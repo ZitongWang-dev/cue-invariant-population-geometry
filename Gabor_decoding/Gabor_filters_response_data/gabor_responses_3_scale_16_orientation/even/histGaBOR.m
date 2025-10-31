@@ -1,0 +1,12 @@
+clc
+clear
+%%
+subplot(3,1,1)
+histogram(center_resps(:,1:16))
+mean(center_resps(:,1:16),'all')
+subplot(3,1,2)
+histogram(center_resps(:,17:32))
+mean(center_resps(:,17:32),'all')
+subplot(3,1,3)
+histogram(center_resps(:,33:48))
+mean(center_resps(:,33:48),'all')

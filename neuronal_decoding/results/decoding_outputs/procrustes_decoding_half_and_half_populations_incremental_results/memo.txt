@@ -1,0 +1,1 @@
+corresponds to the old folder "incremental half&half decoding with controls with only rotation"
