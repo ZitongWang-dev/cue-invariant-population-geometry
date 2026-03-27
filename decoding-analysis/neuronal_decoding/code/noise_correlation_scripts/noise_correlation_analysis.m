@@ -36,8 +36,8 @@ clc; clear;
 close all
 
 %% Configuration
-monkey     = 'FR';       % 'FR' or 'KO'
-vp         = 'V1';       % 'V1' or 'V2'
+monkey     = 'KO';       % 'FR' or 'KO'
+vp         = 'V2';       % 'V1' or 'V2'
 timewindow = [330 630];  % spike-count window (ms)
 
 % Shuffle configuration
@@ -349,20 +349,12 @@ for r = 1:N_renderings
 
     subplot(1, 3, r);
     hold on;
-    % Shuffle-averaged distribution (gray)
+    % Shuffle-averaged distribution (black)
     histogram(shuf_vals, 50, ...
         'FaceColor', [0 0 0], 'EdgeColor', 'w', 'FaceAlpha', 1);
     % Original distribution (colored)
     histogram(orig_vals, 50, ...
         'FaceColor', clr, 'EdgeColor', 'w', 'FaceAlpha', 0.5);
-
-    % % Mean/median lines for original
-    % xline(mean(orig_vals), '-', 'Color', clr, 'LineWidth', 1.5);
-    % xline(median(orig_vals), '--', 'Color', clr, 'LineWidth', 1.5);
-    % 
-    % % Mean/median lines for shuffle
-    % xline(mean(shuf_vals), '-', 'Color', [0.3 0.3 0.3], 'LineWidth', 1.5);
-    % xline(median(shuf_vals), '--', 'Color', [0.3 0.3 0.3], 'LineWidth', 1.5);
 
     xline(0, 'k:', 'LineWidth', 0.5);
     hold off;
@@ -389,8 +381,8 @@ for r = 1:N_renderings
 end
 sgtitle(sprintf('%s %s — Geo Mean-NC Correlation: Original vs Shuffle (%d shuffles)', ...
     monkey, vp, n_shuffles), 'FontSize', 12);
-% saveas(fig6, fullfile(save_path_figs, ...
-%     sprintf('%s_stage1_geomean_nc_corr_original_vs_shuffle.png', fig_prefix)));
+saveas(fig6, fullfile(save_path_figs, ...
+    sprintf('%s_stage1_geomean_nc_corr_original_vs_shuffle.png', fig_prefix)));
 
 %% FIGURE 7a-c: Stage 2 Scatterhist Original vs Pooled Shuffle (one per rendering)
 for r = 1:N_renderings
@@ -422,6 +414,34 @@ for r = 1:N_renderings
     xlim(h(1), shared_xlim_s2);
     ylim(h(1), shared_ylim_s2);
 
+    % Annotate top marginal (mean NC distribution)
+    text(h(2), 0.8, 0.95, sprintf('Orig mean: %.3f', mean(mn_orig)), ...
+        'Units', 'normalized', 'FontSize', 9, 'Color', clr, ...
+        'VerticalAlignment', 'top', 'FontWeight', 'bold');
+    text(h(2), 0.8, 0.80, sprintf('Orig median: %.3f', median(mn_orig)), ...
+        'Units', 'normalized', 'FontSize', 9, 'Color', clr, ...
+        'VerticalAlignment', 'top');
+    text(h(2), 0.8, 0.65, sprintf('Shuf mean: %.3f', mean(mn_shuf_pooled)), ...
+        'Units', 'normalized', 'FontSize', 9, 'Color', [0.4 0.4 0.4], ...
+        'VerticalAlignment', 'top', 'FontWeight', 'bold');
+    text(h(2), 0.8, 0.50, sprintf('Shuf median: %.3f', median(mn_shuf_pooled)), ...
+        'Units', 'normalized', 'FontSize', 9, 'Color', [0.4 0.4 0.4], ...
+        'VerticalAlignment', 'top');
+
+    % Annotate right marginal (variance of NC distribution)
+    text(h(3), 0.02, 0.95, sprintf('Orig mean: %.4f', mean(vn_orig)), ...
+        'Units', 'normalized', 'FontSize', 9, 'Color', clr, ...
+        'VerticalAlignment', 'top', 'FontWeight', 'bold');
+    text(h(3), 0.02, 0.9, sprintf('Orig median: %.4f', median(vn_orig)), ...
+        'Units', 'normalized', 'FontSize', 9, 'Color', clr, ...
+        'VerticalAlignment', 'top');
+    text(h(3), 0.02, 0.85, sprintf('Shuf mean: %.4f', mean(vn_shuf_pooled)), ...
+        'Units', 'normalized', 'FontSize', 9, 'Color', [0.4 0.4 0.4], ...
+        'VerticalAlignment', 'top', 'FontWeight', 'bold');
+    text(h(3), 0.02, 0.80, sprintf('Shuf median: %.4f', median(vn_shuf_pooled)), ...
+        'Units', 'normalized', 'FontSize', 9, 'Color', [0.4 0.4 0.4], ...
+        'VerticalAlignment', 'top');
+
     xlabel(h(1), 'Mean noise correlation');
     ylabel(h(1), 'Variance of noise correlation');
     title(h(1), sprintf('%s %s %s — Original vs Shuffle (%d pairs, %d shuffles pooled)', ...
@@ -433,7 +453,7 @@ for r = 1:N_renderings
 end
 
 %% FIGURE 8: Significance Test — Real vs Shuffle Distribution (summary stats)
-fig8 = figure('Position', [100 100 1800 700]);
+fig8 = figure('Position', [100 100 2000 800]);
 
 for r = 1:N_renderings
     rend = renderings{r};
@@ -478,17 +498,17 @@ saveas(fig8, fullfile(save_path_figs, ...
 end % end shuffle figures
 
 %% Save all results
-% results = struct();
-% results.monkey     = monkey;
-% results.vp         = vp;
-% results.timewindow = timewindow;
-% results.pair_idx   = pair_idx;
-% results.example_pair_indices = example_pair_indices;
-% results.n_shuffles = n_shuffles;
-% results.renderings = all_results;
-%
-% save(fullfile(save_path_data, 'noise_correlation_results.mat'), 'results', '-v7.3');
-% fprintf('\nAll results saved to %s\n', save_path_data);
+results = struct();
+results.monkey     = monkey;
+results.vp         = vp;
+results.timewindow = timewindow;
+results.pair_idx   = pair_idx;
+results.example_pair_indices = example_pair_indices;
+results.n_shuffles = n_shuffles;
+results.renderings = all_results;
+
+save(fullfile(save_path_data, 'noise_correlation_results.mat'), 'results', '-v7.3');
+fprintf('\nAll results saved to %s\n', save_path_data);
 
 %% ==================== HELPER FUNCTIONS ====================
 
