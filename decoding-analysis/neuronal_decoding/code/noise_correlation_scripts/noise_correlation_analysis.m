@@ -36,13 +36,13 @@ clc; clear;
 close all
 
 %% Configuration
-monkey     = 'KO';       % 'FR' or 'KO'
-vp         = 'V2';       % 'V1' or 'V2'
+monkey     = 'FR';       % 'FR' or 'KO'
+vp         = 'V1';       % 'V1' or 'V2'
 timewindow = [330 630];  % spike-count window (ms)
 
 % Shuffle configuration
 run_shuffle = true;
-n_shuffles  = 100;
+n_shuffles  = 10;
 
 renderings = {'ac', 'ec', 'ex'};
 rendering_colors = struct('ac', [0.85 0.33 0.10], ...   % orange
@@ -381,8 +381,8 @@ for r = 1:N_renderings
 end
 sgtitle(sprintf('%s %s — Geo Mean-NC Correlation: Original vs Shuffle (%d shuffles)', ...
     monkey, vp, n_shuffles), 'FontSize', 12);
-saveas(fig6, fullfile(save_path_figs, ...
-    sprintf('%s_stage1_geomean_nc_corr_original_vs_shuffle.png', fig_prefix)));
+% saveas(fig6, fullfile(save_path_figs, ...
+%     sprintf('%s_stage1_geomean_nc_corr_original_vs_shuffle.png', fig_prefix)));
 
 %% FIGURE 7a-c: Stage 2 Scatterhist Original vs Pooled Shuffle (one per rendering)
 for r = 1:N_renderings
@@ -448,8 +448,8 @@ for r = 1:N_renderings
         monkey, vp, upper(rend), N_pairs, n_shuffles));
     legend(h(1), 'Location', 'best');
 
-    saveas(fig7, fullfile(save_path_figs, ...
-        sprintf('%s_%s_stage2_mean_vs_variance_nc_vs_shuffle.png', fig_prefix, rend)));
+    % saveas(fig7, fullfile(save_path_figs, ...
+    %     sprintf('%s_%s_stage2_mean_vs_variance_nc_vs_shuffle.png', fig_prefix, rend)));
 end
 
 %% FIGURE 8: Significance Test — Real vs Shuffle Distribution (summary stats)
@@ -492,8 +492,8 @@ end
 
 sgtitle(sprintf('%s %s — Real vs Shuffle Distribution (%d shuffles)', ...
     monkey, vp, n_shuffles), 'FontSize', 12);
-saveas(fig8, fullfile(save_path_figs, ...
-    sprintf('%s_significance_real_vs_shuffle.png', fig_prefix)));
+% saveas(fig8, fullfile(save_path_figs, ...
+%     sprintf('%s_significance_real_vs_shuffle.png', fig_prefix)));
 
 end % end shuffle figures
 
@@ -507,8 +507,8 @@ results.example_pair_indices = example_pair_indices;
 results.n_shuffles = n_shuffles;
 results.renderings = all_results;
 
-save(fullfile(save_path_data, 'noise_correlation_results.mat'), 'results', '-v7.3');
-fprintf('\nAll results saved to %s\n', save_path_data);
+% save(fullfile(save_path_data, 'noise_correlation_results.mat'), 'results', '-v7.3');
+% fprintf('\nAll results saved to %s\n', save_path_data);
 
 %% ==================== HELPER FUNCTIONS ====================
 
