@@ -37,7 +37,7 @@ close all
 
 %% Configuration
 monkey     = 'KO';       % 'FR' or 'KO'
-vp         = 'V2';       % 'V1' or 'V2'
+vp         = 'V1';       % 'V1' or 'V2'
 timewindow = [330 630];  % spike-count window (ms)
 
 % Shuffle configuration
