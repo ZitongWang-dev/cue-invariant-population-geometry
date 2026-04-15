@@ -499,8 +499,8 @@ for r = 1:N_renderings
         monkey, vp, upper(rend), N_same, N_cross));
     legend(h(1), 'Location', 'best');
 
-    saveas(fig5, fullfile(save_path_figs, ...
-        sprintf('%s_%s_stage2_mean_vs_variance_nc_session.png', fig_prefix, rend)));
+    % saveas(fig5, fullfile(save_path_figs, ...
+    %     sprintf('%s_%s_stage2_mean_vs_variance_nc_session.png', fig_prefix, rend)));
 end
 
 %% ==================== AFFINE SHIFT FIGURES ====================
