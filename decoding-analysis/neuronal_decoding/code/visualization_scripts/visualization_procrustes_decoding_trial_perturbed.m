@@ -13,7 +13,7 @@ Description:
 clc; clear;
 %%
 monkey = 'KO';
-file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_basic_results'];
+file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_trial_perturbed_results\','affine'];
 %% Load result matrices
 V1_acec_result = result_loader(monkey,'V1','acec',file_location);
 V2_acec_result = result_loader(monkey,'V2','acec',file_location);
@@ -80,7 +80,7 @@ for i = 3:10, b(i).LineWidth = 1.5; end
 ylim([0 0.7]); yline(0.02,'--');
 legend('V1 self-decoding','V2 self-decoding','V1 non-PT-decoding','V2 non-PT-decoding','V1 PT-decoding(only rotation)','V2 PT-decoding(only rotation)','V1 PT control','V2 PT control','V1 non-PT control','V2 non-PT control','theoretical chance level: 2%')
 ylabel('Decoding accuracy'); xlabel('Stimulus pair');
-title([monkey ' basic, Z‑scored (rotation‑only)']);
+title([monkey ' trial affine-shifted, Z‑scored (rotation‑only)']);
 
 % Error bars
 [ng, nb] = size(acc_group);
