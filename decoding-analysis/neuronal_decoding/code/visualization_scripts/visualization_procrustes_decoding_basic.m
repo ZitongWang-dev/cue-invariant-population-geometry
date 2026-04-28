@@ -12,7 +12,7 @@ Description:
 
 clc; clear;
 %%
-monkey = 'KO';
+monkey = 'FR';
 file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_basic_results'];
 %% Load result matrices
 V1_acec_result = result_loader(monkey,'V1','acec',file_location);
