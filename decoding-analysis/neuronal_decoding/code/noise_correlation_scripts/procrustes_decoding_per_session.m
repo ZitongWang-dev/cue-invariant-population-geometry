@@ -54,10 +54,10 @@ clc; clear;
 
 %% Configuration
 monkey = 'KO';      % 'FR' or 'KO'
-vp     = 'V1';      % 'V1' or 'V2'
+vp     = 'V2';      % 'V1' or 'V2'
 
 %% Trial perturbation configuration
-perturb_mode = 'none';   % 'none' | 'shuffle' | 'affine'
+perturb_mode = 'affine';   % 'none' | 'shuffle' | 'affine'
 perturb_seed = 1;          % RNG seed applied before perturbation (for 'shuffle')
 
 %% Decoding parameters
