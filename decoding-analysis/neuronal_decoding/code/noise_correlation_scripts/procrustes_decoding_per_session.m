@@ -53,8 +53,8 @@ Outputs:
 clc; clear;
 
 %% Configuration
-monkey = 'KO';      % 'FR' or 'KO'
-vp     = 'V1';      % 'V1' or 'V2'
+monkey = 'FR';      % 'FR' or 'KO'
+vp     = 'V2';      % 'V1' or 'V2'
 
 %% Trial perturbation configuration
 perturb_mode = 'affine';   % 'none' | 'shuffle' | 'affine'
