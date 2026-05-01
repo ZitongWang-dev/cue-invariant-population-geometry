@@ -5,23 +5,31 @@ Date: 2026-04-30
 
 Description:
     Visualizes per-session Procrustes decoding results produced by
-    procrustes_decoding_per_session.m. Each session contributes a single
-    point per decoding type per stimulus pair (mean across trial samples,
-    averaged over the two complementary directions).
+    procrustes_decoding_per_session.m.
 
-    Three figures are produced per monkey:
+    Four figures are produced per monkey:
       Figure 1 - perturb_mode = 'none'   (real noise correlations preserved)
       Figure 2 - perturb_mode = 'affine' (within-session correlations broken)
       Figure 3 - delta (affine - none) per session per decoding type
+      Figure 4 - self-decoding vs PT-decoding scatter, none + affine
+                 overlaid; affine markers carry a black edge; lines
+                 connect the same session's none and affine points.
 
-    Layout (per figure):
+    Layout (Figures 1-3):
       - 3 subplots side-by-side: EC-AC, EC-EX, AC-EX
       - x-axis: 5 decoding types {self, non-PT, PT(rot), PT ctrl, non-PT ctrl}
       - V1 sessions jittered LEFT of each x-tick (blue, graded shades)
       - V2 sessions jittered RIGHT of each x-tick (orange, graded shades)
       - Lines connect points from the same session across decoding types,
         but never across stimulus pairs (subplot boundary enforces this)
-      - 2 percent chance line on raw figures, zero line on delta figure
+
+    Layout (Figure 4):
+      - 3 subplots side-by-side: EC-AC, EC-EX, AC-EX
+      - x-axis: self-decoding accuracy
+      - y-axis: PT-decoding accuracy (rotation only)
+      - Each session contributes 2 points (none + affine) connected by a
+        session-colored line. Affine markers carry a black edge.
+      - Diagonal y=x dashed reference line.
 %}
 
 clc; clear;
@@ -53,25 +61,32 @@ assert(none_v1_meta.n_sessions == affine_v1_meta.n_sessions, ...
 assert(none_v2_meta.n_sessions == affine_v2_meta.n_sessions, ...
     'V2 session counts differ between none and affine.');
 
+%% Pack data structs (used by all plotting functions below)
+data_none   = pack_data(none_v1,   none_v1_meta,   none_v2,   none_v2_meta);
+data_affine = pack_data(affine_v1, affine_v1_meta, affine_v2, affine_v2_meta);
+
 %% Figure 1: perturb_mode = none
-data_none = pack_data(none_v1, none_v1_meta, none_v2, none_v2_meta);
 plot_per_session(data_none, monkey, 'none (correlations preserved)', false, decoding_labels);
 % saveas(gcf, fullfile(fig_save_dir, ...
 %     ['procrustes_decoding_per_session_', monkey, '_none.png']));
 
 %% Figure 2: perturb_mode = affine
-data_affine = pack_data(affine_v1, affine_v1_meta, affine_v2, affine_v2_meta);
 plot_per_session(data_affine, monkey, 'affine (within-session correlations broken)', false, decoding_labels);
 % saveas(gcf, fullfile(fig_save_dir, ...
 %     ['procrustes_decoding_per_session_', monkey, '_affine.png']));
 
 %% Figure 3: delta = affine - none
-delta_v1 = cellfun(@(a, b) a - b, affine_v1, none_v1, 'UniformOutput', false);
-delta_v2 = cellfun(@(a, b) a - b, affine_v2, none_v2, 'UniformOutput', false);
+delta_v1   = cellfun(@(a, b) a - b, affine_v1, none_v1, 'UniformOutput', false);
+delta_v2   = cellfun(@(a, b) a - b, affine_v2, none_v2, 'UniformOutput', false);
 data_delta = pack_data(delta_v1, none_v1_meta, delta_v2, none_v2_meta);
 plot_per_session(data_delta, monkey, '\Delta (affine - none)', true, decoding_labels);
 % saveas(gcf, fullfile(fig_save_dir, ...
 %     ['procrustes_decoding_per_session_', monkey, '_delta.png']));
+
+%% Figure 4: self vs PT-decoding scatter (none + affine on the same axes)
+plot_self_vs_pt(data_none, data_affine, monkey);
+% saveas(gcf, fullfile(fig_save_dir, ...
+%     ['procrustes_decoding_per_session_', monkey, '_self_vs_pt.png']));
 
 %% =================== LOCAL FUNCTIONS ===================
 function data = pack_data(v1_data, v1_meta, v2_data, v2_meta)
@@ -136,8 +151,8 @@ function combined = combine_per_session(pair1_struct, pair2_struct, dec_idx)
     n        = numel(pair1_struct);
     combined = zeros(n, numel(dec_idx));
     for s = 1:n
-        stacked      = [pair1_struct(s).accuracy; pair2_struct(s).accuracy];
-        col_mean     = mean(stacked, 1);
+        stacked       = [pair1_struct(s).accuracy; pair2_struct(s).accuracy];
+        col_mean      = mean(stacked, 1);
         combined(s,:) = col_mean(dec_idx);
     end
 end
@@ -207,8 +222,7 @@ function plot_per_session(data, monkey, title_str, is_delta, decoding_labels)
             yline(0.02, '--k', 'LineWidth', 1, 'HandleVisibility','off');
         end
 
-        % Vertical separators between V1 (left) and V2 (right) at each x-tick
-        % (kept light so they don't dominate)
+        % Light vertical separators between V1 (left) and V2 (right) at each x-tick
         for x = x_base
             xline(x, ':', 'Color', [0.85 0.85 0.85], 'HandleVisibility','off');
         end
@@ -256,21 +270,157 @@ function plot_per_session(data, monkey, title_str, is_delta, decoding_labels)
         hold off;
     end
 
-    % Share y-axis across the three pair-panels
     linkaxes(ax_handles, 'y');
-
     sgtitle(sprintf('%s | per-session Procrustes decoding | %s', monkey, title_str));
+end
+
+function plot_self_vs_pt(data_none, data_affine, monkey)
+% Scatter of self-decoding (x) vs PT-decoding rotation-only (y),
+% with both perturb_modes overlaid. Affine markers carry a black edge,
+% and a session-colored line connects the same session's none and
+% affine points.
+%
+% Column indices in the 5-column dec_idx data:
+%   1 = self, 2 = non-PT, 3 = PT(rot), 4 = PT ctrl, 5 = non-PT ctrl
+    self_col = 1;
+    pt_col   = 3;
+
+    pair_labels = {'EC-AC', 'EC-EX', 'AC-EX'};
+
+    v1_base = [0      0.4470 0.7410];
+    v2_base = [0.8500 0.3250 0.0980];
+
+    n_v1 = data_none.v1_meta.n_sessions;
+    n_v2 = data_none.v2_meta.n_sessions;
+
+    v1_colors = make_shades(v1_base, n_v1);
+    v2_colors = make_shades(v2_base, n_v2);
+
+    figure('Position', [100 100 1300 480]);
+    ax_handles = gobjects(1, 3);
+
+    % First pass: plot data, collect global axis range
+    global_max = 0;
+
+    for p = 1:3
+        ax_handles(p) = subplot(1, 3, p);
+        hold on;
+
+        % V1 sessions
+        for s = 1:n_v1
+            x_n = data_none.v1_data{p}(s,   self_col);
+            y_n = data_none.v1_data{p}(s,   pt_col);
+            x_a = data_affine.v1_data{p}(s, self_col);
+            y_a = data_affine.v1_data{p}(s, pt_col);
+
+            % Connecting line (session color)
+            plot([x_n, x_a], [y_n, y_a], '-', ...
+                 'Color', v1_colors(s, :), 'LineWidth', 0.8, ...
+                 'HandleVisibility','off');
+
+            % None marker (no black edge)
+            plot(x_n, y_n, 'o', ...
+                 'MarkerFaceColor', v1_colors(s, :), ...
+                 'MarkerEdgeColor', v1_colors(s, :), ...
+                 'MarkerSize', 7, ...
+                 'HandleVisibility','off');
+
+            % Affine marker (black edge)
+            plot(x_a, y_a, 'o', ...
+                 'MarkerFaceColor', v1_colors(s, :), ...
+                 'MarkerEdgeColor', 'k', ...
+                 'MarkerSize', 7, 'LineWidth', 1.2, ...
+                 'HandleVisibility','off');
+
+            global_max = max([global_max, x_n, y_n, x_a, y_a]);
+        end
+
+        % V2 sessions
+        for s = 1:n_v2
+            x_n = data_none.v2_data{p}(s,   self_col);
+            y_n = data_none.v2_data{p}(s,   pt_col);
+            x_a = data_affine.v2_data{p}(s, self_col);
+            y_a = data_affine.v2_data{p}(s, pt_col);
+
+            plot([x_n, x_a], [y_n, y_a], '-', ...
+                 'Color', v2_colors(s, :), 'LineWidth', 0.8, ...
+                 'HandleVisibility','off');
+
+            plot(x_n, y_n, 'o', ...
+                 'MarkerFaceColor', v2_colors(s, :), ...
+                 'MarkerEdgeColor', v2_colors(s, :), ...
+                 'MarkerSize', 7, ...
+                 'HandleVisibility','off');
+
+            plot(x_a, y_a, 'o', ...
+                 'MarkerFaceColor', v2_colors(s, :), ...
+                 'MarkerEdgeColor', 'k', ...
+                 'MarkerSize', 7, 'LineWidth', 1.2, ...
+                 'HandleVisibility','off');
+
+            global_max = max([global_max, x_n, y_n, x_a, y_a]);
+        end
+    end
+
+    % Round axis limit up a touch for breathing room
+    axis_max = ceil(global_max * 20) / 20;   % nearest 0.05
+    if axis_max == 0, axis_max = 0.1; end
+
+    % Second pass: apply axis cosmetics, diagonal, legend
+    for p = 1:3
+        subplot(1, 3, p); hold on;
+
+        % Diagonal y = x
+        plot([0, axis_max], [0, axis_max], '--', ...
+             'Color', [0.7 0.7 0.7], 'LineWidth', 1, ...
+             'HandleVisibility','off');
+
+        xlim([0, axis_max]);
+        ylim([0, axis_max]);
+        axis square;
+
+        xlabel('Self-decoding accuracy');
+        if p == 1
+            ylabel('PT-decoding accuracy (rotation only)');
+        end
+        title(pair_labels{p});
+        grid on; box on;
+
+        if p == 3
+            hl_v1 = plot(NaN, NaN, 'o', 'MarkerFaceColor', v1_base, ...
+                         'MarkerEdgeColor', v1_base, 'MarkerSize', 7);
+            hl_v2 = plot(NaN, NaN, 'o', 'MarkerFaceColor', v2_base, ...
+                         'MarkerEdgeColor', v2_base, 'MarkerSize', 7);
+            hl_none = plot(NaN, NaN, 'o', 'MarkerFaceColor', [0.5 0.5 0.5], ...
+                           'MarkerEdgeColor', [0.5 0.5 0.5], 'MarkerSize', 7);
+            hl_aff  = plot(NaN, NaN, 'o', 'MarkerFaceColor', [0.5 0.5 0.5], ...
+                           'MarkerEdgeColor', 'k', 'MarkerSize', 7, 'LineWidth', 1.2);
+            hl_diag = plot(NaN, NaN, '--', 'Color', [0.7 0.7 0.7], 'LineWidth', 1);
+            legend([hl_v1, hl_v2, hl_none, hl_aff, hl_diag], ...
+                {sprintf('V1 (n=%d)', n_v1), ...
+                 sprintf('V2 (n=%d)', n_v2), ...
+                 'none (preserved)', ...
+                 'affine (broken)', ...
+                 'y = x'}, ...
+                'Location', 'best');
+        end
+
+        hold off;
+    end
+
+    linkaxes(ax_handles, 'xy');
+    sgtitle(sprintf('%s | self vs PT decoding | none + affine per session', monkey));
 end
 
 function colors = make_shades(base_color, n)
 % Generate n shades of base_color by varying saturation only.
-% All shades have the same hue as base_color (white -> base_color line in RGB).
-% Session 1 (lightest) -> 40% saturation; session n (darkest) -> base_color exactly.
+% All shades share the same hue (interpolated white -> base_color).
+% Session 1 (lightest) -> 40% saturation; session n (darkest) -> base_color.
     if n <= 1
         colors = base_color;
         return;
     end
     white  = [1 1 1];
-    t      = linspace(0.4, 1.0, n)';        % saturation factor: 0=white, 1=base
+    t      = linspace(0.4, 1.0, n)';
     colors = (1 - t) .* white + t .* base_color;
 end
