@@ -7,7 +7,7 @@ Description:
     Visualizes per-session Procrustes decoding results produced by
     procrustes_decoding_per_session.m.
 
-    Five figures are produced per monkey:
+    Six figures are produced:
       Figure 1 - perturb_mode = 'none'   (real noise correlations preserved)
       Figure 2 - perturb_mode = 'affine' (within-session correlations broken)
       Figure 3 - delta (affine - none) per session per decoding type
@@ -18,6 +18,12 @@ Description:
                  session, with Wilcoxon signed-rank tests on the
                  across-session median, FDR-corrected across all
                  (decoding type x stim pair x area) tests.
+      Figure 6 - pooled across stim pairs and across both monkeys:
+                 per (monkey, area, decoding type) the N_sessions x 3
+                 stim-pair normalized deltas are pooled into a single
+                 sample, Wilcoxon-tested against H0: median = 0, and
+                 FDR-corrected across all 12 tests. Independent of the
+                 top-level monkey setting (loads both FR and KO).
 
     Layout (Figures 1-3):
       - 3 subplots side-by-side: EC-AC, EC-EX, AC-EX
@@ -40,10 +46,20 @@ Description:
       - x-axis: 3 decoding types {self, non-PT, PT(rot)} (controls dropped)
       - y-axis: normalized delta
       - Significance markers above each (decoding type, area) cluster.
+
+    Layout (Figure 6):
+      - 2 subplots side-by-side: FR, KO
+      - x-axis: 3 decoding types (self, non-PT, PT (rot))
+      - V1 dodged LEFT of each x-tick, V2 dodged RIGHT
+      - Each cluster: N_sessions x 3 scatter points
+          - Marker shape: stim pair  (o = EC-AC, s = EC-EX, ^ = AC-EX)
+          - Color shade : session    (light = lowest index, dark = highest)
+      - Cluster overlays: thick dark median bar, thin black mean tick
+      - Asterisks above each cluster from FDR-corrected q.
 %}
 
 clc; clear;
-
+close all
 %% Configuration
 monkey        = 'KO';
 file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_per_session_results'];
@@ -99,6 +115,14 @@ plot_self_vs_pt(data_none, data_affine, monkey);
 plot_normalized_delta(data_none, data_affine, monkey);
 % saveas(gcf, fullfile(fig_save_dir, ...
 %     ['procrustes_decoding_per_session_', monkey, '_norm_delta.png']));
+
+%% Figure 6: pooled across stim pairs AND both monkeys (FR + KO)
+% Independent of the top-level `monkey` setting: this section always
+% loads FR and KO internally and runs one Wilcoxon test per
+% (monkey, area, decoding type) on the pooled N_sessions x 3 deltas.
+plot_pooled_pairs(file_location, dec_idx);
+% saveas(gcf, fullfile('..\..\results\figures\', ...
+%     'procrustes_decoding_per_session_pooled_pairs.png'));
 
 %% =================== LOCAL FUNCTIONS ===================
 function data = pack_data(v1_data, v1_meta, v2_data, v2_meta)
@@ -332,9 +356,6 @@ function plot_normalized_delta(data_none, data_affine, monkey)
 % Figure 5: per-session normalized delta = 2*(affine - none) / (affine + none),
 % with one-sample Wilcoxon signed-rank tests across sessions per (area, pair,
 % decoding type), FDR-corrected across all 18 tests.
-%
-% Drops the two control columns (PT ctrl, non-PT ctrl) which sit at chance
-% and would produce unstable ratios.
 
     dec_col_keep = [1, 2, 3];                       % indices in the 5-col stored data
     dec_labels   = {'self', 'non-PT', 'PT (rot)'};
@@ -422,14 +443,12 @@ function plot_normalized_delta(data_none, data_affine, monkey)
         ax_handles(p) = subplot(1, n_pairs, p);
         hold on;
 
-        % V1 sessions
         for s = 1:n_v1
             plot(x_base + v1_jitter(s), v1_norm{p}(s, :), '-o', ...
                  'Color', v1_colors(s, :), 'MarkerFaceColor', v1_colors(s, :), ...
                  'MarkerEdgeColor', v1_colors(s, :), 'MarkerSize', 5, ...
                  'LineWidth', 1.0, 'HandleVisibility','off');
         end
-        % V2 sessions
         for s = 1:n_v2
             plot(x_base + v2_jitter(s), v2_norm{p}(s, :), '-o', ...
                  'Color', v2_colors(s, :), 'MarkerFaceColor', v2_colors(s, :), ...
@@ -453,7 +472,6 @@ function plot_normalized_delta(data_none, data_affine, monkey)
         end
         grid on; box on;
 
-        % Significance markers above each (decoding type, area) cluster
         sig_y = y_max * 0.92;
         for d = 1:n_dec
             text(d - 0.175, sig_y, sig_marker(q_v1(p, d)), ...
@@ -464,7 +482,6 @@ function plot_normalized_delta(data_none, data_affine, monkey)
                 'FontWeight', 'bold', 'Color', v2_base);
         end
 
-        % Legend in last subplot
         if p == n_pairs
             hl_v1 = plot(NaN, NaN, '-o', 'Color', v1_base, ...
                 'MarkerFaceColor', v1_base, 'MarkerSize', 5, 'LineWidth', 1.0);
@@ -484,6 +501,229 @@ function plot_normalized_delta(data_none, data_affine, monkey)
     sgtitle(sprintf(['%s | normalized \\Delta per session  |  ' ...
                      'Wilcoxon signed-rank (FDR-corrected):  * q<0.05,  ** q<0.01,  *** q<0.001'], ...
                     monkey));
+end
+
+function plot_pooled_pairs(file_location, dec_idx)
+% Figure 6: pooled across stim pairs AND across both monkeys.
+% Independent of the top-level `monkey` setting: loads FR and KO data
+% internally. For each (monkey, area, decoding type), the N_sessions x 3
+% stim-pair normalized deltas are pooled into a single sample, and a
+% one-sample Wilcoxon signed-rank test is run against H0: median = 0.
+% FDR-corrected across all 12 tests.
+
+    monkeys      = {'FR', 'KO'};
+    areas        = {'V1', 'V2'};
+    dec_col_keep = [1, 2, 3];                       % cols of the 5-col loaded data
+    dec_labels   = {'self', 'non-PT', 'PT (rot)'};
+    pair_labels  = {'EC-AC', 'EC-EX', 'AC-EX'};
+    pair_shapes  = {'o', 's', '^'};
+
+    n_monkeys = numel(monkeys);
+    n_areas   = numel(areas);
+    n_dec     = numel(dec_labels);
+    n_pairs   = numel(pair_labels);
+
+    %% Load and build per-(monkey, area) normalized-delta tensor
+    % norm_delta.(monkey).(area) = [n_sessions x n_pairs x n_dec]
+    norm_delta = struct();
+    n_sessions = struct();
+
+    for m = 1:n_monkeys
+        mk = monkeys{m};
+        [none_v1, none_v1_meta, none_v2, none_v2_meta] = ...
+            load_per_session_data(mk, 'none',   file_location, dec_idx);
+        [aff_v1,  aff_v1_meta,  aff_v2,  aff_v2_meta ] = ...
+            load_per_session_data(mk, 'affine', file_location, dec_idx);
+
+        assert(none_v1_meta.n_sessions == aff_v1_meta.n_sessions, ...
+            '%s V1 session counts differ between modes.', mk);
+        assert(none_v2_meta.n_sessions == aff_v2_meta.n_sessions, ...
+            '%s V2 session counts differ between modes.', mk);
+
+        for a = 1:n_areas
+            area = areas{a};
+            if strcmp(area, 'V1')
+                none_data = none_v1; aff_data = aff_v1;
+                n_s = none_v1_meta.n_sessions;
+            else
+                none_data = none_v2; aff_data = aff_v2;
+                n_s = none_v2_meta.n_sessions;
+            end
+
+            tensor = nan(n_s, n_pairs, n_dec);
+            for p = 1:n_pairs
+                a_mat = aff_data{p}(:,  dec_col_keep);   % [n_s x 3]
+                b_mat = none_data{p}(:, dec_col_keep);
+                tensor(:, p, :) = 2 .* (a_mat - b_mat) ./ (a_mat + b_mat);
+            end
+
+            norm_delta.(mk).(area) = tensor;
+            n_sessions.(mk).(area) = n_s;
+        end
+    end
+
+    %% Pooled Wilcoxon signed-rank tests
+    pvals = nan(n_monkeys, n_areas, n_dec);
+    for m = 1:n_monkeys
+        mk = monkeys{m};
+        for a = 1:n_areas
+            area = areas{a};
+            tensor = norm_delta.(mk).(area);
+            for d = 1:n_dec
+                vec = tensor(:, :, d);
+                vec = vec(:);
+                vec = vec(~isnan(vec) & isfinite(vec));
+                if numel(vec) >= 1
+                    pvals(m, a, d) = signrank(vec);
+                end
+            end
+        end
+    end
+
+    %% FDR correction across all 12 tests
+    qvals = bh_fdr(pvals(:));
+    qvals = reshape(qvals, n_monkeys, n_areas, n_dec);
+
+    %% Print summary
+    fprintf('\n=== Pooled-across-stim-pairs Wilcoxon signed-rank (H0: median = 0) ===\n');
+    fprintf('FDR-corrected (Benjamini-Hochberg) across %d tests\n\n', numel(pvals));
+    fprintf('Monkey | Area | Decoding   |  N  |  raw p   |    q     | sig\n');
+    fprintf('%s\n', repmat('-', 1, 62));
+    for m = 1:n_monkeys
+        mk = monkeys{m};
+        for a = 1:n_areas
+            area = areas{a};
+            n_pooled = n_sessions.(mk).(area) * n_pairs;
+            for d = 1:n_dec
+                fprintf('%-6s | %-4s | %-9s  | %3d | %.4f   |  %.4f  | %s\n', ...
+                    mk, area, dec_labels{d}, n_pooled, ...
+                    pvals(m,a,d), qvals(m,a,d), sig_marker(qvals(m,a,d)));
+            end
+        end
+    end
+    fprintf('\n');
+
+    %% Y-axis range (symmetric, shared across both subplots)
+    all_vals = [];
+    for m = 1:n_monkeys
+        for a = 1:n_areas
+            t = norm_delta.(monkeys{m}).(areas{a});
+            all_vals = [all_vals; t(:)]; %#ok<AGROW>
+        end
+    end
+    all_vals = all_vals(~isnan(all_vals) & isfinite(all_vals));
+    y_max    = max(0.5, max(abs(all_vals)) * 1.25);
+
+    %% Plot
+    v1_base = [0      0.4470 0.7410];
+    v2_base = [0.8500 0.3250 0.0980];
+
+    rng(0);   % reproducible jitter
+
+    figure('Position', [100 100 1300 520]);
+    ax_handles = gobjects(1, n_monkeys);
+
+    for m = 1:n_monkeys
+        mk = monkeys{m};
+        ax_handles(m) = subplot(1, n_monkeys, m);
+        hold on;
+
+        for a = 1:n_areas
+            area = areas{a};
+            if strcmp(area, 'V1'), base_color = v1_base; dodge = -0.175;
+            else,                  base_color = v2_base; dodge =  0.175;
+            end
+
+            n_s    = n_sessions.(mk).(area);
+            shades = make_shades(base_color, n_s);
+            tensor = norm_delta.(mk).(area);
+
+            for d = 1:n_dec
+                x_center = d + dodge;
+
+                % Scatter N_s x N_pairs points (jittered)
+                for s = 1:n_s
+                    for p = 1:n_pairs
+                        x_jit = x_center + (rand - 0.5) * 0.14;
+                        y_val = tensor(s, p, d);
+                        plot(x_jit, y_val, pair_shapes{p}, ...
+                             'MarkerFaceColor', shades(s, :), ...
+                             'MarkerEdgeColor', shades(s, :), ...
+                             'MarkerSize',      6, ...
+                             'HandleVisibility','off');
+                    end
+                end
+
+                % Cluster center-tendency overlays
+                cluster_vals = tensor(:, :, d);
+                cluster_vals = cluster_vals(:);
+                cluster_vals = cluster_vals(~isnan(cluster_vals) & isfinite(cluster_vals));
+                if ~isempty(cluster_vals)
+                    med_y  = median(cluster_vals);
+                    mean_y = mean(cluster_vals);
+
+                    % Median: thick dark bar
+                    plot([x_center - 0.13, x_center + 0.13], [med_y, med_y], '-', ...
+                         'Color', [0.15 0.15 0.15], 'LineWidth', 3.0, ...
+                         'HandleVisibility','off');
+                    % Mean: thin black tick
+                    plot([x_center - 0.09, x_center + 0.09], [mean_y, mean_y], '-', ...
+                         'Color', [0 0 0], 'LineWidth', 1.2, ...
+                         'HandleVisibility','off');
+                end
+
+                % Significance asterisk (area-colored)
+                sig_y = y_max * 0.92;
+                text(x_center, sig_y, sig_marker(qvals(m, a, d)), ...
+                     'HorizontalAlignment', 'center', 'FontSize', 12, ...
+                     'FontWeight', 'bold', 'Color', base_color);
+            end
+        end
+
+        yline(0, '--k', 'LineWidth', 1, 'HandleVisibility','off');
+        for x = 1:n_dec
+            xline(x, ':', 'Color', [0.85 0.85 0.85], 'HandleVisibility','off');
+        end
+
+        xlim([0.4, n_dec + 0.6]);
+        ylim([-y_max, y_max]);
+        xticks(1:n_dec);
+        xticklabels(dec_labels);
+        xtickangle(20);
+
+        title(sprintf('%s   (V1: n=%d sessions, V2: n=%d sessions; %d pairs each)', ...
+            mk, n_sessions.(mk).V1, n_sessions.(mk).V2, n_pairs));
+
+        if m == 1
+            ylabel('Normalized \Delta: 2(affine - none)/(affine + none)');
+        end
+        grid on; box on;
+
+        % Legend in the rightmost subplot
+        if m == n_monkeys
+            hl_v1 = plot(NaN, NaN, 'o', 'MarkerFaceColor', v1_base, ...
+                         'MarkerEdgeColor', v1_base, 'MarkerSize', 6);
+            hl_v2 = plot(NaN, NaN, 'o', 'MarkerFaceColor', v2_base, ...
+                         'MarkerEdgeColor', v2_base, 'MarkerSize', 6);
+            hl_p1 = plot(NaN, NaN, pair_shapes{1}, 'MarkerFaceColor', [0.5 0.5 0.5], ...
+                         'MarkerEdgeColor', [0.5 0.5 0.5], 'MarkerSize', 6);
+            hl_p2 = plot(NaN, NaN, pair_shapes{2}, 'MarkerFaceColor', [0.5 0.5 0.5], ...
+                         'MarkerEdgeColor', [0.5 0.5 0.5], 'MarkerSize', 6);
+            hl_p3 = plot(NaN, NaN, pair_shapes{3}, 'MarkerFaceColor', [0.5 0.5 0.5], ...
+                         'MarkerEdgeColor', [0.5 0.5 0.5], 'MarkerSize', 6);
+            hl_med = plot(NaN, NaN, '-', 'Color', [0.15 0.15 0.15], 'LineWidth', 3.0);
+            hl_mn  = plot(NaN, NaN, '-', 'Color', [0 0 0],           'LineWidth', 1.2);
+            legend([hl_v1, hl_v2, hl_p1, hl_p2, hl_p3, hl_med, hl_mn], ...
+                {'V1', 'V2', pair_labels{1}, pair_labels{2}, pair_labels{3}, ...
+                 'median', 'mean'}, ...
+                'Location', 'eastoutside', 'NumColumns', 1);
+        end
+        hold off;
+    end
+
+    linkaxes(ax_handles, 'y');
+    sgtitle(['Pooled across stim pairs  |  ' ...
+             'Wilcoxon signed-rank (FDR-corrected):  * q<0.05,  ** q<0.01,  *** q<0.001']);
 end
 
 function s = sig_marker(q)
