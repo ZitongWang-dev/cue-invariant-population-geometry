@@ -34,12 +34,13 @@ Description:
         - Observed : per-resample cross-condition correlation, R values,
                      drawn from the same bootstrap iterations that populate
                      the resampled heatmaps (no extra cost).
-        - Null     : stimulus-label-shuffle correlation on the trial-
-                     averaged matrices. Permutes one condition's stimulus
-                     IDs (equivalent to permuting both rows AND columns of
-                     the 50x50 matrix), then correlates with the other
-                     condition's unshuffled matrix. Analog of the PT label-
-                     shuffle control. Centered near 0 under no
+        - Null     : stimulus-label shuffle nested in bootstrap. At each
+                     iteration, a fresh joint bootstrap resample is drawn
+                     for all conditions, then stimulus IDs in one condition
+                     of each pair are permuted before correlating. This
+                     matches the noise structure of the observed and
+                     ceiling distributions, so all three violins are
+                     directly comparable. Centered near 0 under no
                      correspondence.
         - Ceiling  : two independent bootstrap resamples WITHIN a single
                      condition; correlate their distance/cosine matrices.
@@ -64,10 +65,10 @@ Outputs:
 clc; clear;
 close all
 %% Configuration
-monkey              = 'FR';        % 'FR' or 'KO'
-vp                  = 'V1';        % 'V1' or 'V2'
+monkey              = 'KO';        % 'FR' or 'KO'
+vp                  = 'V2';        % 'V1' or 'V2'
 timewindow          = [330 630];   % spike-count window (ms)
-normalize_mode      = 'zscore';        % 'raw' | 'zscore' | 'pt'
+normalize_mode      = 'raw';        % 'raw' | 'zscore' | 'pt'
 trial_sample_repeat = 100;         % # bootstrap resamples for observed distribution
 ceiling_repeat      = 100;         % # bootstrap-pair iterations per condition for ceiling
 shuffle_repeat      = 1000;        % # stimulus-label shuffles for null
@@ -193,23 +194,37 @@ for r = 1:ceiling_repeat
     end
 end
 
-%% Null: stimulus-label shuffle on trial-averaged matrices
-fprintf('Null (stimulus-label shuffle, R=%d per pair)\n', shuffle_repeat);
+%% Null: stimulus-label shuffle nested in bootstrap resamples
+% Each iteration: fresh joint bootstrap resample of all conditions, then
+% permute stimulus IDs in one condition of each pair before correlating.
+% This matches the noise structure of the observed and ceiling
+% distributions, so the three violins are directly comparable -- the only
+% thing distinguishing them is whether i<->i correspondence is preserved,
+% broken via permutation, or replaced by a second independent draw of the
+% same condition.
+fprintf('Null (shuffle nested in bootstrap, R=%d)\n', shuffle_repeat);
 dist_r_null   = zeros(shuffle_repeat, n_pairs);
 dist_rho_null = zeros(shuffle_repeat, n_pairs);
 cos_r_null    = zeros(shuffle_repeat, n_pairs);
 cos_rho_null  = zeros(shuffle_repeat, n_pairs);
 
-for p = 1:n_pairs
-    i = pair_list{p}(1); j = pair_list{p}(2);
-    Di   = D_avg{i};   Dj   = D_avg{j};
-    Ci   = Cos_avg{i}; Cj   = Cos_avg{j};
-    for r = 1:shuffle_repeat
+for r = 1:shuffle_repeat
+    % Joint bootstrap resample of all conditions
+    D_r   = cell(1, nconds);
+    Cos_r = cell(1, nconds);
+    for i = 1:nconds
+        M = trial_mean_bootstrap(data_trial_proc{i}, labels);
+        if strcmp(normalize_mode, 'pt'), M = pt_normalize(M); end
+        [D_r{i}, Cos_r{i}] = geom_metrics(M);
+    end
+    % Shuffle stimulus IDs in the second condition of each pair before correlating
+    for p = 1:n_pairs
+        i = pair_list{p}(1); j = pair_list{p}(2);
         perm = randperm(nstim);
-        Dj_sh = Dj(perm, perm);
-        Cj_sh = Cj(perm, perm);
-        [dist_r_null(r,p), dist_rho_null(r,p)] = pair_corr(Di, Dj_sh);
-        [cos_r_null(r,p),  cos_rho_null(r,p)]  = pair_corr(Ci, Cj_sh);
+        Dj_sh = D_r{j}(perm, perm);
+        Cj_sh = Cos_r{j}(perm, perm);
+        [dist_r_null(r,p), dist_rho_null(r,p)] = pair_corr(D_r{i},   Dj_sh);
+        [cos_r_null(r,p),  cos_rho_null(r,p)]  = pair_corr(Cos_r{i}, Cj_sh);
     end
 end
 
@@ -384,7 +399,7 @@ for i = 1:nconds
 end
 sgtitle(ttl);
 % saveas(fig, fullfile(fig_root, [fname '.fig']));
-% saveas(fig, fullfile(fig_root, [fname '.png']));
+saveas(fig, fullfile(fig_root, [fname '.png']));
 end
 
 function plot_scatter(M_cell, ttl, cond_names, pair_list, pair_names, stats, field, fig_root, fname)
@@ -410,7 +425,7 @@ for p = 1:numel(pair_list)
 end
 sgtitle(ttl);
 % saveas(fig, fullfile(fig_root, [fname '.fig']));
-% saveas(fig, fullfile(fig_root, [fname '.png']));
+saveas(fig, fullfile(fig_root, [fname '.png']));
 end
 
 function plot_distributions(obs, null_dist, ceil_dist, pair_list, pair_names, ...
@@ -457,7 +472,7 @@ for p = 1:n_pairs
 end
 sgtitle(ttl);
 % saveas(fig, fullfile(fig_root, [fname '.fig']));
-% saveas(fig, fullfile(fig_root, [fname '.png']));
+saveas(fig, fullfile(fig_root, [fname '.png']));
 end
 
 function violin_at(data, x_center, width, color)
