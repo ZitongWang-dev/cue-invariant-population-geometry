@@ -31,7 +31,7 @@ Description:
 clc; clear;
 
 %% Configuration
-monkey        = 'FR';   % 'FR' or 'KO'
+monkey        = 'KO';   % 'FR' or 'KO'
 file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_per_session_results'];
 
 areas       = {'V1', 'V2'};
