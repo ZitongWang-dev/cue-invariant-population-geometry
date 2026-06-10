@@ -1,0 +1,319 @@
+%{
+% FILENAME: procrustes_Gabor_resps_decoding_basic_incremental_pr.m
+% AUTHOR:   Zitong Wang (incremental + PR extension)
+% DATE:     2025-07-13 (PR variant)
+%
+% DESCRIPTION:
+%   Incremental Procrustes-based transfer decoding with participation ratio
+%   (PR) on synthetic Gabor-filter trial data. This is the Gabor-side mirror of
+%   procrustes_decoding_basic_incremental_pr.m, so neural and Gabor results
+%   share the same output format and can be read by one visualization.
+%
+%   Extends procrustes_Gabor_resps_decoding_basic.m in three ways:
+%     (1) Filter-count sweep uses uniform 10-unit steps (10,20,...,max), where
+%         max is the number of available filters in the loaded model, so sizes
+%         match the neural sweep exactly over the overlapping range.
+%     (2) At each sampled filter subset, computes the PR of the trial-averaged
+%         signal manifold for BOTH conditions in the pair, tagged by condition.
+%     (3) Output is reorganized as a struct per filter-count (matching neural).
+%
+%   PR is computed on the z-scored, 10-trial-averaged 50 x N response matrix,
+%   centered across stimuli, as (sum lambda)^2 / sum(lambda^2) over the
+%   covariance spectrum (via SVD; scale- and Procrustes-invariant). The mean is
+%   estimated from the generated Poisson trials, NOT from the noiseless filter
+%   rate, so the estimator matches the neural pipeline (same residual-noise
+%   treatment); using the known rate would give Gabor a clean-mean advantage the
+%   neural data never gets. No second renormalization after averaging.
+%
+% Output (per pair file): a 1 x numel(neuron_list) cell array; each cell is a
+% struct with fields:
+%     .neuron_num     scalar, number of sampled filters
+%     .stim1, .stim2  condition labels ('ac'/'ec'/'ex'); stim1 transformed, stim2 trained
+%     .acc            [(neuron_sample_repeat*trial_sample_repeat) x 8] decoding accuracies
+%                     (same 8 metrics, same order, as the basic Gabor script)
+%     .acc_repeat_id  [(...) x 1] neuron-repeat index for each acc row (for PR<->acc pairing)
+%     .pr_stim1       [neuron_sample_repeat x 1] PR of the stim1 manifold per repeat
+%     .pr_stim2       [neuron_sample_repeat x 1] PR of the stim2 manifold per repeat
+%
+%   To pool a condition's PR, gather pr_stim1 from the pairs where stim1 == that
+%   condition and pr_stim2 from the pairs where stim2 == that condition.
+%
+% Outputs saved to:
+%   results/decoding_outputs/procrustes_Gabor_incremental_pr_results/<filter_name>/
+%}
+
+%% INITIALIZATION
+clc;
+clear;
+
+%% CONFIGURATION
+% Select the Gabor filter model to be analyzed.
+% Options: 'even and odd combined', 'complex'
+filter_name = 'even and odd combined';
+
+%% LOAD AND PREPARE DATA
+fprintf('Loading data for "%s" model...\n', filter_name);
+
+% --- Load synthetic trial data ---
+data_file = fullfile('..','..','Gabor_filters_response_data','sampled_trials', filter_name, [filter_name '.mat']);
+spike_data = load(data_file, 'response_array');
+spike_data = spike_data.response_array;
+
+% --- Prepare output directory ---
+save_path = fullfile('..','..','results','decoding_outputs','procrustes_Gabor_incremental_pr_results', filter_name);
+if ~exist(save_path, 'dir'), mkdir(save_path); end
+
+% --- Format data for decoding (50 stimuli x 10 trials -> 500 x N per condition) ---
+data_trial = cellfun(@(x) cell2mat(x), spike_data, 'UniformOutput', false);
+
+%% Build incremental filter-count list (uniform 10-unit steps)
+% Sweep ceiling is the number of available filters in this model.
+all_neuron_num = size(data_trial{1}, 2);
+neuron_list = unique([10:10:all_neuron_num, all_neuron_num]);
+fprintf('Sweeping filter counts: %s (max %d).\n', mat2str(neuron_list), all_neuron_num);
+
+% Define stimulus labels (50 stimuli, 10 trials each).
+labels = reshape(repmat((1:50)', 1, 10)', [], 1);
+
+%% RUN DECODING ANALYSIS
+% --- Set repetition and randomization parameters ---
+neuron_sample_repeat = 20; % matches the neural incremental script for comparability / tractability
+trial_sample_repeat = 15;  % Number of times to resample trial partitions
+rng(1); % Set the random seed for reproducibility
+
+tic;
+fprintf('Starting incremental decoding + PR for "%s" model...\n', filter_name);
+
+% --- Run decoding for each stimulus pair ---
+acec_results = Gabor_incre_decoding('ac','ec',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'acec_results.mat'),'acec_results');
+fprintf('Saved acec_results.mat\n');
+
+ecex_results = Gabor_incre_decoding('ec','ex',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'ecex_results.mat'),'ecex_results');
+fprintf('Saved ecex_results.mat\n');
+
+acex_results = Gabor_incre_decoding('ac','ex',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'acex_results.mat'),'acex_results');
+fprintf('Saved acex_results.mat\n');
+
+ecac_results = Gabor_incre_decoding('ec','ac',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'ecac_results.mat'),'ecac_results');
+fprintf('Saved ecac_results.mat\n');
+
+exec_results = Gabor_incre_decoding('ex','ec',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'exec_results.mat'),'exec_results');
+fprintf('Saved exec_results.mat\n');
+
+exac_results = Gabor_incre_decoding('ex','ac',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'exac_results.mat'),'exac_results');
+fprintf('Saved exac_results.mat\n');
+
+toc;
+fprintf('Analysis complete.\n');
+
+%%
+function results = Gabor_incre_decoding(stim1,stim2,data_trial,labels,neuron_num_list,neuron_sample_repeat,trial_sample_repeat)
+% stim1 is transformed, stim2 is the training data
+
+pair_wise_data_trial = pair_pcaloader(data_trial,stim1,stim2);
+
+%load data
+stim1_data = pair_wise_data_trial(1:500,:);
+stim2_data = pair_wise_data_trial(501:1000,:);
+
+% zscore (per filter, over the full set of trials)
+stim1_data = zscore(stim1_data);
+stim2_data = zscore(stim2_data);
+
+results = cell(1,length(neuron_num_list)); % each cell stores results for one filter-number decoding
+
+for neuron_squence = 1:length(neuron_num_list)
+    disp([stim1,stim2,num2str(neuron_squence)])
+
+    % sliced outputs for parfor: one acc block / one id block / one PR value per neuron-repeat
+    acc_blocks = cell(neuron_sample_repeat,1);
+    id_blocks  = cell(neuron_sample_repeat,1);
+    pr1_vec    = zeros(neuron_sample_repeat,1);
+    pr2_vec    = zeros(neuron_sample_repeat,1);
+
+    parfor neuron_repeat = 1:neuron_sample_repeat
+        % sample different filter subset, for neuron_sample_repeat times
+        sampled_neuron_idx = sample_neuron(neuron_num_list,neuron_squence);
+        stim1_data_sample = stim1_data(:,sampled_neuron_idx);
+        stim2_data_sample = stim2_data(:,sampled_neuron_idx);
+
+        % participation ratio of each condition's signal manifold on this
+        % subset (independent of the trial split -> computed once per repeat)
+        pr1_vec(neuron_repeat) = compute_pr(stim1_data_sample);
+        pr2_vec(neuron_repeat) = compute_pr(stim2_data_sample);
+
+        % sample trials multiple times
+        trial_result = zeros(trial_sample_repeat,8);
+        for trial_repeat =1:trial_sample_repeat
+            [training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,toy_transd,partially_transformed_stim1] = data_trial_sampler(stim1_data_sample,stim2_data_sample,labels);
+            [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_onlyscale,accuracy_onlyrotation,accuracy_onlytranslation,accuracy_non_transfer_control] = ...
+            pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,toy_transd,partially_transformed_stim1);
+
+            trial_result(trial_repeat,:) = [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_onlyscale,accuracy_onlyrotation,accuracy_onlytranslation,accuracy_non_transfer_control];
+
+        end
+        acc_blocks{neuron_repeat} = trial_result;
+        id_blocks{neuron_repeat}  = repmat(neuron_repeat,trial_sample_repeat,1);
+    end
+
+    one = struct();
+    one.neuron_num    = neuron_num_list(neuron_squence);
+    one.stim1         = stim1;
+    one.stim2         = stim2;
+    one.acc           = cat(1, acc_blocks{:});   % (nrep*trep) x 8
+    one.acc_repeat_id = cat(1, id_blocks{:});    % (nrep*trep) x 1
+    one.pr_stim1      = pr1_vec;                 % nrep x 1
+    one.pr_stim2      = pr2_vec;                 % nrep x 1
+    results{neuron_squence} = one;
+end
+
+end
+
+function pr = compute_pr(zscored_data)
+% Participation ratio of the trial-averaged signal manifold.
+% Input : zscored_data, a [500 x N] matrix (50 stimuli x 10 trials),
+%         already z-scored per unit over the full set of trials.
+% Method: trial-average to [50 x N], center across stimuli, then
+%         PR = (sum lambda)^2 / sum(lambda^2) over the covariance spectrum.
+%         Computed via SVD of the centered trial-averaged matrix, which is
+%         scale-invariant and avoids rank-deficiency artifacts when N > 50.
+avg = take_average(zscored_data, 10);   % 50 x N signal manifold
+avg = avg - mean(avg, 1);               % center across the 50 stimuli
+s = svd(avg, 'econ');                   % singular values
+lambda = s.^2;                          % covariance eigenvalues (up to a constant)
+lambda = lambda(lambda > 0);            % numerical safety
+pr = (sum(lambda)^2) / sum(lambda.^2);
+end
+
+function stim_data_trial_averged = take_average(stim_data,number_of_average)
+[trial,neuron] = size(stim_data);
+stim_data_trial_averged = zeros(50,neuron);
+for i = 1:50
+    temp = stim_data(i*number_of_average-(number_of_average-1):i*number_of_average,:);
+    temp_mean = mean(temp,1);
+    stim_data_trial_averged(i,:) = temp_mean;
+end
+end
+
+function [training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,toy_transd,partially_transformed_stim1] = data_trial_sampler(stim1_data_sample,stim2_data_sample,labels)
+% sample trial
+tial_out_of_ten = 1;
+valid_trial_idx = sample_trial(tial_out_of_ten); % 10 fold
+training_trial_idx = setdiff([1:500],valid_trial_idx);
+
+% SVM training data, all stim2 data
+training_data = stim2_data_sample;
+training_label = labels;
+
+% test data 
+stim1_test_data = stim1_data_sample(valid_trial_idx,:);
+stim1_test_label = labels(valid_trial_idx,:);
+
+% transformed data
+stim2_target_data = stim2_data_sample;
+stim1_2transform_data = stim1_data_sample(training_trial_idx,:);
+% take the mean
+stim2_target_data_averged = take_average(stim2_target_data,10);
+stim1_2transform_data_averged = take_average(stim1_2transform_data,10 - tial_out_of_ten);
+
+[d,Z,transform] = procrustes(stim2_target_data_averged,stim1_2transform_data_averged);
+t_matrix = transform.T;
+b = transform.b;
+c = transform.c;
+transformed_stim1 = b*stim1_test_data*t_matrix+c; 
+
+% partially transformed data - without 1 transofrm
+% without_scaling_transformed_stim1 = stim1_test_data*t_matrix+c;
+% without_rotation_transformed_stim1 = b*stim1_test_data+c;
+% without_translation_transformed_stim1 = b*stim1_test_data*t_matrix;
+% partially_transformed_stim1 = {without_scaling_transformed_stim1,without_rotation_transformed_stim1,without_translation_transformed_stim1};
+
+% partially transformed data - only 1 transofrm
+scaling_only_transformed_stim1 = b*stim1_test_data;
+rotation_only_transformed_stim1 = stim1_test_data*t_matrix;
+translation_only_transformed_stim1 = stim1_test_data + c;
+partially_transformed_stim1 = {scaling_only_transformed_stim1,rotation_only_transformed_stim1,translation_only_transformed_stim1};
+
+% randomlized data
+shuffle_idx = randperm(size(stim1_2transform_data_averged,1));
+toy_averaged = stim1_2transform_data_averged(shuffle_idx,:);
+[d_fake,Z_fake,t_fake] = procrustes(stim2_target_data_averged,toy_averaged);
+t_fakematrix = t_fake.T;
+toy_b = t_fake.b;
+toy_c = t_fake.c;
+toy_transd = toy_b * stim1_test_data*t_fakematrix + toy_c;
+
+
+% fake, transform, validation has the same label
+end
+
+
+function sample_trial_idx = sample_trial(trialnum_outof_ten)
+% trial sampling
+sample_trial_matrix = zeros(50,10); % same for all cases
+for i = 1:50
+    sample_trial_matrix(i,:) = randperm(10);
+end
+sample_trial_4condition = sample_trial_matrix(:,1:trialnum_outof_ten); % sampled trial num for each condition
+base = [0:10:490]';
+sample_trial_idx = sample_trial_4condition+base;
+sample_trial_idx = reshape(sample_trial_idx,[],1);
+sample_trial_idx = sort(sample_trial_idx);
+end
+
+function sampled_neuron_idx = sample_neuron(neuron_num_list,sequence)
+% neuron/filter sampling
+% sequence: the idx of how many units to be sampled
+origin_neuron_num = max(neuron_num_list);
+sampled_neuron_num = neuron_num_list(sequence);
+sampled_neuron_idx = randperm(origin_neuron_num,sampled_neuron_num);
+disp([origin_neuron_num,sampled_neuron_num])
+end
+
+function pair_wise_pca_data = pair_pcaloader(dca_data,stim1,stim2)
+% use the input stimulus name to load pair_wise dca data
+
+name2idx = struct('ac',1,'ec',2,'ex',3);
+
+stim1_data = dca_data{name2idx.(stim1)};
+stim2_data = dca_data{name2idx.(stim2)};
+pair_wise_pca_data = [stim1_data;stim2_data];
+end
+
+function [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_noscale,accuracy_norotation,accuracy_notranslation,accuracy_non_transfer_control] ...
+    = pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,toy_transd,partially_transformed_stim1)
+% get 4 accs
+stim2_model = fitcecoc(training_data,training_label);
+
+CVMdl1 = crossval(stim2_model,'KFold',10);
+genError1 = kfoldLoss(CVMdl1);
+genAcc = 1-genError1;
+
+% non-transformation transfer decoding
+predicted_Label_s1 = predict(stim2_model,stim1_test_data);
+accuracy_s1 = sum(stim1_test_label == predicted_Label_s1)/length(predicted_Label_s1);
+% with-transformation transfer decoding
+predicted_Label_transformed_s1 = predict(stim2_model,transformed_stim1);
+accuracy_transformed_s1 = sum(stim1_test_label == predicted_Label_transformed_s1)/length(predicted_Label_transformed_s1);
+% random-transformation transfer decoding
+predicted_Label_rand = predict(stim2_model,toy_transd);
+accuracy_rand = sum(stim1_test_label == predicted_Label_rand)/length(predicted_Label_rand);
+% partial-transformation transfer decoding
+% scaling only
+predicted_Label_scale = predict(stim2_model,partially_transformed_stim1{1,1});
+accuracy_noscale= sum(stim1_test_label == predicted_Label_scale)/length(predicted_Label_scale);
+% rotation only
+predicted_Label_rotation = predict(stim2_model,partially_transformed_stim1{1,2});
+accuracy_norotation= sum(stim1_test_label == predicted_Label_rotation)/length(predicted_Label_rotation);
+% translation only
+predicted_Label_translation = predict(stim2_model,partially_transformed_stim1{1,3});
+accuracy_notranslation= sum(stim1_test_label == predicted_Label_translation)/length(predicted_Label_translation);
+% non-transformation transfer decoding control
+accuracy_non_transfer_control = sum(randperm(50)' == predicted_Label_s1)/length(predicted_Label_s1);
+end
