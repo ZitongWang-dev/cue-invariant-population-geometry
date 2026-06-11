@@ -1,0 +1,386 @@
+%{
+Filename: geometric_metrics_characteristic_trials.m
+Author:   Zitong Wang
+Date:     2026-05-23
+
+Description:
+    Variation of geometric_metrics_basic.m that asks which trials carry the
+    cue-invariant geometric structure. Hypothesis: high-magnitude responses
+    (trials far from the population center) preserve the across-rendering
+    geometry better than central trials, which would help explain why
+    single-trial cue-transfer decoding works despite only modest mean-level
+    geometry correlation.
+
+    Instead of representing each stimulus by its full 10-trial mean, each
+    stimulus is represented by the average of k SELECTED trials, sweeping
+    k = 1..5. Three selection rules, plus references:
+
+        far    : average the k trials FARTHEST from the selection center.
+        near   : average the k trials NEAREST the selection center.
+        random : average k randomly chosen trials (noise-matched baseline).
+        mean   : average of all 10 trials (k=10 upper reference).
+        null   : random-k geometry with the stimulus correspondence between
+                 renderings shuffled (k-matched chance floor). Reuses the
+                 random-k matrices, permuting one rendering's stimulus IDs
+                 before correlating.
+
+    k is capped at 5 so that the far-k and near-k sets are disjoint (2k<=10).
+
+    Selection center (`center_mode`):
+        'global' : grand mean of all 500 trials of that rendering (primary).
+                   Picks the most distinctive trial per stimulus.
+        'own'    : the stimulus's own 10-trial mean (NEGATIVE CONTROL).
+                   "far" then = the noisiest trial for that stimulus, which
+                   should DEGRADE geometry. If global helps and own hurts,
+                   the effect is distance-from-global-structure, not trial
+                   extremeness per se.
+
+    For each rendering pair (ac-ec, ac-ex, ec-ex) and each k, the cross-
+    rendering correlation (Pearson r and Spearman rho) of the pairwise
+    distance matrix and the centroid cosine matrix is computed. Bootstrap
+    bands come from a single shared trial resample per iteration, so all
+    selection conditions carry the same trial-sampling variability.
+
+    Three normalization modes via `normalize_mode`, matching the basic
+    script: 'raw' (none), 'zscore' (per-neuron on the 500xN trial matrix),
+    'pt' (center + Frobenius on the final 50xN selected-trial matrix). For
+    'pt'/'raw' the selection distances are measured on raw trials; for
+    'zscore' they are measured on z-scored trials.
+
+Inputs:
+    neuronal_data/<monkey>/<vp>/<monkey>_<vp>_allstim.mat
+        variable 'three_stim_array' : 1x3 cell {ac, ec, ex} of
+                                       [trials x neurons] spike data.
+
+Outputs:
+    results/geometric_metrics_outputs/<monkey>/<vp>/
+        chartrials_<normalize_mode>_<center_mode>_results.mat
+    results/figures/geometric_metrics_<monkey>_<vp>/
+        {dist,cos}_ksweep_<normalize_mode>_<center_mode>.{fig,png}
+        (saveas calls are commented out during active development.)
+%}
+
+%% Initialization
+clc; clear;
+close all
+%% Configuration
+monkey         = 'KO';        % 'FR' or 'KO'
+vp             = 'V1';        % 'V1' or 'V2'
+timewindow     = [330 630];   % spike-count window (ms)
+normalize_mode = 'zscore';        % 'raw' | 'zscore' | 'pt'
+center_mode    = 'own';    % 'global' (primary) | 'own' (negative control)
+k_list         = 1:5;         % # selected trials per stimulus (cap 5 -> disjoint far/near)
+boot_repeat    = 100;         % # bootstrap iterations (shared resample drives all conditions)
+rng(1);
+
+%% Paths
+data_file = fullfile('..','..','neuronal_data', monkey, vp, ...
+    sprintf('%s_%s_allstim.mat', monkey, vp));
+result_root = fullfile('..','..','results','geometric_metrics_outputs', monkey, vp);
+fig_root    = fullfile('..','..','results','figures', ...
+    sprintf('geometric_metrics_%s_%s', monkey, vp));
+if ~exist(result_root,'dir'); mkdir(result_root); end
+if ~exist(fig_root,'dir');    mkdir(fig_root);    end
+
+%% Load data
+tmp = load(data_file, 'three_stim_array');
+spike_data = tmp.three_stim_array;
+nconds = numel(spike_data);
+
+data_trial  = cell(1, nconds);
+label_trial = cell(1, nconds);
+for i = 1:nconds
+    [data_trial{i}, label_trial{i}] = multiclass_svmloader_PT(spike_data{i}, timewindow);
+end
+labels = label_trial{1};
+
+cond_names = {'ac','ec','ex'};
+nstim  = max(labels);
+ntrial = sum(labels == 1);   % trials per stimulus (10)
+
+%% Trial-level normalization (z-score only)
+data_proc = cell(1, nconds);
+for i = 1:nconds
+    if strcmp(normalize_mode, 'zscore')
+        data_proc{i} = zscore(data_trial{i});
+    else
+        data_proc{i} = data_trial{i};
+    end
+end
+
+%% Precompute per-condition: trial indices, selection centers
+idx_by_stim = cell(1, nconds);   % idx_by_stim{i}{s} = global row indices of stim s
+C_global    = cell(1, nconds);   % 1 x N grand mean
+C_own       = cell(1, nconds);   % nstim x N per-stimulus means
+for i = 1:nconds
+    idx_by_stim{i} = cell(nstim, 1);
+    C_own{i} = zeros(nstim, size(data_proc{i}, 2));
+    for s = 1:nstim
+        gi = find(labels == s);
+        idx_by_stim{i}{s} = gi;
+        C_own{i}(s,:) = mean(data_proc{i}(gi,:), 1);
+    end
+    C_global{i} = mean(data_proc{i}, 1);
+end
+
+%% Rendering pairs
+pair_list  = {[1 2], [1 3], [2 3]};
+pair_names = {'acec', 'acex', 'ecex'};
+n_pairs    = numel(pair_list);
+n_k        = numel(k_list);
+
+%% Preallocate result arrays
+% selection conditions: [boot x pair x k]
+[far_dist_r,  near_dist_r,  rand_dist_r,  null_dist_r]  = deal(zeros(boot_repeat, n_pairs, n_k));
+[far_cos_r,   near_cos_r,   rand_cos_r,   null_cos_r]   = deal(zeros(boot_repeat, n_pairs, n_k));
+[far_dist_rho,near_dist_rho,rand_dist_rho,null_dist_rho]= deal(zeros(boot_repeat, n_pairs, n_k));
+[far_cos_rho, near_cos_rho, rand_cos_rho, null_cos_rho] = deal(zeros(boot_repeat, n_pairs, n_k));
+% mean (k=10) reference: [boot x pair]
+[mean_dist_r, mean_cos_r, mean_dist_rho, mean_cos_rho]  = deal(zeros(boot_repeat, n_pairs));
+
+%% Bootstrap loop (shared resample per iteration drives every condition)
+fprintf('%s %s | normalize=%s | center=%s | boot=%d\n', ...
+    monkey, vp, normalize_mode, center_mode, boot_repeat);
+for b = 1:boot_repeat
+    % Per-condition geometry for each selection rule and k, plus mean
+    D_far  = cell(nconds, n_k);  Cos_far  = cell(nconds, n_k);
+    D_near = cell(nconds, n_k);  Cos_near = cell(nconds, n_k);
+    D_rand = cell(nconds, n_k);  Cos_rand = cell(nconds, n_k);
+    D_mean = cell(nconds, 1);    Cos_mean = cell(nconds, 1);
+
+    for i = 1:nconds
+        % One shared resample of trials for this condition this iteration
+        trials_cell = cell(nstim, 1);   % {s} = ntrial x N resampled trials
+        dmat = zeros(nstim, ntrial);    % distance of each resampled trial to its center
+        for s = 1:nstim
+            gi = idx_by_stim{i}{s};
+            rs = gi(randi(numel(gi), numel(gi), 1));   % resample with replacement
+            Ts = data_proc{i}(rs, :);
+            trials_cell{s} = Ts;
+            if strcmp(center_mode, 'global')
+                refc = C_global{i};
+            else
+                refc = C_own{i}(s, :);
+            end
+            dmat(s,:) = sqrt(sum((Ts - refc).^2, 2))';
+        end
+
+        % Mean (all trials) reference
+        M = build_matrix(trials_cell, dmat, ntrial, 'far');  % k=ntrial 'far' == all trials
+        if strcmp(normalize_mode, 'pt'), M = pt_normalize(M); end
+        [D_mean{i}, Cos_mean{i}] = geom_metrics(M);
+
+        % Selection rules across k
+        for ik = 1:n_k
+            k = k_list(ik);
+            Mf = build_matrix(trials_cell, dmat, k, 'far');
+            Mn = build_matrix(trials_cell, dmat, k, 'near');
+            Mr = build_matrix(trials_cell, dmat, k, 'rand');
+            if strcmp(normalize_mode, 'pt')
+                Mf = pt_normalize(Mf); Mn = pt_normalize(Mn); Mr = pt_normalize(Mr);
+            end
+            [D_far{i,ik},  Cos_far{i,ik}]  = geom_metrics(Mf);
+            [D_near{i,ik}, Cos_near{i,ik}] = geom_metrics(Mn);
+            [D_rand{i,ik}, Cos_rand{i,ik}] = geom_metrics(Mr);
+        end
+    end
+
+    % Cross-rendering correlations
+    for p = 1:n_pairs
+        i = pair_list{p}(1); j = pair_list{p}(2);
+
+        % mean reference
+        [mean_dist_r(b,p), mean_dist_rho(b,p)] = pair_corr(D_mean{i},   D_mean{j});
+        [mean_cos_r(b,p),  mean_cos_rho(b,p)]  = pair_corr(Cos_mean{i}, Cos_mean{j});
+
+        for ik = 1:n_k
+            [far_dist_r(b,p,ik),  far_dist_rho(b,p,ik)]  = pair_corr(D_far{i,ik},  D_far{j,ik});
+            [far_cos_r(b,p,ik),   far_cos_rho(b,p,ik)]   = pair_corr(Cos_far{i,ik}, Cos_far{j,ik});
+            [near_dist_r(b,p,ik), near_dist_rho(b,p,ik)] = pair_corr(D_near{i,ik}, D_near{j,ik});
+            [near_cos_r(b,p,ik),  near_cos_rho(b,p,ik)]  = pair_corr(Cos_near{i,ik},Cos_near{j,ik});
+            [rand_dist_r(b,p,ik), rand_dist_rho(b,p,ik)] = pair_corr(D_rand{i,ik}, D_rand{j,ik});
+            [rand_cos_r(b,p,ik),  rand_cos_rho(b,p,ik)]  = pair_corr(Cos_rand{i,ik},Cos_rand{j,ik});
+
+            % null: random-k geometry with stimulus correspondence shuffled
+            perm = randperm(nstim);
+            [null_dist_r(b,p,ik), null_dist_rho(b,p,ik)] = pair_corr(D_rand{i,ik},   D_rand{j,ik}(perm,perm));
+            [null_cos_r(b,p,ik),  null_cos_rho(b,p,ik)]  = pair_corr(Cos_rand{i,ik}, Cos_rand{j,ik}(perm,perm));
+        end
+    end
+
+    if mod(b, 20) == 0, fprintf('  iter %d/%d\n', b, boot_repeat); end
+end
+
+%% Save results
+% save(fullfile(result_root, sprintf('chartrials_%s_%s_results.mat', normalize_mode, center_mode)), ...
+%     'far_dist_r','near_dist_r','rand_dist_r','null_dist_r','mean_dist_r', ...
+%     'far_cos_r','near_cos_r','rand_cos_r','null_cos_r','mean_cos_r', ...
+%     'far_dist_rho','near_dist_rho','rand_dist_rho','null_dist_rho','mean_dist_rho', ...
+%     'far_cos_rho','near_cos_rho','rand_cos_rho','null_cos_rho','mean_cos_rho', ...
+%     'k_list','normalize_mode','center_mode','boot_repeat','timewindow', ...
+%     'cond_names','pair_names','pair_list');
+
+%% Visualization
+fprintf('Generating figures...\n');
+plot_ksweep(far_dist_r, near_dist_r, rand_dist_r, null_dist_r, mean_dist_r, ...
+    k_list, pair_list, cond_names, ...
+    sprintf('Distance — Pearson r  [%s, center=%s]', normalize_mode, center_mode), ...
+    fig_root, sprintf('dist_ksweep_%s_%s', normalize_mode, center_mode));
+
+plot_ksweep(far_cos_r, near_cos_r, rand_cos_r, null_cos_r, mean_cos_r, ...
+    k_list, pair_list, cond_names, ...
+    sprintf('Centroid cosine — Pearson r  [%s, center=%s]', normalize_mode, center_mode), ...
+    fig_root, sprintf('cos_ksweep_%s_%s', normalize_mode, center_mode));
+
+%% Print summary (Pearson r, mean across bootstrap)
+fprintf('\n=== %s %s [normalize=%s, center=%s] : Pearson r (boot mean) ===\n', ...
+    monkey, vp, normalize_mode, center_mode);
+print_summary('DISTANCE', far_dist_r, near_dist_r, rand_dist_r, null_dist_r, mean_dist_r, k_list, pair_names);
+print_summary('COSINE',   far_cos_r,  near_cos_r,  rand_cos_r,  null_cos_r,  mean_cos_r,  k_list, pair_names);
+
+
+%% ====================== Local functions ======================
+
+function idx = pick_idx(d, k, rule)
+% Return slot indices of k selected trials given per-trial distances d.
+switch rule
+    case 'far'
+        [~, ord] = sort(d, 'ascend'); idx = ord(end-k+1:end);
+    case 'near'
+        [~, ord] = sort(d, 'ascend'); idx = ord(1:k);
+    case 'rand'
+        idx = randperm(numel(d), k);
+end
+end
+
+function M = build_matrix(trials_cell, dmat, k, rule)
+% Build a 50xN matrix: each stimulus = mean of its k selected trials.
+nstim = numel(trials_cell);
+N = size(trials_cell{1}, 2);
+M = zeros(nstim, N);
+for s = 1:nstim
+    idx = pick_idx(dmat(s,:), k, rule);
+    M(s,:) = mean(trials_cell{s}(idx,:), 1);
+end
+end
+
+function M = pt_normalize(M)
+% Procrustes-style normalization: center on stimulus centroid, divide by
+% Frobenius norm of the centered matrix.
+c  = mean(M, 1);
+M  = M - c;
+fn = norm(M, 'fro');
+if fn > 0, M = M / fn; end
+end
+
+function [D, Cos] = geom_metrics(M)
+% D   : pairwise Euclidean distances.
+% Cos : centroid-anchored cosine similarity (diagonal 1).
+nstim = size(M, 1);
+D = squareform(pdist(M, 'euclidean'));
+c  = mean(M, 1);
+Mc = M - c;
+nrm = sqrt(sum(Mc.^2, 2));
+Mc_unit = Mc ./ max(nrm, eps);
+Cos = Mc_unit * Mc_unit';
+Cos = max(min(Cos, 1), -1);
+Cos(1:nstim+1:end) = 1;
+end
+
+function [r, rho] = pair_corr(M1, M2)
+% Correlation across upper-triangular off-diagonal entries (1225 pairs).
+n = size(M1, 1);
+mask = triu(true(n), 1);
+v1 = M1(mask); v2 = M2(mask);
+r   = corr(v1, v2, 'type', 'Pearson');
+rho = corr(v1, v2, 'type', 'Spearman');
+end
+
+function plot_ksweep(far, near, rand_, null_, mean_arr, k_list, pair_list, cond_names, ttl, fig_root, fname)
+% far/near/rand_/null_ : [boot x n_pairs x n_k] Pearson r for one metric.
+% mean_arr             : [boot x n_pairs]       Pearson r of the full mean.
+fig = figure('Position', [100 100 1500 470], 'Color', 'w');
+n_pairs = numel(pair_list);
+
+col_far  = [0.20 0.40 0.80];
+col_near = [0.85 0.45 0.20];
+col_rand = [0.45 0.65 0.45];
+col_null = [0.60 0.60 0.60];
+col_mean = [0.10 0.10 0.10];
+
+xpad = [k_list(1)-0.2, k_list(end)+0.2];
+
+% shared y-limits across panels
+allv = cat(3, far, near, rand_, null_);
+ymin = min([allv(:); mean_arr(:)]);
+ymax = max([allv(:); mean_arr(:)]);
+yr = ymax - ymin; ylims = [ymin - 0.08*yr, ymax + 0.08*yr];
+
+for p = 1:n_pairs
+    i = pair_list{p}(1); j = pair_list{p}(2);
+    subplot(1, n_pairs, p); hold on;
+
+    h_null = band_line(k_list, squeeze(null_(:,p,:)), col_null);
+    h_rand = band_line(k_list, squeeze(rand_(:,p,:)), col_rand);
+    h_near = band_line(k_list, squeeze(near(:,p,:)),  col_near);
+    h_far  = band_line(k_list, squeeze(far(:,p,:)),   col_far);
+    h_mean = mean_ref(mean_arr(:,p), col_mean, xpad);
+
+    yline(0, 'k:', 'LineWidth', 0.5);
+    xlim(xpad); ylim(ylims);
+    xticks(k_list);
+    xlabel('k (trials per stimulus)');
+    ylabel('Pearson r');
+    title(sprintf('%s vs %s', upper(cond_names{i}), upper(cond_names{j})));
+    set(gca, 'Box', 'on');
+    if p == 1
+        legend([h_far, h_near, h_rand, h_null, h_mean], ...
+            {'far','near','random','null (shuffle)','mean (k=10)'}, ...
+            'Location', 'northwest', 'Box', 'off');
+    end
+end
+sgtitle(ttl);
+% saveas(fig, fullfile(fig_root, [fname '.fig']));
+% saveas(fig, fullfile(fig_root, [fname '.png']));
+end
+
+function h = band_line(x, Y, color)
+% Y: [boot x n_k]. Plot mean line with 2.5/97.5 percentile shaded band.
+m  = mean(Y, 1);
+lo = prctile(Y, 2.5, 1);
+hi = prctile(Y, 97.5, 1);
+fill([x, fliplr(x)], [lo, fliplr(hi)], color, ...
+    'EdgeColor', 'none', 'FaceAlpha', 0.18, 'HandleVisibility', 'off');
+h = plot(x, m, '-o', 'Color', color, 'LineWidth', 1.6, ...
+    'MarkerSize', 4, 'MarkerFaceColor', color);
+end
+
+function h = mean_ref(y, color, xpad)
+% Horizontal reference line (full-mean value) with faint percentile band.
+m  = mean(y);
+lo = prctile(y, 2.5);
+hi = prctile(y, 97.5);
+fill([xpad(1) xpad(2) xpad(2) xpad(1)], [lo lo hi hi], color, ...
+    'EdgeColor', 'none', 'FaceAlpha', 0.10, 'HandleVisibility', 'off');
+h = plot(xpad, [m m], '--', 'Color', color, 'LineWidth', 1.3);
+end
+
+function print_summary(label, far, near, rand_, null_, mean_arr, k_list, pair_names)
+fprintf('\n-- %s --\n', label);
+for p = 1:numel(pair_names)
+    fprintf('%s\n', pair_names{p});
+    fprintf('  %-8s', 'k:');
+    fprintf('%7d', k_list); fprintf('\n');
+    print_row('far',    squeeze(mean(far(:,p,:),1)));
+    print_row('near',   squeeze(mean(near(:,p,:),1)));
+    print_row('random', squeeze(mean(rand_(:,p,:),1)));
+    print_row('null',   squeeze(mean(null_(:,p,:),1)));
+    fprintf('  %-8s%7.3f  (k=10)\n', 'mean', mean(mean_arr(:,p)));
+end
+end
+
+function print_row(name, vals)
+fprintf('  %-8s', name);
+fprintf('%7.3f', vals(:)');
+fprintf('\n');
+end
