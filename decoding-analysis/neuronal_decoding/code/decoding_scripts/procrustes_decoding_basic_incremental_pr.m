@@ -1,7 +1,7 @@
 %{
 Filename: procrustes_decoding_basic_incremental_pr.m
 Author: Zitong Wang (PR extension)
-Date: 2025-06-24 (PR variant)
+Date: 2026-06-10 (PR variant)
 
 Description:
     Incremental Procrustes-based transfer decoding with participation ratio (PR).
@@ -53,7 +53,7 @@ clc; clear;
 
 %% Configuration
 monkey = 'KO';      % Monkey ID: 'FR' or 'KO'
-vp = 'V1';          % Visual area: 'V1' or 'V2'
+vp = 'V2';          % Visual area: 'V1' or 'V2'
 
 data_file = fullfile('..','..','neuronal_data', monkey, vp, sprintf('%s_%s_allstim.mat', monkey, vp));
 tmp = load(data_file, 'three_stim_array');
