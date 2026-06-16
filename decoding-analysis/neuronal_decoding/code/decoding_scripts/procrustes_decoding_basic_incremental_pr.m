@@ -52,8 +52,8 @@ Outputs:
 clc; clear;
 
 %% Configuration
-monkey = 'KO';      % Monkey ID: 'FR' or 'KO'
-vp = 'V2';          % Visual area: 'V1' or 'V2'
+monkey = 'FR';      % Monkey ID: 'FR' or 'KO'
+vp = 'V1';          % Visual area: 'V1' or 'V2'
 
 data_file = fullfile('..','..','neuronal_data', monkey, vp, sprintf('%s_%s_allstim.mat', monkey, vp));
 tmp = load(data_file, 'three_stim_array');
@@ -91,11 +91,11 @@ rng(1);
 
 tic;
 % Run decoding for each transformation pair
-% acec_results = incre_decoding('ac','ec', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat);
-% save(fullfile(save_path,'acec_results.mat'),'acec_results');
-% 
-% ecex_results = incre_decoding('ec','ex', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat);
-% save(fullfile(save_path,'ecex_results.mat'),'ecex_results');
+acec_results = incre_decoding('ac','ec', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat);
+save(fullfile(save_path,'acec_results.mat'),'acec_results');
+
+ecex_results = incre_decoding('ec','ex', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat);
+save(fullfile(save_path,'ecex_results.mat'),'ecex_results');
 
 acex_results = incre_decoding('ac','ex', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat);
 save(fullfile(save_path,'acex_results.mat'),'acex_results');

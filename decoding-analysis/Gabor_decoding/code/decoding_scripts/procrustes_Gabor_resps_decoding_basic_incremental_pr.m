@@ -85,21 +85,21 @@ tic;
 fprintf('Starting incremental decoding + PR for "%s" model...\n', filter_name);
 
 % --- Run decoding for each stimulus pair ---
-% acec_results = Gabor_incre_decoding('ac','ec',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
-% save(fullfile(save_path,'acec_results.mat'),'acec_results');
-% fprintf('Saved acec_results.mat\n');
-% 
-% ecex_results = Gabor_incre_decoding('ec','ex',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
-% save(fullfile(save_path,'ecex_results.mat'),'ecex_results');
-% fprintf('Saved ecex_results.mat\n');
-% 
-% acex_results = Gabor_incre_decoding('ac','ex',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
-% save(fullfile(save_path,'acex_results.mat'),'acex_results');
-% fprintf('Saved acex_results.mat\n');
-% 
-% ecac_results = Gabor_incre_decoding('ec','ac',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
-% save(fullfile(save_path,'ecac_results.mat'),'ecac_results');
-% fprintf('Saved ecac_results.mat\n');
+acec_results = Gabor_incre_decoding('ac','ec',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'acec_results.mat'),'acec_results');
+fprintf('Saved acec_results.mat\n');
+
+ecex_results = Gabor_incre_decoding('ec','ex',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'ecex_results.mat'),'ecex_results');
+fprintf('Saved ecex_results.mat\n');
+
+acex_results = Gabor_incre_decoding('ac','ex',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'acex_results.mat'),'acex_results');
+fprintf('Saved acex_results.mat\n');
+
+ecac_results = Gabor_incre_decoding('ec','ac',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
+save(fullfile(save_path,'ecac_results.mat'),'ecac_results');
+fprintf('Saved ecac_results.mat\n');
 
 exec_results = Gabor_incre_decoding('ex','ec',data_trial,labels,neuron_list,neuron_sample_repeat,trial_sample_repeat);
 save(fullfile(save_path,'exec_results.mat'),'exec_results');
