@@ -53,7 +53,7 @@ clc; clear;
 
 %% Configuration
 monkey = 'FR';      % Monkey ID: 'FR' or 'KO'
-vp = 'V1';          % Visual area: 'V1' or 'V2'
+vp = 'V2';          % Visual area: 'V1' or 'V2'
 
 data_file = fullfile('..','..','neuronal_data', monkey, vp, sprintf('%s_%s_allstim.mat', monkey, vp));
 tmp = load(data_file, 'three_stim_array');
