@@ -64,7 +64,8 @@ pair_files = {'acec_results','ecex_results','acex_results', ...
               'ecac_results','exec_results','exac_results'};
 
 % --- Display options ---
-show_err = true;   % overlay +/-1 SEM error bars over the pooled resampling distribution
+show_err = true;          % overlay +/-1 SEM error bars over the pooled resampling distribution
+show_endpoint_N = true;   % (Figure 2) label each curve's largest-N endpoint with its N
 
 % --- Output figure location ---
 fig_dir = fullfile(script_dir, '..','..','results','figures','incremental_pr');
@@ -112,7 +113,7 @@ for p = 1:numel(P)
     % ----- LEFT axis: accuracy (self solid, PT dashed) -----
     yyaxis left
     if show_err
-        errorbar(x, P(p).self_m, P(p).self_sem, '-',  'Color',c, 'Marker','o', ...
+        errorbar(x, P(p).self_m, P(p).self_sem, '-',  'Color',c, 'Marker','s', ...
             'MarkerFaceColor',c, 'MarkerSize',4, 'LineWidth',1.5, 'CapSize',3);
         errorbar(x, P(p).rot_m,  P(p).rot_sem,  '--', 'Color',c, 'Marker','o', ...
             'MarkerSize',4, 'LineWidth',1.5, 'CapSize',3);
@@ -151,8 +152,8 @@ grid on; box on;
 
 % ----- Linestyle key: fake black lines naming the metric for each style -----
 yyaxis left
-h_self = plot(nan, nan, '-k',  'Marker','o', 'MarkerFaceColor','k', 'LineWidth',1.5);
-h_pt   = plot(nan, nan, '--k', 'Marker','o','MarkerFaceColor','k', 'LineWidth',1.5);
+h_self = plot(nan, nan, '-k',  'Marker','s', 'MarkerFaceColor','k', 'LineWidth',1.5);
+h_pt   = plot(nan, nan, '--k', 'Marker','o', 'LineWidth',1.5);
 h_pr   = plot(nan, nan, ':k',  'Marker','^', 'LineWidth',1.5);
 
 legend([pop_handles, h_self, h_pt, h_pr], ...
@@ -161,7 +162,35 @@ legend([pop_handles, h_self, h_pt, h_pr], ...
 sgtitle('Decoding accuracy and participation ratio vs population size');
 
 %% Save (uncomment for production)
-% saveas(gcf, fullfile(fig_dir, 'fig1_accuracy_pr_vs_N.png'));
+saveas(gcf, fullfile(fig_dir, 'fig1_accuracy_pr_vs_N.png'));
+
+%% Figure 2: transfer (rotation) and self-decoding vs participation ratio
+%  Reuses the pooled P struct from Figure 1. Each population is a connected
+%  curve through the (PR, accuracy) plane, ordered by N (smallest N at the
+%  lower-left). 2-D error bars are +/-1 SEM on both axes.
+figure('Color','w','Position',[100 100 1180 480]);
+tiledlayout(1,2,'TileSpacing','compact','Padding','compact');
+
+% Panel A: PR vs rotation-only PT transfer
+axA = nexttile;
+leg_handles = plot_acc_vs_pr(P, 'rot_m', 'rot_sem', 'o', show_err, show_endpoint_N);
+xlabel('Participation ratio'); ylabel('Rotation-only PT transfer accuracy');
+title('Cue-transfer (rotation) vs effective dimensionality');
+grid on; box on;
+
+% Panel B: PR vs self-decoding
+nexttile;
+plot_acc_vs_pr(P, 'self_m', 'self_sem', 's', show_err, show_endpoint_N);
+xlabel('Participation ratio'); ylabel('Self-decoding accuracy');
+title('Self-decoding vs effective dimensionality');
+grid on; box on;
+
+lg = legend(axA, leg_handles, {P.name});
+lg.Layout.Tile = 'east';
+sgtitle('Decoding accuracy vs participation ratio');
+
+%% Save (uncomment for production)
+saveas(gcf, fullfile(fig_dir, 'fig2_accuracy_vs_pr.png'));
 
 %% ----------------------------------------------------------------------
 function [N, self_m, self_sem, rot_m, rot_sem, pr_m, pr_sem] = ...
@@ -210,4 +239,31 @@ end
 self_m = self_m(order); self_sem = self_sem(order);
 rot_m  = rot_m(order);  rot_sem  = rot_sem(order);
 pr_m   = pr_m(order);   pr_sem   = pr_sem(order);
+end
+
+function h = plot_acc_vs_pr(P, accfield, semfield, mk, show_err, label_end)
+% Plot accuracy-vs-PR connected curves (one per population) with 2-D SEM
+% error bars. accfield/semfield name the accuracy mean/SEM fields in P (e.g.
+% 'rot_m'/'rot_sem' or 'self_m'/'self_sem'); mk is the marker. Points are
+% ordered by N (smallest N at the lower-left). Returns one clean line handle
+% per population for the legend.
+hold on;
+h = gobjects(1,numel(P));
+for p = 1:numel(P)
+    c  = P(p).color;
+    x  = P(p).pr_m;        xe = P(p).pr_sem;
+    y  = P(p).(accfield);  ye = P(p).(semfield);
+    if show_err
+        errorbar(x, y, ye, ye, xe, xe, '-', 'Color',c, 'Marker',mk, ...
+            'MarkerFaceColor',c, 'MarkerSize',4, 'LineWidth',1.4, 'CapSize',3);
+    else
+        plot(x, y, '-', 'Color',c, 'Marker',mk, 'MarkerFaceColor',c, ...
+            'MarkerSize',4, 'LineWidth',1.4);
+    end
+    h(p) = plot(nan, nan, '-', 'Color',c, 'LineWidth',2.5);  % clean legend proxy
+    if label_end
+        text(x(end), y(end), sprintf('  %d', P(p).N(end)), ...
+            'Color',c, 'FontSize',8, 'VerticalAlignment','middle');
+    end
+end
 end
