@@ -245,7 +245,7 @@ grid on; box on;
 legend(leg_h, {U.name}, 'Location','best');
 
 %% Save (uncomment for production)
-% saveas(gcf, fullfile(fig_dir, 'fig3_normalized_transfer_vs_pr.png'));
+saveas(gcf, fullfile(fig_dir, 'fig3_normalized_transfer_vs_pr.png'));
 
 %% Figure 4: transfer-per-dimension (PT / PR) vs neuron count
 %  Matched-population-size view requested by the reviewer: at each N, pooled
@@ -268,65 +268,131 @@ grid on; box on;
 legend(leg_h, {U.name}, 'Location','best');
 
 %% Save (uncomment for production)
-% saveas(gcf, fullfile(fig_dir, 'fig4_transfer_per_dim_vs_N.png'));
+saveas(gcf, fullfile(fig_dir, 'fig4_transfer_per_dim_vs_N.png'));
 
-%% Figure 5: saturating-exponential fit of the PR-vs-PT curves, with PR_inf
-%  Fit PR(N) and PT(N) per population to f(N) = a*(1-exp(-N/tau)); trace the
-%  fitted (PR(N), PT(N)) trajectory and draw the vertical asymptote PR_inf
-%  (the limiting effective dimensionality). PR_inf is the well-posed estimate
-%  -- it saturates within range -- whereas PT_inf is a longer extrapolation
-%  for populations still rising at max N, so treat it as indicative only.
-figure('Color','w','Position',[100 100 760 600]); hold on;
-leg_h = gobjects(1,numel(P));
+%% Figure 5: where PR and PT saturate, viewed four ways
+%  (a) PR vs N  -> horizontal asymptote PR_inf (PR(N) fit)
+%  (b) PT vs N  -> horizontal asymptote PT_inf (PT(N) fit; usually unconverged)
+%  (c) PT vs PR -> vertical line = PR_inf carried over from the PR(N) fit,
+%      plus the limiting corner (PR_inf, PT_inf).
+%  (d) PT vs PR -> vertical line read purely from the trajectory's shape:
+%      extend the curve and stop where its tail turns parallel to the y-axis
+%      (slope dPT/dPR exceeds vert_slope), regardless of whether PT is a
+%      reachable accuracy. (c) and (d) are two readings of the same limiting
+%      dimensionality -- (c) from the independent PR(N) fit, (d) from the
+%      joint curve -- so comparing them is a self-consistency check.
+nP = numel(P);
+prinf_all = zeros(1,nP); ptinf_all = zeros(1,nP);
+prrate_all = zeros(1,nP); ptrate_all = zeros(1,nP);
+prfun_all = cell(1,nP);  ptfun_all = cell(1,nP);
 fprintf('\nCurve fits (method = %s):\n', fit_method);
-for p = 1:numel(P)
-    c  = P(p).color;
-    Nv = P(p).N;
-    [prinf, prrate, prfun] = fit_curve(Nv, P(p).pr_m,  fit_method);
-    [ptinf, ptrate, ptfun] = fit_curve(Nv, P(p).rot_m, fit_method);
+for p = 1:nP
+    [prinf_all(p), prrate_all(p), prfun_all{p}] = fit_curve(P(p).N, P(p).pr_m,  fit_method);
+    [ptinf_all(p), ptrate_all(p), ptfun_all{p}] = fit_curve(P(p).N, P(p).rot_m, fit_method);
+    fprintf('  %-18s PR_inf = %5.2f   PT_inf = %5.2f\n', P(p).name, prinf_all(p), ptinf_all(p));
+end
 
-    % data points
+ycap = 1.05;        % display cap on the accuracy axes
+
+figure('Color','w','Position',[100 100 1300 760]);
+tiledlayout(2,2,'TileSpacing','compact','Padding','compact');
+ax_a = nexttile(1);   % (a) PR vs N            [top-left]
+ax_c = nexttile(2);   % (c) PT vs PR, PR_inf   [top-right]
+ax_b = nexttile(3);   % (b) PT vs N            [bottom-left]
+ax_d = nexttile(4);   % (d) PT vs PR, tail     [bottom-right]
+
+% ---- (a) PR vs N : horizontal asymptote PR_inf ----
+axes(ax_a); hold on;
+for p = 1:nP
+    c = P(p).color; Nv = P(p).N;
+    Ng = linspace(min(Nv), max(Nv)*1.5, 300);
+    plot(Nv, P(p).pr_m, 'o', 'Color',c, 'MarkerFaceColor',c, 'MarkerSize',4);
+    plot(Ng, prfun_all{p}(Ng), '-', 'Color',c, 'LineWidth',1.4);
+    yline(prinf_all(p), '--', sprintf('%.1f',prinf_all(p)), 'Color',c, 'FontSize',8, ...
+        'LabelHorizontalAlignment','left', 'LabelVerticalAlignment','bottom');
+end
+ylabel('Participation ratio');
+title('(a) PR vs N   (asymptote PR_\infty)'); grid on; box on;
+
+% ---- (b) PT vs N : horizontal asymptote PT_inf ----
+axes(ax_b); hold on;
+for p = 1:nP
+    c = P(p).color; Nv = P(p).N;
+    Ng = linspace(min(Nv), max(Nv)*1.5, 300);
+    plot(Nv, P(p).rot_m, 'o', 'Color',c, 'MarkerFaceColor',c, 'MarkerSize',4);
+    plot(Ng, ptfun_all{p}(Ng), '-', 'Color',c, 'LineWidth',1.4);
+    if ptinf_all(p) <= ycap
+        yline(ptinf_all(p), '--', sprintf('%.2f',ptinf_all(p)), 'Color',c, 'FontSize',8, ...
+            'LabelHorizontalAlignment','left', 'LabelVerticalAlignment','bottom');
+    end
+end
+xlabel('Number of units (N)'); ylabel('Rotation-only PT transfer accuracy');
+title('(b) PT vs N   (asymptote PT_\infty, often unconverged)'); grid on; box on;
+ylim([0 ycap]);
+linkaxes([ax_a ax_b],'x'); ax_a.XTickLabel = [];   % shared N axis, label only on (b)
+
+% ---- (c) PT vs PR : vertical line = PR_inf (from the PR(N) fit) + corner ----
+axes(ax_c); hold on;
+leg_h = gobjects(1,nP);
+for p = 1:nP
+    c = P(p).color; Nv = P(p).N;
+    prinf = prinf_all(p); ptinf = ptinf_all(p);
+    prfun = prfun_all{p}; ptfun = ptfun_all{p};
+
     plot(P(p).pr_m, P(p).rot_m, 'o', 'Color',c, 'MarkerFaceColor',c, 'MarkerSize',4);
 
-    % Extend the N-grid until PT reaches 1 (if it does) or PR reaches its
-    % asymptote, so the trajectory visibly approaches the PR_inf line.
-    N_pt1  = invert_fit(ptinf, ptrate, fit_method, 1.0);           % N where PT = 1 (Inf if PT_inf<=1)
-    N_pr99 = invert_fit(prinf, prrate, fit_method, 0.999*prinf);   % N where PR reaches its asymptote
-    % Always go far enough for PR to saturate (so the curve meets the PR_inf
-    % line and turns vertical); if PT also crosses 1, extend a little past that.
+    % extend N until PR saturates (and a little past PT=1 if it crosses)
+    N_pt1  = invert_fit(ptinf, ptrate_all(p), fit_method, 1.0);
+    N_pr99 = invert_fit(prinf, prrate_all(p), fit_method, 0.999*prinf);
     N_max = N_pr99;
     if isfinite(N_pt1), N_max = max(N_max, N_pt1*1.10); end
-    N_max = max(min(N_max, max(Nv)*1000), max(Nv)*1.5);            % keep sane
-    Ng  = linspace(min(Nv), N_max, 600);
-    PRg = prfun(Ng);  PTg = ptfun(Ng);
+    N_max = max(min(N_max, max(Nv)*1000), max(Nv)*1.5);
+    Ng = linspace(min(Nv), N_max, 600);
+    PRg = prfun(Ng); PTg = ptfun(Ng);
+    plot_traj(PRg, PTg, c);
 
-    % Solid where PT is a valid accuracy (<=1); dashed in the extrapolated PT>1 region.
-    k = find(PTg > 1, 1);
-    if isempty(k)
-        plot(PRg, PTg, '-', 'Color',c, 'LineWidth',1.6);
-    elseif k == 1
-        plot(PRg, PTg, '--', 'Color',c, 'LineWidth',1.6);
-    else
-        plot(PRg(1:k-1),   PTg(1:k-1),   '-',  'Color',c, 'LineWidth',1.6);
-        plot(PRg(k-1:end), PTg(k-1:end), '--', 'Color',c, 'LineWidth',1.6);  % overlap to connect
-    end
-
-    % vertical asymptote at PR_inf
-    xline(prinf, '--', sprintf('%.1f', prinf), 'Color',c, 'FontSize',8, ...
+    xline(prinf, '--', sprintf('%.1f',prinf), 'Color',c, 'FontSize',8, ...
         'LabelHorizontalAlignment','center', 'LabelVerticalAlignment','top');
-
+    if ptinf <= ycap
+        plot(prinf, ptinf, 'p', 'Color',c, 'MarkerFaceColor',c, 'MarkerSize',10);
+    end
     leg_h(p) = plot(nan, nan, '-', 'Color',c, 'LineWidth',2.5);
-    fprintf('  %-18s PR_inf = %5.2f   PT_inf = %5.2f\n', P(p).name, prinf, ptinf);
 end
-yl = ylim; ylim([0 0.6]);   % cap so the PT>1 tail does not crush the data range
-xlabel('Participation ratio');
-ylabel('Rotation-only PT transfer accuracy');
-title('PR-vs-PT fits and dimensional asymptote (PR_\infty)');
-grid on; box on;
-legend(leg_h, {P.name}, 'Location','northwest');
+xlabel('Participation ratio'); ylabel('Rotation-only PT transfer accuracy');
+title('(c) PT vs PR   (vertical = PR_\infty from PR-vs-N fit)'); grid on; box on;
+ylim([0 ycap]);
+
+% ---- (d) PT vs PR : vertical asymptote from extrapolating PR(PT) to PT -> inf ----
+%  Fit PR as a function of PT (axes swapped) and read its asymptote PR_v -- the
+%  PR the joint curve approaches as PT grows without bound. This is the vertical
+%  asymptote implied by the PR-vs-PT shape itself, independent of the PR(N) fit
+%  used in (c). It is a long extrapolation from the observed PT range out to
+%  PT -> inf, so PR_v is a soft, curve-intrinsic estimate.
+axes(ax_d); hold on;
+for p = 1:nP
+    c = P(p).color;
+    [prv, ~, prvfun] = fit_curve(P(p).rot_m, P(p).pr_m, fit_method);   % x = PT, y = PR
+
+    plot(P(p).pr_m, P(p).rot_m, 'o', 'Color',c, 'MarkerFaceColor',c, 'MarkerSize',4);
+
+    % sweep PT past 1 (ignoring reachability) so the curve bends toward PR_v
+    PTg = linspace(min(P(p).rot_m), 1.5, 400);
+    PRg = prvfun(PTg);
+    plot_traj(PRg, PTg, c);   % solid PT<=1, dashed in the PT>1 extrapolation
+
+    xline(prv, '--', sprintf('%.1f',prv), 'Color',c, 'FontSize',8, ...
+        'LabelHorizontalAlignment','center', 'LabelVerticalAlignment','top');
+end
+xlabel('Participation ratio'); ylabel('Rotation-only PT transfer accuracy');
+title('(d) PT vs PR   (vertical = PR_v, extrapolating PR(PT) to PT\rightarrow\infty)'); grid on; box on;
+ylim([0 ycap]);
+linkaxes([ax_c ax_d],'y');   % shared accuracy axis; x autoscales per panel
+
+lg = legend(ax_c, leg_h, {P.name}); lg.Layout.Tile = 'east';
+sgtitle('Saturation of PR and PT, and two readings of the PR-vs-PT asymptote');
 
 %% Save (uncomment for production)
-% saveas(gcf, fullfile(fig_dir, 'fig5_pr_pt_fit_asymptote.png'));
+saveas(gcf, fullfile(fig_dir, 'fig5_saturation_four_views.png'));
 
 %% ----------------------------------------------------------------------
 function [N, self_m, self_sem, rot_m, rot_sem, pr_m, pr_sem] = ...
@@ -517,5 +583,19 @@ switch lower(method)
         N = rate * ytarget / (yinf - ytarget);
     otherwise
         N = Inf;
+end
+end
+
+function plot_traj(PRg, PTg, c)
+% Plot a PR-vs-PT trajectory: solid where PT is a valid accuracy (<=1),
+% dashed in the extrapolated PT>1 region.
+k = find(PTg > 1, 1);
+if isempty(k)
+    plot(PRg, PTg, '-', 'Color',c, 'LineWidth',1.6);
+elseif k == 1
+    plot(PRg, PTg, '--', 'Color',c, 'LineWidth',1.6);
+else
+    plot(PRg(1:k-1),   PTg(1:k-1),   '-',  'Color',c, 'LineWidth',1.6);
+    plot(PRg(k-1:end), PTg(k-1:end), '--', 'Color',c, 'LineWidth',1.6);
 end
 end
