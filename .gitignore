@@ -1,0 +1,13 @@
+# Microsoft Office temporary/lock files
+~$*
+
+# MATLAB
+*.asv
+*.m~
+*.mex*
+slprj/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
