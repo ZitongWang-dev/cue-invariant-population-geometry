@@ -41,6 +41,7 @@
 clc; clear;
 
 %% CONFIGURATION
+addpath(fullfile('..','generation_scripts'))
 cfg = struct();
 
 % --- model selection ---
@@ -57,7 +58,7 @@ cfg.baseline     = 'auto';     % positivity margin that tracks weight_scale
 % --- run parameters ---
 cfg.R_pop        = 100;        % number of populations (outer loop = error bar)
 cfg.base_seed    = 1000;       % population seeds = base_seed + (1:R_pop)
-cfg.trial_repeat = 15;         % trial-holdout resamples per (population, pair)
+cfg.trial_repeat = 10;         % trial-holdout resamples per (population, pair)
 cfg.n_folds      = 10;         % k-fold for self-decoding (5 is a fine speedup)
 
 %% OUTPUT LOCATION
