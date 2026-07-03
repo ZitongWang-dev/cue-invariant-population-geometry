@@ -51,12 +51,12 @@ cfg.noise        = 'poisson';                     % label only (tags variant)
 
 % --- generator parameters (passed through to model_fn) ---
 cfg.N            = 100;        % neurons (all used; open parameter for later sweep)
-cfg.weight_scale = 0.7;        % SD of readout weights (SNR knob)
+cfg.weight_scale = 8;        % SD of readout weights (SNR knob)
 cfg.rho          = 0;          % cross-cue weight correlation (0 = independent)
 cfg.baseline     = 'auto';     % positivity margin that tracks weight_scale
 
 % --- run parameters ---
-cfg.R_pop        = 100;        % number of populations (outer loop = error bar)
+cfg.R_pop        = 50;        % number of populations (outer loop = error bar)
 cfg.base_seed    = 1000;       % population seeds = base_seed + (1:R_pop)
 cfg.trial_repeat = 10;         % trial-holdout resamples per (population, pair)
 cfg.n_folds      = 10;         % k-fold for self-decoding (5 is a fine speedup)
