@@ -46,7 +46,7 @@ clc; clear;
 %% CONFIGURATION
 cfg = struct();
 cfg.N              = 100;
-cfg.ws_grid        = [0.7 1 1.5 2 3 4 6 8];   % signal-magnitude sweep
+cfg.ws_grid        = [0.7 1 1.5 2 3 4 6 8 10 12 14];   % signal-magnitude sweep
 cfg.n_seeds        = 6;                        % seeds averaged per point
 cfg.base_seed      = 2000;
 cfg.fixed_baseline = 8;                        % baseline for the 'fixed' mode (data-like count)
@@ -72,6 +72,7 @@ n_job = numel(MI);
 self_j  = zeros(n_job, 1);
 mc_j    = zeros(n_job, 1);
 floor_j = zeros(n_job, 1);
+pr_j    = zeros(n_job, 1);
 
 ws_grid  = cfg.ws_grid;          % local copies for clean parfor slicing
 base_seed = cfg.base_seed;
@@ -89,22 +90,25 @@ parfor j = 1:n_job
     self_j(j)  = self_decode(d{1}, lab, n_folds);
     mc_j(j)    = g.mean_count;
     floor_j(j) = g.frac_floored;
+    pr_j(j)    = mean(g.signal_PR);   % mean over cues; PR is a model-class property
 end
 
 %% AGGREGATE OVER SEEDS
 self_arr  = reshape(self_j,  [n_mode, n_ws, n_seed]);
 mc_arr    = reshape(mc_j,    [n_mode, n_ws, n_seed]);
 floor_arr = reshape(floor_j, [n_mode, n_ws, n_seed]);
+pr_arr    = reshape(pr_j,    [n_mode, n_ws, n_seed]);
 
 self_mean = mean(self_arr, 3);        % [n_mode x n_ws]
 self_sd   = std(self_arr, 0, 3);
 mc_mean   = mean(mc_arr, 3);
 floor_max = max(floor_arr, [], 3);    % worst seed (want 0)
+pr_mean   = mean(pr_arr, 3);          % ~2 when clean; inflates once rectified
 
 %% PRINT TABLES
 for mi = 1:n_mode
     fprintf('\n=== baseline mode: %s ===\n', mode_names{mi});
-    fprintf('%8s  %14s  %11s  %12s\n', 'weight', 'self (mean±sd)', 'mean_count', 'frac_floor');
+    fprintf('%8s  %14s  %11s  %8s  %12s\n', 'weight', 'self (mean±sd)', 'mean_count', 'PR', 'frac_floor');
     for wi = 1:n_ws
         flag = '';
         if floor_max(mi,wi) == 0 && ...
@@ -114,9 +118,9 @@ for mi = 1:n_mode
         if floor_max(mi,wi) > 0
             flag = [flag, '  [FLOORED: rectifying]'];
         end
-        fprintf('%8.2f  %6.3f ± %.3f  %11.1f  %12.4f%s\n', ...
+        fprintf('%8.2f  %6.3f ± %.3f  %11.1f  %8.3f  %12.4f%s\n', ...
             cfg.ws_grid(wi), self_mean(mi,wi), self_sd(mi,wi), ...
-            mc_mean(mi,wi), floor_max(mi,wi), flag);
+            mc_mean(mi,wi), pr_mean(mi,wi), floor_max(mi,wi), flag);
     end
 end
 
@@ -139,23 +143,23 @@ end
 fprintf('(chance = %.3f)\n', 1/50);
 
 %% SAVE
-% if cfg.save
-%     save_path = fullfile('..','..','results','decoding_outputs', cfg.model_name, 'calibration');
-%     if ~exist(save_path, 'dir'), mkdir(save_path); end
-%     sweep = struct('cfg', cfg, 'mode_names', {mode_names}, 'ws_grid', cfg.ws_grid, ...
-%                    'self_mean', self_mean, 'self_sd', self_sd, ...
-%                    'mean_count', mc_mean, 'frac_floored', floor_max);
-%     save(fullfile(save_path, 'calibration_sweep.mat'), 'sweep');
-%     fprintf('\nSaved sweep to %s\n', save_path);
-% end
+if cfg.save
+    save_path = fullfile('..','..','results','decoding_outputs', cfg.model_name, 'calibration');
+    if ~exist(save_path, 'dir'), mkdir(save_path); end
+    sweep = struct('cfg', cfg, 'mode_names', {mode_names}, 'ws_grid', cfg.ws_grid, ...
+                   'self_mean', self_mean, 'self_sd', self_sd, ...
+                   'mean_count', mc_mean, 'signal_PR', pr_mean, 'frac_floored', floor_max);
+    save(fullfile(save_path, 'calibration_sweep.mat'), 'sweep');
+    fprintf('\nSaved sweep to %s\n', save_path);
+end
 
 %% FIGURE
 if cfg.make_figure
     colors = {[0 0 0], [0.85 0.2 0.2]};   % auto = black, fixed = red
-    figure('Color', 'w', 'Position', [100 100 900 380]);
+    figure('Color', 'w', 'Position', [100 100 1300 380]);
 
     % Panel 1: self-decoding vs signal magnitude
-    subplot(1,2,1); hold on;
+    subplot(1,3,1); hold on;
     for mi = 1:n_mode
         errorbar(cfg.ws_grid, self_mean(mi,:), self_sd(mi,:), '-o', ...
             'Color', colors{mi}, 'MarkerFaceColor', colors{mi}, 'DisplayName', mode_names{mi});
@@ -173,7 +177,7 @@ if cfg.make_figure
     title('self-decoding ( x = rectified )');
 
     % Panel 2: mean count vs signal magnitude
-    subplot(1,2,2); hold on;
+    subplot(1,3,2); hold on;
     for mi = 1:n_mode
         plot(cfg.ws_grid, mc_mean(mi,:), '-o', 'Color', colors{mi}, ...
             'MarkerFaceColor', colors{mi}, 'DisplayName', mode_names{mi});
@@ -182,9 +186,25 @@ if cfg.make_figure
     legend('Location', 'northwest'); box off;
     title('mean count (the auto tradeoff)');
 
-    sgtitle('Model 3 calibration: self-decoding vs signal magnitude');
-    % saveas(gcf, fullfile('..','..','results','decoding_outputs', cfg.model_name, ...
-    %     'calibration', 'calibration_sweep.png'));   % uncomment for production
+    % Panel 3: signal PR vs signal magnitude (rank-2 => 2; inflates once rectified)
+    subplot(1,3,3); hold on;
+    for mi = 1:n_mode
+        plot(cfg.ws_grid, pr_mean(mi,:), '-o', 'Color', colors{mi}, ...
+            'MarkerFaceColor', colors{mi}, 'DisplayName', mode_names{mi});
+        fl = floor_max(mi,:) > 0;
+        if any(fl)
+            plot(cfg.ws_grid(fl), pr_mean(mi,fl), 'x', 'Color', colors{mi}, ...
+                'MarkerSize', 12, 'LineWidth', 1.5, 'HandleVisibility', 'off');
+        end
+    end
+    yline(2, ':', 'rank-2', 'HandleVisibility', 'off');
+    xlabel('weight\_scale (signal magnitude)'); ylabel('signal PR');
+    legend('Location', 'best'); box off;
+    title('participation ratio ( x = rectified )');
+
+    sgtitle('Model 3 calibration: self-decoding, count, and PR vs signal magnitude');
+    saveas(gcf, fullfile('..','..','results','decoding_outputs', cfg.model_name, ...
+        'calibration', 'calibration_sweep.png'));   % uncomment for production
 end
 
 
