@@ -45,15 +45,15 @@ addpath(fullfile('..','generation_scripts'))
 cfg = struct();
 
 % --- model selection ---
-cfg.model_name   = 'model3';                      % tags the output folder
-cfg.model_fn     = @generate_model3_trial_data;   % generator handle
+cfg.model_name   = 'model1';                      % tags the output folder
+cfg.model_fn     = @generate_model1_trial_data;   % generator handle
 cfg.noise        = 'poisson';                     % label only (tags variant)
 
 % --- generator parameters (passed through to model_fn) ---
 cfg.N            = 100;        % neurons (all used; open parameter for later sweep)
-cfg.weight_scale = 12;        % SD of readout weights (SNR knob)
+cfg.weight_scale = 1;        % SD of readout weights (SNR knob)
 cfg.rho          = 0;          % cross-cue weight correlation (0 = independent)
-cfg.baseline     = 'auto';     % positivity margin that tracks weight_scale
+cfg.baseline     = 8;     % positivity margin that tracks weight_scale
 
 % --- run parameters ---
 cfg.R_pop        = 100;        % number of populations (outer loop = error bar)
@@ -63,7 +63,7 @@ cfg.n_folds      = 10;         % k-fold for self-decoding (5 is a fine speedup)
 
 %% OUTPUT LOCATION
 % Layered, variant-tagged so runs never overwrite (rho / N / noise vary).
-variant   = sprintf('rho%g_N%d_%s', cfg.rho, cfg.N, cfg.noise);   % e.g. rho0_N100_poisson
+variant   = sprintf('rho%g_N%d_ws%g_%s', cfg.rho, cfg.N, cfg.weight_scale, cfg.noise);
 save_path = fullfile('..','..','results','decoding_outputs', cfg.model_name, variant);
 if ~exist(save_path, 'dir'), mkdir(save_path); end
 
@@ -279,8 +279,8 @@ fprintf('\n=== %s [%s]: mean over %d populations ===\n', ...
     results.cfg.model_name, results.variant, R);
 fprintf('signal PR per cue: %s\n', num2str(agg.PR_mean, '%.3f '));
 for p = 1:numel(labels)
-    fprintf('%-10s  self=%.3f  PT=%.3f  no-tf=%.3f  null=%.3f\n', ...
-        labels{p}, agg.mean(p,1), agg.mean(p,3), agg.mean(p,2), agg.mean(p,4));
+    fprintf('%-10s  self=%.3f  PT=%.3f rot-PT=%.3f no-tf=%.3f  null=%.3f\n', ...
+        labels{p}, agg.mean(p,1), agg.mean(p,3), agg.mean(p,6), agg.mean(p,2), agg.mean(p,4));
 end
 fprintf('(chance = %.3f)\n', 1/50);
 end

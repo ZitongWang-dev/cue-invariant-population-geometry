@@ -4,15 +4,21 @@
 % DATE:     2026-07-01
 %
 % DESCRIPTION:
-%   Calibration sweep for the Model 3 benchmark. Finds the signal magnitude
+%   Calibration sweep for a simulation-family benchmark. The model is selected
+%   by cfg.model_fn (contract: [data_trial, labels, diag] = model_fn(gen_cfg)),
+%   so the same script calibrates Models 1/2/3/5/6. Finds the signal magnitude
 %   that puts self-decoding in a target band, and exposes the auto-vs-fixed
 %   baseline tradeoff (and the modulation-depth ceiling) in one table.
 %
-%   Signal magnitude is controlled by weight_scale (SD of the readout weights).
-%   Rescaling the stimulus grid is algebraically identical -- signal =
-%   w1*z1 + w2*z2 depends only on the product weight_scale * grid_spread -- so
-%   this one knob covers both. Seeds are averaged per point so the trend is not
-%   buried in single-seed noise.
+%   NOTE: the useful ws_grid range is model-specific. Model 3 needs LARGE values
+%   (self climbs slowly, capped by rank-2 + positivity); Model 1 self-decodes
+%   easily and needs SMALL values to bring self DOWN into the band. Set ws_grid
+%   accordingly per model.
+%
+%   Signal magnitude is controlled by weight_scale. For Model 3 this is the SD
+%   of the readout weights; rescaling the stimulus grid is algebraically
+%   identical. For Model 1 it is the SD of the random means directly. Seeds are
+%   averaged per point so the trend is not buried in single-seed noise.
 %
 %   Two baseline modes are swept side by side:
 %     'auto'   baseline = ceil(5.5 * weight_scale * M_grid), tracks the signal.
@@ -45,8 +51,23 @@ clc; clear;
 
 %% CONFIGURATION
 cfg = struct();
+
+% --- model selection (swap these two to calibrate a different model) ---
+cfg.model_name     = 'model1';
+cfg.model_fn       = @generate_model1_trial_data;   % generator handle, contract: model_fn(gen_cfg)
+
+% ---- locked operating points (for reference / reruns) ----
+%   Model 3: model_fn=@generate_model3_trial_data, baseline='auto', rho=0, N=100
+%            weight_scale=12 -> self~0.49, PR~1.98, count~138, frac_floored=0
+%   Model 1: model_fn=@generate_model1_trial_data, baseline='auto', rho=0, N=100
+%            matched-self:  weight_scale=0.70 -> self~0.48, PR~33, count~4,  frac_floored=0
+%            near-ceiling:  weight_scale=2    -> self~0.97, PR~33, count~11, frac_floored=0
+
+% --- sweep: ws_grid is model-specific ---
+%   Model 3: [0.7 1 1.5 2 3 4 6 8 10 12 14]   self climbs slowly (rank-2 + positivity cap); in band ~12
+%   Model 1: [0.2 0.3 0.5 0.7 1 1.5 2 3]      self near ceiling; calibrate DOWN into the band
 cfg.N              = 100;
-cfg.ws_grid        = [0.7 1 1.5 2 3 4 6 8 10 12 14];   % signal-magnitude sweep
+cfg.ws_grid        = [0.2 0.3 0.5 0.7 1 1.5 2 3];   % Model 1 range
 cfg.n_seeds        = 6;                        % seeds averaged per point
 cfg.base_seed      = 2000;
 cfg.fixed_baseline = 8;                        % baseline for the 'fixed' mode (data-like count)
@@ -54,7 +75,6 @@ cfg.n_folds        = 5;                        % k-fold for the self-decoding pr
 cfg.target_self    = [0.4 0.6];                % band to flag
 cfg.make_figure    = true;
 cfg.save           = true;
-cfg.model_name     = 'model3';
 
 % Baseline modes: {label, baseline value passed to the generator}
 modes      = {'auto', cfg.fixed_baseline};
@@ -77,6 +97,7 @@ pr_j    = zeros(n_job, 1);
 ws_grid  = cfg.ws_grid;          % local copies for clean parfor slicing
 base_seed = cfg.base_seed;
 N = cfg.N;  n_folds = cfg.n_folds;
+model_fn = cfg.model_fn;         % local handle for parfor broadcast
 
 parfor j = 1:n_job
     gc = struct('N', N, 'weight_scale', ws_grid(WI(j)), 'rho', 0, ...
@@ -84,7 +105,7 @@ parfor j = 1:n_job
 
     % Suppress the generator's floor warning; frac_floored is read as a column.
     warn_state = warning('off', 'all');
-    [d, lab, g] = generate_model3_trial_data(gc);
+    [d, lab, g] = model_fn(gc);
     warning(warn_state);
 
     self_j(j)  = self_decode(d{1}, lab, n_folds);
@@ -202,7 +223,7 @@ if cfg.make_figure
     legend('Location', 'best'); box off;
     title('participation ratio ( x = rectified )');
 
-    sgtitle('Model 3 calibration: self-decoding, count, and PR vs signal magnitude');
+    sgtitle(sprintf('%s calibration: self-decoding, count, and PR vs signal magnitude', cfg.model_name));
     saveas(gcf, fullfile('..','..','results','decoding_outputs', cfg.model_name, ...
         'calibration', 'calibration_sweep.png'));   % uncomment for production
 end
