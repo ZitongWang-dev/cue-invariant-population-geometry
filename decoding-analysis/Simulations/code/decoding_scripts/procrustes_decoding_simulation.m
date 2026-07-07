@@ -50,7 +50,7 @@ cfg.model_fn     = @generate_model1_trial_data;   % generator handle
 cfg.noise        = 'poisson';                     % label only (tags variant)
 
 % --- generator parameters (passed through to model_fn) ---
-cfg.N            = 100;        % neurons (all used; open parameter for later sweep)
+cfg.N            = 50;        % neurons (all used; open parameter for later sweep)
 cfg.weight_scale = 1;        % SD of readout weights (SNR knob)
 cfg.rho          = 0;          % cross-cue weight correlation (0 = independent)
 cfg.baseline     = 8;     % positivity margin that tracks weight_scale
@@ -279,8 +279,8 @@ fprintf('\n=== %s [%s]: mean over %d populations ===\n', ...
     results.cfg.model_name, results.variant, R);
 fprintf('signal PR per cue: %s\n', num2str(agg.PR_mean, '%.3f '));
 for p = 1:numel(labels)
-    fprintf('%-10s  self=%.3f  PT=%.3f rot-PT=%.3f no-tf=%.3f  null=%.3f\n', ...
-        labels{p}, agg.mean(p,1), agg.mean(p,3), agg.mean(p,6), agg.mean(p,2), agg.mean(p,4));
+    fprintf('%-10s  self=%.3f  PT=%.3f rot-PT=%.3f shuffle-pt=%.3f no-tf=%.3f  null=%.3f\n', ...
+        labels{p}, agg.mean(p,1), agg.mean(p,3), agg.mean(p,6), agg.mean(p,4), agg.mean(p,2), agg.mean(p,4));
 end
 fprintf('(chance = %.3f)\n', 1/50);
 end
