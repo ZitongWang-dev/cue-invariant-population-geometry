@@ -59,7 +59,7 @@ tmp = load(data_file, 'three_stim_array');
 spike_data = tmp.three_stim_array;
 
 % Prepare output directory (DISTINCT leaf so real results are never overwritten)
-save_path = fullfile('..','..','results','decoding_outputs','procrustes_decoding_basic_null_floor_results', monkey, vp);
+save_path = fullfile('..','..','results','decoding_outputs','procrustes_decoding_basic_null_floor_mmtmatched_results', monkey, vp);
 if ~exist(save_path, 'dir'), mkdir(save_path); end
 
 %% Define decoding time window (ms)

@@ -12,26 +12,26 @@ Description:
 
 clc; clear;
 %%
-monkey = 'FR';
-file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_basic_results'];
+monkey = 'KO';
+file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_basic_null_floor_results'];
 %% Load result matrices
 V1_acec_result = result_loader(monkey,'V1','acec',file_location);
-V2_acec_result = result_loader(monkey,'V2','acec',file_location);
+% V2_acec_result = result_loader(monkey,'V2','acec',file_location);
 
 V1_ecac_result = result_loader(monkey,'V1','ecac',file_location);
-V2_ecac_result = result_loader(monkey,'V2','ecac',file_location);
+% V2_ecac_result = result_loader(monkey,'V2','ecac',file_location);
 
 V1_acex_result = result_loader(monkey,'V1','acex',file_location);
-V2_acex_result = result_loader(monkey,'V2','acex',file_location);
+% V2_acex_result = result_loader(monkey,'V2','acex',file_location);
 
 V1_exac_result = result_loader(monkey,'V1','exac',file_location);
-V2_exac_result = result_loader(monkey,'V2','exac',file_location);
+% V2_exac_result = result_loader(monkey,'V2','exac',file_location);
 
 V1_ecex_result = result_loader(monkey,'V1','ecex',file_location);
-V2_ecex_result = result_loader(monkey,'V2','ecex',file_location);
+% V2_ecex_result = result_loader(monkey,'V2','ecex',file_location);
 
 V1_exec_result = result_loader(monkey,'V1','exec',file_location);
-V2_exec_result = result_loader(monkey,'V2','exec',file_location);
+% V2_exec_result = result_loader(monkey,'V2','exec',file_location);
 
 %% Combine complementary stimulus pairs vertically
 V1_acec_combined = [V1_acec_result ; V1_ecac_result];
