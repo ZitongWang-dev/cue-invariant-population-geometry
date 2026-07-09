@@ -38,7 +38,7 @@ Inputs:
 
 Outputs:
     - MAT-files saved to:
-      results/decoding_outputs/procrustes_decoding_structure_shuffled_results/<monkey>/<area>/
+      results/decoding_outputs/procrustes_decoding_basic_trialShuffledWithMean/<monkey>/<area>/
       Named: acec_results.mat, ecex_results.mat, acex_results.mat, ecac_results.mat, exec_results.mat, exac_results.mat
 
     Each result cell is an [N x 6] matrix, one row per (neuron_repeat, trial_repeat).
