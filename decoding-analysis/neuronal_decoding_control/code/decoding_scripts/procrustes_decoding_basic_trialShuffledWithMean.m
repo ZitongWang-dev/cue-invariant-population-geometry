@@ -55,7 +55,7 @@ Outputs:
 clc; clear;
 
 %% Configuration
-monkey = 'KO';      % Monkey ID ('FR' or 'KO')
+monkey = 'FR';      % Monkey ID ('FR' or 'KO')
 vp = 'V2';          % Visual area ('V1' or 'V2')
 
 % Load neuronal data for all stimuli
