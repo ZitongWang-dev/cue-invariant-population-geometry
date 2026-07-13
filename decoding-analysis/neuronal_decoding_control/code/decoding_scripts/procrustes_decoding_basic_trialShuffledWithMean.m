@@ -56,7 +56,7 @@ clc; clear;
 
 %% Configuration
 monkey = 'KO';      % Monkey ID ('FR' or 'KO')
-vp = 'V2';          % Visual area ('V1' or 'V2')
+vp = 'V1';          % Visual area ('V1' or 'V2')
 
 % Load neuronal data for all stimuli
 data_file = fullfile('..','..','neuronal_data', monkey, vp, sprintf('%s_%s_allstim.mat', monkey, vp));
