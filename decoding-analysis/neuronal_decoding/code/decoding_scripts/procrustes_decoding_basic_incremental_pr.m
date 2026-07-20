@@ -22,12 +22,35 @@ Description:
     after trial-averaging: each unit is weighted by its stimulus-driven (reliable)
     variance, matching the decoding geometry.
 
+    Column 4 of .acc no longer holds the base script's random-transformation
+    control: it has been replaced by a self-consistent, correspondence-shuffled
+    control. One permutation pi shuffles BOTH the trial-averaged mean matrix and
+    the held-out test trials; a rotation-only Procrustes transform is learned from
+    the shuffled means and applied to the identically-shuffled test trials.
+    Decoding against target labels 1:50 then measures whether PT can force a
+    mapping even when the true stim1<->stim2 condition correspondence is destroyed
+    (the shuffle-target accuracy). The shuffle-identity variant is not computed
+    here. The matched true-correspondence baseline is the rotation-only column
+    (col 6, accuracy_onlyrotation).
+
 Output (per pair file): a 1 x numel(neuron_list) cell array; each cell is a
 struct with fields:
     .neuron_num     scalar, number of sampled units
     .stim1, .stim2  condition labels ('ac'/'ec'/'ex'); stim1 transformed, stim2 trained
-    .acc            [(neuron_sample_repeat*trial_sample_repeat) x 8] decoding accuracies
-                    (same 8 metrics, same order, as the base incremental script)
+    .acc            [(neuron_sample_repeat*trial_sample_repeat) x 8] decoding accuracies.
+                    Column order:
+                      1 genAcc                        stim2 within-condition 10-fold CV accuracy (ceiling)
+                      2 accuracy_s1                    raw stim1 test, no transform (vs 1:50)
+                      3 accuracy_transformed_s1        TRUE corr., FULL transform b*X*T+c (vs 1:50)
+                      4 accuracy_rand                  CORRESPONDENCE-SHUFFLED control, rotation-only,
+                                                       decoded vs TARGET labels 1:50 (shuffle-target acc)
+                      5 accuracy_noscale               TRUE corr., scaling-only b*X (vs 1:50)
+                      6 accuracy_onlyrotation          TRUE corr., rotation-only X*T (vs 1:50) -- matched
+                                                       baseline for column 4
+                      7 accuracy_notranslation         TRUE corr., translation-only X+c (vs 1:50)
+                      8 accuracy_non_transfer_control  random-permutation chance baseline
+                    (NB: variable names in cols 5 and 7 read 'no...' but hold the
+                    'only' partial transform, matching col 6's content.)
     .acc_repeat_id  [(...) x 1] neuron-repeat index for each acc row (for PR<->acc pairing)
     .pr_stim1       [neuron_sample_repeat x 1] PR of the stim1 manifold per repeat
     .pr_stim2       [neuron_sample_repeat x 1] PR of the stim2 manifold per repeat
@@ -150,9 +173,9 @@ for neuron_squence = 1:length(neuron_num_list)
         trial_result = zeros(trial_sample_repeat,8);
         for trial_repeat =1:trial_sample_repeat
             [training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,shuffle_transformed,partially_transformed_stim1] = data_trial_sampler(stim1_data_sample,stim2_data_sample,labels);
-            [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_noscale,accuracy_norotation,accuracy_notranslation,accuracy_non_transfer_control] = pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,shuffle_transformed,partially_transformed_stim1);
+            [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_onlyscale,accuracy_onlyrotation,accuracy_onlytranslation,accuracy_non_transfer_control] = pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,shuffle_transformed,partially_transformed_stim1);
 
-            trial_result(trial_repeat,:) = [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_noscale,accuracy_norotation,accuracy_notranslation,accuracy_non_transfer_control];
+            trial_result(trial_repeat,:) = [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_onlyscale,accuracy_onlyrotation,accuracy_onlytranslation,accuracy_non_transfer_control];
 
         end
         acc_blocks{neuron_repeat} = trial_result;
@@ -219,7 +242,7 @@ stim1_2transform_data = stim1_data_sample(training_trial_idx,:);
 stim2_target_data_averged = take_average(stim2_target_data,10);
 stim1_2transform_data_averged = take_average(stim1_2transform_data,10 - tial_out_of_ten);
 
-% ---- TRUE correspondence transform (full transform, matched baseline) ----
+% ---- TRUE correspondence transform (rotation only, matched baseline) ----
 [d,Z,transform] = procrustes(stim2_target_data_averged,stim1_2transform_data_averged);
 t_matrix = transform.T;
 b = transform.b;
@@ -291,7 +314,7 @@ stim2_data = dca_data{name2idx.(stim2)};
 pair_wise_pca_data = [stim1_data;stim2_data];
 end
 
-function [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_noscale,accuracy_norotation,accuracy_notranslation,accuracy_non_transfer_control] ...
+function [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_onlyscale,accuracy_onlyrotation,accuracy_onlytranslation,accuracy_non_transfer_control] ...
     = pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,shuffle_transformed,partially_transformed_stim1)
 % get 4 accs
 stim2_model = fitcecoc(training_data,training_label);
@@ -312,13 +335,13 @@ accuracy_rand = sum(stim1_test_label == predicted_Label_rand)/length(predicted_L
 % partial-transformation transfer decoding
 % scaling only
 predicted_Label_scale = predict(stim2_model,partially_transformed_stim1{1,1});
-accuracy_noscale= sum(stim1_test_label == predicted_Label_scale)/length(predicted_Label_scale);
+accuracy_onlyscale= sum(stim1_test_label == predicted_Label_scale)/length(predicted_Label_scale);
 % rotation only
 predicted_Label_rotation = predict(stim2_model,partially_transformed_stim1{1,2});
-accuracy_norotation= sum(stim1_test_label == predicted_Label_rotation)/length(predicted_Label_rotation);
+accuracy_onlyrotation= sum(stim1_test_label == predicted_Label_rotation)/length(predicted_Label_rotation);
 % translation only
 predicted_Label_translation = predict(stim2_model,partially_transformed_stim1{1,3});
-accuracy_notranslation= sum(stim1_test_label == predicted_Label_translation)/length(predicted_Label_translation);
+accuracy_onlytranslation= sum(stim1_test_label == predicted_Label_translation)/length(predicted_Label_translation);
 % non-transformation transfer decoding control
 accuracy_non_transfer_control = sum(randperm(50)' == predicted_Label_s1)/length(predicted_Label_s1);
 end
