@@ -149,8 +149,8 @@ for neuron_squence = 1:length(neuron_num_list)
         % sample trials multiple times
         trial_result = zeros(trial_sample_repeat,8);
         for trial_repeat =1:trial_sample_repeat
-            [training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,toy_transd,partially_transformed_stim1] = data_trial_sampler(stim1_data_sample,stim2_data_sample,labels);
-            [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_noscale,accuracy_norotation,accuracy_notranslation,accuracy_non_transfer_control] = pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,toy_transd,partially_transformed_stim1);
+            [training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,shuffle_transformed,partially_transformed_stim1] = data_trial_sampler(stim1_data_sample,stim2_data_sample,labels);
+            [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_noscale,accuracy_norotation,accuracy_notranslation,accuracy_non_transfer_control] = pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,shuffle_transformed,partially_transformed_stim1);
 
             trial_result(trial_repeat,:) = [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_noscale,accuracy_norotation,accuracy_notranslation,accuracy_non_transfer_control];
 
@@ -198,7 +198,7 @@ for i = 1:50
 end
 end
 
-function [training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,toy_transd,partially_transformed_stim1] = data_trial_sampler(stim1_data_sample,stim2_data_sample,labels)
+function [training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,shuffle_transformed,partially_transformed_stim1] = data_trial_sampler(stim1_data_sample,stim2_data_sample,labels)
 % sample trial
 tial_out_of_ten = 1;
 valid_trial_idx = sample_trial(tial_out_of_ten); % 10 fold
@@ -208,7 +208,7 @@ training_trial_idx = setdiff([1:500],valid_trial_idx);
 training_data = stim2_data_sample;
 training_label = labels;
 
-% test data 
+% test data (one held-out trial per condition, ordered condition 1..50)
 stim1_test_data = stim1_data_sample(valid_trial_idx,:);
 stim1_test_label = labels(valid_trial_idx,:);
 
@@ -219,17 +219,12 @@ stim1_2transform_data = stim1_data_sample(training_trial_idx,:);
 stim2_target_data_averged = take_average(stim2_target_data,10);
 stim1_2transform_data_averged = take_average(stim1_2transform_data,10 - tial_out_of_ten);
 
+% ---- TRUE correspondence transform (full transform, matched baseline) ----
 [d,Z,transform] = procrustes(stim2_target_data_averged,stim1_2transform_data_averged);
 t_matrix = transform.T;
 b = transform.b;
 c = transform.c;
 transformed_stim1 = b*stim1_test_data*t_matrix+c; 
-
-% partially transformed data - without 1 transofrm
-% without_scaling_transformed_stim1 = stim1_test_data*t_matrix+c;
-% without_rotation_transformed_stim1 = b*stim1_test_data+c;
-% without_translation_transformed_stim1 = b*stim1_test_data*t_matrix;
-% partially_transformed_stim1 = {without_scaling_transformed_stim1,without_rotation_transformed_stim1,without_translation_transformed_stim1};
 
 % partially transformed data - only 1 transofrm
 scaling_only_transformed_stim1 = b*stim1_test_data;
@@ -237,14 +232,27 @@ rotation_only_transformed_stim1 = stim1_test_data*t_matrix;
 translation_only_transformed_stim1 = stim1_test_data + c;
 partially_transformed_stim1 = {scaling_only_transformed_stim1,rotation_only_transformed_stim1,translation_only_transformed_stim1};
 
-% randomlized data
+% ---- Structure-destroying (correspondence-shuffled) control ----
+% One permutation pi is used to shuffle BOTH the mean matrix and the held-out
+% test trials, so that within the shuffled ordering the trial<->mean
+% correspondence is preserved, while the true stim1<->stim2 condition
+% correspondence is destroyed.
 shuffle_idx = randperm(size(stim1_2transform_data_averged,1));
+
+% shuffle the mean matrix and learn the (broken-correspondence) rotation
 toy_averaged = stim1_2transform_data_averged(shuffle_idx,:);
 [d_fake,Z_fake,t_fake] = procrustes(stim2_target_data_averged,toy_averaged);
 t_fakematrix = t_fake.T;
-toy_b = t_fake.b;
-toy_c = t_fake.c;
-toy_transd = toy_b * stim1_test_data*t_fakematrix + toy_c;
+
+% shuffle the held-out test trials the same way, then apply rotation only
+stim1_test_data_shuffled = stim1_test_data(shuffle_idx,:);
+shuffle_transformed = stim1_test_data_shuffled*t_fakematrix;   % rotation only (no toy_b, no toy_c)
+
+
+% To use the FULL transform instead of rotation-only, replace the two
+% "rotation only" lines above with:
+%   true_rot_transformed = transform.b*stim1_test_data*t_matrix + transform.c;
+%   shuffle_transformed  = t_fake.b*stim1_test_data_shuffled*t_fakematrix + t_fake.c;
 
 
 % fake, transform, validation has the same label
@@ -284,7 +292,7 @@ pair_wise_pca_data = [stim1_data;stim2_data];
 end
 
 function [genAcc,accuracy_s1,accuracy_transformed_s1,accuracy_rand,accuracy_noscale,accuracy_norotation,accuracy_notranslation,accuracy_non_transfer_control] ...
-    = pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,toy_transd,partially_transformed_stim1)
+    = pro_decoding(training_data,training_label,stim1_test_data,stim1_test_label,transformed_stim1,shuffle_transformed,partially_transformed_stim1)
 % get 4 accs
 stim2_model = fitcecoc(training_data,training_label);
 
@@ -299,7 +307,7 @@ accuracy_s1 = sum(stim1_test_label == predicted_Label_s1)/length(predicted_Label
 predicted_Label_transformed_s1 = predict(stim2_model,transformed_stim1);
 accuracy_transformed_s1 = sum(stim1_test_label == predicted_Label_transformed_s1)/length(predicted_Label_transformed_s1);
 % random-transformation transfer decoding
-predicted_Label_rand = predict(stim2_model,toy_transd);
+predicted_Label_rand = predict(stim2_model,shuffle_transformed);
 accuracy_rand = sum(stim1_test_label == predicted_Label_rand)/length(predicted_Label_rand);
 % partial-transformation transfer decoding
 % scaling only
