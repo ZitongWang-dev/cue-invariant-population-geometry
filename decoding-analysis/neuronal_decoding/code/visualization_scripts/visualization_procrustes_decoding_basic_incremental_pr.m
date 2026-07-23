@@ -245,7 +245,7 @@ grid on; box on;
 legend(leg_h, {U.name}, 'Location','best');
 
 %% Save (uncomment for production)
-saveas(gcf, fullfile(fig_dir, 'fig3_normalized_transfer_vs_pr.png'));
+% saveas(gcf, fullfile(fig_dir, 'fig3_normalized_transfer_vs_pr.png'));
 
 %% Figure 4: transfer-per-dimension (PT / PR) vs neuron count
 %  Matched-population-size view requested by the reviewer: at each N, pooled
@@ -268,7 +268,7 @@ grid on; box on;
 legend(leg_h, {U.name}, 'Location','best');
 
 %% Save (uncomment for production)
-saveas(gcf, fullfile(fig_dir, 'fig4_transfer_per_dim_vs_N.png'));
+% saveas(gcf, fullfile(fig_dir, 'fig4_transfer_per_dim_vs_N.png'));
 
 %% Figure 5: where PR and PT saturate, viewed four ways
 %  (a) PR vs N  -> horizontal asymptote PR_inf (PR(N) fit)
@@ -392,7 +392,7 @@ lg = legend(ax_c, leg_h, {P.name}); lg.Layout.Tile = 'east';
 sgtitle('Saturation of PR and PT, and two readings of the PR-vs-PT asymptote');
 
 %% Save (uncomment for production)
-saveas(gcf, fullfile(fig_dir, 'fig5_saturation_four_views.png'));
+% saveas(gcf, fullfile(fig_dir, 'fig5_saturation_four_views.png'));
 
 %% ----------------------------------------------------------------------
 function [N, self_m, self_sem, rot_m, rot_sem, pr_m, pr_sem] = ...
