@@ -82,7 +82,7 @@ rng(1);
 %% Configuration
 settings   = {'FR','V1'; 'FR','V2'; 'KO','V1'; 'KO','V2'};  % all four in one run
 timewindow = [330 630];       % e.g. early: [340 410], late: [410 480]
-trial_sample_repeat = 100;    % trial-split repeats (absorbs the dropped neuron-repeat budget)
+trial_sample_repeat = 15;    % trial-split repeats (absorbs the dropped neuron-repeat budget)
 
 pairs      = {'ac','ec'; 'ec','ex'; 'ac','ex'; 'ec','ac'; 'ex','ec'; 'ex','ac'};
 pair_names = {'acec','ecex','acex','ecac','exec','exac'};
