@@ -16,6 +16,15 @@ Description:
     All populations are overlaid, colour-coded:
       FR V1, FR V2, KO V1, KO V2, and the Gabor model (black).
 
+    FIGURE 3 -- normalized transfer (PT / self-decoding) vs PR:
+      - SOLID  : true-correspondence rotation-only transfer (column 6 of .acc)
+      - DASHED : correspondence-shuffled control (column 4 of .acc), i.e. the
+                 rotation learned from a row-shuffled mean matrix and applied
+                 to the identically-shuffled held-out trials, decoded against
+                 the target labels 1:50. Normalized by the same self-decoding
+                 denominator, so the solid-minus-dashed gap isolates the part
+                 of the transfer that requires the true stimulus correspondence.
+
     Accuracy is the rotation-only transfer (column 6 of .acc) to match the
     main results; self-decoding is column 1 (genAcc). Each quantity is
     averaged across the six ordered rendering pairs (PR is pooled across the
@@ -65,6 +74,7 @@ populations = {
 % --- Metric columns inside .acc ---
 col_self = 1;   % within-condition self-decoding (genAcc)
 col_rot  = 6;   % rotation-only Procrustes transfer
+col_ctrl = 4;   % correspondence-shuffled control (rotation-only, vs target labels 1:50)
 
 % --- The six ordered-pair files (variable name inside each == file stem) ---
 pair_files = {'acec_results','ecex_results','acex_results', ...
@@ -74,6 +84,7 @@ pair_files = {'acec_results','ecex_results','acex_results', ...
 show_err = true;          % overlay +/-1 SEM error bars over the pooled resampling distribution
 show_endpoint_N = true;   % (Figure 2) label each curve's largest-N endpoint with its N
 n_boot = 2000;            % (Figures 3-4) bootstrap iterations for ratio CIs
+show_ctrl = true;         % (Figure 3) overlay the correspondence-shuffled control (dashed)
 fit_method = 'mm';    % (Figure 5) curve-fit form: 'satexp' = a*(1-exp(-N/tau)), 'mm' = a*N/(N+k)
 
 % --- Output figure location ---
@@ -206,19 +217,20 @@ sgtitle('Decoding accuracy vs participation ratio');
 %  stay untouched. A "unit" is one neuron-resampling repeat within one pair
 %  file; this is the resampling unit used for the bootstrap CIs below.
 U = struct('name',{},'color',{},'N',{},'pr_m',{},'pr_sem',{}, ...
-           'unit_pt',{},'unit_self',{},'unit_pr',{});
+           'unit_pt',{},'unit_self',{},'unit_pr',{},'unit_ctrl',{});
 for p = 1:nPop
     pdir = populations{p,2};
     if ~exist(pdir,'dir'), continue; end
     try
-        Up = load_units(pdir, pair_files, col_self, col_rot);
+        Up = load_units(pdir, pair_files, col_self, col_rot, col_ctrl);
     catch ME
         warning('Could not load units for %s (%s); skipping.', populations{p,1}, ME.message);
         continue;
     end
     U(end+1) = struct('name',populations{p,1},'color',populations{p,3}, ...
         'N',Up.N,'pr_m',Up.pr_m,'pr_sem',Up.pr_sem, ...
-        'unit_pt',Up.unit_pt,'unit_self',Up.unit_self,'unit_pr',Up.unit_pr);
+        'unit_pt',Up.unit_pt,'unit_self',Up.unit_self,'unit_pr',Up.unit_pr, ...
+        'unit_ctrl',Up.unit_ctrl);
 end
 
 rng(1);   % reproducible bootstrap CIs
@@ -228,21 +240,51 @@ rng(1);   % reproducible bootstrap CIs
 %  by pooled mean self-decoding (all three conditions) -- the symmetric
 %  PT/mean(self) ratio-of-means. y error = percentile bootstrap over
 %  neuron-repeats; x = pooled PR mean (x error = PR SEM, Figure-2 convention).
+%
+%  SOLID  = true-correspondence, rotation-only transfer (col 6).
+%  DASHED = correspondence-shuffled control (col 4), normalized by the same
+%           self-decoding denominator so the two are directly comparable.
+%  Both curves are rotation-only and share the same x (PR), so the control's
+%  x error bars are omitted to reduce clutter. The vertical gap between solid
+%  and dashed is the part of the transfer that actually requires the true
+%  stimulus correspondence: if the dashed curve tracks the solid one, PT is
+%  forcing an alignment that does not depend on matched condition identity.
 figure('Color','w','Position',[100 100 720 560]); hold on;
 leg_h = gobjects(1,numel(U));
 for p = 1:numel(U)
     c = U(p).color;
+
+    % --- true correspondence (solid, 2-D error bars) ---
     [r, lo, hi] = bootstrap_ratio(U(p).unit_pt, U(p).unit_self, n_boot);
     errorbar(U(p).pr_m, r, r-lo, hi-r, U(p).pr_sem, U(p).pr_sem, '-', ...
         'Color',c, 'Marker','o', 'MarkerFaceColor',c, 'MarkerSize',4, ...
         'LineWidth',1.4, 'CapSize',3);
+
+    % --- correspondence-shuffled control (dashed, y error bars only) ---
+    if show_ctrl
+        [rc, loc, hic] = bootstrap_ratio(U(p).unit_ctrl, U(p).unit_self, n_boot);
+        errorbar(U(p).pr_m, rc, rc-loc, hic-rc, '--', ...
+            'Color',c, 'Marker','v', 'MarkerSize',4, ...
+            'LineWidth',1.1, 'CapSize',3);
+    end
+
     leg_h(p) = plot(nan, nan, '-', 'Color',c, 'LineWidth',2.5);
 end
 xlabel('Participation ratio');
 ylabel('Normalized transfer   (PT / self-decoding)');
 title('Cue-transfer efficiency vs effective dimensionality');
 grid on; box on;
-legend(leg_h, {U.name}, 'Location','best');
+yl = ylim; ylim([0 yl(2)]);   % keep 0 in view so the control's height is readable
+
+if show_ctrl
+    % Linestyle key (black proxies) alongside the population colours
+    h_true = plot(nan, nan, '-k',  'Marker','o', 'MarkerFaceColor','k', 'LineWidth',1.4);
+    h_ctrl = plot(nan, nan, '--k', 'Marker','v', 'LineWidth',1.1);
+    legend([leg_h, h_true, h_ctrl], ...
+           [{U.name}, {'true correspondence','shuffled control'}], 'Location','best');
+else
+    legend(leg_h, {U.name}, 'Location','best');
+end
 
 %% Save (uncomment for production)
 % saveas(gcf, fullfile(fig_dir, 'fig3_normalized_transfer_vs_pr.png'));
@@ -470,11 +512,12 @@ for p = 1:numel(P)
 end
 end
 
-function U = load_units(pdir, pair_files, col_self, col_rot)
+function U = load_units(pdir, pair_files, col_self, col_rot, col_ctrl)
 % Reload the six ordered-pair files and return per-neuron-repeat ("unit")
 % means needed for the ratio bootstraps, plus the pooled PR mean/SEM. A unit
 % is one neuron-resampling repeat within one pair file (the resampling unit).
-% Returns matrices [nUnits x nSeq] for PT, self, and PR per unit, sorted by N.
+% Returns matrices [nUnits x nSeq] for PT, self, PR, and the correspondence-
+% shuffled control per unit, sorted by N.
 nPairs = numel(pair_files);
 res = cell(1,nPairs);
 for k = 1:nPairs
@@ -492,6 +535,7 @@ pr_sem    = zeros(1,nSeq);
 unit_pt   = zeros(nUnits,nSeq);
 unit_self = zeros(nUnits,nSeq);
 unit_pr   = zeros(nUnits,nSeq);
+unit_ctrl = zeros(nUnits,nSeq);
 
 for s = 1:nSeq
     N(s) = res{1}{s}.neuron_num;
@@ -502,10 +546,12 @@ for s = 1:nSeq
         ids = c.acc_repeat_id;
         upt   = accumarray(ids, c.acc(:,col_rot ), [], @mean);  % nrep x 1, per-unit mean PT
         uself = accumarray(ids, c.acc(:,col_self), [], @mean);  % nrep x 1, per-unit mean self
+        uctrl = accumarray(ids, c.acc(:,col_ctrl), [], @mean);  % nrep x 1, per-unit mean control
         upr   = (c.pr_stim1(:) + c.pr_stim2(:)) / 2;            % nrep x 1, per-unit mean PR
         rows = u + (1:nrep);
         unit_pt(rows,s)   = upt;
         unit_self(rows,s) = uself;
+        unit_ctrl(rows,s) = uctrl;
         unit_pr(rows,s)   = upr;
         u = u + nrep;
         pr_pool = [pr_pool; c.pr_stim1(:); c.pr_stim2(:)];
@@ -518,10 +564,11 @@ end
 [N, order] = sort(N);
 pr_m      = pr_m(order);      pr_sem    = pr_sem(order);
 unit_pt   = unit_pt(:,order); unit_self = unit_self(:,order);
-unit_pr   = unit_pr(:,order);
+unit_pr   = unit_pr(:,order); unit_ctrl = unit_ctrl(:,order);
 
 U = struct('N',N, 'pr_m',pr_m, 'pr_sem',pr_sem, ...
-           'unit_pt',unit_pt, 'unit_self',unit_self, 'unit_pr',unit_pr);
+           'unit_pt',unit_pt, 'unit_self',unit_self, 'unit_pr',unit_pr, ...
+           'unit_ctrl',unit_ctrl);
 end
 
 function [r, lo, hi] = bootstrap_ratio(num_units, den_units, nboot)
