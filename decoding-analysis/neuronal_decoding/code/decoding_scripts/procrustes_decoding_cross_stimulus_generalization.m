@@ -172,7 +172,7 @@ end
 fprintf('all combinations done in %.1f min\n', toc(total_timer)/60);
 
 %%
-function results = cross_stim_decoding(stim1,stim2,data_trial,labels,neuron_num_list,neuron_sample_repeat,trial_sample_repeat,n_partition) %#ok<INUSD>
+function results = cross_stim_decoding(stim1,stim2,data_trial,labels,neuron_num_list,neuron_sample_repeat,trial_sample_repeat,n_partition)
 % stim1 = source (transformed), stim2 = target (classifier trained here).
 % labels is unused: held-out stimulus ids are derived from the 40/10 partition
 % inside draw_partition. Kept in the signature for call-site parity.
