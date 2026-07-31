@@ -116,9 +116,10 @@ neuron_code = {[48]; [48 112]; [109]; [109 146]};
 map = struct('FRV1',1, 'FRV2',2, 'KOV1',3, 'KOV2',4);
 
 %% Resampling parameters (three independent knobs -- see header)
-n_partition          = 100;  % random 40/10 stimulus splits (dominant variance axis)
+n_partition          = 100;  % random stimulus splits (dominant variance axis)
 neuron_sample_repeat = 10;   % neuron subsets per partition
 trial_sample_repeat  = 10;   % 1-of-10 trial hold-outs per (partition, neuron subset)
+n_stim_hold = 2; %random (50 - n_stim_hold)/n_stim_hold stimulus splits
 rng(1);
 
 total_timer = tic;
@@ -133,7 +134,7 @@ for c = 1:size(combos,1)
     tmp = load(data_file, 'three_stim_array');
     spike_data = tmp.three_stim_array;
 
-    save_path = fullfile('..','..','results','decoding_outputs','procrustes_decoding_cross_stimulus_generalization_results', monkey, vp);
+    save_path = fullfile('..','..','results','decoding_outputs','procrustes_decoding_cross_stimulus_generalization_results','HoldStim',num2str(n_stim_hold), monkey, vp);
     if ~exist(save_path, 'dir'), mkdir(save_path); end
 
     nconds = numel(spike_data);
@@ -149,22 +150,22 @@ for c = 1:size(combos,1)
     labels      = label_trial{1};
 
     % ---- run all six ordered pairs (stim1 = source, stim2 = target) ----
-    acec_results = cross_stim_decoding('ac','ec', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition);
+    acec_results = cross_stim_decoding('ac','ec', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition,n_stim_hold);
     save(fullfile(save_path,'acec_results.mat'),'acec_results');
 
-    ecex_results = cross_stim_decoding('ec','ex', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition);
+    ecex_results = cross_stim_decoding('ec','ex', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition,n_stim_hold);
     save(fullfile(save_path,'ecex_results.mat'),'ecex_results');
 
-    acex_results = cross_stim_decoding('ac','ex', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition);
+    acex_results = cross_stim_decoding('ac','ex', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition,n_stim_hold);
     save(fullfile(save_path,'acex_results.mat'),'acex_results');
 
-    ecac_results = cross_stim_decoding('ec','ac', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition);
+    ecac_results = cross_stim_decoding('ec','ac', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition,n_stim_hold);
     save(fullfile(save_path,'ecac_results.mat'),'ecac_results');
 
-    exec_results = cross_stim_decoding('ex','ec', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition);
+    exec_results = cross_stim_decoding('ex','ec', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition,n_stim_hold);
     save(fullfile(save_path,'exec_results.mat'),'exec_results');
 
-    exac_results = cross_stim_decoding('ex','ac', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition);
+    exac_results = cross_stim_decoding('ex','ac', data_trial, labels, neuron_list, neuron_sample_repeat, trial_sample_repeat, n_partition,n_stim_hold);
     save(fullfile(save_path,'exac_results.mat'),'exac_results');
 
     fprintf('    %s %s done in %.1f min\n', monkey, vp, toc(combo_timer)/60);
@@ -172,7 +173,7 @@ end
 fprintf('all combinations done in %.1f min\n', toc(total_timer)/60);
 
 %%
-function results = cross_stim_decoding(stim1,stim2,data_trial,labels,neuron_num_list,neuron_sample_repeat,trial_sample_repeat,n_partition)
+function results = cross_stim_decoding(stim1,stim2,data_trial,labels,neuron_num_list,neuron_sample_repeat,trial_sample_repeat,n_partition,n_stim_hold)
 % stim1 = source (transformed), stim2 = target (classifier trained here).
 % labels is unused: held-out stimulus ids are derived from the 40/10 partition
 % inside draw_partition. Kept in the signature for call-site parity.
@@ -200,7 +201,7 @@ for neuron_squence = 1:length(neuron_num_list)
 
     parfor part = 1:n_partition
         % draw one 40/10 stimulus partition, fixed across the neuron & trial loops
-        [H,F] = draw_partition();
+        [H,F] = draw_partition(n_stim_hold);
 
         acc_p = zeros(rows_per_part,7);
         neu_p = zeros(rows_per_part,1);
@@ -236,18 +237,19 @@ for neuron_squence = 1:length(neuron_num_list)
     one.stim1         = stim1;
     one.stim2         = stim2;
     one.acc           = cat(1, acc_blocks{:});    % (n_partition*nrep*trep) x 7
-    one.partition_id  = cat(1, part_blocks{:});   % which 40/10 draw
+    one.partition_id  = cat(1, part_blocks{:});   % which draw
     one.neuron_rep_id = cat(1, neu_blocks{:});    % which neuron subset within the partition
+    one.stim_hold_num = n_stim_hold; % how many stimuli are hold-out
     results{neuron_squence} = one;
 end
 
 end
 
 %% ---------- one 40/10 stimulus partition ----------
-function [H,F] = draw_partition()
+function [H,F] = draw_partition(n)
 perm = randperm(50);
-H = sort(perm(1:10));      % 10 held-out (test) stimuli
-F = sort(perm(11:50));     % 40 fit stimuli
+H = sort(perm(1:n));      % n held-out (test) stimuli
+F = sort(perm(n+1:50));     % 50-n fit stimuli
 end
 
 %% ---------- target classifier (trained once per partition x neuron subset) ----------

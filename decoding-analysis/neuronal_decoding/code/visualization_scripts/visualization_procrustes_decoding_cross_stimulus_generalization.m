@@ -55,7 +55,7 @@ fig_dir = fullfile(script_dir, '..','..','results','figures','cross_stimulus_gen
 if ~exist(fig_dir, 'dir'), mkdir(fig_dir); end
 
 % --- Areas to plot: {monkey, area} per row. One figure each. ---
-areas_to_plot = {'FR','V1'};      % add rows (e.g. 'FR','V2'; ...) once ready
+areas_to_plot = {'FR','V1';'FR','V2';'KO','V1';'KO','V2'};      % add rows (e.g. 'FR','V2'; ...) once ready
 
 % --- Unordered pairs: {panel title, {ordered-direction file stems}} ---
 %     Two stems  -> the panel pools both directions.
