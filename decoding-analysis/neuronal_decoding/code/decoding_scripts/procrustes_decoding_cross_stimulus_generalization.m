@@ -134,7 +134,7 @@ for c = 1:size(combos,1)
     tmp = load(data_file, 'three_stim_array');
     spike_data = tmp.three_stim_array;
 
-    save_path = fullfile('..','..','results','decoding_outputs','procrustes_decoding_cross_stimulus_generalization_results','HoldStim',num2str(n_stim_hold), monkey, vp);
+    save_path = fullfile('..','..','results','decoding_outputs','procrustes_decoding_cross_stimulus_generalization_results',['HoldStim',num2str(n_stim_hold)], monkey, vp);
     if ~exist(save_path, 'dir'), mkdir(save_path); end
 
     nconds = numel(spike_data);
@@ -222,7 +222,7 @@ for neuron_squence = 1:length(neuron_num_list)
             % ---- trial hold-out loop (redraws only T_ceil/T_floor + source trials) ----
             for trial_repeat = 1:trial_sample_repeat
                 row = (neuron_repeat-1)*trial_sample_repeat + trial_repeat;
-                acc_p(row,:) = score_one_trial(model, self_decode, src, H, target_H_mean, T_gen, T_rand);
+                acc_p(row,:) = score_one_trial(model, self_decode, src, H, target_H_mean, T_gen, T_rand,n_stim_hold);
                 neu_p(row)   = neuron_repeat;
             end
         end
@@ -263,7 +263,7 @@ self_decode = 1 - kfoldLoss(cv);
 end
 
 %% ---------- one trial hold-out -> 7 rotation-only measures ----------
-function acc = score_one_trial(model, self_decode, src, H, target_H_mean, T_gen, T_rand)
+function acc = score_one_trial(model, self_decode, src, H, target_H_mean, T_gen, T_rand,n_stim_hold)
 % T_gen / T_rand are pre-fit (trial-independent); T_ceil / T_floor are fit here
 % (they depend on the 9-trial source mean). All applied transforms are X*T.
 testIdx        = randi(10, 10, 1);                 % held-out trial per H stim
@@ -273,17 +273,17 @@ test_label     = H(:);
 
 T_ceil = rot_only(target_H_mean, source_H_train);
 
-% self-consistent shuffle on the 10 (same pi on fit means AND test trials)
-pi10               = randperm(10);
-T_floor            = rot_only(target_H_mean, source_H_train(pi10,:));
-source_H_test_shuf = source_H_test(pi10,:);        % labels stay = test_label
+% self-consistent shuffle on the n_stim_hold (same pi on fit means AND test trials)
+pi_n_stim_hold               = randperm(n_stim_hold);
+T_floor            = rot_only(target_H_mean, source_H_train(pi_n_stim_hold,:));
+source_H_test_shuf = source_H_test(pi_n_stim_hold,:);        % labels stay = test_label
 
 no_transform = mean(predict(model, source_H_test)                == test_label);
 pt_gen       = mean(predict(model, source_H_test      * T_gen)   == test_label);
 pt_ceiling   = mean(predict(model, source_H_test      * T_ceil)  == test_label);
 pt_floor     = mean(predict(model, source_H_test_shuf * T_floor) == test_label);
 rand_rot_40  = mean(predict(model, source_H_test      * T_rand)  == test_label);
-chance       = mean(test_label(randperm(10))                     == test_label);
+chance       = mean(test_label(randperm(n_stim_hold))                     == test_label);
 
 % column order: 1 self_decode 2 no_transform 3 pt_gen 4 pt_ceiling
 %               5 pt_floor    6 rand_rot_40  7 chance
