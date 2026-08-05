@@ -7,14 +7,17 @@ Description:
     CCGP-style Procrustes transfer decoding with a STIMULUS hold-out design.
     Instead of fitting the cross-cue alignment on all 50 stimulus means and
     testing on held-out TRIALS of those same stimuli, the alignment (ROTATION
-    ONLY) is estimated from a 40-stimulus training subset and applied to the 10
-    held-out stimuli the rotation never saw. This tests whether the cue-1 ->
+    ONLY) is estimated from a (50 - n_stim_hold)-stimulus training subset and
+    applied to the n_stim_hold held-out stimuli the rotation never saw
+    (n_stim_hold is set in the batch config; the original design was 40 fit /
+    10 held out). This tests whether the cue-1 ->
     cue-2 alignment is a GLOBAL property of the manifold (a rotation learned from
     part of it places the rest correctly) rather than something that requires
     seeing every stimulus.
 
-    Everything is scored on the 10 held-out stimuli with a 10-way ECOC classifier
-    trained on the TARGET cue (stim2). Only the rotation component T of the
+    Everything is scored on the n_stim_hold held-out stimuli with an ECOC
+    classifier (n_stim_hold classes) trained on the TARGET cue (stim2). Only the
+    rotation component T of the
     Procrustes solution is applied to the source test trials (X*T); the uniform
     scale b and translation c are NOT applied, matching the rotation-only claim.
 
@@ -23,16 +26,17 @@ Description:
     in the _pr script, joinable by neuron_num if the gap-vs-PR view is wanted.)
 
 Resampling structure (three independent knobs):
-    n_partition           outer CCGP resampling: random 40/10 stimulus splits.
-                          THIS is the dominant variance source (which 10 are held
-                          out matters most), so it is its own explicit loop and
-                          the one to keep large. parfor runs over this axis.
+    n_partition           outer CCGP resampling: random splits holding out
+                          n_stim_hold stimuli. THIS is the dominant variance
+                          source (which stimuli are held out matters most), so it
+                          is its own explicit loop and the one to keep large.
+                          parfor runs over this axis.
     neuron_sample_repeat  neuron subsets drawn per partition (subset overlap makes
                           this axis low-variance; small counts suffice).
     trial_sample_repeat   1-of-10 trial hold-outs per (partition, neuron subset);
                           smooths the single held-out source trial. Second-order.
 
-    Efficiency: the target-H classifier, self_decode, and the fit-40 rotations
+    Efficiency: the target-H classifier, self_decode, and the fit-on-F rotations
     (T_gen, T_rand) depend only on (partition, neuron subset) -- NOT on the trial
     hold-out -- so they are computed ONCE per (partition, neuron subset) and
     reused across the trial loop. Only T_ceil / T_floor and the source test/anchor
@@ -41,34 +45,37 @@ Resampling structure (three independent knobs):
     partition_id x neuron_rep_id before treating it as independent samples.
 
 Regimes and controls (all rotation-only, all scored on the 10 held-out stimuli):
-    self_decode   within-target-cue 10-way k-fold CV. Absolute (no-transfer)
-                  ceiling for these 10 stimuli. Chance = 1/10.
+    self_decode   within-target-cue k-fold CV over the held-out stimuli. Absolute
+                  (no-transfer) ceiling. Chance = 1/n_stim_hold.
     no_transform  target classifier applied to UNtransformed source test trials.
-    pt_gen        MAIN. Rotation fit on the 40 training-stimulus means (true
-                  correspondence), applied to the 10 held-out source test trials.
+    pt_gen        MAIN. Rotation fit on the training-stimulus means (50 - n_stim_hold
+                  of them, true correspondence), applied to the n_stim_hold held-out
+                  source test trials.
                   The generalization / CCGP measure. Read RELATIVE to the bracket
                   below: pt_gen ~ pt_ceiling => the rotation generalizes.
-    pt_ceiling    Rotation fit on the 10 held-out stimulus means (true
-                  correspondence, from the 9 train trials), applied to the same 10.
-                  In-sample PT ceiling.
-    pt_floor      Rotation fit on the 10 held-out stimuli under a SELF-CONSISTENT
+    pt_ceiling    Rotation fit on the held-out stimulus means (n_stim_hold of them,
+                  true correspondence, from the 9 train trials), applied to the same
+                  held-out stimuli. In-sample PT ceiling.
+    pt_floor      Rotation fit on the held-out stimuli under a SELF-CONSISTENT
                   correspondence shuffle: one permutation pi shuffles BOTH the
                   source mean matrix (used to fit the rotation) AND the source test
                   trials, while labels stay in true order. The correct null for
                   "can the transform force a mapping when true correspondence is
                   destroyed?".
                   NOTE: OVERFITTING-MATCHED null, not a chance floor. With N large
-                  relative to 10 anchor points a rotation has enough d.o.f. to
-                  align an arbitrary bijection, so pt_floor rides toward pt_ceiling
+                  relative to the n_stim_hold anchor points a rotation has enough
+                  d.o.f. to align an arbitrary bijection, so pt_floor rides toward
+                  pt_ceiling
                   at large N and only separates in the constrained (small-N)
                   regime. The ceiling<->floor gap vs neuron count is the
                   overfitting diagnostic.
-    rand_rot_40   Rotation fit on the 40 with a NON-self-consistent shuffle (means
-                  shuffled, test unshuffled) applied to the 10. Genuine chance
-                  floor, kept as a trivial sanity reference. (A self-consistent
-                  null is undefined at the 40-fit scale because fit set != test
-                  set -- which is why the floor/ceiling bracket is built on the 10.)
-    chance        Random-label baseline (~1/10).
+    rand_rot      Rotation fit on F with a NON-self-consistent shuffle (means
+                  shuffled, test unshuffled) applied to the held-out stimuli.
+                  Genuine chance floor, kept as a trivial sanity reference. (A
+                  self-consistent null is undefined at the fit-set scale because
+                  fit set != test set -- which is why the floor/ceiling bracket is
+                  built on the held-out stimuli.)
+    chance        Random-label baseline (~1/n_stim_hold).
 
     z-scoring: per unit, once over all 500 trials (50-stimulus calibration frame).
     Treated as fixed sensor gain, not a learned alignment parameter, so estimating
@@ -83,8 +90,8 @@ Output (per pair file): a 1 x numel(neuron_list) cell array; each cell a struct:
     .acc            [(n_partition*neuron_sample_repeat*trial_sample_repeat) x 7]
                     accuracies, columns in this FIXED order:
                       1 self_decode   2 no_transform   3 pt_gen   4 pt_ceiling
-                      5 pt_floor      6 rand_rot_40     7 chance
-    .partition_id   [(...) x 1] which 40/10 stimulus draw each acc row came from
+                      5 pt_floor      6 rand_rot        7 chance
+    .partition_id   [(...) x 1] which stimulus draw (partition) each acc row came from
     .neuron_rep_id  [(...) x 1] which neuron subset (within its partition) per row
 
 Inputs:
@@ -175,7 +182,7 @@ fprintf('all combinations done in %.1f min\n', toc(total_timer)/60);
 %%
 function results = cross_stim_decoding(stim1,stim2,data_trial,labels,neuron_num_list,neuron_sample_repeat,trial_sample_repeat,n_partition,n_stim_hold)
 % stim1 = source (transformed), stim2 = target (classifier trained here).
-% labels is unused: held-out stimulus ids are derived from the 40/10 partition
+% labels is unused: held-out stimulus ids are derived from the stimulus partition
 % inside draw_partition. Kept in the signature for call-site parity.
 
 pair_wise_data_trial = pair_pcaloader(data_trial,stim1,stim2);
@@ -200,7 +207,7 @@ for neuron_squence = 1:length(neuron_num_list)
     rows_per_part = neuron_sample_repeat*trial_sample_repeat;
 
     parfor part = 1:n_partition
-        % draw one 40/10 stimulus partition, fixed across the neuron & trial loops
+        % draw one stimulus partition (n_stim_hold held out), fixed across the neuron & trial loops
         [H,F] = draw_partition(n_stim_hold);
 
         acc_p = zeros(rows_per_part,7);
@@ -216,8 +223,8 @@ for neuron_squence = 1:length(neuron_num_list)
             source_F_mean = cond_mean_all(src, F);
             target_F_mean = cond_mean_all(tgt, F);
             target_H_mean = cond_mean_all(tgt, H);
-            T_gen  = rot_only(target_F_mean, source_F_mean);                       % fit-40 true
-            T_rand = rot_only(target_F_mean, source_F_mean(randperm(numel(F)),:)); % fit-40 chance
+            T_gen  = rot_only(target_F_mean, source_F_mean);                       % rotation fit on F, true correspondence
+            T_rand = rot_only(target_F_mean, source_F_mean(randperm(numel(F)),:)); % rotation fit on F, shuffled correspondence
 
             % ---- trial hold-out loop (redraws only T_ceil/T_floor + source trials) ----
             for trial_repeat = 1:trial_sample_repeat
@@ -245,7 +252,7 @@ end
 
 end
 
-%% ---------- one 40/10 stimulus partition ----------
+%% ---------- one stimulus partition (n_stim_hold held out) ----------
 function [H,F] = draw_partition(n)
 perm = randperm(50);
 H = sort(perm(1:n));      % n held-out (test) stimuli
@@ -254,9 +261,10 @@ end
 
 %% ---------- target classifier (trained once per partition x neuron subset) ----------
 function [model, self_decode] = train_target_classifier(tgt, H)
-% 10-way ECOC on all target-cue trials of the held-out stimuli; self_decode is
-% the within-cue 10-fold CV accuracy (no-transfer ceiling).
-[Xtr, ytr] = stim_trials(tgt, H);      % 100 x n, labels = stim id
+% ECOC over the held-out stimuli (numel(H) = n_stim_hold classes) on all their
+% target-cue trials; self_decode is the within-cue 10-fold CV accuracy
+% (no-transfer ceiling). The 10 here is the CV fold count, not the hold-out size.
+[Xtr, ytr] = stim_trials(tgt, H);      % (n_stim_hold*10) x n, labels = stim id
 model       = fitcecoc(Xtr, ytr);
 cv          = crossval(model,'KFold',10);
 self_decode = 1 - kfoldLoss(cv);
@@ -266,14 +274,14 @@ end
 function acc = score_one_trial(model, self_decode, src, H, target_H_mean, T_gen, T_rand,n_stim_hold)
 % T_gen / T_rand are pre-fit (trial-independent); T_ceil / T_floor are fit here
 % (they depend on the 9-trial source mean). All applied transforms are X*T.
-testIdx        = randi(10, 10, 1);                 % held-out trial per H stim
-source_H_test  = pick_trial(src, H, testIdx);      % 10 x n (transfer test set)
-source_H_train = cond_mean_excl(src, H, testIdx);  % 10 x n (rotation anchor)
+testIdx        = randi(10, n_stim_hold, 1);        % held-out trial per held-out stimulus
+source_H_test  = pick_trial(src, H, testIdx);      % n_stim_hold x n (transfer test set)
+source_H_train = cond_mean_excl(src, H, testIdx);  % n_stim_hold x n (rotation anchor)
 test_label     = H(:);
 
 T_ceil = rot_only(target_H_mean, source_H_train);
 
-% self-consistent shuffle on the n_stim_hold (same pi on fit means AND test trials)
+% self-consistent shuffle on the held-out stimuli (same pi on fit means AND test trials)
 pi_n_stim_hold               = randperm(n_stim_hold);
 T_floor            = rot_only(target_H_mean, source_H_train(pi_n_stim_hold,:));
 source_H_test_shuf = source_H_test(pi_n_stim_hold,:);        % labels stay = test_label
@@ -282,12 +290,12 @@ no_transform = mean(predict(model, source_H_test)                == test_label);
 pt_gen       = mean(predict(model, source_H_test      * T_gen)   == test_label);
 pt_ceiling   = mean(predict(model, source_H_test      * T_ceil)  == test_label);
 pt_floor     = mean(predict(model, source_H_test_shuf * T_floor) == test_label);
-rand_rot_40  = mean(predict(model, source_H_test      * T_rand)  == test_label);
+rand_rot     = mean(predict(model, source_H_test      * T_rand)  == test_label);
 chance       = mean(test_label(randperm(n_stim_hold))                     == test_label);
 
 % column order: 1 self_decode 2 no_transform 3 pt_gen 4 pt_ceiling
-%               5 pt_floor    6 rand_rot_40  7 chance
-acc = [self_decode, no_transform, pt_gen, pt_ceiling, pt_floor, rand_rot_40, chance];
+%               5 pt_floor    6 rand_rot     7 chance
+acc = [self_decode, no_transform, pt_gen, pt_ceiling, pt_floor, rand_rot, chance];
 end
 
 %% ---------- rotation-only Procrustes ----------
