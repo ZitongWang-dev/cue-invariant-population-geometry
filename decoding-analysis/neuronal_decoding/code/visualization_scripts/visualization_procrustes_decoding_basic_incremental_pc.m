@@ -25,6 +25,14 @@ Description:
                      rotation (lower = rotation shrank the residual mismatch more).
       (col 3, d_full, is not plotted.)
 
+    FIGURE 3 -- ratio summary vs k (two subplots, ratios as percentages):
+      PANEL 1 (ratios to self): PT/self (dashed, key 'o') and control/self
+                     (dotted, key '^'); both sit at or below 100%.
+      PANEL 2 (PT / control, solid, key 's'): how far PT pulls above its own
+                     shuffle null; runs above 100%. Split from panel 1 because it
+                     lives on a different scale. Both panels share a 100% line.
+      PT/self and control/self repeat the Figure 1 panel-2 ratios.
+
     PT column choice: the shuffle control is rotation-only (T alone, no scale, no
     translation), so its matched real quantity is the rotation-only transfer
     (col 6), NOT the full b*T+c transfer (col 3). col_pt is set to 6 for a
@@ -95,6 +103,7 @@ nPop = size(populations,1);
 P = struct('name',{},'color',{},'k',{}, ...
            'self_m',{},'self_sem',{},'pt_m',{},'pt_sem',{},'ctrl_m',{},'ctrl_sem',{}, ...
            'rpt',{},'rpt_lo',{},'rpt_hi',{},'rct',{},'rct_lo',{},'rct_hi',{}, ...
+           'rpc',{},'rpc_lo',{},'rpc_hi',{}, ...
            'bef_m',{},'bef_sem',{},'aft_m',{},'aft_sem',{}, ...
            'rd',{},'rd_lo',{},'rd_hi',{});
 
@@ -120,6 +129,7 @@ for p = 1:nPop
 
     [rpt, rpt_lo, rpt_hi] = bootstrap_ratio(pt_mat,   self_mat, n_boot);
     [rct, rct_lo, rct_hi] = bootstrap_ratio(ctrl_mat, self_mat, n_boot);
+    [rpc, rpc_lo, rpc_hi] = bootstrap_ratio(pt_mat,   ctrl_mat, n_boot);   % PT / control
     [rd,  rd_lo,  rd_hi ] = bootstrap_ratio(aft_mat,  bef_mat,  n_boot);   % after / before
 
     P(end+1) = struct('name',populations{p,1},'color',populations{p,3},'k',kx, ...
@@ -127,6 +137,7 @@ for p = 1:nPop
         'ctrl_m',ctrl_m,'ctrl_sem',ctrl_sem, ...
         'rpt',rpt,'rpt_lo',rpt_lo,'rpt_hi',rpt_hi, ...
         'rct',rct,'rct_lo',rct_lo,'rct_hi',rct_hi, ...
+        'rpc',rpc,'rpc_lo',rpc_lo,'rpc_hi',rpc_hi, ...
         'bef_m',bef_m,'bef_sem',bef_sem,'aft_m',aft_m,'aft_sem',aft_sem, ...
         'rd',rd,'rd_lo',rd_lo,'rd_hi',rd_hi);   %#ok<SAGROW>
     fprintf('Loaded %-6s : k = 1..%d\n', populations{p,1}, kx(end));
@@ -222,6 +233,60 @@ sgtitle('Procrustes shape distance vs PC dimension');
 
 %% Save (uncomment for production)
 % saveas(gcf, fullfile(fig_dir, 'fig_pc_procrustes_distance.png'));
+
+%% Figure 3: ratio summary vs number of PCs (two subplots, ratios as percentages)
+figure('Color','w','Position',[100 100 1180 480]);
+tiledlayout(1,2,'TileSpacing','compact','Padding','compact');
+
+% ----- Panel 1: ratios to self-decoding -----
+axR = nexttile; hold(axR,'on');
+pop_handles3 = gobjects(1,numel(P));
+for p = 1:numel(P)
+    c = P(p).color; x = P(p).k;
+    plot_ci(x, 100*P(p).rpt, 100*P(p).rpt_lo, 100*P(p).rpt_hi, c, '--', show_band);   % PT / self
+    plot_ci(x, 100*P(p).rct, 100*P(p).rct_lo, 100*P(p).rct_hi, c, ':',  show_band);   % control / self
+    pop_handles3(p) = plot(nan, nan, '-', 'Color',c, 'LineWidth',2.5);
+end
+yline(100, '-', '100%', 'Color',[0.6 0.6 0.6], 'LineWidth',0.8, ...
+      'LabelHorizontalAlignment','left', 'FontSize',8, 'HandleVisibility','off');
+xlabel('Number of PCs (k)'); ylabel('Ratio to self-decoding (%)');
+ylim([0 50])
+grid on; box on;
+title('PT and control, normalized by self');
+
+% linestyle key (markers only here)
+h_r1 = plot(nan, nan, '--k', 'Marker','o', 'LineWidth',1.5);
+h_r2 = plot(nan, nan, ':k',  'Marker','^', 'LineWidth',1.5);
+h_r3 = plot(nan, nan, '-k',  'Marker','s', 'MarkerFaceColor','k', 'LineWidth',1.5);
+
+% ----- Panel 2: PT / control -----
+nexttile; hold on;
+for p = 1:numel(P)
+    c = P(p).color; x = P(p).k;
+    plot_ci(x, 100*P(p).rpc, 100*P(p).rpc_lo, 100*P(p).rpc_hi, c, '-', show_band);   % PT / control
+end
+yline(100, '-', '100%', 'Color',[0.6 0.6 0.6], 'LineWidth',0.8, ...
+      'LabelHorizontalAlignment','left', 'FontSize',8, 'HandleVisibility','off');
+xlabel('Number of PCs (k)'); ylabel('PT / control (%)');
+grid on; box on;
+title('PT relative to its shuffle null');
+
+% ----- Shared legend -----
+lg3 = legend(axR, [pop_handles3, h_r1, h_r2, h_r3], ...
+       [{P.name}, {'PT / self', 'control / self', 'PT / control'}]);
+lg3.Layout.Tile = 'east';
+sgtitle('Ratio summary vs PC dimension');
+
+% linestyle key (markers only here)
+h_r1 = plot(nan, nan, '--k', 'Marker','o', 'LineWidth',1.5);
+h_r2 = plot(nan, nan, ':k',  'Marker','^', 'LineWidth',1.5);
+h_r3 = plot(nan, nan, '-k',  'Marker','s', 'MarkerFaceColor','k', 'LineWidth',1.5);
+legend([pop_handles3, h_r1, h_r2, h_r3], ...
+       [{P.name}, {'PT / self', 'control / self', 'PT / control'}], ...
+       'Location','eastoutside');
+
+%% Save (uncomment for production)
+% saveas(gcf, fullfile(fig_dir, 'fig_pc_ratio_summary.png'));
 
 %% ------------------------------------------------------------------------
 function [kx, self_mat, pt_mat, ctrl_mat, bef_mat, aft_mat] = pool_population(pdir, pair_files, col_self, col_pt, col_ctrl, pcol_before, pcol_after)
