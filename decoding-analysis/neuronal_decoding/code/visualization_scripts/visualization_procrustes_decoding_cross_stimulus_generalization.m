@@ -41,21 +41,26 @@ Path note:
 
 %% Configuration
 clc; clear;
-
+close all
 % Resolve this script's folder (fall back to pwd when run cell-by-cell).
 script_dir = fileparts(mfilename('fullpath'));
 if isempty(script_dir) || contains(script_dir, fullfile('AppData','Local','Temp'))
     script_dir = pwd;
 end
 
-results_base = fullfile(script_dir, '..','..','results','decoding_outputs', ...
-    'procrustes_decoding_cross_stimulus_generalization_results');
+% --- Hold-out level to visualize (selects the HoldStim<n> results folder) ---
+n_stim_hold = 2;   % must match the compute run you want to view
 
-fig_dir = fullfile(script_dir, '..','..','results','figures','cross_stimulus_generalization');
+results_base = fullfile(script_dir, '..','..','results','decoding_outputs', ...
+    'procrustes_decoding_cross_stimulus_generalization_results', ...
+    sprintf('HoldStim%d', n_stim_hold));
+
+fig_dir = fullfile(script_dir, '..','..','results','figures','cross_stimulus_generalization', ...
+    sprintf('HoldStim%d', n_stim_hold));
 if ~exist(fig_dir, 'dir'), mkdir(fig_dir); end
 
 % --- Areas to plot: {monkey, area} per row. One figure each. ---
-areas_to_plot = {'FR','V1';'FR','V2';'KO','V1';'KO','V2'};      % add rows (e.g. 'FR','V2'; ...) once ready
+areas_to_plot = {'FR','V1'; 'FR','V2'; 'KO','V1'; 'KO','V2'};
 
 % --- Unordered pairs: {panel title, {ordered-direction file stems}} ---
 %     Two stems  -> the panel pools both directions.
@@ -67,8 +72,14 @@ pairs = {
 };
 
 % --- Measure style table, indexed by .acc column (1..7) ---
-m_name  = {'self-decoding','no-transform','PT-gen (fit 40)','PT-ceiling (fit 10)', ...
-           'PT-floor (shuffle)','rand-rot (fit 40)','chance'};
+% Labels track the hold-out level: fit set = 50 - n_stim_hold, hold-out = n_stim_hold.
+n_fit = 50 - n_stim_hold;
+m_name  = {'self-decoding', 'no-transform', ...
+           sprintf('PT-gen (fit %d)', n_fit), ...
+           sprintf('PT-ceiling (fit %d)', n_stim_hold), ...
+           'PT-floor (shuffle)', ...
+           sprintf('rand-rot (fit %d)', n_fit), ...
+           'chance'};
 m_color = {[0.50 0.50 0.50],[0.70 0.70 0.70],[0.00 0.45 0.74],[0.30 0.75 0.93], ...
            [0.85 0.33 0.10],[0.95 0.55 0.45],[0.00 0.00 0.00]};
 m_style = {'--',':','-','--','-','--',':'};
@@ -129,9 +140,9 @@ for a = 1:size(areas_to_plot,1)
 
     lg = legend(leg_h, leg_names);
     lg.Layout.Tile = 'east';
-    sgtitle(sprintf('%s %s  --  cross-stimulus generalization', monkey, vp));
+    sgtitle(sprintf('%s %s  --  cross-stimulus generalization (hold %d)', monkey, vp, n_stim_hold));
 
-    % saveas(gcf, fullfile(fig_dir, sprintf('cross_stim_gen_%s_%s.png', monkey, vp)));
+    % saveas(gcf, fullfile(fig_dir, sprintf('cross_stim_gen_HoldStim%d_%s_%s.png', n_stim_hold, monkey, vp)));
 end
 
 %% ---------- helpers ----------
