@@ -31,7 +31,7 @@ Description:
 clc; clear;
 
 %% Configuration
-monkey        = 'KO';   % 'FR' or 'KO'
+monkey        = 'FR';   % 'FR' or 'KO'
 file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_per_session_results'];
 
 areas       = {'V1', 'V2'};
@@ -252,6 +252,11 @@ linkaxes(ax_handles, 'y');
 sgtitle(sprintf(['%s  |  per-cell Mann-Whitney U (affine vs none)  |  ' ...
                  'shape = stim pair, color = area, filled = p < %.2f'], ...
                 monkey, sig_thresh));
+fig_save_dir  = ['..\..\results\figures\','procrustes_decoding_per_session\', monkey];
+if ~exist(fig_save_dir, 'dir'), mkdir(fig_save_dir); end
+
+saveas(gcf, fullfile(fig_save_dir, ...
+    ['procrustes_decoding_per_session_', monkey, '_norm_delta.png']));
 
 %% =================== LOCAL FUNCTIONS ===================
 function plot_cell(x, y, shape, area_color, is_sig)

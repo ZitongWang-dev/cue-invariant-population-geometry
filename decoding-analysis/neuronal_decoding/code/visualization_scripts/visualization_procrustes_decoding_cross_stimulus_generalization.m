@@ -142,7 +142,7 @@ for a = 1:size(areas_to_plot,1)
     lg.Layout.Tile = 'east';
     sgtitle(sprintf('%s %s  --  cross-stimulus generalization (hold %d)', monkey, vp, n_stim_hold));
 
-    % saveas(gcf, fullfile(fig_dir, sprintf('cross_stim_gen_HoldStim%d_%s_%s.png', n_stim_hold, monkey, vp)));
+    saveas(gcf, fullfile(fig_dir, sprintf('cross_stim_gen_HoldStim%d_%s_%s.png', n_stim_hold, monkey, vp)));
 end
 
 %% ---------- helpers ----------

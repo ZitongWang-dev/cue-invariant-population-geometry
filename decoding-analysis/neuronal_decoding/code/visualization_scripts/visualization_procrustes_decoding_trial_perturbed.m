@@ -12,7 +12,7 @@ Description:
 
 clc; clear;
 %%
-monkey = 'FR';
+monkey = 'KO';
 file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_trial_perturbed_results\','affine'];
 %% Load result matrices
 V1_acec_result = result_loader(monkey,'V1','acec',file_location);
@@ -87,6 +87,12 @@ title([monkey ' trial affine-shifted, Z‑scored (rotation‑only)']);
 x = nan(nb, ng);
 for i = 1:nb, x(i,:) = b(i).XEndPoints; end
 hold on; errorbar(x', acc_group, er_group,'r','linestyle','none','LineWidth',1,'HandleVisibility','off'); hold off;
+%% save
+script_dir = fileparts(mfilename('fullpath'));
+fig_dir = fullfile(script_dir, '..','..','results','figures', ...
+    'trial_affine_shifted_PT_decoding');
+if ~exist(fig_dir, 'dir'), mkdir(fig_dir); end
+saveas(gcf, fullfile(fig_dir, sprintf('%s_trial_perturbed_decoding.png',monkey)));
 %%
 function organized_result = result_loader(monkey,vp,stimpair,file_location)
 decoding_result = load(strcat(pwd,'\',file_location,'\',monkey,'\',vp,'\',stimpair,'_','results','.mat'),[stimpair,'_','results']); 

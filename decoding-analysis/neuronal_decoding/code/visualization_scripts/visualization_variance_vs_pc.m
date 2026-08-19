@@ -158,7 +158,7 @@ lg.Layout.Tile = 'east';
 sgtitle('Signal-variance spectrum of the 50-condition mean manifold');
 
 %% Save (uncomment for production)
-% saveas(gcf, fullfile(fig_dir, 'fig_pc_signal_variance.png'));
+saveas(gcf, fullfile(fig_dir, 'fig_pc_signal_variance.png'));
 
 %% ------------------------------------------------------------------------
 function stim_data_trial_averged = take_average(stim_data, number_of_average)

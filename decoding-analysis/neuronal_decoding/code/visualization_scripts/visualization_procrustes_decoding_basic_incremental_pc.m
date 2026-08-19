@@ -192,7 +192,7 @@ lg.Layout.Tile = 'east';
 sgtitle('Procrustes transfer decoding vs PC dimension');
 
 %% Save (uncomment for production)
-% saveas(gcf, fullfile(fig_dir, 'fig_pc_self_pt_control.png'));
+saveas(gcf, fullfile(fig_dir, 'fig_pc_self_pt_control.png'));
 
 %% Figure 2: residual Procrustes shape distance vs number of PCs
 figure('Color','w','Position',[100 100 1180 480]);
@@ -232,7 +232,7 @@ lg2.Layout.Tile = 'east';
 sgtitle('Procrustes shape distance vs PC dimension');
 
 %% Save (uncomment for production)
-% saveas(gcf, fullfile(fig_dir, 'fig_pc_procrustes_distance.png'));
+saveas(gcf, fullfile(fig_dir, 'fig_pc_procrustes_distance.png'));
 
 %% Figure 3: ratio summary vs number of PCs (two subplots, ratios as percentages)
 figure('Color','w','Position',[100 100 1180 480]);
@@ -286,7 +286,7 @@ legend([pop_handles3, h_r1, h_r2, h_r3], ...
        'Location','eastoutside');
 
 %% Save (uncomment for production)
-% saveas(gcf, fullfile(fig_dir, 'fig_pc_ratio_summary.png'));
+saveas(gcf, fullfile(fig_dir, 'fig_pc_ratio_summary.png'));
 
 %% ------------------------------------------------------------------------
 function [kx, self_mat, pt_mat, ctrl_mat, bef_mat, aft_mat] = pool_population(pdir, pair_files, col_self, col_pt, col_ctrl, pcol_before, pcol_after)

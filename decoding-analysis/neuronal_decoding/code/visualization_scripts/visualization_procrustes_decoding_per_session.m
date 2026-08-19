@@ -61,10 +61,10 @@ Description:
 clc; clear;
 close all
 %% Configuration
-monkey        = 'KO';
+monkey        = 'FR';
 file_location = ['..\..\results\decoding_outputs\','procrustes_decoding_per_session_results'];
-fig_save_dir  = ['..\..\results\figures\','procrustes_decoding_per_session_', monkey];
-% if ~exist(fig_save_dir, 'dir'), mkdir(fig_save_dir); end
+fig_save_dir  = ['..\..\results\figures\','procrustes_decoding_per_session\', monkey];
+if ~exist(fig_save_dir, 'dir'), mkdir(fig_save_dir); end
 
 %% Decoding type columns to display
 % Original 8-column accuracy order (from pro_decoding):
@@ -90,40 +90,39 @@ data_affine = pack_data(affine_v1, affine_v1_meta, affine_v2, affine_v2_meta);
 
 %% Figure 1: perturb_mode = none
 plot_per_session(data_none, monkey, 'none (correlations preserved)', false, decoding_labels);
-% saveas(gcf, fullfile(fig_save_dir, ...
-%     ['procrustes_decoding_per_session_', monkey, '_none.png']));
+saveas(gcf, fullfile(fig_save_dir, ...
+    ['procrustes_decoding_per_session_', monkey, '_none.png']));
 
 %% Figure 2: perturb_mode = affine
 plot_per_session(data_affine, monkey, 'affine (within-session correlations broken)', false, decoding_labels);
-% saveas(gcf, fullfile(fig_save_dir, ...
-%     ['procrustes_decoding_per_session_', monkey, '_affine.png']));
+saveas(gcf, fullfile(fig_save_dir, ...
+    ['procrustes_decoding_per_session_', monkey, '_affine.png']));
 
 %% Figure 3: delta = affine - none
 delta_v1   = cellfun(@(a, b) a - b, affine_v1, none_v1, 'UniformOutput', false);
 delta_v2   = cellfun(@(a, b) a - b, affine_v2, none_v2, 'UniformOutput', false);
 data_delta = pack_data(delta_v1, none_v1_meta, delta_v2, none_v2_meta);
 plot_per_session(data_delta, monkey, '\Delta (affine - none)', true, decoding_labels);
-% saveas(gcf, fullfile(fig_save_dir, ...
-%     ['procrustes_decoding_per_session_', monkey, '_delta.png']));
+saveas(gcf, fullfile(fig_save_dir, ...
+    ['procrustes_decoding_per_session_', monkey, '_delta.png']));
 
 %% Figure 4: self vs PT-decoding scatter (none + affine on the same axes)
 plot_self_vs_pt(data_none, data_affine, monkey);
-% saveas(gcf, fullfile(fig_save_dir, ...
-%     ['procrustes_decoding_per_session_', monkey, '_self_vs_pt.png']));
+saveas(gcf, fullfile(fig_save_dir, ...
+    ['procrustes_decoding_per_session_', monkey, '_self_vs_pt.png']));
 
 %% Figure 5: normalized delta per session, with significance annotations
 plot_normalized_delta(data_none, data_affine, monkey);
-% saveas(gcf, fullfile(fig_save_dir, ...
-%     ['procrustes_decoding_per_session_', monkey, '_norm_delta.png']));
+saveas(gcf, fullfile(fig_save_dir, ...
+    ['procrustes_decoding_per_session_', monkey, '_norm_delta.png']));
 
 %% Figure 6: pooled across stim pairs AND both monkeys (FR + KO)
 % Independent of the top-level `monkey` setting: this section always
 % loads FR and KO internally and runs one Wilcoxon test per
 % (monkey, area, decoding type) on the pooled N_sessions x 3 deltas.
 plot_pooled_pairs(file_location, dec_idx);
-% saveas(gcf, fullfile('..\..\results\figures\', ...
-%     'procrustes_decoding_per_session_pooled_pairs.png'));
-
+saveas(gcf, fullfile(fig_save_dir, ...
+    'procrustes_decoding_per_session_pooled_pairs.png'));
 %% =================== LOCAL FUNCTIONS ===================
 function data = pack_data(v1_data, v1_meta, v2_data, v2_meta)
     data.v1_data = v1_data;

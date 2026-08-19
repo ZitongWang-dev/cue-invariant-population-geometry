@@ -27,7 +27,7 @@ Description:
 
 clc; clear;
 %% Configuration
-monkey = 'KO';                 % 'FR' or 'KO'
+monkey = 'FR';                 % 'FR' or 'KO'
 areas  = {'V1','V2'};          % use {'V1'} to plot a single area
 
 % NOTE: must match save_path in procrustes_decoding_basic_trialShuffledWithMean.m.
@@ -119,8 +119,8 @@ hold on;
 errorbar(x', acc_group, er_group,'r','linestyle','none','LineWidth',1,'HandleVisibility','off');
 hold off;
 
-% saveas(gcf, fullfile('..','..','results','figures', ...
-%     ['procrustes_decoding_basic_trialShuffledWithMean_' monkey '.png']));
+saveas(gcf, fullfile('..','..','results','figures', ...
+    ['procrustes_decoding_basic_trialShuffledWithMean_' monkey '.png']));
 
 %%
 function organized_result = result_loader(monkey,vp,stimpair,file_location)
