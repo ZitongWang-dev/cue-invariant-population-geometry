@@ -49,3 +49,16 @@ The general workflow for this project is a three-step process:
 
 3.  *Visualize Results*:
     Finally, run the corresponding script from a `/visualization_scripts/` folder to load the results and generate the final plots, which are saved in the `/results/figures/` directory.
+
+SIMULATION DIRECTORIES (added 2026-09-17)
+-----------------------------------------
+* `Simulations_v2/`: CURRENT synthetic benchmark for the J Neurosci rebuttal (Reviewer 1,
+  points 3 and 5). Model 1 (independent random means, the null) and Model 3 (shared rank-2
+  latent geometry with independent per-cue linear readout), swept over the number of neurons
+  (5-100) and the number of stimulus classes (5-50), scored with the corrected
+  correspondence-shuffled control (same permutation applied to the stim1 means and the held-out
+  stim1 trials, rotation-only). Generators draw each neuron's mean count and tuning depth from
+  the measured distributions of the recorded populations. See Simulations_v2/README.md.
+* `Simulations/`: the first version (July 2026), superseded. Its "rand null" control shuffled
+  the means but applied the transform to unshuffled test trials, so it sat at chance and could
+  not reveal the rotation's overfitting. Kept for reference only.

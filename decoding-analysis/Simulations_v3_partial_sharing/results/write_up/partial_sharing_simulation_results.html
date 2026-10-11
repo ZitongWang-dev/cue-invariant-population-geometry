@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Partially shared geometry: simulation results</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});"></script>
+<style>
+  @page { size: Letter; margin: 0.8in 0.85in; }
+  body { font-family: Georgia, 'Times New Roman', serif; font-size: 10.5pt; line-height: 1.45; color: #1a1a1a; background: #ffffff; margin: 0; font-variant-numeric: lining-nums; }
+  h1, h2, h3 { font-family: 'Segoe UI', Arial, sans-serif; color: #111; break-after: avoid; }
+  h1 { font-size: 19pt; margin: 0 0 4pt; }
+  h2 { font-size: 13.5pt; margin: 20pt 0 6pt; border-bottom: 0.75pt solid #bbb; padding-bottom: 2pt; }
+  h3 { font-size: 11pt; margin: 14pt 0 4pt; }
+  p { margin: 5pt 0; }
+  .byline { color: #555; font-family: 'Segoe UI', Arial, sans-serif; font-size: 9.5pt; margin-bottom: 10pt; }
+  ul, ol { margin: 5pt 0; padding-left: 20pt; }
+  li { margin: 3pt 0; }
+  .eq { margin: 8pt 0; break-inside: avoid; overflow-x: hidden; }
+  table { border-collapse: collapse; width: 100%; margin: 8pt 0; font-size: 9.5pt; break-inside: avoid; }
+  th, td { border-top: 0.5pt solid #bbb; border-bottom: 0.5pt solid #bbb; padding: 4pt 6pt; text-align: left; vertical-align: top; }
+  th { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 600; background: #f3f3f1; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  figure { margin: 10pt 0; break-inside: avoid; }
+  figure img { width: 100%; display: block; }
+  figcaption { font-size: 9pt; color: #333; margin-top: 4pt; }
+  .katex { font-size: 1.05em; }
+</style>
+</head>
+<body>
+
+<h1>Partially shared geometry: simulation results</h1>
+<div class="byline">Oct 8, 2026 · Zitong Wang</div>
+
+<h2>Models</h2>
+<p>PT was benchmarked on three models that differ only in how the renderings relate. All three share the neurons, their single-neuron statistics, the trial noise and the decoding pipeline.</p>
+<p>Notation: \(\mu_{s,c} \in \mathbb{R}^N\) is the population's mean response to stimulus \(s\) in rendering \(c\). \(r \in \mathbb{R}^N\) holds each neuron's mean spike count and \(D = \operatorname{diag}(r_i \kappa_i)\) its tuning depth, both drawn from the recorded distributions. Trials are Poisson around \(\mu_{s,c}\), 10 per stimulus.</p>
+
+<h3>Model 1: independent representations</h3>
+<div class="eq">\[\mu_{s,c} = r + D\,\varepsilon_{s,c}, \qquad \varepsilon_{s,c} \text{ independent across } s \text{ and } c, \qquad \mathbb{E}\,\varepsilon = 0, \ \operatorname{Var}\varepsilon = 1\]</div>
+<p>Nothing is shared across renderings. The \(\varepsilon\) are standardized Gamma draws, so rates stay positive. This is the high-dimensional null: PR ≈ 30 at 100 neurons and 50 classes.</p>
+
+<h3>Model 2: shared structure in rendering-specific coordinates</h3>
+<div class="eq">\[\mu_{s,c} = r + D\,U_c\, z_s, \qquad z_s \in \mathbb{R}^{K}, \quad U_c \in \mathbb{R}^{N \times K}, \quad K = 5\]</div>
+<p>\(z_s\) are the stimulus's shape coordinates: the same in every rendering, and whitened across stimuli. \(U_c\) is the rendering's coordinate frame, with unit-norm rows drawn independently per rendering. With \(N \gg K\), \(U_c^{\top}U_c \approx (N/K)\, I\), so \(U_c\) acts as a random orthonormal frame up to scale: the role of \(R_c\) in an orthogonal formulation.</p>
+
+<h3>Model 3: shared plus rendering-specific structure</h3>
+<div class="eq">\[\mu_{s,c} = r + D\,\big(U_c^{\mathrm{sh}}\, x_s + U_c^{\mathrm{sp}}\, y_{s,c}\big), \qquad x_s \in \mathbb{R}^{K_s}, \quad y_{s,c} \in \mathbb{R}^{K - K_s}, \qquad \alpha = \frac{K_s}{K}\]</div>
+<ul>
+  <li><b>\(x_s\):</b> shape coordinates shared by every rendering; \(U_c^{\mathrm{sh}}\) embeds them in rendering \(c\).</li>
+  <li><b>\(U_c^{\mathrm{sp}}\):</b> a rendering-specific subspace common to all stimuli in that rendering (the role of \(A_c\)). <b>\(y_{s,c}\):</b> each stimulus's position in it, drawn independently per rendering (the role of \(u_{i,c}\)).</li>
+  <li><b>Weighting:</b> every latent coordinate has unit variance, so the shared term carries a fraction \(\alpha\) of each rendering's signal variance (the role of \(\sqrt{\alpha}\)). The total dimensionality stays \(K\) at every \(\alpha\).</li>
+  <li><b>Endpoints:</b> \(\alpha = 1\) is Model 2. \(\alpha = 0\) is an independent-representation null at Model 2's dimensionality (PR 7–8), complementing Model 1's high-dimensional null.</li>
+</ul>
+
+<h3>Where this departs from the proposed design</h3>
+<table>
+  <tr><th>Proposed</th><th>Implemented</th><th>Why</th></tr>
+  <tr><td>Gaussian means, \(\mu \sim \mathcal{N}(0, \Sigma_c)\)</td><td>Mean counts and tuning depths drawn from the recordings; Poisson trials</td><td>Matches single-neuron statistics; rates stay positive without rectification</td></tr>
+  <tr><td>Full-rank shared latent, \(s_i \in \mathbb{R}^N\)</td><td>5-D shared latent</td><td>Matches the recorded PR (7–9.5); a full-rank latent has Model 1's PR (≈ 30)</td></tr>
+  <tr><td>Exact orthogonal \(R_c\)</td><td>Random per-rendering readout \(U_c\), near-orthogonal for \(N \gg K\)</td><td>Generic linear mixed selectivity, as the reviewer proposed; unequal neuron gains and z-scoring break an exact rotation anyway</td></tr>
+  <tr><td>\(\sqrt{\alpha}\) and \(\sqrt{1-\alpha}\) weights on separate subspaces</td><td>\(K_s\) of \(K\) equal-variance dimensions shared; \(\alpha = 0, 0.2, \dots, 1\)</td><td>The weighted form changes each rendering's PR with \(\alpha\) (5 → 10 → 5 for 5 + 5 dimensions), and the floor depends on PR</td></tr>
+  <tr><td>Three renderings (EC, AC, EX)</td><td>Two renderings per population, both ordered pairs</td><td>The recordings are compared pair by pair on the same metric; an EX-specific latent was not run</td></tr>
+</table>
+
+<h2>Implementation</h2>
+<p>The three models share their neurons, latent draws and trial noise. Per neuron \(i\), stimulus \(s\), rendering \(c\) and trial \(t\), Model 3 (Model 2 at \(\alpha = 1\)) is generated as:</p>
+<div class="eq">\[\begin{aligned}
+r_i &amp;= 9.4\, e^{0.66\,\xi_i}, \qquad \kappa_i = 0.14\, e^{0.65\,\eta_i}, \qquad \xi_i, \eta_i \sim \mathcal{N}(0, 1) \\
+z_{s,c} &amp;= \operatorname{whiten}\big(\,[\,x_s,\; y_{s,c}\,]\,\big), \qquad x_s \sim \mathcal{N}(0, I_{K_s}), \quad y_{s,c} \sim \mathcal{N}(0, I_{K-K_s}) \\
+\lambda_{i,s,c} &amp;= r_i \big(1 + \kappa_i\, u_{i,c}^{\top} z_{s,c}\big), \qquad \lVert u_{i,c} \rVert = 1 \\
+n_{i,s,c,t} &amp;\sim \operatorname{Poisson}(\lambda_{i,s,c}), \qquad t = 1, \dots, 10
+\end{aligned}\]</div>
+<ul>
+  <li><b>\(r_i, \kappa_i\):</b> the neuron's mean spike count and tuning depth (SD over mean of its tuning curve), drawn from the recorded distributions in the 330–630 ms window. They belong to the neuron, so they are the same in every rendering. The recorded Fano factor (1.08) motivates Poisson trials.</li>
+  <li><b>\(x_s\):</b> the stimulus's shape coordinates, identical in every rendering. <b>\(y_{s,c}\):</b> its appearance coordinates, drawn independently for each rendering.</li>
+  <li><b>whiten:</b> zero mean and identity covariance across stimuli within each rendering. Cholesky whitening leaves the shape coordinates identical across renderings and makes the appearance coordinates orthogonal to them.</li>
+  <li><b>\(u_{i,c}\):</b> neuron \(i\)'s readout direction in rendering \(c\), a random unit vector drawn independently per rendering. The renderings thus embed the same shape coordinates differently, which Procrustes can largely undo.</li>
+  <li><b>\(\kappa_i\) cap:</b> at 0.35 and at the largest value that keeps neuron \(i\)'s rates non-negative, so no offset or rectification is needed.</li>
+</ul>
+<p>Because \(z\) is white and \(u\) has unit length, neuron \(i\)'s tuning SD is exactly \(r_i \kappa_i\) in every rendering and at every \(\alpha\). Self-decoding and PR therefore do not change with \(\alpha\): at most 0.039 and 0.17 across \(\alpha\) over the 55 grid points, against a population SEM of 0.014 for self-decoding. \(\alpha = 1\) reproduces Model 2 exactly (the 5-D “Model 3” of the earlier write-up), and \(\alpha = 0\) is a null at the recorded dimensionality (PR 7–8 at 50 classes).</p>
+<p>Model 1 uses the same \(r_i\) and \(\kappa_i\), with every rate an independent Gamma draw, \(\lambda_{i,s,c} \sim \operatorname{Gamma}(1/\kappa_i^2,\; r_i \kappa_i^2)\): mean \(r_i\) and SD \(r_i \kappa_i\).</p>
+
+<h3>Decoding and metric</h3>
+<p>Each ordered pair of renderings (source → target) is decoded exactly as the recordings are:</p>
+<ol>
+  <li>Z-score each rendering per neuron over all of its trials.</li>
+  <li>Self-decoding: an ECOC linear SVM trained on the target rendering, scored by 10-fold cross-validation.</li>
+  <li>PT: hold out one source trial per stimulus and average the other 9. Fit the orthogonal map \(T\) from the source means to the target means, map the held-out trials by \(T\), and decode them with the target SVM.</li>
+  <li>Control: apply one random permutation of the stimuli to both the source means and the held-out trials, then fit, map and decode the same way. It keeps the rotation's freedom but destroys the stimulus correspondence.</li>
+  <li>Average 10 holdouts and both ordered pairs. Each grid point has 16 populations (\(N\) = 5–100 neurons, 10–50 classes, 6 values of \(\alpha\)).</li>
+</ol>
+<div class="eq">\[\hat T = \arg\min_{T^{\top} T = I} \big\lVert \bar M_{\mathrm{src}}\, T - \bar M_{\mathrm{tgt}} \big\rVert_F\]</div>
+<p>\(\bar M\) is the stimulus × neuron matrix of class means, centred across stimuli. MATLAB's <code>procrustes</code> also fits a scale and a translation, but only \(T\) is applied.</p>
+<div class="eq">\[\text{headroom} = \frac{\text{PT} - \text{control}}{\text{self} - \text{control}}\]</div>
+<p>Headroom is the share of the gap between the shuffled floor and self-decoding that PT recovers: 0 when nothing is shared, 1 for full transfer. Unlike PT/control, it corrects for both the floor and the ceiling.</p>
+
+<h2>Calibration: headroom reads out \(\alpha\)</h2>
+<p>Headroom tracks \(\alpha\) and hardly depends on the number of neurons or classes. PT/control at a fixed \(\alpha\) grows with the class count, so it cannot be compared across class counts.</p>
+<figure>
+  <img src="../figures/results_section/fig1_partial_sharing_calibration.png" alt="Figure 1">
+  <figcaption><i>Figure 1. (A) Headroom vs. \(\alpha\), one line per class count (mean over \(N \ge 20\)). (B) PT/control vs. class count, one line per \(\alpha\). (C) Headroom vs. \(N\) at 50 classes, one line per \(\alpha\).</i></figcaption>
+</figure>
+<ul>
+  <li><b>\(\alpha = 0\) is a clean null.</b> Over \(N \ge 20\), PT/control has a median of 1.00 (0.90–1.07) and headroom stays between −0.07 and 0.05. Scored against the permuted identities, the control stays within 0.03 of chance.</li>
+  <li><b>Headroom is stable across class counts.</b> At 50 classes it is 0.09, 0.22, 0.38, 0.62 and 0.94 for \(\alpha\) = 0.2 to 1, and it stays within 0.03 of these values at 20–40 classes. Only 10 classes falls lower at large \(\alpha\) (0.84 at \(\alpha = 1\)).</li>
+  <li><b>Headroom is stable across \(N\).</b> From 20 neurons on it barely moves; at 50 classes and \(\alpha = 0.4\) it ranges 0.18–0.24 over \(N\) = 20–100.</li>
+  <li><b>PT/control is not.</b> At \(\alpha = 0.4\) it rises from 1.07 at 10 classes to 1.77 at 50; at \(\alpha = 1\), from 1.34 to 4.33.</li>
+</ul>
+<p>Headroom is convex in \(\alpha\): sharing 40% of the latent dimensions recovers only about a fifth of the gap between floor and self-decoding.</p>
+
+<h2>Recorded populations at 50 classes</h2>
+<p>The recorded headroom is 0.15–0.25. Within this family that places the four populations at \(\alpha \approx\) 0.30–0.45: well above the \(\alpha = 0\) null, and far below full sharing.</p>
+<table>
+  <tr><th>Population</th><th class="num">Neurons</th><th class="num">Self</th><th class="num">PT</th><th class="num">Control</th><th class="num">PT/control</th><th class="num">Headroom</th><th class="num">Implied \(\alpha\)</th></tr>
+  <tr><td>FR V1</td><td class="num">48</td><td class="num">0.262</td><td class="num">0.111</td><td class="num">0.084</td><td class="num">1.32</td><td class="num">0.15</td><td class="num">0.30</td></tr>
+  <tr><td>FR V2</td><td class="num">112</td><td class="num">0.338</td><td class="num">0.167</td><td class="num">0.131</td><td class="num">1.28</td><td class="num">0.18</td><td class="num">0.34</td></tr>
+  <tr><td>KO V1</td><td class="num">109</td><td class="num">0.496</td><td class="num">0.255</td><td class="num">0.174</td><td class="num">1.47</td><td class="num">0.25</td><td class="num">0.45</td></tr>
+  <tr><td>KO V2</td><td class="num">146</td><td class="num">0.370</td><td class="num">0.214</td><td class="num">0.173</td><td class="num">1.24</td><td class="num">0.21</td><td class="num">0.38</td></tr>
+</table>
+<p>Accuracies are from the same decoder and control as the models (8 repeats, all neurons, all 6 rendering pairs) and agree with the earlier neuron-subsampling analysis to within 0.005 in accuracy and 0.01 in headroom. Implied \(\alpha\) is interpolated on the model's 50-class headroom curve (Figure 1A).</p>
+<ul>
+  <li><b>Operating point matches.</b> The family at \(N\) = 40–100 has self-decoding 0.28–0.41 and PR 7.1–7.8; the recordings have 0.26–0.50 and 7.0–9.5.</li>
+  <li><b>Headroom is flat in \(N\), as the family predicts.</b> Subsampling neurons from 20 up to full size (Figure 2A), headroom stays at 0.15 (FR V1), 0.12–0.19 (FR V2), 0.19–0.26 (KO V1) and 0.11–0.22 (KO V2).</li>
+</ul>
+
+<h2>Recorded populations on fewer classes</h2>
+<p>On random subsets of 20–50 stimuli, each population's headroom stays in its own \(\alpha\) band, as the family predicts. Over the same range PT/control falls with the class count. The \(\alpha\) read at 50 classes therefore carries over to fewer classes, which tests the family on data it was not read from.</p>
+<figure>
+  <img src="../figures/results_section/fig2_recorded_vs_partial_sharing.png" alt="Figure 2">
+  <figcaption><i>Figure 2. (A) Headroom vs. \(N\) at 50 classes: the family (orange, \(\alpha = 0\) light to 1 dark) and the recorded populations (neuron subsampling). (B) Recorded headroom vs. number of classes (16 random stimulus subsets per class count, all neurons; error bars = SEM over subsets) over each \(\alpha\)'s model headroom. (C) Floor (control / self) vs. neurons per class: Model 1, the family (one line per class count) and the recordings (filled: 50 classes; open: stimulus subsets).</i></figcaption>
+</figure>
+<ul>
+  <li><b>Headroom is flat from 20 to 50 classes.</b> With all neurons it is 0.14–0.15 (FR V1), 0.15–0.18 (FR V2), 0.25–0.28 (KO V1) and 0.21–0.23 (KO V2).</li>
+  <li><b>PT/control is not.</b> From 50 to 20 classes it falls from 1.47 to 1.18 in KO V1 and from 1.32 to 1.10 in FR V1.</li>
+  <li><b>Same with \(N/C\) held at the recorded ratio.</b> Headroom at 20–50 classes is 0.11–0.17, 0.13–0.18, 0.21–0.27 and 0.17–0.22 in the same order.</li>
+  <li><b>10 classes is too noisy to read.</b> Subset SEMs are 0.03–0.14, KO V2 drops to 0.11 with all neurons, and with all neurons the floor sits at 0.73–0.81 of self-decoding.</li>
+</ul>
+
+<h2>Floor mismatch and limits</h2>
+<p>The family matches the recordings' self-decoding, PR and headroom, but not their floor. The implied \(\alpha\) is therefore a calibrated reading within this family, not a measured fraction of shared structure.</p>
+<ul>
+  <li><b>The recorded floor is higher.</b> At 50 classes and full size, control/self is 0.32–0.47 in the recordings and 0.20–0.24 in the family at matched self-decoding and PR, at every \(\alpha\).</li>
+  <li><b>It rises with \(N\), as Model 1's does.</b> From 20 neurons to full size it goes from 0.26 to 0.35 in KO V1 and from 0.36 to 0.46 in KO V2. Model 1's goes from 0.42 to 0.80 over \(N\) = 40–100, while the family's stays flat.</li>
+  <li><b>The metric matters.</b> PT/control does not correct for the floor; read through it, the recordings would imply only \(\alpha \approx\) 0.16–0.27, against 0.30–0.45 from headroom.</li>
+</ul>
+<p>What the simulations support: at the recorded dimensionality the recordings are inconsistent with \(\alpha = 0\) and consistent with partial sharing. The exact \(\alpha\) depends on the family's assumptions (linear readout, 5 equal-variance latent dimensions, independent readouts per rendering). A latent with a decaying spectrum might reproduce the higher floor; it has not been run.</p>
+
+</body>
+</html>

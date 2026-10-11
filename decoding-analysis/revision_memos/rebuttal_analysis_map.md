@@ -219,6 +219,20 @@ they saturate to ~1 whenever N ≥ n_hold (documented in the header).
 
 ## Point 5 — Benchmark the pipeline on artificial data, varying #neurons, #classes, representation statistics
 
+> **UPDATE 2026-09-18 — superseded by `Simulations_v2/`.** The v1 "rand null" (column 4 of the SIM
+> driver) applied a transform fit on shuffled means to *unshuffled* test trials, so it sat at chance and
+> could not measure the rotation's overfitting. `decoding-analysis/Simulations_v2/` re-does Models 1 and 3
+> with the corrected correspondence-shuffled control (same π on means and held-out trials, rotation-only,
+> as in `..._trialShuffledWithMean.m` / `..._incremental_pr.m`), sweeps N ∈ {5,10,20,…,100} ×
+> n_stim ∈ {5,10,20,30,40,50}, and draws each neuron's mean count and tuning depth from the measured
+> distributions (median count 9.4, tuning CV 0.14, Fano 1.08 → Poisson). Headline numbers
+> (`Simulations_v2/README.md`, `results/figures/sweep_N_S/`): Model 1 PT/control = 1.00 over the whole
+> grid (PT 0.75 vs control 0.74 at N = 100, 50 stimuli); Model 3 PT = self at every point with
+> PT/control ≈ 1.2 (5 classes) → 3.4–4 (50 classes); recorded populations at 50 stimuli sit between,
+> at PT/control ≈ 1.3 (FR V1, FR V2, KO V2) and 1.5 (KO V1), flat in N. Under the null the floor
+> (control/self) collapses onto one curve of N/n_stim (≈0.5–0.7 at N = n_stim, ≈1 beyond N/n_stim ≈ 6).
+> The stimulus-count sweep requested by the reviewer is therefore done; Models 5/6 remain unbuilt.
+
 Entirely in `SIM/`. Decoding math identical to `procrustes_decoding_basic.m` (z-score per cue,
 MATLAB `procrustes` similarity transform, ECOC SVM); no neuron subsampling — N is set directly
 and the error bar comes from `R_pop` independent synthetic populations (one population = one

@@ -1,0 +1,50 @@
+FR_V1: 48 neurons, 3 cues
+FR_V2: 112 neurons, 3 cues
+KO_V1: 109 neurons, 3 cues
+KO_V2: 146 neurons, 3 cues
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+[FR_V1 full_N       ] C=50 N= 48 | self 0.262  noTF 0.041  PT_rot 0.111  ctrl 0.084  ratio 1.32  headroom 0.15  ctrl_id 0.022  chance 0.021 | PR 7.0  silent 0.0 | 466 s
+[FR_V1 matched_ratio] C=50 N= 48 | self 0.262  noTF 0.041  PT_rot 0.111  ctrl 0.084  ratio 1.32  headroom 0.15  ctrl_id 0.022  chance 0.021 | PR 7.0  silent 0.0 | 0 s
+[FR_V2 full_N       ] C=50 N=112 | self 0.338  noTF 0.054  PT_rot 0.167  ctrl 0.131  ratio 1.28  headroom 0.18  ctrl_id 0.020  chance 0.019 | PR 7.8  silent 4.0 | 432 s
+[FR_V2 matched_ratio] C=50 N=112 | self 0.338  noTF 0.054  PT_rot 0.167  ctrl 0.131  ratio 1.28  headroom 0.18  ctrl_id 0.020  chance 0.019 | PR 7.8  silent 4.0 | 0 s
+[KO_V1 full_N       ] C=50 N=109 | self 0.496  noTF 0.094  PT_rot 0.255  ctrl 0.174  ratio 1.47  headroom 0.25  ctrl_id 0.021  chance 0.020 | PR 7.8  silent 0.0 | 417 s
+[KO_V1 matched_ratio] C=50 N=109 | self 0.496  noTF 0.094  PT_rot 0.255  ctrl 0.174  ratio 1.47  headroom 0.25  ctrl_id 0.021  chance 0.020 | PR 7.8  silent 0.0 | 0 s
+[KO_V2 full_N       ] C=50 N=146 | self 0.370  noTF 0.057  PT_rot 0.214  ctrl 0.173  ratio 1.24  headroom 0.21  ctrl_id 0.021  chance 0.020 | PR 9.5  silent 0.0 | 422 s
+[KO_V2 matched_ratio] C=50 N=146 | self 0.370  noTF 0.057  PT_rot 0.214  ctrl 0.173  ratio 1.24  headroom 0.21  ctrl_id 0.021  chance 0.020 | PR 9.5  silent 0.0 | 0 s
+[FR_V1 full_N       ] C=40 N= 48 | self 0.291  noTF 0.053  PT_rot 0.139  ctrl 0.111  ratio 1.24  headroom 0.15  ctrl_id 0.025  chance 0.026 | PR 6.7  silent 0.0 | 517 s
+[FR_V1 matched_ratio] C=40 N= 38 | self 0.265  noTF 0.056  PT_rot 0.120  ctrl 0.097  ratio 1.23  headroom 0.13  ctrl_id 0.025  chance 0.027 | PR 6.5  silent 0.0 | 507 s
+[FR_V2 full_N       ] C=40 N=112 | self 0.376  noTF 0.061  PT_rot 0.203  ctrl 0.167  ratio 1.21  headroom 0.17  ctrl_id 0.026  chance 0.024 | PR 7.6  silent 4.0 | 514 s
+[FR_V2 matched_ratio] C=40 N= 90 | self 0.349  noTF 0.059  PT_rot 0.180  ctrl 0.151  ratio 1.19  headroom 0.14  ctrl_id 0.025  chance 0.026 | PR 7.5  silent 3.2 | 520 s
+[KO_V1 full_N       ] C=40 N=109 | self 0.536  noTF 0.117  PT_rot 0.301  ctrl 0.211  ratio 1.42  headroom 0.28  ctrl_id 0.027  chance 0.026 | PR 7.5  silent 0.0 | 528 s
+[KO_V1 matched_ratio] C=40 N= 87 | self 0.474  noTF 0.103  PT_rot 0.262  ctrl 0.187  ratio 1.40  headroom 0.26  ctrl_id 0.026  chance 0.026 | PR 7.3  silent 0.0 | 527 s
+[KO_V2 full_N       ] C=40 N=146 | self 0.407  noTF 0.067  PT_rot 0.255  ctrl 0.212  ratio 1.21  headroom 0.22  ctrl_id 0.025  chance 0.025 | PR 9.1  silent 0.0 | 551 s
+[KO_V2 matched_ratio] C=40 N=117 | self 0.364  noTF 0.064  PT_rot 0.221  ctrl 0.182  ratio 1.21  headroom 0.21  ctrl_id 0.026  chance 0.026 | PR 8.9  silent 0.0 | 544 s
+[FR_V1 full_N       ] C=30 N= 48 | self 0.347  noTF 0.072  PT_rot 0.184  ctrl 0.158  ratio 1.17  headroom 0.14  ctrl_id 0.033  chance 0.032 | PR 6.4  silent 0.0 | 296 s
+[FR_V1 matched_ratio] C=30 N= 29 | self 0.255  noTF 0.062  PT_rot 0.131  ctrl 0.105  ratio 1.24  headroom 0.17  ctrl_id 0.036  chance 0.033 | PR 5.7  silent 0.0 | 293 s
+[FR_V2 full_N       ] C=30 N=112 | self 0.435  noTF 0.078  PT_rot 0.256  ctrl 0.225  ratio 1.14  headroom 0.15  ctrl_id 0.035  chance 0.034 | PR 7.2  silent 4.0 | 305 s
+[FR_V2 matched_ratio] C=30 N= 67 | self 0.346  noTF 0.072  PT_rot 0.199  ctrl 0.171  ratio 1.17  headroom 0.16  ctrl_id 0.034  chance 0.035 | PR 6.7  silent 2.7 | 294 s
+[KO_V1 full_N       ] C=30 N=109 | self 0.583  noTF 0.138  PT_rot 0.356  ctrl 0.278  ratio 1.28  headroom 0.26  ctrl_id 0.036  chance 0.033 | PR 7.0  silent 0.0 | 295 s
+[KO_V1 matched_ratio] C=30 N= 65 | self 0.473  noTF 0.113  PT_rot 0.284  ctrl 0.214  ratio 1.33  headroom 0.27  ctrl_id 0.034  chance 0.035 | PR 6.7  silent 0.0 | 300 s
+[KO_V2 full_N       ] C=30 N=146 | self 0.460  noTF 0.081  PT_rot 0.305  ctrl 0.265  ratio 1.15  headroom 0.21  ctrl_id 0.033  chance 0.031 | PR 8.2  silent 0.0 | 298 s
+[KO_V2 matched_ratio] C=30 N= 88 | self 0.365  noTF 0.079  PT_rot 0.240  ctrl 0.205  ratio 1.17  headroom 0.22  ctrl_id 0.035  chance 0.034 | PR 8.1  silent 0.0 | 284 s
+[FR_V1 full_N       ] C=20 N= 48 | self 0.418  noTF 0.103  PT_rot 0.263  ctrl 0.239  ratio 1.10  headroom 0.14  ctrl_id 0.051  chance 0.051 | PR 5.9  silent 0.0 | 129 s
+[FR_V1 matched_ratio] C=20 N= 19 | self 0.251  noTF 0.082  PT_rot 0.148  ctrl 0.135  ratio 1.10  headroom 0.11  ctrl_id 0.052  chance 0.050 | PR 5.1  silent 0.0 | 131 s
+[FR_V2 full_N       ] C=20 N=112 | self 0.508  noTF 0.103  PT_rot 0.346  ctrl 0.317  ratio 1.09  headroom 0.15  ctrl_id 0.049  chance 0.051 | PR 6.4  silent 4.0 | 135 s
+[FR_V2 matched_ratio] C=20 N= 45 | self 0.357  noTF 0.087  PT_rot 0.231  ctrl 0.211  ratio 1.09  headroom 0.13  ctrl_id 0.053  chance 0.051 | PR 5.8  silent 1.6 | 131 s
+[KO_V1 full_N       ] C=20 N=109 | self 0.657  noTF 0.178  PT_rot 0.450  ctrl 0.382  ratio 1.18  headroom 0.25  ctrl_id 0.053  chance 0.051 | PR 6.4  silent 0.0 | 134 s
+[KO_V1 matched_ratio] C=20 N= 44 | self 0.481  noTF 0.142  PT_rot 0.307  ctrl 0.260  ratio 1.18  headroom 0.21  ctrl_id 0.052  chance 0.052 | PR 5.9  silent 0.0 | 128 s
+[KO_V2 full_N       ] C=20 N=146 | self 0.534  noTF 0.113  PT_rot 0.397  ctrl 0.355  ratio 1.12  headroom 0.23  ctrl_id 0.053  chance 0.050 | PR 7.2  silent 0.0 | 127 s
+[KO_V2 matched_ratio] C=20 N= 58 | self 0.358  noTF 0.089  PT_rot 0.254  ctrl 0.233  ratio 1.09  headroom 0.17  ctrl_id 0.050  chance 0.048 | PR 6.9  silent 0.0 | 124 s
+[FR_V1 full_N       ] C=10 N= 48 | self 0.561  noTF 0.199  PT_rot 0.429  ctrl 0.410  ratio 1.05  headroom 0.12  ctrl_id 0.102  chance 0.099 | PR 4.6  silent 0.0 | 32 s
+[FR_V1 matched_ratio] C=10 N= 10 | self 0.319  noTF 0.140  PT_rot 0.226  ctrl 0.216  ratio 1.05  headroom 0.10  ctrl_id 0.098  chance 0.098 | PR 3.3  silent 0.0 | 32 s
+[FR_V2 full_N       ] C=10 N=112 | self 0.662  noTF 0.176  PT_rot 0.535  ctrl 0.515  ratio 1.04  headroom 0.13  ctrl_id 0.101  chance 0.100 | PR 4.8  silent 4.0 | 33 s
+[FR_V2 matched_ratio] C=10 N= 22 | self 0.369  noTF 0.146  PT_rot 0.284  ctrl 0.277  ratio 1.03  headroom 0.08  ctrl_id 0.103  chance 0.097 | PR 4.3  silent 0.6 | 32 s
+[KO_V1 full_N       ] C=10 N=109 | self 0.788  noTF 0.309  PT_rot 0.636  ctrl 0.586  ratio 1.09  headroom 0.25  ctrl_id 0.115  chance 0.099 | PR 4.8  silent 0.0 | 33 s
+[KO_V1 matched_ratio] C=10 N= 22 | self 0.500  noTF 0.209  PT_rot 0.372  ctrl 0.333  ratio 1.12  headroom 0.23  ctrl_id 0.097  chance 0.102 | PR 4.0  silent 0.0 | 32 s
+[KO_V2 full_N       ] C=10 N=146 | self 0.672  noTF 0.203  PT_rot 0.559  ctrl 0.545  ratio 1.03  headroom 0.11  ctrl_id 0.103  chance 0.106 | PR 5.3  silent 0.2 | 34 s
+[KO_V2 matched_ratio] C=10 N= 29 | self 0.396  noTF 0.155  PT_rot 0.328  ctrl 0.305  ratio 1.08  headroom 0.26  ctrl_id 0.100  chance 0.097 | PR 4.4  silent 0.0 | 32 s
+
+All results in C:\Git Repos\cue-invariant-population-geometry\decoding-analysis\Simulations_v3_partial_sharing\code\decoding_scripts\..\..\results\decoding_outputs\real_stimsub_results.mat
+Total time: 160.1 min
+MATLAB exit code: 0 

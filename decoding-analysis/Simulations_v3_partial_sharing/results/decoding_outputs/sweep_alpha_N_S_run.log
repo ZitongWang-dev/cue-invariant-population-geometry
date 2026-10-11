@@ -1,0 +1,284 @@
+Imported 55 alpha = 1 points from C:\Git Repos\cue-invariant-population-geometry\decoding-analysis\Simulations_v3_partial_sharing\code\decoding_scripts\..\..\..\Simulations_v2\results\decoding_outputs\sweep_N_S_model3_D5_results.mat
+
+===== partial sharing: K = 5, alpha = [0 0.2 0.4 0.6 0.8 1] : 11 x 5 grid, R_pop = 16, trial_repeat = 10, n_folds = 10, tag = sweep_alpha_N_S =====
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+[alpha 0.0] N=  5 S=50 | self 0.096  noTF 0.021  PT_rot 0.032  ctrl 0.027  ratio 1.20  headroom 0.07  ctrl_id 0.021  chance 0.020 | PR 1.8 (emp 3.1)  count 13.6  capped 0.07 | 266 s
+[alpha 0.2] N=  5 S=50 | self 0.095  noTF 0.023  PT_rot 0.032  ctrl 0.028  ratio 1.13  headroom 0.05  ctrl_id 0.022  chance 0.021 | PR 1.8 (emp 3.0)  count 13.6  capped 0.07 | 251 s
+[alpha 0.4] N=  5 S=50 | self 0.095  noTF 0.017  PT_rot 0.039  ctrl 0.028  ratio 1.39  headroom 0.16  ctrl_id 0.021  chance 0.020 | PR 1.8 (emp 3.0)  count 13.6  capped 0.07 | 246 s
+[alpha 0.6] N=  5 S=50 | self 0.094  noTF 0.021  PT_rot 0.044  ctrl 0.028  ratio 1.67  headroom 0.24  ctrl_id 0.022  chance 0.020 | PR 1.8 (emp 3.0)  count 13.6  capped 0.09 | 223 s
+[alpha 0.8] N=  5 S=50 | self 0.094  noTF 0.024  PT_rot 0.054  ctrl 0.029  ratio 1.90  headroom 0.38  ctrl_id 0.020  chance 0.020 | PR 1.8 (emp 3.1)  count 13.6  capped 0.09 | 210 s
+[alpha 0.0] N= 10 S=50 | self 0.120  noTF 0.022  PT_rot 0.035  ctrl 0.034  ratio 1.04  headroom 0.01  ctrl_id 0.022  chance 0.019 | PR 2.2 (emp 4.7)  count 10.8  capped 0.07 | 210 s
+[alpha 0.2] N= 10 S=50 | self 0.123  noTF 0.021  PT_rot 0.043  ctrl 0.033  ratio 1.31  headroom 0.11  ctrl_id 0.020  chance 0.019 | PR 2.2 (emp 4.6)  count 10.8  capped 0.07 | 235 s
+[alpha 0.4] N= 10 S=50 | self 0.116  noTF 0.020  PT_rot 0.050  ctrl 0.035  ratio 1.45  headroom 0.18  ctrl_id 0.021  chance 0.019 | PR 2.2 (emp 4.7)  count 10.8  capped 0.07 | 240 s
+[alpha 0.6] N= 10 S=50 | self 0.118  noTF 0.021  PT_rot 0.062  ctrl 0.035  ratio 1.82  headroom 0.33  ctrl_id 0.022  chance 0.020 | PR 2.2 (emp 4.6)  count 10.8  capped 0.07 | 240 s
+[alpha 0.8] N= 10 S=50 | self 0.118  noTF 0.022  PT_rot 0.072  ctrl 0.033  ratio 2.18  headroom 0.46  ctrl_id 0.021  chance 0.020 | PR 2.2 (emp 4.7)  count 10.8  capped 0.07 | 240 s
+[alpha 0.0] N= 20 S=50 | self 0.211  noTF 0.022  PT_rot 0.046  ctrl 0.045  ratio 1.04  headroom 0.01  ctrl_id 0.019  chance 0.021 | PR 2.9 (emp 5.7)  count 11.4  capped 0.09 | 242 s
+[alpha 0.2] N= 20 S=50 | self 0.201  noTF 0.020  PT_rot 0.064  ctrl 0.050  ratio 1.29  headroom 0.09  ctrl_id 0.020  chance 0.021 | PR 2.9 (emp 5.7)  count 11.4  capped 0.09 | 241 s
+[alpha 0.4] N= 20 S=50 | self 0.211  noTF 0.023  PT_rot 0.085  ctrl 0.046  ratio 1.92  headroom 0.24  ctrl_id 0.021  chance 0.020 | PR 2.9 (emp 5.7)  count 11.4  capped 0.09 | 242 s
+[alpha 0.6] N= 20 S=50 | self 0.209  noTF 0.022  PT_rot 0.102  ctrl 0.048  ratio 2.17  headroom 0.34  ctrl_id 0.021  chance 0.021 | PR 2.9 (emp 5.7)  count 11.4  capped 0.09 | 242 s
+[alpha 0.8] N= 20 S=50 | self 0.206  noTF 0.021  PT_rot 0.136  ctrl 0.045  ratio 3.02  headroom 0.56  ctrl_id 0.023  chance 0.022 | PR 2.9 (emp 5.7)  count 11.4  capped 0.09 | 242 s
+[alpha 0.0] N= 30 S=50 | self 0.236  noTF 0.020  PT_rot 0.055  ctrl 0.056  ratio 0.99  headroom -0.01  ctrl_id 0.021  chance 0.021 | PR 3.2 (emp 6.6)  count 10.7  capped 0.11 | 242 s
+[alpha 0.2] N= 30 S=50 | self 0.237  noTF 0.023  PT_rot 0.074  ctrl 0.056  ratio 1.32  headroom 0.10  ctrl_id 0.019  chance 0.021 | PR 3.2 (emp 6.5)  count 10.7  capped 0.10 | 242 s
+[alpha 0.4] N= 30 S=50 | self 0.238  noTF 0.022  PT_rot 0.092  ctrl 0.058  ratio 1.64  headroom 0.19  ctrl_id 0.021  chance 0.022 | PR 3.2 (emp 6.5)  count 10.7  capped 0.10 | 241 s
+[alpha 0.6] N= 30 S=50 | self 0.240  noTF 0.025  PT_rot 0.122  ctrl 0.056  ratio 2.23  headroom 0.36  ctrl_id 0.020  chance 0.019 | PR 3.2 (emp 6.6)  count 10.7  capped 0.10 | 241 s
+[alpha 0.8] N= 30 S=50 | self 0.232  noTF 0.026  PT_rot 0.165  ctrl 0.057  ratio 2.91  headroom 0.62  ctrl_id 0.022  chance 0.020 | PR 3.2 (emp 6.5)  count 10.7  capped 0.10 | 242 s
+[alpha 0.0] N= 40 S=50 | self 0.278  noTF 0.021  PT_rot 0.059  ctrl 0.060  ratio 1.00  headroom -0.00  ctrl_id 0.021  chance 0.019 | PR 3.6 (emp 7.1)  count 11.8  capped 0.07 | 243 s
+[alpha 0.2] N= 40 S=50 | self 0.279  noTF 0.021  PT_rot 0.084  ctrl 0.067  ratio 1.27  headroom 0.08  ctrl_id 0.021  chance 0.019 | PR 3.6 (emp 7.1)  count 11.8  capped 0.06 | 241 s
+[alpha 0.4] N= 40 S=50 | self 0.282  noTF 0.022  PT_rot 0.113  ctrl 0.064  ratio 1.79  headroom 0.22  ctrl_id 0.021  chance 0.022 | PR 3.6 (emp 7.1)  count 11.8  capped 0.06 | 242 s
+[alpha 0.6] N= 40 S=50 | self 0.281  noTF 0.024  PT_rot 0.141  ctrl 0.062  ratio 2.28  headroom 0.36  ctrl_id 0.023  chance 0.020 | PR 3.6 (emp 7.1)  count 11.8  capped 0.06 | 242 s
+[alpha 0.8] N= 40 S=50 | self 0.286  noTF 0.018  PT_rot 0.193  ctrl 0.063  ratio 3.06  headroom 0.58  ctrl_id 0.022  chance 0.021 | PR 3.6 (emp 7.1)  count 11.8  capped 0.06 | 242 s
+[alpha 0.0] N= 50 S=50 | self 0.317  noTF 0.020  PT_rot 0.064  ctrl 0.067  ratio 0.97  headroom -0.01  ctrl_id 0.020  chance 0.021 | PR 3.2 (emp 7.1)  count 11.8  capped 0.08 | 243 s
+[alpha 0.2] N= 50 S=50 | self 0.327  noTF 0.020  PT_rot 0.092  ctrl 0.067  ratio 1.38  headroom 0.09  ctrl_id 0.019  chance 0.021 | PR 3.2 (emp 7.1)  count 11.8  capped 0.08 | 243 s
+[alpha 0.4] N= 50 S=50 | self 0.315  noTF 0.015  PT_rot 0.124  ctrl 0.067  ratio 1.88  headroom 0.23  ctrl_id 0.021  chance 0.019 | PR 3.2 (emp 7.1)  count 11.8  capped 0.08 | 244 s
+[alpha 0.6] N= 50 S=50 | self 0.324  noTF 0.024  PT_rot 0.165  ctrl 0.069  ratio 2.45  headroom 0.38  ctrl_id 0.021  chance 0.019 | PR 3.2 (emp 7.1)  count 11.8  capped 0.08 | 245 s
+[alpha 0.8] N= 50 S=50 | self 0.324  noTF 0.020  PT_rot 0.225  ctrl 0.068  ratio 3.34  headroom 0.61  ctrl_id 0.022  chance 0.020 | PR 3.2 (emp 7.1)  count 11.8  capped 0.08 | 246 s
+[alpha 0.0] N= 60 S=50 | self 0.328  noTF 0.019  PT_rot 0.073  ctrl 0.075  ratio 1.00  headroom -0.01  ctrl_id 0.023  chance 0.019 | PR 3.5 (emp 7.4)  count 11.9  capped 0.07 | 247 s
+[alpha 0.2] N= 60 S=50 | self 0.325  noTF 0.022  PT_rot 0.095  ctrl 0.073  ratio 1.31  headroom 0.09  ctrl_id 0.022  chance 0.021 | PR 3.5 (emp 7.4)  count 11.9  capped 0.08 | 245 s
+[alpha 0.4] N= 60 S=50 | self 0.336  noTF 0.020  PT_rot 0.133  ctrl 0.073  ratio 1.84  headroom 0.23  ctrl_id 0.023  chance 0.021 | PR 3.5 (emp 7.4)  count 11.9  capped 0.07 | 245 s
+[alpha 0.6] N= 60 S=50 | self 0.334  noTF 0.022  PT_rot 0.171  ctrl 0.072  ratio 2.40  headroom 0.38  ctrl_id 0.020  chance 0.020 | PR 3.5 (emp 7.4)  count 11.9  capped 0.07 | 248 s
+[alpha 0.8] N= 60 S=50 | self 0.336  noTF 0.024  PT_rot 0.232  ctrl 0.076  ratio 3.13  headroom 0.60  ctrl_id 0.024  chance 0.019 | PR 3.5 (emp 7.4)  count 11.9  capped 0.07 | 246 s
+[alpha 0.0] N= 70 S=50 | self 0.358  noTF 0.024  PT_rot 0.077  ctrl 0.080  ratio 0.97  headroom -0.01  ctrl_id 0.021  chance 0.021 | PR 3.6 (emp 7.6)  count 11.1  capped 0.09 | 248 s
+[alpha 0.2] N= 70 S=50 | self 0.353  noTF 0.020  PT_rot 0.101  ctrl 0.080  ratio 1.28  headroom 0.08  ctrl_id 0.022  chance 0.022 | PR 3.6 (emp 7.6)  count 11.1  capped 0.09 | 249 s
+[alpha 0.4] N= 70 S=50 | self 0.348  noTF 0.019  PT_rot 0.139  ctrl 0.075  ratio 1.86  headroom 0.23  ctrl_id 0.021  chance 0.022 | PR 3.6 (emp 7.6)  count 11.1  capped 0.09 | 247 s
+[alpha 0.6] N= 70 S=50 | self 0.354  noTF 0.019  PT_rot 0.189  ctrl 0.080  ratio 2.41  headroom 0.40  ctrl_id 0.020  chance 0.022 | PR 3.6 (emp 7.6)  count 11.1  capped 0.09 | 249 s
+[alpha 0.8] N= 70 S=50 | self 0.355  noTF 0.020  PT_rot 0.261  ctrl 0.078  ratio 3.41  headroom 0.66  ctrl_id 0.021  chance 0.021 | PR 3.6 (emp 7.7)  count 11.1  capped 0.09 | 250 s
+[alpha 0.0] N= 80 S=50 | self 0.376  noTF 0.021  PT_rot 0.083  ctrl 0.080  ratio 1.05  headroom 0.01  ctrl_id 0.022  chance 0.020 | PR 3.6 (emp 7.6)  count 11.9  capped 0.08 | 251 s
+[alpha 0.2] N= 80 S=50 | self 0.370  noTF 0.020  PT_rot 0.101  ctrl 0.079  ratio 1.30  headroom 0.08  ctrl_id 0.021  chance 0.018 | PR 3.6 (emp 7.6)  count 11.9  capped 0.08 | 250 s
+[alpha 0.4] N= 80 S=50 | self 0.373  noTF 0.020  PT_rot 0.137  ctrl 0.085  ratio 1.63  headroom 0.18  ctrl_id 0.022  chance 0.019 | PR 3.6 (emp 7.6)  count 11.9  capped 0.08 | 249 s
+[alpha 0.6] N= 80 S=50 | self 0.372  noTF 0.020  PT_rot 0.197  ctrl 0.084  ratio 2.36  headroom 0.39  ctrl_id 0.022  chance 0.019 | PR 3.6 (emp 7.6)  count 11.9  capped 0.08 | 249 s
+[alpha 0.8] N= 80 S=50 | self 0.378  noTF 0.018  PT_rot 0.268  ctrl 0.082  ratio 3.32  headroom 0.63  ctrl_id 0.021  chance 0.020 | PR 3.6 (emp 7.6)  count 11.9  capped 0.08 | 250 s
+[alpha 0.0] N= 90 S=50 | self 0.380  noTF 0.019  PT_rot 0.083  ctrl 0.086  ratio 0.97  headroom -0.01  ctrl_id 0.021  chance 0.017 | PR 3.8 (emp 7.8)  count 11.5  capped 0.09 | 253 s
+[alpha 0.2] N= 90 S=50 | self 0.373  noTF 0.020  PT_rot 0.115  ctrl 0.084  ratio 1.37  headroom 0.11  ctrl_id 0.021  chance 0.021 | PR 3.8 (emp 7.8)  count 11.5  capped 0.09 | 252 s
+[alpha 0.4] N= 90 S=50 | self 0.365  noTF 0.020  PT_rot 0.144  ctrl 0.083  ratio 1.75  headroom 0.22  ctrl_id 0.020  chance 0.020 | PR 3.8 (emp 7.9)  count 11.5  capped 0.09 | 251 s
+[alpha 0.6] N= 90 S=50 | self 0.372  noTF 0.024  PT_rot 0.202  ctrl 0.088  ratio 2.29  headroom 0.40  ctrl_id 0.021  chance 0.019 | PR 3.8 (emp 7.8)  count 11.5  capped 0.09 | 252 s
+[alpha 0.8] N= 90 S=50 | self 0.376  noTF 0.019  PT_rot 0.269  ctrl 0.083  ratio 3.25  headroom 0.63  ctrl_id 0.024  chance 0.021 | PR 3.9 (emp 7.8)  count 11.5  capped 0.09 | 251 s
+[alpha 0.0] N=100 S=50 | self 0.412  noTF 0.019  PT_rot 0.087  ctrl 0.087  ratio 1.01  headroom 0.00  ctrl_id 0.020  chance 0.022 | PR 3.8 (emp 7.8)  count 12.0  capped 0.08 | 251 s
+[alpha 0.2] N=100 S=50 | self 0.409  noTF 0.021  PT_rot 0.110  ctrl 0.086  ratio 1.28  headroom 0.07  ctrl_id 0.019  chance 0.021 | PR 3.8 (emp 7.8)  count 12.0  capped 0.08 | 252 s
+[alpha 0.4] N=100 S=50 | self 0.414  noTF 0.020  PT_rot 0.158  ctrl 0.089  ratio 1.80  headroom 0.21  ctrl_id 0.020  chance 0.020 | PR 3.9 (emp 7.8)  count 12.0  capped 0.08 | 253 s
+[alpha 0.6] N=100 S=50 | self 0.414  noTF 0.023  PT_rot 0.216  ctrl 0.086  ratio 2.52  headroom 0.40  ctrl_id 0.021  chance 0.019 | PR 3.8 (emp 7.8)  count 12.0  capped 0.08 | 253 s
+[alpha 0.8] N=100 S=50 | self 0.412  noTF 0.023  PT_rot 0.294  ctrl 0.087  ratio 3.42  headroom 0.64  ctrl_id 0.024  chance 0.021 | PR 3.8 (emp 7.8)  count 12.0  capped 0.08 | 251 s
+[alpha 0.0] N=  5 S=40 | self 0.089  noTF 0.023  PT_rot 0.039  ctrl 0.036  ratio 1.09  headroom 0.05  ctrl_id 0.025  chance 0.024 | PR 1.9 (emp 3.1)  count 10.7  capped 0.06 | 152 s
+[alpha 0.2] N=  5 S=40 | self 0.090  noTF 0.027  PT_rot 0.040  ctrl 0.032  ratio 1.30  headroom 0.15  ctrl_id 0.023  chance 0.025 | PR 1.9 (emp 3.1)  count 10.7  capped 0.06 | 151 s
+[alpha 0.4] N=  5 S=40 | self 0.085  noTF 0.027  PT_rot 0.041  ctrl 0.034  ratio 1.24  headroom 0.15  ctrl_id 0.025  chance 0.024 | PR 1.9 (emp 3.0)  count 10.7  capped 0.06 | 151 s
+[alpha 0.6] N=  5 S=40 | self 0.085  noTF 0.025  PT_rot 0.049  ctrl 0.034  ratio 1.47  headroom 0.29  ctrl_id 0.024  chance 0.024 | PR 1.9 (emp 3.1)  count 10.7  capped 0.06 | 151 s
+[alpha 0.8] N=  5 S=40 | self 0.090  noTF 0.026  PT_rot 0.054  ctrl 0.032  ratio 1.67  headroom 0.37  ctrl_id 0.026  chance 0.025 | PR 1.9 (emp 3.1)  count 10.7  capped 0.06 | 150 s
+[alpha 0.0] N= 10 S=40 | self 0.164  noTF 0.025  PT_rot 0.048  ctrl 0.047  ratio 1.04  headroom 0.01  ctrl_id 0.024  chance 0.026 | PR 2.4 (emp 4.3)  count 11.6  capped 0.08 | 152 s
+[alpha 0.2] N= 10 S=40 | self 0.165  noTF 0.028  PT_rot 0.060  ctrl 0.044  ratio 1.40  headroom 0.13  ctrl_id 0.027  chance 0.027 | PR 2.4 (emp 4.3)  count 11.6  capped 0.08 | 152 s
+[alpha 0.4] N= 10 S=40 | self 0.163  noTF 0.027  PT_rot 0.074  ctrl 0.048  ratio 1.56  headroom 0.22  ctrl_id 0.026  chance 0.025 | PR 2.4 (emp 4.3)  count 11.6  capped 0.07 | 152 s
+[alpha 0.6] N= 10 S=40 | self 0.166  noTF 0.028  PT_rot 0.079  ctrl 0.044  ratio 1.80  headroom 0.29  ctrl_id 0.027  chance 0.023 | PR 2.4 (emp 4.4)  count 11.6  capped 0.07 | 152 s
+[alpha 0.8] N= 10 S=40 | self 0.164  noTF 0.028  PT_rot 0.097  ctrl 0.043  ratio 2.24  headroom 0.45  ctrl_id 0.025  chance 0.027 | PR 2.4 (emp 4.3)  count 11.6  capped 0.08 | 151 s
+[alpha 0.0] N= 20 S=40 | self 0.213  noTF 0.027  PT_rot 0.063  ctrl 0.061  ratio 1.06  headroom 0.02  ctrl_id 0.023  chance 0.024 | PR 3.0 (emp 6.0)  count 11.4  capped 0.08 | 153 s
+[alpha 0.2] N= 20 S=40 | self 0.217  noTF 0.026  PT_rot 0.074  ctrl 0.061  ratio 1.23  headroom 0.08  ctrl_id 0.024  chance 0.023 | PR 3.0 (emp 6.0)  count 11.4  capped 0.08 | 153 s
+[alpha 0.4] N= 20 S=40 | self 0.217  noTF 0.027  PT_rot 0.100  ctrl 0.055  ratio 1.84  headroom 0.28  ctrl_id 0.026  chance 0.024 | PR 3.0 (emp 6.1)  count 11.4  capped 0.08 | 153 s
+[alpha 0.6] N= 20 S=40 | self 0.218  noTF 0.024  PT_rot 0.127  ctrl 0.058  ratio 2.20  headroom 0.43  ctrl_id 0.029  chance 0.027 | PR 3.0 (emp 6.0)  count 11.4  capped 0.08 | 153 s
+[alpha 0.8] N= 20 S=40 | self 0.213  noTF 0.023  PT_rot 0.146  ctrl 0.060  ratio 2.44  headroom 0.56  ctrl_id 0.025  chance 0.025 | PR 3.0 (emp 6.0)  count 11.4  capped 0.08 | 153 s
+[alpha 0.0] N= 30 S=40 | self 0.282  noTF 0.026  PT_rot 0.075  ctrl 0.074  ratio 1.03  headroom 0.00  ctrl_id 0.025  chance 0.026 | PR 3.2 (emp 6.5)  count 11.8  capped 0.08 | 154 s
+[alpha 0.2] N= 30 S=40 | self 0.272  noTF 0.020  PT_rot 0.090  ctrl 0.074  ratio 1.24  headroom 0.08  ctrl_id 0.027  chance 0.025 | PR 3.2 (emp 6.5)  count 11.8  capped 0.08 | 153 s
+[alpha 0.4] N= 30 S=40 | self 0.272  noTF 0.022  PT_rot 0.110  ctrl 0.074  ratio 1.50  headroom 0.18  ctrl_id 0.024  chance 0.027 | PR 3.2 (emp 6.6)  count 11.8  capped 0.09 | 154 s
+[alpha 0.6] N= 30 S=40 | self 0.273  noTF 0.024  PT_rot 0.152  ctrl 0.076  ratio 1.98  headroom 0.38  ctrl_id 0.026  chance 0.025 | PR 3.2 (emp 6.5)  count 11.8  capped 0.08 | 153 s
+[alpha 0.8] N= 30 S=40 | self 0.267  noTF 0.025  PT_rot 0.183  ctrl 0.071  ratio 2.59  headroom 0.57  ctrl_id 0.027  chance 0.026 | PR 3.2 (emp 6.5)  count 11.8  capped 0.08 | 155 s
+[alpha 0.0] N= 40 S=40 | self 0.314  noTF 0.030  PT_rot 0.077  ctrl 0.085  ratio 0.91  headroom -0.04  ctrl_id 0.025  chance 0.025 | PR 3.6 (emp 7.0)  count 11.3  capped 0.07 | 154 s
+[alpha 0.2] N= 40 S=40 | self 0.310  noTF 0.029  PT_rot 0.103  ctrl 0.083  ratio 1.25  headroom 0.09  ctrl_id 0.024  chance 0.025 | PR 3.6 (emp 7.0)  count 11.3  capped 0.06 | 155 s
+[alpha 0.4] N= 40 S=40 | self 0.310  noTF 0.026  PT_rot 0.131  ctrl 0.080  ratio 1.64  headroom 0.22  ctrl_id 0.028  chance 0.024 | PR 3.6 (emp 7.0)  count 11.3  capped 0.06 | 155 s
+[alpha 0.6] N= 40 S=40 | self 0.304  noTF 0.024  PT_rot 0.167  ctrl 0.081  ratio 2.06  headroom 0.38  ctrl_id 0.024  chance 0.022 | PR 3.6 (emp 7.0)  count 11.3  capped 0.06 | 154 s
+[alpha 0.8] N= 40 S=40 | self 0.311  noTF 0.026  PT_rot 0.217  ctrl 0.083  ratio 2.64  headroom 0.59  ctrl_id 0.028  chance 0.023 | PR 3.6 (emp 7.0)  count 11.3  capped 0.07 | 154 s
+[alpha 0.0] N= 50 S=40 | self 0.348  noTF 0.024  PT_rot 0.084  ctrl 0.090  ratio 0.95  headroom -0.02  ctrl_id 0.025  chance 0.025 | PR 3.7 (emp 7.2)  count 11.9  capped 0.06 | 155 s
+[alpha 0.2] N= 50 S=40 | self 0.341  noTF 0.024  PT_rot 0.116  ctrl 0.091  ratio 1.29  headroom 0.10  ctrl_id 0.024  chance 0.024 | PR 3.7 (emp 7.2)  count 11.9  capped 0.06 | 155 s
+[alpha 0.4] N= 50 S=40 | self 0.340  noTF 0.024  PT_rot 0.147  ctrl 0.089  ratio 1.67  headroom 0.23  ctrl_id 0.026  chance 0.024 | PR 3.7 (emp 7.2)  count 11.9  capped 0.06 | 155 s
+[alpha 0.6] N= 50 S=40 | self 0.335  noTF 0.025  PT_rot 0.185  ctrl 0.090  ratio 2.09  headroom 0.39  ctrl_id 0.026  chance 0.025 | PR 3.7 (emp 7.2)  count 11.9  capped 0.06 | 156 s
+[alpha 0.8] N= 50 S=40 | self 0.348  noTF 0.025  PT_rot 0.250  ctrl 0.095  ratio 2.66  headroom 0.61  ctrl_id 0.028  chance 0.025 | PR 3.7 (emp 7.2)  count 11.9  capped 0.06 | 156 s
+[alpha 0.0] N= 60 S=40 | self 0.378  noTF 0.025  PT_rot 0.097  ctrl 0.098  ratio 1.01  headroom -0.00  ctrl_id 0.024  chance 0.027 | PR 3.5 (emp 7.4)  count 11.8  capped 0.07 | 157 s
+[alpha 0.2] N= 60 S=40 | self 0.383  noTF 0.026  PT_rot 0.129  ctrl 0.099  ratio 1.31  headroom 0.11  ctrl_id 0.027  chance 0.025 | PR 3.5 (emp 7.4)  count 11.8  capped 0.06 | 156 s
+[alpha 0.4] N= 60 S=40 | self 0.374  noTF 0.026  PT_rot 0.165  ctrl 0.101  ratio 1.63  headroom 0.23  ctrl_id 0.027  chance 0.025 | PR 3.5 (emp 7.3)  count 11.8  capped 0.06 | 156 s
+[alpha 0.6] N= 60 S=40 | self 0.364  noTF 0.023  PT_rot 0.201  ctrl 0.096  ratio 2.12  headroom 0.39  ctrl_id 0.024  chance 0.023 | PR 3.5 (emp 7.4)  count 11.8  capped 0.06 | 155 s
+[alpha 0.8] N= 60 S=40 | self 0.368  noTF 0.028  PT_rot 0.264  ctrl 0.096  ratio 2.77  headroom 0.62  ctrl_id 0.027  chance 0.025 | PR 3.5 (emp 7.4)  count 11.8  capped 0.06 | 155 s
+[alpha 0.0] N= 70 S=40 | self 0.403  noTF 0.026  PT_rot 0.106  ctrl 0.100  ratio 1.07  headroom 0.02  ctrl_id 0.025  chance 0.027 | PR 3.7 (emp 7.4)  count 11.7  capped 0.08 | 156 s
+[alpha 0.2] N= 70 S=40 | self 0.410  noTF 0.024  PT_rot 0.136  ctrl 0.103  ratio 1.33  headroom 0.11  ctrl_id 0.023  chance 0.024 | PR 3.7 (emp 7.4)  count 11.7  capped 0.08 | 157 s
+[alpha 0.4] N= 70 S=40 | self 0.403  noTF 0.026  PT_rot 0.165  ctrl 0.099  ratio 1.68  headroom 0.22  ctrl_id 0.025  chance 0.023 | PR 3.7 (emp 7.4)  count 11.7  capped 0.08 | 157 s
+[alpha 0.6] N= 70 S=40 | self 0.410  noTF 0.026  PT_rot 0.234  ctrl 0.106  ratio 2.23  headroom 0.42  ctrl_id 0.025  chance 0.024 | PR 3.7 (emp 7.4)  count 11.7  capped 0.08 | 157 s
+[alpha 0.8] N= 70 S=40 | self 0.412  noTF 0.026  PT_rot 0.292  ctrl 0.102  ratio 2.89  headroom 0.61  ctrl_id 0.027  chance 0.028 | PR 3.7 (emp 7.4)  count 11.7  capped 0.08 | 156 s
+[alpha 0.0] N= 80 S=40 | self 0.418  noTF 0.026  PT_rot 0.113  ctrl 0.108  ratio 1.06  headroom 0.02  ctrl_id 0.027  chance 0.025 | PR 3.8 (emp 7.6)  count 11.3  capped 0.08 | 164 s
+[alpha 0.2] N= 80 S=40 | self 0.422  noTF 0.023  PT_rot 0.140  ctrl 0.106  ratio 1.34  headroom 0.11  ctrl_id 0.024  chance 0.028 | PR 3.9 (emp 7.6)  count 11.3  capped 0.08 | 164 s
+[alpha 0.4] N= 80 S=40 | self 0.417  noTF 0.026  PT_rot 0.184  ctrl 0.110  ratio 1.68  headroom 0.24  ctrl_id 0.025  chance 0.023 | PR 3.8 (emp 7.6)  count 11.3  capped 0.08 | 159 s
+[alpha 0.6] N= 80 S=40 | self 0.422  noTF 0.022  PT_rot 0.232  ctrl 0.107  ratio 2.19  headroom 0.40  ctrl_id 0.025  chance 0.025 | PR 3.8 (emp 7.6)  count 11.3  capped 0.08 | 159 s
+[alpha 0.8] N= 80 S=40 | self 0.423  noTF 0.022  PT_rot 0.307  ctrl 0.110  ratio 2.83  headroom 0.63  ctrl_id 0.026  chance 0.027 | PR 3.8 (emp 7.6)  count 11.3  capped 0.08 | 159 s
+[alpha 0.0] N= 90 S=40 | self 0.461  noTF 0.022  PT_rot 0.113  ctrl 0.118  ratio 0.97  headroom -0.01  ctrl_id 0.025  chance 0.025 | PR 3.9 (emp 7.4)  count 11.9  capped 0.08 | 159 s
+[alpha 0.2] N= 90 S=40 | self 0.464  noTF 0.025  PT_rot 0.149  ctrl 0.115  ratio 1.31  headroom 0.10  ctrl_id 0.023  chance 0.023 | PR 3.9 (emp 7.4)  count 11.9  capped 0.08 | 159 s
+[alpha 0.4] N= 90 S=40 | self 0.476  noTF 0.018  PT_rot 0.178  ctrl 0.119  ratio 1.51  headroom 0.17  ctrl_id 0.027  chance 0.027 | PR 3.9 (emp 7.4)  count 11.9  capped 0.08 | 160 s
+[alpha 0.6] N= 90 S=40 | self 0.469  noTF 0.027  PT_rot 0.244  ctrl 0.111  ratio 2.24  headroom 0.37  ctrl_id 0.027  chance 0.024 | PR 3.9 (emp 7.4)  count 11.9  capped 0.08 | 160 s
+[alpha 0.8] N= 90 S=40 | self 0.463  noTF 0.026  PT_rot 0.329  ctrl 0.116  ratio 2.85  headroom 0.62  ctrl_id 0.026  chance 0.024 | PR 3.9 (emp 7.4)  count 11.9  capped 0.08 | 159 s
+[alpha 0.0] N=100 S=40 | self 0.455  noTF 0.027  PT_rot 0.117  ctrl 0.117  ratio 1.00  headroom 0.00  ctrl_id 0.025  chance 0.024 | PR 4.0 (emp 7.7)  count 11.8  capped 0.08 | 160 s
+[alpha 0.2] N=100 S=40 | self 0.451  noTF 0.026  PT_rot 0.147  ctrl 0.117  ratio 1.26  headroom 0.09  ctrl_id 0.026  chance 0.028 | PR 4.0 (emp 7.7)  count 11.8  capped 0.08 | 160 s
+[alpha 0.4] N=100 S=40 | self 0.449  noTF 0.029  PT_rot 0.183  ctrl 0.116  ratio 1.59  headroom 0.20  ctrl_id 0.025  chance 0.024 | PR 4.0 (emp 7.8)  count 11.8  capped 0.08 | 160 s
+[alpha 0.6] N=100 S=40 | self 0.438  noTF 0.029  PT_rot 0.243  ctrl 0.115  ratio 2.12  headroom 0.40  ctrl_id 0.028  chance 0.023 | PR 4.0 (emp 7.7)  count 11.8  capped 0.08 | 160 s
+[alpha 0.8] N=100 S=40 | self 0.448  noTF 0.028  PT_rot 0.327  ctrl 0.117  ratio 2.80  headroom 0.63  ctrl_id 0.029  chance 0.024 | PR 4.0 (emp 7.7)  count 11.8  capped 0.08 | 160 s
+[alpha 0.0] N=  5 S=30 | self 0.132  noTF 0.032  PT_rot 0.054  ctrl 0.052  ratio 1.06  headroom 0.02  ctrl_id 0.035  chance 0.036 | PR 2.1 (emp 3.1)  count 11.9  capped 0.04 | 86 s
+[alpha 0.2] N=  5 S=30 | self 0.132  noTF 0.036  PT_rot 0.054  ctrl 0.049  ratio 1.12  headroom 0.06  ctrl_id 0.035  chance 0.034 | PR 2.1 (emp 3.2)  count 11.9  capped 0.04 | 85 s
+[alpha 0.4] N=  5 S=30 | self 0.135  noTF 0.036  PT_rot 0.065  ctrl 0.048  ratio 1.41  headroom 0.20  ctrl_id 0.034  chance 0.030 | PR 2.1 (emp 3.2)  count 11.9  capped 0.04 | 85 s
+[alpha 0.6] N=  5 S=30 | self 0.137  noTF 0.035  PT_rot 0.080  ctrl 0.055  ratio 1.45  headroom 0.31  ctrl_id 0.036  chance 0.033 | PR 2.1 (emp 3.2)  count 11.9  capped 0.04 | 85 s
+[alpha 0.8] N=  5 S=30 | self 0.136  noTF 0.041  PT_rot 0.082  ctrl 0.049  ratio 1.71  headroom 0.38  ctrl_id 0.035  chance 0.035 | PR 2.1 (emp 3.3)  count 11.9  capped 0.04 | 85 s
+[alpha 0.0] N= 10 S=30 | self 0.185  noTF 0.031  PT_rot 0.068  ctrl 0.066  ratio 1.04  headroom 0.02  ctrl_id 0.033  chance 0.033 | PR 2.1 (emp 4.4)  count 11.6  capped 0.07 | 86 s
+[alpha 0.2] N= 10 S=30 | self 0.181  noTF 0.038  PT_rot 0.072  ctrl 0.067  ratio 1.09  headroom 0.04  ctrl_id 0.031  chance 0.035 | PR 2.1 (emp 4.4)  count 11.6  capped 0.08 | 86 s
+[alpha 0.4] N= 10 S=30 | self 0.184  noTF 0.034  PT_rot 0.082  ctrl 0.065  ratio 1.29  headroom 0.14  ctrl_id 0.033  chance 0.035 | PR 2.1 (emp 4.4)  count 11.6  capped 0.07 | 86 s
+[alpha 0.6] N= 10 S=30 | self 0.182  noTF 0.034  PT_rot 0.096  ctrl 0.060  ratio 1.63  headroom 0.30  ctrl_id 0.033  chance 0.032 | PR 2.1 (emp 4.5)  count 11.6  capped 0.07 | 86 s
+[alpha 0.8] N= 10 S=30 | self 0.185  noTF 0.032  PT_rot 0.121  ctrl 0.062  ratio 1.98  headroom 0.48  ctrl_id 0.034  chance 0.033 | PR 2.1 (emp 4.5)  count 11.6  capped 0.07 | 86 s
+[alpha 0.0] N= 20 S=30 | self 0.273  noTF 0.029  PT_rot 0.092  ctrl 0.094  ratio 0.99  headroom -0.01  ctrl_id 0.033  chance 0.032 | PR 2.8 (emp 5.5)  count 12.4  capped 0.09 | 86 s
+[alpha 0.2] N= 20 S=30 | self 0.283  noTF 0.035  PT_rot 0.107  ctrl 0.087  ratio 1.25  headroom 0.10  ctrl_id 0.036  chance 0.035 | PR 2.8 (emp 5.4)  count 12.4  capped 0.09 | 86 s
+[alpha 0.4] N= 20 S=30 | self 0.278  noTF 0.037  PT_rot 0.124  ctrl 0.082  ratio 1.54  headroom 0.22  ctrl_id 0.036  chance 0.032 | PR 2.8 (emp 5.4)  count 12.4  capped 0.09 | 86 s
+[alpha 0.6] N= 20 S=30 | self 0.282  noTF 0.033  PT_rot 0.149  ctrl 0.091  ratio 1.65  headroom 0.31  ctrl_id 0.035  chance 0.036 | PR 2.8 (emp 5.4)  count 12.4  capped 0.09 | 86 s
+[alpha 0.8] N= 20 S=30 | self 0.274  noTF 0.041  PT_rot 0.189  ctrl 0.087  ratio 2.22  headroom 0.55  ctrl_id 0.035  chance 0.038 | PR 2.8 (emp 5.4)  count 12.4  capped 0.09 | 88 s
+[alpha 0.0] N= 30 S=30 | self 0.337  noTF 0.033  PT_rot 0.106  ctrl 0.111  ratio 0.97  headroom -0.02  ctrl_id 0.034  chance 0.033 | PR 3.2 (emp 6.2)  count 12.4  capped 0.06 | 87 s
+[alpha 0.2] N= 30 S=30 | self 0.331  noTF 0.029  PT_rot 0.132  ctrl 0.104  ratio 1.28  headroom 0.13  ctrl_id 0.029  chance 0.035 | PR 3.2 (emp 6.3)  count 12.4  capped 0.06 | 87 s
+[alpha 0.4] N= 30 S=30 | self 0.339  noTF 0.036  PT_rot 0.164  ctrl 0.108  ratio 1.52  headroom 0.24  ctrl_id 0.034  chance 0.034 | PR 3.2 (emp 6.3)  count 12.4  capped 0.06 | 87 s
+[alpha 0.6] N= 30 S=30 | self 0.339  noTF 0.038  PT_rot 0.200  ctrl 0.107  ratio 1.88  headroom 0.40  ctrl_id 0.035  chance 0.032 | PR 3.2 (emp 6.3)  count 12.4  capped 0.06 | 87 s
+[alpha 0.8] N= 30 S=30 | self 0.339  noTF 0.037  PT_rot 0.255  ctrl 0.113  ratio 2.28  headroom 0.63  ctrl_id 0.035  chance 0.034 | PR 3.2 (emp 6.3)  count 12.4  capped 0.06 | 87 s
+[alpha 0.0] N= 40 S=30 | self 0.407  noTF 0.033  PT_rot 0.127  ctrl 0.126  ratio 1.02  headroom 0.00  ctrl_id 0.032  chance 0.032 | PR 3.2 (emp 6.6)  count 12.0  capped 0.08 | 87 s
+[alpha 0.2] N= 40 S=30 | self 0.400  noTF 0.031  PT_rot 0.149  ctrl 0.128  ratio 1.18  headroom 0.08  ctrl_id 0.031  chance 0.034 | PR 3.2 (emp 6.6)  count 12.0  capped 0.08 | 87 s
+[alpha 0.4] N= 40 S=30 | self 0.401  noTF 0.036  PT_rot 0.183  ctrl 0.119  ratio 1.56  headroom 0.23  ctrl_id 0.032  chance 0.032 | PR 3.2 (emp 6.5)  count 12.0  capped 0.09 | 88 s
+[alpha 0.6] N= 40 S=30 | self 0.402  noTF 0.034  PT_rot 0.231  ctrl 0.120  ratio 1.93  headroom 0.39  ctrl_id 0.035  chance 0.031 | PR 3.2 (emp 6.6)  count 12.0  capped 0.08 | 88 s
+[alpha 0.8] N= 40 S=30 | self 0.397  noTF 0.037  PT_rot 0.303  ctrl 0.124  ratio 2.46  headroom 0.66  ctrl_id 0.037  chance 0.030 | PR 3.2 (emp 6.6)  count 12.0  capped 0.08 | 87 s
+[alpha 0.0] N= 50 S=30 | self 0.431  noTF 0.033  PT_rot 0.137  ctrl 0.133  ratio 1.03  headroom 0.01  ctrl_id 0.034  chance 0.030 | PR 3.5 (emp 6.8)  count 11.8  capped 0.08 | 88 s
+[alpha 0.2] N= 50 S=30 | self 0.441  noTF 0.033  PT_rot 0.156  ctrl 0.132  ratio 1.18  headroom 0.08  ctrl_id 0.036  chance 0.031 | PR 3.5 (emp 6.8)  count 11.8  capped 0.08 | 88 s
+[alpha 0.4] N= 50 S=30 | self 0.436  noTF 0.032  PT_rot 0.216  ctrl 0.137  ratio 1.59  headroom 0.26  ctrl_id 0.034  chance 0.033 | PR 3.5 (emp 6.8)  count 11.8  capped 0.08 | 88 s
+[alpha 0.6] N= 50 S=30 | self 0.443  noTF 0.038  PT_rot 0.249  ctrl 0.130  ratio 1.92  headroom 0.38  ctrl_id 0.038  chance 0.035 | PR 3.5 (emp 6.8)  count 11.8  capped 0.08 | 87 s
+[alpha 0.8] N= 50 S=30 | self 0.436  noTF 0.031  PT_rot 0.323  ctrl 0.132  ratio 2.47  headroom 0.63  ctrl_id 0.041  chance 0.034 | PR 3.5 (emp 6.7)  count 11.8  capped 0.08 | 88 s
+[alpha 0.0] N= 60 S=30 | self 0.447  noTF 0.037  PT_rot 0.146  ctrl 0.142  ratio 1.03  headroom 0.01  ctrl_id 0.035  chance 0.034 | PR 3.7 (emp 7.1)  count 11.3  capped 0.09 | 89 s
+[alpha 0.2] N= 60 S=30 | self 0.439  noTF 0.032  PT_rot 0.172  ctrl 0.147  ratio 1.17  headroom 0.09  ctrl_id 0.033  chance 0.034 | PR 3.7 (emp 7.1)  count 11.3  capped 0.09 | 88 s
+[alpha 0.4] N= 60 S=30 | self 0.445  noTF 0.035  PT_rot 0.204  ctrl 0.141  ratio 1.47  headroom 0.21  ctrl_id 0.037  chance 0.033 | PR 3.7 (emp 7.1)  count 11.3  capped 0.09 | 88 s
+[alpha 0.6] N= 60 S=30 | self 0.441  noTF 0.036  PT_rot 0.252  ctrl 0.139  ratio 1.83  headroom 0.37  ctrl_id 0.034  chance 0.037 | PR 3.7 (emp 7.1)  count 11.3  capped 0.09 | 88 s
+[alpha 0.8] N= 60 S=30 | self 0.441  noTF 0.045  PT_rot 0.332  ctrl 0.140  ratio 2.42  headroom 0.64  ctrl_id 0.038  chance 0.032 | PR 3.7 (emp 7.1)  count 11.3  capped 0.09 | 88 s
+[alpha 0.0] N= 70 S=30 | self 0.476  noTF 0.031  PT_rot 0.147  ctrl 0.151  ratio 0.98  headroom -0.01  ctrl_id 0.033  chance 0.034 | PR 3.9 (emp 7.3)  count 11.8  capped 0.07 | 88 s
+[alpha 0.2] N= 70 S=30 | self 0.474  noTF 0.030  PT_rot 0.190  ctrl 0.149  ratio 1.29  headroom 0.13  ctrl_id 0.031  chance 0.034 | PR 3.9 (emp 7.3)  count 11.8  capped 0.07 | 89 s
+[alpha 0.4] N= 70 S=30 | self 0.464  noTF 0.030  PT_rot 0.219  ctrl 0.147  ratio 1.50  headroom 0.23  ctrl_id 0.033  chance 0.032 | PR 3.9 (emp 7.3)  count 11.8  capped 0.07 | 89 s
+[alpha 0.6] N= 70 S=30 | self 0.469  noTF 0.035  PT_rot 0.278  ctrl 0.154  ratio 1.82  headroom 0.39  ctrl_id 0.037  chance 0.034 | PR 3.9 (emp 7.3)  count 11.8  capped 0.07 | 89 s
+[alpha 0.8] N= 70 S=30 | self 0.473  noTF 0.035  PT_rot 0.353  ctrl 0.153  ratio 2.32  headroom 0.62  ctrl_id 0.032  chance 0.034 | PR 3.9 (emp 7.3)  count 11.8  capped 0.07 | 90 s
+[alpha 0.0] N= 80 S=30 | self 0.490  noTF 0.035  PT_rot 0.171  ctrl 0.163  ratio 1.05  headroom 0.03  ctrl_id 0.034  chance 0.033 | PR 3.8 (emp 7.3)  count 11.7  capped 0.07 | 90 s
+[alpha 0.2] N= 80 S=30 | self 0.485  noTF 0.031  PT_rot 0.198  ctrl 0.159  ratio 1.24  headroom 0.12  ctrl_id 0.034  chance 0.033 | PR 3.8 (emp 7.3)  count 11.7  capped 0.07 | 89 s
+[alpha 0.4] N= 80 S=30 | self 0.498  noTF 0.034  PT_rot 0.240  ctrl 0.159  ratio 1.52  headroom 0.24  ctrl_id 0.031  chance 0.032 | PR 3.8 (emp 7.3)  count 11.7  capped 0.07 | 89 s
+[alpha 0.6] N= 80 S=30 | self 0.497  noTF 0.036  PT_rot 0.295  ctrl 0.158  ratio 1.88  headroom 0.41  ctrl_id 0.036  chance 0.030 | PR 3.8 (emp 7.3)  count 11.7  capped 0.07 | 89 s
+[alpha 0.8] N= 80 S=30 | self 0.496  noTF 0.034  PT_rot 0.374  ctrl 0.156  ratio 2.42  headroom 0.64  ctrl_id 0.040  chance 0.036 | PR 3.8 (emp 7.3)  count 11.7  capped 0.07 | 88 s
+[alpha 0.0] N= 90 S=30 | self 0.530  noTF 0.039  PT_rot 0.169  ctrl 0.159  ratio 1.08  headroom 0.03  ctrl_id 0.034  chance 0.033 | PR 3.8 (emp 7.3)  count 11.6  capped 0.10 | 89 s
+[alpha 0.2] N= 90 S=30 | self 0.527  noTF 0.032  PT_rot 0.200  ctrl 0.164  ratio 1.24  headroom 0.10  ctrl_id 0.032  chance 0.032 | PR 3.8 (emp 7.3)  count 11.6  capped 0.10 | 90 s
+[alpha 0.4] N= 90 S=30 | self 0.521  noTF 0.029  PT_rot 0.245  ctrl 0.164  ratio 1.50  headroom 0.23  ctrl_id 0.034  chance 0.032 | PR 3.8 (emp 7.3)  count 11.6  capped 0.10 | 89 s
+[alpha 0.6] N= 90 S=30 | self 0.529  noTF 0.037  PT_rot 0.315  ctrl 0.162  ratio 1.95  headroom 0.42  ctrl_id 0.035  chance 0.032 | PR 3.8 (emp 7.3)  count 11.6  capped 0.10 | 89 s
+[alpha 0.8] N= 90 S=30 | self 0.531  noTF 0.029  PT_rot 0.402  ctrl 0.167  ratio 2.41  headroom 0.65  ctrl_id 0.036  chance 0.032 | PR 3.8 (emp 7.3)  count 11.6  capped 0.10 | 90 s
+[alpha 0.0] N=100 S=30 | self 0.510  noTF 0.030  PT_rot 0.165  ctrl 0.167  ratio 0.99  headroom -0.01  ctrl_id 0.035  chance 0.033 | PR 4.0 (emp 7.7)  count 11.5  capped 0.07 | 93 s
+[alpha 0.2] N=100 S=30 | self 0.503  noTF 0.032  PT_rot 0.207  ctrl 0.171  ratio 1.22  headroom 0.11  ctrl_id 0.036  chance 0.033 | PR 4.0 (emp 7.7)  count 11.5  capped 0.07 | 89 s
+[alpha 0.4] N=100 S=30 | self 0.502  noTF 0.035  PT_rot 0.246  ctrl 0.175  ratio 1.41  headroom 0.22  ctrl_id 0.036  chance 0.033 | PR 4.0 (emp 7.6)  count 11.5  capped 0.07 | 90 s
+[alpha 0.6] N=100 S=30 | self 0.503  noTF 0.037  PT_rot 0.306  ctrl 0.168  ratio 1.83  headroom 0.41  ctrl_id 0.035  chance 0.035 | PR 4.0 (emp 7.6)  count 11.5  capped 0.07 | 90 s
+[alpha 0.8] N=100 S=30 | self 0.501  noTF 0.033  PT_rot 0.387  ctrl 0.168  ratio 2.32  headroom 0.66  ctrl_id 0.034  chance 0.034 | PR 4.0 (emp 7.6)  count 11.5  capped 0.07 | 91 s
+[alpha 0.0] N=  5 S=20 | self 0.151  noTF 0.050  PT_rot 0.077  ctrl 0.068  ratio 1.15  headroom 0.11  ctrl_id 0.050  chance 0.050 | PR 1.8 (emp 3.0)  count 11.2  capped 0.07 | 39 s
+[alpha 0.2] N=  5 S=20 | self 0.148  noTF 0.058  PT_rot 0.077  ctrl 0.071  ratio 1.11  headroom 0.08  ctrl_id 0.052  chance 0.049 | PR 1.8 (emp 3.0)  count 11.2  capped 0.07 | 39 s
+[alpha 0.4] N=  5 S=20 | self 0.157  noTF 0.042  PT_rot 0.085  ctrl 0.075  ratio 1.16  headroom 0.13  ctrl_id 0.053  chance 0.048 | PR 1.8 (emp 3.0)  count 11.1  capped 0.07 | 39 s
+[alpha 0.6] N=  5 S=20 | self 0.159  noTF 0.050  PT_rot 0.087  ctrl 0.076  ratio 1.15  headroom 0.13  ctrl_id 0.055  chance 0.048 | PR 1.8 (emp 3.1)  count 11.1  capped 0.07 | 39 s
+[alpha 0.8] N=  5 S=20 | self 0.152  noTF 0.057  PT_rot 0.094  ctrl 0.072  ratio 1.28  headroom 0.27  ctrl_id 0.049  chance 0.059 | PR 1.8 (emp 3.0)  count 11.2  capped 0.07 | 39 s
+[alpha 0.0] N= 10 S=20 | self 0.247  noTF 0.048  PT_rot 0.105  ctrl 0.100  ratio 1.05  headroom 0.03  ctrl_id 0.053  chance 0.050 | PR 2.3 (emp 4.3)  count 11.5  capped 0.06 | 39 s
+[alpha 0.2] N= 10 S=20 | self 0.243  noTF 0.051  PT_rot 0.117  ctrl 0.101  ratio 1.17  headroom 0.11  ctrl_id 0.052  chance 0.052 | PR 2.3 (emp 4.3)  count 11.5  capped 0.06 | 39 s
+[alpha 0.4] N= 10 S=20 | self 0.235  noTF 0.052  PT_rot 0.129  ctrl 0.108  ratio 1.19  headroom 0.17  ctrl_id 0.055  chance 0.050 | PR 2.3 (emp 4.3)  count 11.5  capped 0.06 | 40 s
+[alpha 0.6] N= 10 S=20 | self 0.231  noTF 0.047  PT_rot 0.153  ctrl 0.103  ratio 1.50  headroom 0.39  ctrl_id 0.048  chance 0.052 | PR 2.3 (emp 4.3)  count 11.5  capped 0.07 | 39 s
+[alpha 0.8] N= 10 S=20 | self 0.244  noTF 0.043  PT_rot 0.164  ctrl 0.108  ratio 1.53  headroom 0.41  ctrl_id 0.049  chance 0.052 | PR 2.3 (emp 4.4)  count 11.5  capped 0.06 | 40 s
+[alpha 0.0] N= 20 S=20 | self 0.349  noTF 0.049  PT_rot 0.156  ctrl 0.145  ratio 1.08  headroom 0.05  ctrl_id 0.055  chance 0.049 | PR 2.6 (emp 5.3)  count 12.8  capped 0.07 | 40 s
+[alpha 0.2] N= 20 S=20 | self 0.352  noTF 0.052  PT_rot 0.168  ctrl 0.152  ratio 1.11  headroom 0.08  ctrl_id 0.048  chance 0.050 | PR 2.6 (emp 5.3)  count 12.8  capped 0.07 | 40 s
+[alpha 0.4] N= 20 S=20 | self 0.355  noTF 0.053  PT_rot 0.202  ctrl 0.155  ratio 1.32  headroom 0.23  ctrl_id 0.047  chance 0.052 | PR 2.6 (emp 5.2)  count 12.8  capped 0.07 | 39 s
+[alpha 0.6] N= 20 S=20 | self 0.352  noTF 0.053  PT_rot 0.234  ctrl 0.157  ratio 1.50  headroom 0.40  ctrl_id 0.050  chance 0.052 | PR 2.6 (emp 5.3)  count 12.8  capped 0.07 | 40 s
+[alpha 0.8] N= 20 S=20 | self 0.355  noTF 0.058  PT_rot 0.258  ctrl 0.151  ratio 1.73  headroom 0.52  ctrl_id 0.060  chance 0.046 | PR 2.6 (emp 5.4)  count 12.8  capped 0.07 | 40 s
+[alpha 0.0] N= 30 S=20 | self 0.454  noTF 0.056  PT_rot 0.196  ctrl 0.188  ratio 1.06  headroom 0.03  ctrl_id 0.052  chance 0.052 | PR 3.3 (emp 5.8)  count 12.2  capped 0.10 | 40 s
+[alpha 0.2] N= 30 S=20 | self 0.442  noTF 0.042  PT_rot 0.208  ctrl 0.180  ratio 1.16  headroom 0.11  ctrl_id 0.055  chance 0.054 | PR 3.3 (emp 5.8)  count 12.2  capped 0.10 | 40 s
+[alpha 0.4] N= 30 S=20 | self 0.447  noTF 0.050  PT_rot 0.240  ctrl 0.192  ratio 1.26  headroom 0.19  ctrl_id 0.053  chance 0.047 | PR 3.3 (emp 5.8)  count 12.2  capped 0.10 | 40 s
+[alpha 0.6] N= 30 S=20 | self 0.450  noTF 0.050  PT_rot 0.277  ctrl 0.182  ratio 1.52  headroom 0.35  ctrl_id 0.055  chance 0.050 | PR 3.3 (emp 5.8)  count 12.2  capped 0.10 | 40 s
+[alpha 0.8] N= 30 S=20 | self 0.457  noTF 0.051  PT_rot 0.331  ctrl 0.176  ratio 1.90  headroom 0.55  ctrl_id 0.053  chance 0.051 | PR 3.3 (emp 5.8)  count 12.2  capped 0.10 | 40 s
+[alpha 0.0] N= 40 S=20 | self 0.469  noTF 0.049  PT_rot 0.209  ctrl 0.212  ratio 0.99  headroom -0.01  ctrl_id 0.052  chance 0.051 | PR 3.4 (emp 6.3)  count 11.9  capped 0.08 | 40 s
+[alpha 0.2] N= 40 S=20 | self 0.458  noTF 0.044  PT_rot 0.218  ctrl 0.202  ratio 1.08  headroom 0.06  ctrl_id 0.051  chance 0.049 | PR 3.4 (emp 6.3)  count 11.9  capped 0.08 | 40 s
+[alpha 0.4] N= 40 S=20 | self 0.464  noTF 0.045  PT_rot 0.255  ctrl 0.198  ratio 1.31  headroom 0.21  ctrl_id 0.053  chance 0.047 | PR 3.4 (emp 6.3)  count 11.9  capped 0.08 | 40 s
+[alpha 0.6] N= 40 S=20 | self 0.470  noTF 0.040  PT_rot 0.310  ctrl 0.211  ratio 1.48  headroom 0.38  ctrl_id 0.050  chance 0.049 | PR 3.4 (emp 6.3)  count 11.9  capped 0.08 | 40 s
+[alpha 0.8] N= 40 S=20 | self 0.474  noTF 0.050  PT_rot 0.365  ctrl 0.202  ratio 1.82  headroom 0.60  ctrl_id 0.057  chance 0.050 | PR 3.4 (emp 6.2)  count 11.9  capped 0.08 | 40 s
+[alpha 0.0] N= 50 S=20 | self 0.526  noTF 0.055  PT_rot 0.223  ctrl 0.230  ratio 0.98  headroom -0.02  ctrl_id 0.050  chance 0.047 | PR 3.6 (emp 6.3)  count 11.6  capped 0.09 | 40 s
+[alpha 0.2] N= 50 S=20 | self 0.552  noTF 0.044  PT_rot 0.262  ctrl 0.225  ratio 1.16  headroom 0.11  ctrl_id 0.052  chance 0.048 | PR 3.6 (emp 6.3)  count 11.6  capped 0.09 | 40 s
+[alpha 0.4] N= 50 S=20 | self 0.542  noTF 0.047  PT_rot 0.300  ctrl 0.222  ratio 1.36  headroom 0.24  ctrl_id 0.054  chance 0.053 | PR 3.6 (emp 6.4)  count 11.6  capped 0.09 | 40 s
+[alpha 0.6] N= 50 S=20 | self 0.537  noTF 0.050  PT_rot 0.346  ctrl 0.228  ratio 1.53  headroom 0.38  ctrl_id 0.057  chance 0.049 | PR 3.6 (emp 6.3)  count 11.6  capped 0.09 | 40 s
+[alpha 0.8] N= 50 S=20 | self 0.522  noTF 0.054  PT_rot 0.407  ctrl 0.225  ratio 1.82  headroom 0.61  ctrl_id 0.054  chance 0.050 | PR 3.6 (emp 6.4)  count 11.6  capped 0.09 | 40 s
+[alpha 0.0] N= 60 S=20 | self 0.566  noTF 0.050  PT_rot 0.246  ctrl 0.242  ratio 1.02  headroom 0.01  ctrl_id 0.046  chance 0.053 | PR 3.4 (emp 6.5)  count 11.5  capped 0.09 | 40 s
+[alpha 0.2] N= 60 S=20 | self 0.566  noTF 0.050  PT_rot 0.267  ctrl 0.241  ratio 1.11  headroom 0.08  ctrl_id 0.052  chance 0.047 | PR 3.4 (emp 6.5)  count 11.5  capped 0.09 | 40 s
+[alpha 0.4] N= 60 S=20 | self 0.568  noTF 0.045  PT_rot 0.305  ctrl 0.238  ratio 1.29  headroom 0.20  ctrl_id 0.049  chance 0.048 | PR 3.4 (emp 6.5)  count 11.5  capped 0.09 | 40 s
+[alpha 0.6] N= 60 S=20 | self 0.565  noTF 0.050  PT_rot 0.360  ctrl 0.240  ratio 1.50  headroom 0.37  ctrl_id 0.053  chance 0.046 | PR 3.4 (emp 6.5)  count 11.5  capped 0.09 | 40 s
+[alpha 0.8] N= 60 S=20 | self 0.569  noTF 0.051  PT_rot 0.460  ctrl 0.239  ratio 1.93  headroom 0.67  ctrl_id 0.063  chance 0.047 | PR 3.4 (emp 6.5)  count 11.5  capped 0.09 | 41 s
+[alpha 0.0] N= 70 S=20 | self 0.577  noTF 0.046  PT_rot 0.249  ctrl 0.251  ratio 0.99  headroom -0.01  ctrl_id 0.052  chance 0.050 | PR 3.7 (emp 6.8)  count 12.0  capped 0.07 | 40 s
+[alpha 0.2] N= 70 S=20 | self 0.576  noTF 0.046  PT_rot 0.278  ctrl 0.243  ratio 1.15  headroom 0.10  ctrl_id 0.046  chance 0.049 | PR 3.7 (emp 6.8)  count 12.0  capped 0.07 | 40 s
+[alpha 0.4] N= 70 S=20 | self 0.578  noTF 0.056  PT_rot 0.320  ctrl 0.241  ratio 1.33  headroom 0.23  ctrl_id 0.058  chance 0.053 | PR 3.7 (emp 6.8)  count 12.0  capped 0.07 | 40 s
+[alpha 0.6] N= 70 S=20 | self 0.579  noTF 0.051  PT_rot 0.365  ctrl 0.248  ratio 1.47  headroom 0.35  ctrl_id 0.049  chance 0.048 | PR 3.7 (emp 6.7)  count 12.0  capped 0.07 | 40 s
+[alpha 0.8] N= 70 S=20 | self 0.568  noTF 0.048  PT_rot 0.443  ctrl 0.243  ratio 1.83  headroom 0.61  ctrl_id 0.061  chance 0.050 | PR 3.7 (emp 6.8)  count 12.0  capped 0.07 | 40 s
+[alpha 0.0] N= 80 S=20 | self 0.602  noTF 0.046  PT_rot 0.269  ctrl 0.264  ratio 1.02  headroom 0.01  ctrl_id 0.052  chance 0.049 | PR 3.7 (emp 6.8)  count 11.9  capped 0.08 | 40 s
+[alpha 0.2] N= 80 S=20 | self 0.607  noTF 0.052  PT_rot 0.307  ctrl 0.267  ratio 1.15  headroom 0.12  ctrl_id 0.054  chance 0.048 | PR 3.7 (emp 6.8)  count 11.9  capped 0.08 | 40 s
+[alpha 0.4] N= 80 S=20 | self 0.594  noTF 0.051  PT_rot 0.343  ctrl 0.260  ratio 1.33  headroom 0.25  ctrl_id 0.050  chance 0.049 | PR 3.7 (emp 6.8)  count 11.9  capped 0.08 | 40 s
+[alpha 0.6] N= 80 S=20 | self 0.609  noTF 0.052  PT_rot 0.413  ctrl 0.267  ratio 1.55  headroom 0.43  ctrl_id 0.056  chance 0.048 | PR 3.7 (emp 6.9)  count 11.9  capped 0.08 | 40 s
+[alpha 0.8] N= 80 S=20 | self 0.604  noTF 0.057  PT_rot 0.461  ctrl 0.255  ratio 1.81  headroom 0.59  ctrl_id 0.058  chance 0.045 | PR 3.7 (emp 6.8)  count 11.9  capped 0.08 | 41 s
+[alpha 0.0] N= 90 S=20 | self 0.596  noTF 0.052  PT_rot 0.259  ctrl 0.270  ratio 0.96  headroom -0.03  ctrl_id 0.050  chance 0.051 | PR 3.8 (emp 6.9)  count 11.3  capped 0.08 | 41 s
+[alpha 0.2] N= 90 S=20 | self 0.607  noTF 0.050  PT_rot 0.307  ctrl 0.275  ratio 1.12  headroom 0.10  ctrl_id 0.048  chance 0.047 | PR 3.8 (emp 7.0)  count 11.3  capped 0.08 | 41 s
+[alpha 0.4] N= 90 S=20 | self 0.604  noTF 0.053  PT_rot 0.355  ctrl 0.278  ratio 1.28  headroom 0.24  ctrl_id 0.057  chance 0.053 | PR 3.8 (emp 7.0)  count 11.3  capped 0.08 | 40 s
+[alpha 0.6] N= 90 S=20 | self 0.598  noTF 0.055  PT_rot 0.403  ctrl 0.272  ratio 1.48  headroom 0.40  ctrl_id 0.054  chance 0.049 | PR 3.8 (emp 7.0)  count 11.3  capped 0.08 | 41 s
+[alpha 0.8] N= 90 S=20 | self 0.590  noTF 0.056  PT_rot 0.472  ctrl 0.269  ratio 1.76  headroom 0.63  ctrl_id 0.056  chance 0.051 | PR 3.8 (emp 6.9)  count 11.3  capped 0.08 | 40 s
+[alpha 0.0] N=100 S=20 | self 0.652  noTF 0.048  PT_rot 0.284  ctrl 0.283  ratio 1.01  headroom 0.00  ctrl_id 0.053  chance 0.052 | PR 3.8 (emp 7.0)  count 11.6  capped 0.08 | 40 s
+[alpha 0.2] N=100 S=20 | self 0.652  noTF 0.051  PT_rot 0.310  ctrl 0.279  ratio 1.12  headroom 0.08  ctrl_id 0.044  chance 0.051 | PR 3.8 (emp 6.9)  count 11.6  capped 0.08 | 40 s
+[alpha 0.4] N=100 S=20 | self 0.653  noTF 0.058  PT_rot 0.372  ctrl 0.287  ratio 1.30  headroom 0.23  ctrl_id 0.050  chance 0.052 | PR 3.8 (emp 7.0)  count 11.6  capped 0.08 | 41 s
+[alpha 0.6] N=100 S=20 | self 0.651  noTF 0.050  PT_rot 0.432  ctrl 0.287  ratio 1.51  headroom 0.40  ctrl_id 0.057  chance 0.047 | PR 3.8 (emp 7.0)  count 11.6  capped 0.09 | 41 s
+[alpha 0.8] N=100 S=20 | self 0.666  noTF 0.050  PT_rot 0.523  ctrl 0.286  ratio 1.83  headroom 0.62  ctrl_id 0.058  chance 0.052 | PR 3.8 (emp 6.9)  count 11.6  capped 0.08 | 41 s
+[alpha 0.0] N=  5 S=10 | self 0.306  noTF 0.096  PT_rot 0.190  ctrl 0.169  ratio 1.14  headroom 0.15  ctrl_id 0.101  chance 0.097 | PR 1.9 (emp 2.6)  count 12.5  capped 0.06 | 10 s
+[alpha 0.2] N=  5 S=10 | self 0.307  noTF 0.122  PT_rot 0.198  ctrl 0.184  ratio 1.10  headroom 0.11  ctrl_id 0.110  chance 0.094 | PR 1.9 (emp 2.7)  count 12.5  capped 0.06 | 10 s
+[alpha 0.4] N=  5 S=10 | self 0.308  noTF 0.131  PT_rot 0.198  ctrl 0.180  ratio 1.12  headroom 0.14  ctrl_id 0.096  chance 0.101 | PR 1.9 (emp 2.7)  count 12.5  capped 0.06 | 10 s
+[alpha 0.6] N=  5 S=10 | self 0.317  noTF 0.085  PT_rot 0.205  ctrl 0.177  ratio 1.19  headroom 0.20  ctrl_id 0.102  chance 0.102 | PR 1.9 (emp 2.6)  count 12.5  capped 0.06 | 10 s
+[alpha 0.8] N=  5 S=10 | self 0.321  noTF 0.093  PT_rot 0.206  ctrl 0.193  ratio 1.06  headroom 0.10  ctrl_id 0.100  chance 0.101 | PR 1.9 (emp 2.7)  count 12.5  capped 0.06 | 11 s
+[alpha 0.0] N= 10 S=10 | self 0.389  noTF 0.112  PT_rot 0.248  ctrl 0.260  ratio 0.96  headroom -0.09  ctrl_id 0.105  chance 0.097 | PR 2.2 (emp 3.8)  count 11.1  capped 0.09 | 11 s
+[alpha 0.2] N= 10 S=10 | self 0.378  noTF 0.105  PT_rot 0.271  ctrl 0.257  ratio 1.07  headroom 0.12  ctrl_id 0.104  chance 0.101 | PR 2.2 (emp 3.7)  count 11.2  capped 0.09 | 10 s
+[alpha 0.4] N= 10 S=10 | self 0.400  noTF 0.083  PT_rot 0.271  ctrl 0.251  ratio 1.10  headroom 0.13  ctrl_id 0.099  chance 0.103 | PR 2.2 (emp 3.8)  count 11.2  capped 0.09 | 10 s
+[alpha 0.6] N= 10 S=10 | self 0.403  noTF 0.105  PT_rot 0.287  ctrl 0.256  ratio 1.14  headroom 0.21  ctrl_id 0.104  chance 0.101 | PR 2.2 (emp 3.8)  count 11.1  capped 0.09 | 11 s
+[alpha 0.8] N= 10 S=10 | self 0.394  noTF 0.088  PT_rot 0.301  ctrl 0.227  ratio 1.30  headroom 0.44  ctrl_id 0.103  chance 0.113 | PR 2.2 (emp 3.7)  count 11.1  capped 0.09 | 10 s
+[alpha 0.0] N= 20 S=10 | self 0.513  noTF 0.086  PT_rot 0.363  ctrl 0.371  ratio 0.99  headroom -0.05  ctrl_id 0.102  chance 0.096 | PR 2.6 (emp 4.7)  count 12.4  capped 0.07 | 10 s
+[alpha 0.2] N= 20 S=10 | self 0.532  noTF 0.121  PT_rot 0.377  ctrl 0.360  ratio 1.07  headroom 0.10  ctrl_id 0.108  chance 0.108 | PR 2.6 (emp 4.6)  count 12.4  capped 0.07 | 10 s
+[alpha 0.4] N= 20 S=10 | self 0.535  noTF 0.089  PT_rot 0.388  ctrl 0.357  ratio 1.10  headroom 0.18  ctrl_id 0.096  chance 0.098 | PR 2.6 (emp 4.6)  count 12.4  capped 0.07 | 10 s
+[alpha 0.6] N= 20 S=10 | self 0.521  noTF 0.110  PT_rot 0.386  ctrl 0.340  ratio 1.15  headroom 0.26  ctrl_id 0.104  chance 0.097 | PR 2.6 (emp 4.6)  count 12.4  capped 0.07 | 10 s
+[alpha 0.8] N= 20 S=10 | self 0.526  noTF 0.091  PT_rot 0.433  ctrl 0.359  ratio 1.22  headroom 0.44  ctrl_id 0.096  chance 0.101 | PR 2.6 (emp 4.6)  count 12.4  capped 0.07 | 10 s
+[alpha 0.0] N= 30 S=10 | self 0.606  noTF 0.101  PT_rot 0.432  ctrl 0.444  ratio 0.98  headroom -0.07  ctrl_id 0.094  chance 0.097 | PR 3.0 (emp 5.2)  count 11.1  capped 0.09 | 10 s
+[alpha 0.2] N= 30 S=10 | self 0.605  noTF 0.102  PT_rot 0.443  ctrl 0.430  ratio 1.03  headroom 0.07  ctrl_id 0.096  chance 0.106 | PR 3.0 (emp 5.3)  count 11.1  capped 0.09 | 10 s
+[alpha 0.4] N= 30 S=10 | self 0.619  noTF 0.101  PT_rot 0.473  ctrl 0.424  ratio 1.12  headroom 0.25  ctrl_id 0.111  chance 0.094 | PR 3.0 (emp 5.2)  count 11.1  capped 0.09 | 10 s
+[alpha 0.6] N= 30 S=10 | self 0.628  noTF 0.107  PT_rot 0.484  ctrl 0.424  ratio 1.14  headroom 0.29  ctrl_id 0.107  chance 0.106 | PR 3.0 (emp 5.2)  count 11.1  capped 0.09 | 10 s
+[alpha 0.8] N= 30 S=10 | self 0.606  noTF 0.108  PT_rot 0.510  ctrl 0.420  ratio 1.22  headroom 0.48  ctrl_id 0.113  chance 0.096 | PR 3.0 (emp 5.1)  count 11.1  capped 0.09 | 10 s
+[alpha 0.0] N= 40 S=10 | self 0.685  noTF 0.096  PT_rot 0.504  ctrl 0.496  ratio 1.02  headroom 0.04  ctrl_id 0.098  chance 0.096 | PR 3.1 (emp 5.4)  count 12.0  capped 0.07 | 10 s
+[alpha 0.2] N= 40 S=10 | self 0.704  noTF 0.091  PT_rot 0.526  ctrl 0.517  ratio 1.02  headroom 0.05  ctrl_id 0.105  chance 0.101 | PR 3.1 (emp 5.4)  count 11.9  capped 0.07 | 10 s
+[alpha 0.4] N= 40 S=10 | self 0.702  noTF 0.095  PT_rot 0.559  ctrl 0.502  ratio 1.12  headroom 0.29  ctrl_id 0.109  chance 0.100 | PR 3.1 (emp 5.4)  count 12.0  capped 0.07 | 10 s
+[alpha 0.6] N= 40 S=10 | self 0.702  noTF 0.109  PT_rot 0.576  ctrl 0.513  ratio 1.13  headroom 0.34  ctrl_id 0.115  chance 0.097 | PR 3.1 (emp 5.4)  count 12.0  capped 0.07 | 10 s
+[alpha 0.8] N= 40 S=10 | self 0.692  noTF 0.113  PT_rot 0.602  ctrl 0.489  ratio 1.23  headroom 0.56  ctrl_id 0.112  chance 0.104 | PR 3.1 (emp 5.4)  count 11.9  capped 0.07 | 10 s
+[alpha 0.0] N= 50 S=10 | self 0.699  noTF 0.109  PT_rot 0.532  ctrl 0.522  ratio 1.02  headroom 0.05  ctrl_id 0.096  chance 0.089 | PR 3.6 (emp 5.5)  count 11.9  capped 0.08 | 10 s
+[alpha 0.2] N= 50 S=10 | self 0.735  noTF 0.090  PT_rot 0.556  ctrl 0.524  ratio 1.06  headroom 0.15  ctrl_id 0.102  chance 0.097 | PR 3.6 (emp 5.6)  count 11.9  capped 0.08 | 11 s
+[alpha 0.4] N= 50 S=10 | self 0.727  noTF 0.109  PT_rot 0.566  ctrl 0.521  ratio 1.09  headroom 0.22  ctrl_id 0.111  chance 0.096 | PR 3.6 (emp 5.6)  count 11.9  capped 0.08 | 10 s
+[alpha 0.6] N= 50 S=10 | self 0.712  noTF 0.108  PT_rot 0.577  ctrl 0.518  ratio 1.12  headroom 0.30  ctrl_id 0.115  chance 0.101 | PR 3.6 (emp 5.5)  count 11.9  capped 0.08 | 10 s
+[alpha 0.8] N= 50 S=10 | self 0.718  noTF 0.118  PT_rot 0.625  ctrl 0.522  ratio 1.20  headroom 0.53  ctrl_id 0.113  chance 0.102 | PR 3.6 (emp 5.5)  count 11.9  capped 0.08 | 15 s
+[alpha 0.0] N= 60 S=10 | self 0.755  noTF 0.103  PT_rot 0.560  ctrl 0.568  ratio 0.99  headroom -0.04  ctrl_id 0.096  chance 0.104 | PR 3.6 (emp 5.6)  count 11.9  capped 0.08 | 21 s
+[alpha 0.2] N= 60 S=10 | self 0.766  noTF 0.108  PT_rot 0.576  ctrl 0.542  ratio 1.07  headroom 0.15  ctrl_id 0.094  chance 0.099 | PR 3.6 (emp 5.6)  count 11.9  capped 0.08 | 11 s
+[alpha 0.4] N= 60 S=10 | self 0.758  noTF 0.109  PT_rot 0.577  ctrl 0.557  ratio 1.04  headroom 0.10  ctrl_id 0.115  chance 0.100 | PR 3.6 (emp 5.6)  count 11.9  capped 0.08 | 11 s
+[alpha 0.6] N= 60 S=10 | self 0.747  noTF 0.103  PT_rot 0.599  ctrl 0.543  ratio 1.10  headroom 0.27  ctrl_id 0.102  chance 0.097 | PR 3.6 (emp 5.6)  count 11.9  capped 0.08 | 11 s
+[alpha 0.8] N= 60 S=10 | self 0.745  noTF 0.090  PT_rot 0.648  ctrl 0.541  ratio 1.20  headroom 0.53  ctrl_id 0.123  chance 0.101 | PR 3.6 (emp 5.6)  count 11.9  capped 0.08 | 11 s
+[alpha 0.0] N= 70 S=10 | self 0.778  noTF 0.109  PT_rot 0.575  ctrl 0.577  ratio 1.00  headroom -0.01  ctrl_id 0.100  chance 0.106 | PR 3.5 (emp 5.7)  count 11.5  capped 0.08 | 11 s
+[alpha 0.2] N= 70 S=10 | self 0.797  noTF 0.110  PT_rot 0.581  ctrl 0.573  ratio 1.01  headroom 0.03  ctrl_id 0.112  chance 0.104 | PR 3.5 (emp 5.7)  count 11.5  capped 0.08 | 11 s
+[alpha 0.4] N= 70 S=10 | self 0.799  noTF 0.105  PT_rot 0.637  ctrl 0.608  ratio 1.05  headroom 0.15  ctrl_id 0.101  chance 0.111 | PR 3.5 (emp 5.7)  count 11.5  capped 0.08 | 11 s
+[alpha 0.6] N= 70 S=10 | self 0.794  noTF 0.103  PT_rot 0.650  ctrl 0.590  ratio 1.10  headroom 0.29  ctrl_id 0.112  chance 0.104 | PR 3.5 (emp 5.7)  count 11.5  capped 0.08 | 11 s
+[alpha 0.8] N= 70 S=10 | self 0.801  noTF 0.111  PT_rot 0.697  ctrl 0.577  ratio 1.21  headroom 0.53  ctrl_id 0.117  chance 0.105 | PR 3.5 (emp 5.7)  count 11.5  capped 0.08 | 11 s
+[alpha 0.0] N= 80 S=10 | self 0.808  noTF 0.112  PT_rot 0.590  ctrl 0.588  ratio 1.01  headroom 0.01  ctrl_id 0.097  chance 0.101 | PR 3.7 (emp 5.7)  count 11.9  capped 0.08 | 11 s
+[alpha 0.2] N= 80 S=10 | self 0.806  noTF 0.103  PT_rot 0.596  ctrl 0.574  ratio 1.04  headroom 0.09  ctrl_id 0.095  chance 0.104 | PR 3.7 (emp 5.7)  count 11.9  capped 0.08 | 11 s
+[alpha 0.4] N= 80 S=10 | self 0.823  noTF 0.094  PT_rot 0.629  ctrl 0.602  ratio 1.05  headroom 0.12  ctrl_id 0.105  chance 0.098 | PR 3.7 (emp 5.7)  count 11.9  capped 0.08 | 11 s
+[alpha 0.6] N= 80 S=10 | self 0.819  noTF 0.118  PT_rot 0.654  ctrl 0.587  ratio 1.11  headroom 0.29  ctrl_id 0.110  chance 0.106 | PR 3.7 (emp 5.7)  count 11.9  capped 0.08 | 11 s
+[alpha 0.8] N= 80 S=10 | self 0.823  noTF 0.097  PT_rot 0.718  ctrl 0.627  ratio 1.15  headroom 0.47  ctrl_id 0.120  chance 0.093 | PR 3.7 (emp 5.8)  count 11.9  capped 0.08 | 11 s
+[alpha 0.0] N= 90 S=10 | self 0.822  noTF 0.097  PT_rot 0.609  ctrl 0.604  ratio 1.01  headroom 0.02  ctrl_id 0.100  chance 0.108 | PR 3.9 (emp 5.8)  count 11.6  capped 0.08 | 11 s
+[alpha 0.2] N= 90 S=10 | self 0.831  noTF 0.102  PT_rot 0.624  ctrl 0.611  ratio 1.02  headroom 0.06  ctrl_id 0.113  chance 0.098 | PR 3.9 (emp 5.8)  count 11.6  capped 0.08 | 11 s
+[alpha 0.4] N= 90 S=10 | self 0.812  noTF 0.118  PT_rot 0.649  ctrl 0.602  ratio 1.08  headroom 0.22  ctrl_id 0.107  chance 0.101 | PR 3.9 (emp 5.8)  count 11.6  capped 0.08 | 11 s
+[alpha 0.6] N= 90 S=10 | self 0.823  noTF 0.112  PT_rot 0.663  ctrl 0.597  ratio 1.11  headroom 0.29  ctrl_id 0.115  chance 0.099 | PR 3.9 (emp 5.8)  count 11.6  capped 0.08 | 11 s
+[alpha 0.8] N= 90 S=10 | self 0.804  noTF 0.110  PT_rot 0.702  ctrl 0.579  ratio 1.21  headroom 0.55  ctrl_id 0.120  chance 0.100 | PR 3.9 (emp 5.8)  count 11.6  capped 0.08 | 11 s
+[alpha 0.0] N=100 S=10 | self 0.881  noTF 0.104  PT_rot 0.636  ctrl 0.649  ratio 0.98  headroom -0.06  ctrl_id 0.100  chance 0.092 | PR 3.9 (emp 5.8)  count 12.1  capped 0.09 | 11 s
+[alpha 0.2] N=100 S=10 | self 0.860  noTF 0.093  PT_rot 0.651  ctrl 0.613  ratio 1.06  headroom 0.15  ctrl_id 0.100  chance 0.095 | PR 3.9 (emp 5.8)  count 12.1  capped 0.09 | 11 s
+[alpha 0.4] N=100 S=10 | self 0.863  noTF 0.094  PT_rot 0.647  ctrl 0.616  ratio 1.06  headroom 0.13  ctrl_id 0.118  chance 0.101 | PR 3.9 (emp 5.8)  count 12.1  capped 0.09 | 11 s
+[alpha 0.6] N=100 S=10 | self 0.864  noTF 0.113  PT_rot 0.687  ctrl 0.618  ratio 1.11  headroom 0.28  ctrl_id 0.127  chance 0.098 | PR 3.9 (emp 5.8)  count 12.1  capped 0.09 | 11 s
+[alpha 0.8] N=100 S=10 | self 0.891  noTF 0.113  PT_rot 0.762  ctrl 0.635  ratio 1.21  headroom 0.50  ctrl_id 0.130  chance 0.096 | PR 3.9 (emp 5.8)  count 12.1  capped 0.09 | 11 s
+
+All results in C:\Git Repos\cue-invariant-population-geometry\decoding-analysis\Simulations_v3_partial_sharing\code\decoding_scripts\..\..\results\decoding_outputs\sweep_alpha_N_S_results.mat
+Total time: 494.1 min
+MATLAB exit code: 0 

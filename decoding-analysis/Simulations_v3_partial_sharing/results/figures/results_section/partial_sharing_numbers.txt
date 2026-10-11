@@ -1,0 +1,103 @@
+Numbers for the partial-sharing write-up. Synthetic: sweep_alpha_N_S (K = 5 latent dimensions per cue,
+alpha = K_s/K, 16 populations per point; alpha = 1 imported from Simulations_v2 sweep_N_S_model3_D5).
+headroom = (PT - control)/(self - control) and ratio = PT/control, both from mean accuracies.
+
+--- design check: within-cue statistics across alpha (all 55 grid points) ---
+self-decoding: max range across alpha 0.039 (median 0.013); mean SEM over populations 0.014
+participation ratio (z-scored means): max range across alpha 0.17 (median 0.06)
+fraction of depth-capped neurons (computed alphas): 0.038-0.106
+alpha = 0: cross-cue latent canonical correlations (mean) [0.71 0.57 0.42 0.25 0.082]
+
+--- alpha = 0 (no shared structure at the recorded dimensionality) ---
+N >= 20: PT/control median 1.00, range 0.90-1.07; headroom -0.07 to 0.05
+control scored vs permuted identities (computed alphas): max |acc - 1/n_stim| = 0.030
+
+--- headroom, mean over N >= 20 (rows alpha, columns n_stim [10 20 30 40 50]) ---
+alpha 0.0:  -0.01  0.00  0.00 -0.00 -0.00
+alpha 0.2:   0.10  0.09  0.10  0.10  0.09
+alpha 0.4:   0.18  0.23  0.23  0.22  0.22
+alpha 0.6:   0.29  0.39  0.39  0.40  0.38
+alpha 0.8:   0.51  0.60  0.63  0.60  0.62
+alpha 1.0:   0.84  0.91  0.93  0.94  0.94
+range over N >= 20 at 50 classes, per alpha:
+   alpha 0.0: -0.01-0.01
+   alpha 0.2: 0.07-0.11
+   alpha 0.4: 0.18-0.24
+   alpha 0.6: 0.34-0.40
+   alpha 0.8: 0.56-0.66
+   alpha 1.0: 0.81-1.00
+
+--- PT / control, mean over N >= 20 (rows alpha, columns n_stim [10 20 30 40 50]) ---
+alpha 0.0:   1.00  1.01  1.01  0.99  0.99
+alpha 0.2:   1.04  1.12  1.22  1.27  1.30
+alpha 0.4:   1.07  1.30  1.50  1.62  1.77
+alpha 0.6:   1.12  1.50  1.85  2.12  2.32
+alpha 0.8:   1.20  1.82  2.34  2.70  3.18
+alpha 1.0:   1.34  2.20  3.01  3.69  4.33
+
+--- 50 classes, N = 40-100 (self and PR in the recorded range) ---
+alpha 0.0: self 0.278-0.412 | PT/control 0.95-1.04 | headroom -0.01-0.01 | control/self 0.21-0.23 | PR 7.1-7.8
+alpha 0.2: self 0.279-0.409 | PT/control 1.26-1.36 | headroom 0.07-0.11 | control/self 0.21-0.24 | PR 7.1-7.8
+alpha 0.4: self 0.282-0.414 | PT/control 1.61-1.86 | headroom 0.18-0.23 | control/self 0.21-0.23 | PR 7.1-7.9
+alpha 0.6: self 0.281-0.414 | PT/control 2.25-2.50 | headroom 0.36-0.40 | control/self 0.21-0.24 | PR 7.1-7.8
+alpha 0.8: self 0.286-0.412 | PT/control 3.05-3.39 | headroom 0.58-0.66 | control/self 0.21-0.23 | PR 7.1-7.8
+alpha 1.0: self 0.280-0.411 | PT/control 4.28-4.91 | headroom 0.93-1.00 | control/self 0.20-0.22 | PR 7.1-7.8
+Model 1 (v2), 50 classes, N = 40-100: control/self 0.42-0.80
+
+--- recorded populations, 50 classes, full population ---
+alpha implied by headroom: interpolated on the 50-class model curve (mean over N >= 20)
+alpha implied by PT/control: interpolated on the 50-class model curve (mean over N = 40-100)
+| Population | N | Self | PT | Control | PT/control | Headroom | Control/self | PR | alpha (headroom) | alpha (ratio) | source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| FR V1 | 48 | 0.264 | 0.113 | 0.086 | 1.31 | 0.15 | 0.33 | 7.0 | 0.30 | 0.21 | incremental_pr |
+| FR V2 | 112 | 0.339 | 0.169 | 0.131 | 1.29 | 0.18 | 0.39 | 7.8 | 0.35 | 0.20 | incremental_pr |
+| KO V1 | 109 | 0.495 | 0.255 | 0.170 | 1.50 | 0.26 | 0.34 | 7.8 | 0.46 | 0.29 | incremental_pr |
+| KO V2 | 146 | 0.371 | 0.212 | 0.168 | 1.26 | 0.22 | 0.45 | 9.5 | 0.40 | 0.18 | incremental_pr |
+| FR V1 | 48 | 0.262 | 0.111 | 0.084 | 1.32 | 0.15 | 0.32 | 7.0 | 0.30 | 0.21 | stimsub C = 50 (same decoder as models) |
+| FR V2 | 112 | 0.338 | 0.167 | 0.131 | 1.28 | 0.18 | 0.39 | 7.8 | 0.34 | 0.19 | stimsub C = 50 (same decoder as models) |
+| KO V1 | 109 | 0.496 | 0.255 | 0.174 | 1.47 | 0.25 | 0.35 | 7.8 | 0.45 | 0.27 | stimsub C = 50 (same decoder as models) |
+| KO V2 | 146 | 0.370 | 0.214 | 0.173 | 1.24 | 0.21 | 0.47 | 9.5 | 0.38 | 0.16 | stimsub C = 50 (same decoder as models) |
+recorded headroom over N (incremental_pr, 50 classes):
+   FR V1: 0.15-0.15 (N = 20..48); control/self 0.31-0.33
+   FR V2: 0.12-0.19 (N = 20..112); control/self 0.34-0.39
+   KO V1: 0.19-0.26 (N = 20..109); control/self 0.26-0.35
+   KO V2: 0.11-0.22 (N = 20..146); control/self 0.36-0.46
+
+--- recorded populations on random subsets of C stimuli (16 subsets per C < 50; 8 repeats at C = 50) ---
+mode full_N: headroom (SEM over subsets) by C = [10 20 30 40 50]
+   FR_V1     0.12 (0.06)   0.14 (0.02)   0.14 (0.02)   0.15 (0.01)   0.15 (0.01)
+   FR_V2     0.13 (0.04)   0.15 (0.03)   0.15 (0.01)   0.17 (0.01)   0.18 (0.01)
+   KO_V1     0.25 (0.03)   0.25 (0.01)   0.26 (0.01)   0.28 (0.01)   0.25 (0.00)
+   KO_V2     0.11 (0.04)   0.23 (0.02)   0.21 (0.01)   0.22 (0.01)   0.21 (0.01)
+   PT/control by C:
+   FR_V1     1.05   1.10   1.17   1.24   1.32
+   FR_V2     1.04   1.09   1.14   1.21   1.28
+   KO_V1     1.09   1.18   1.28   1.42   1.47
+   KO_V2     1.03   1.12   1.15   1.21   1.24
+   control/self by C:
+   FR_V1     0.73   0.57   0.46   0.38   0.32
+   FR_V2     0.78   0.62   0.52   0.45   0.39
+   KO_V1     0.74   0.58   0.48   0.39   0.35
+   KO_V2     0.81   0.66   0.58   0.52   0.47
+mode matched_ratio: headroom (SEM over subsets) by C = [10 20 30 40 50]
+   FR_V1     0.10 (0.14)   0.11 (0.03)   0.17 (0.02)   0.13 (0.01)   0.15 (0.01)
+   FR_V2     0.08 (0.09)   0.13 (0.02)   0.16 (0.02)   0.14 (0.01)   0.18 (0.01)
+   KO_V1     0.23 (0.04)   0.21 (0.02)   0.27 (0.01)   0.26 (0.01)   0.25 (0.00)
+   KO_V2     0.26 (0.08)   0.17 (0.03)   0.22 (0.02)   0.21 (0.01)   0.21 (0.01)
+   PT/control by C:
+   FR_V1     1.05   1.10   1.24   1.23   1.32
+   FR_V2     1.03   1.09   1.17   1.19   1.28
+   KO_V1     1.12   1.18   1.33   1.40   1.47
+   KO_V2     1.08   1.09   1.17   1.21   1.24
+   control/self by C:
+   FR_V1     0.68   0.54   0.41   0.37   0.32
+   FR_V2     0.75   0.59   0.49   0.43   0.39
+   KO_V1     0.67   0.54   0.45   0.39   0.35
+   KO_V2     0.77   0.65   0.56   0.50   0.47
+model headroom by C (mean over N >= 20), for reference:
+   alpha 0.0:   -0.01   0.00   0.00  -0.00  -0.00
+   alpha 0.2:    0.10   0.09   0.10   0.10   0.09
+   alpha 0.4:    0.18   0.23   0.23   0.22   0.22
+   alpha 0.6:    0.29   0.39   0.39   0.40   0.38
+   alpha 0.8:    0.51   0.60   0.63   0.60   0.62
+   alpha 1.0:    0.84   0.91   0.93   0.94   0.94

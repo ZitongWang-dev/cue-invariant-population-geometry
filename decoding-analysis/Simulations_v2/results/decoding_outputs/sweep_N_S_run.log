@@ -1,0 +1,140 @@
+
+===== models model1, model3 : 11 x 6 grid, R_pop = 16, trial_repeat = 10, n_folds = 10, tag = sweep_N_S =====
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+[model1] N=  5 S= 5 | self 0.447  noTF 0.190  PT_rot 0.379  ctrl 0.374  ratio 1.01  ctrl_id 0.201  chance 0.179 | PR 1.5 (emp 2.1)  count 10.9 | 20 s
+[model3] N=  5 S= 5 | self 0.426  noTF 0.254  PT_rot 0.381  ctrl 0.324  ratio 1.19  ctrl_id 0.202  chance 0.204 | PR 1.4 (emp 1.8)  count 11.3 | 5 s
+[model1] N= 10 S= 5 | self 0.526  noTF 0.205  PT_rot 0.469  ctrl 0.478  ratio 0.98  ctrl_id 0.204  chance 0.189 | PR 2.0 (emp 2.8)  count 11.8 | 7 s
+[model3] N= 10 S= 5 | self 0.508  noTF 0.225  PT_rot 0.502  ctrl 0.444  ratio 1.15  ctrl_id 0.226  chance 0.204 | PR 1.7 (emp 2.3)  count 12.2 | 5 s
+[model1] N= 20 S= 5 | self 0.692  noTF 0.160  PT_rot 0.649  ctrl 0.636  ratio 1.02  ctrl_id 0.189  chance 0.202 | PR 2.1 (emp 3.3)  count 11.3 | 4 s
+[model3] N= 20 S= 5 | self 0.607  noTF 0.208  PT_rot 0.570  ctrl 0.476  ratio 1.20  ctrl_id 0.207  chance 0.198 | PR 1.7 (emp 2.4)  count 11.3 | 4 s
+[model1] N= 30 S= 5 | self 0.761  noTF 0.236  PT_rot 0.743  ctrl 0.747  ratio 0.99  ctrl_id 0.201  chance 0.197 | PR 2.6 (emp 3.5)  count 11.3 | 3 s
+[model3] N= 30 S= 5 | self 0.671  noTF 0.221  PT_rot 0.686  ctrl 0.538  ratio 1.28  ctrl_id 0.248  chance 0.200 | PR 1.8 (emp 2.5)  count 11.4 | 4 s
+[model1] N= 40 S= 5 | self 0.842  noTF 0.189  PT_rot 0.827  ctrl 0.829  ratio 1.00  ctrl_id 0.203  chance 0.197 | PR 2.8 (emp 3.6)  count 12.0 | 4 s
+[model3] N= 40 S= 5 | self 0.691  noTF 0.174  PT_rot 0.682  ctrl 0.546  ratio 1.25  ctrl_id 0.262  chance 0.201 | PR 1.8 (emp 2.5)  count 11.8 | 4 s
+[model1] N= 50 S= 5 | self 0.916  noTF 0.187  PT_rot 0.902  ctrl 0.896  ratio 1.01  ctrl_id 0.207  chance 0.197 | PR 2.7 (emp 3.6)  count 11.6 | 3 s
+[model3] N= 50 S= 5 | self 0.716  noTF 0.231  PT_rot 0.686  ctrl 0.584  ratio 1.18  ctrl_id 0.287  chance 0.203 | PR 1.8 (emp 2.5)  count 11.7 | 4 s
+[model1] N= 60 S= 5 | self 0.934  noTF 0.169  PT_rot 0.908  ctrl 0.918  ratio 0.99  ctrl_id 0.208  chance 0.191 | PR 3.0 (emp 3.7)  count 11.8 | 4 s
+[model3] N= 60 S= 5 | self 0.718  noTF 0.205  PT_rot 0.706  ctrl 0.576  ratio 1.23  ctrl_id 0.262  chance 0.200 | PR 1.8 (emp 2.5)  count 11.4 | 4 s
+[model1] N= 70 S= 5 | self 0.957  noTF 0.217  PT_rot 0.941  ctrl 0.944  ratio 1.00  ctrl_id 0.204  chance 0.193 | PR 3.0 (emp 3.8)  count 11.8 | 4 s
+[model3] N= 70 S= 5 | self 0.761  noTF 0.208  PT_rot 0.759  ctrl 0.594  ratio 1.28  ctrl_id 0.263  chance 0.204 | PR 1.8 (emp 2.5)  count 11.8 | 3 s
+[model1] N= 80 S= 5 | self 0.979  noTF 0.176  PT_rot 0.963  ctrl 0.969  ratio 0.99  ctrl_id 0.199  chance 0.195 | PR 2.9 (emp 3.8)  count 11.8 | 3 s
+[model3] N= 80 S= 5 | self 0.778  noTF 0.199  PT_rot 0.786  ctrl 0.594  ratio 1.33  ctrl_id 0.283  chance 0.209 | PR 1.8 (emp 2.5)  count 11.7 | 4 s
+[model1] N= 90 S= 5 | self 0.982  noTF 0.213  PT_rot 0.983  ctrl 0.984  ratio 1.00  ctrl_id 0.219  chance 0.209 | PR 3.0 (emp 3.8)  count 11.8 | 3 s
+[model3] N= 90 S= 5 | self 0.779  noTF 0.197  PT_rot 0.759  ctrl 0.624  ratio 1.22  ctrl_id 0.264  chance 0.198 | PR 1.9 (emp 2.5)  count 11.2 | 4 s
+[model1] N=100 S= 5 | self 0.991  noTF 0.228  PT_rot 0.993  ctrl 0.991  ratio 1.00  ctrl_id 0.207  chance 0.194 | PR 3.4 (emp 3.8)  count 12.0 | 4 s
+[model3] N=100 S= 5 | self 0.800  noTF 0.192  PT_rot 0.786  ctrl 0.621  ratio 1.27  ctrl_id 0.276  chance 0.210 | PR 1.8 (emp 2.5)  count 11.5 | 4 s
+[model1] N=  5 S=10 | self 0.326  noTF 0.114  PT_rot 0.200  ctrl 0.202  ratio 1.05  ctrl_id 0.097  chance 0.101 | PR 2.1 (emp 3.0)  count 12.5 | 12 s
+[model3] N=  5 S=10 | self 0.256  noTF 0.101  PT_rot 0.223  ctrl 0.153  ratio 1.45  ctrl_id 0.095  chance 0.096 | PR 1.4 (emp 2.1)  count 11.4 | 11 s
+[model1] N= 10 S=10 | self 0.405  noTF 0.118  PT_rot 0.312  ctrl 0.292  ratio 1.07  ctrl_id 0.100  chance 0.095 | PR 2.7 (emp 4.6)  count 11.1 | 12 s
+[model3] N= 10 S=10 | self 0.312  noTF 0.091  PT_rot 0.291  ctrl 0.190  ratio 1.56  ctrl_id 0.105  chance 0.096 | PR 1.5 (emp 2.6)  count 11.8 | 13 s
+[model1] N= 20 S=10 | self 0.558  noTF 0.077  PT_rot 0.451  ctrl 0.460  ratio 0.99  ctrl_id 0.100  chance 0.107 | PR 3.3 (emp 5.8)  count 12.4 | 11 s
+[model3] N= 20 S=10 | self 0.381  noTF 0.107  PT_rot 0.374  ctrl 0.234  ratio 1.61  ctrl_id 0.113  chance 0.107 | PR 1.7 (emp 2.8)  count 11.7 | 11 s
+[model1] N= 30 S=10 | self 0.669  noTF 0.098  PT_rot 0.573  ctrl 0.577  ratio 1.00  ctrl_id 0.103  chance 0.095 | PR 3.8 (emp 6.5)  count 11.1 | 11 s
+[model3] N= 30 S=10 | self 0.444  noTF 0.111  PT_rot 0.444  ctrl 0.249  ratio 1.81  ctrl_id 0.111  chance 0.087 | PR 1.7 (emp 2.9)  count 12.4 | 11 s
+[model1] N= 40 S=10 | self 0.789  noTF 0.108  PT_rot 0.712  ctrl 0.707  ratio 1.01  ctrl_id 0.095  chance 0.106 | PR 4.0 (emp 7.1)  count 12.0 | 11 s
+[model3] N= 40 S=10 | self 0.471  noTF 0.105  PT_rot 0.437  ctrl 0.247  ratio 1.79  ctrl_id 0.115  chance 0.101 | PR 1.8 (emp 2.9)  count 12.1 | 11 s
+[model1] N= 50 S=10 | self 0.812  noTF 0.099  PT_rot 0.758  ctrl 0.768  ratio 0.99  ctrl_id 0.102  chance 0.098 | PR 4.6 (emp 7.3)  count 11.9 | 11 s
+[model3] N= 50 S=10 | self 0.495  noTF 0.108  PT_rot 0.506  ctrl 0.279  ratio 1.84  ctrl_id 0.119  chance 0.098 | PR 1.7 (emp 3.0)  count 12.1 | 11 s
+[model1] N= 60 S=10 | self 0.897  noTF 0.089  PT_rot 0.870  ctrl 0.870  ratio 1.00  ctrl_id 0.101  chance 0.097 | PR 4.9 (emp 7.6)  count 11.9 | 12 s
+[model3] N= 60 S=10 | self 0.493  noTF 0.084  PT_rot 0.483  ctrl 0.282  ratio 1.72  ctrl_id 0.118  chance 0.098 | PR 1.8 (emp 2.9)  count 11.9 | 11 s
+[model1] N= 70 S=10 | self 0.912  noTF 0.088  PT_rot 0.875  ctrl 0.888  ratio 0.99  ctrl_id 0.087  chance 0.098 | PR 4.6 (emp 7.7)  count 11.5 | 11 s
+[model3] N= 70 S=10 | self 0.501  noTF 0.093  PT_rot 0.504  ctrl 0.282  ratio 1.80  ctrl_id 0.131  chance 0.090 | PR 1.8 (emp 3.0)  count 11.8 | 11 s
+[model1] N= 80 S=10 | self 0.949  noTF 0.111  PT_rot 0.916  ctrl 0.923  ratio 0.99  ctrl_id 0.097  chance 0.093 | PR 5.4 (emp 7.9)  count 11.9 | 11 s
+[model3] N= 80 S=10 | self 0.509  noTF 0.097  PT_rot 0.523  ctrl 0.286  ratio 1.84  ctrl_id 0.120  chance 0.098 | PR 1.9 (emp 3.0)  count 11.7 | 11 s
+[model1] N= 90 S=10 | self 0.964  noTF 0.093  PT_rot 0.942  ctrl 0.944  ratio 1.00  ctrl_id 0.105  chance 0.096 | PR 5.5 (emp 8.0)  count 11.6 | 11 s
+[model3] N= 90 S=10 | self 0.529  noTF 0.101  PT_rot 0.526  ctrl 0.285  ratio 1.87  ctrl_id 0.129  chance 0.099 | PR 1.9 (emp 3.1)  count 11.6 | 11 s
+[model1] N=100 S=10 | self 0.983  noTF 0.080  PT_rot 0.967  ctrl 0.974  ratio 0.99  ctrl_id 0.094  chance 0.103 | PR 5.7 (emp 8.1)  count 12.1 | 11 s
+[model3] N=100 S=10 | self 0.558  noTF 0.103  PT_rot 0.559  ctrl 0.302  ratio 1.85  ctrl_id 0.134  chance 0.105 | PR 1.8 (emp 3.1)  count 11.7 | 12 s
+[model1] N=  5 S=20 | self 0.151  noTF 0.047  PT_rot 0.073  ctrl 0.075  ratio 0.99  ctrl_id 0.051  chance 0.053 | PR 2.1 (emp 3.3)  count 11.3 | 43 s
+[model3] N=  5 S=20 | self 0.158  noTF 0.082  PT_rot 0.147  ctrl 0.073  ratio 2.03  ctrl_id 0.058  chance 0.050 | PR 1.4 (emp 2.3)  count 10.7 | 43 s
+[model1] N= 10 S=20 | self 0.267  noTF 0.050  PT_rot 0.137  ctrl 0.120  ratio 1.20  ctrl_id 0.051  chance 0.050 | PR 3.1 (emp 5.7)  count 11.5 | 43 s
+[model3] N= 10 S=20 | self 0.197  noTF 0.058  PT_rot 0.176  ctrl 0.083  ratio 2.12  ctrl_id 0.056  chance 0.050 | PR 1.5 (emp 2.8)  count 12.2 | 43 s
+[model1] N= 20 S=20 | self 0.440  noTF 0.046  PT_rot 0.265  ctrl 0.258  ratio 1.04  ctrl_id 0.048  chance 0.048 | PR 3.8 (emp 8.6)  count 12.8 | 43 s
+[model3] N= 20 S=20 | self 0.251  noTF 0.046  PT_rot 0.238  ctrl 0.097  ratio 2.49  ctrl_id 0.061  chance 0.049 | PR 1.7 (emp 3.0)  count 12.0 | 39 s
+[model1] N= 30 S=20 | self 0.602  noTF 0.049  PT_rot 0.400  ctrl 0.403  ratio 1.00  ctrl_id 0.048  chance 0.044 | PR 5.2 (emp 10.4)  count 12.3 | 36 s
+[model3] N= 30 S=20 | self 0.285  noTF 0.054  PT_rot 0.289  ctrl 0.115  ratio 2.57  ctrl_id 0.062  chance 0.048 | PR 1.7 (emp 3.0)  count 11.9 | 36 s
+[model1] N= 40 S=20 | self 0.655  noTF 0.052  PT_rot 0.539  ctrl 0.525  ratio 1.03  ctrl_id 0.045  chance 0.051 | PR 6.2 (emp 11.9)  count 11.9 | 36 s
+[model3] N= 40 S=20 | self 0.280  noTF 0.049  PT_rot 0.291  ctrl 0.119  ratio 2.49  ctrl_id 0.059  chance 0.054 | PR 1.8 (emp 3.2)  count 12.1 | 36 s
+[model1] N= 50 S=20 | self 0.784  noTF 0.045  PT_rot 0.655  ctrl 0.645  ratio 1.02  ctrl_id 0.051  chance 0.050 | PR 7.1 (emp 12.8)  count 11.6 | 37 s
+[model3] N= 50 S=20 | self 0.300  noTF 0.055  PT_rot 0.296  ctrl 0.124  ratio 2.42  ctrl_id 0.055  chance 0.046 | PR 1.8 (emp 3.3)  count 11.6 | 37 s
+[model1] N= 60 S=20 | self 0.855  noTF 0.053  PT_rot 0.734  ctrl 0.745  ratio 0.98  ctrl_id 0.051  chance 0.048 | PR 6.2 (emp 13.3)  count 11.5 | 36 s
+[model3] N= 60 S=20 | self 0.313  noTF 0.054  PT_rot 0.313  ctrl 0.126  ratio 2.55  ctrl_id 0.061  chance 0.051 | PR 1.8 (emp 3.3)  count 11.1 | 36 s
+[model1] N= 70 S=20 | self 0.866  noTF 0.047  PT_rot 0.768  ctrl 0.761  ratio 1.01  ctrl_id 0.046  chance 0.047 | PR 7.5 (emp 14.0)  count 11.9 | 36 s
+[model3] N= 70 S=20 | self 0.321  noTF 0.057  PT_rot 0.333  ctrl 0.137  ratio 2.45  ctrl_id 0.065  chance 0.051 | PR 1.8 (emp 3.3)  count 12.2 | 36 s
+[model1] N= 80 S=20 | self 0.904  noTF 0.054  PT_rot 0.824  ctrl 0.826  ratio 1.00  ctrl_id 0.055  chance 0.050 | PR 7.4 (emp 14.4)  count 11.9 | 36 s
+[model3] N= 80 S=20 | self 0.320  noTF 0.052  PT_rot 0.329  ctrl 0.139  ratio 2.42  ctrl_id 0.065  chance 0.047 | PR 1.8 (emp 3.3)  count 11.6 | 37 s
+[model1] N= 90 S=20 | self 0.930  noTF 0.053  PT_rot 0.874  ctrl 0.870  ratio 1.00  ctrl_id 0.048  chance 0.052 | PR 7.7 (emp 14.9)  count 11.3 | 37 s
+[model3] N= 90 S=20 | self 0.326  noTF 0.058  PT_rot 0.333  ctrl 0.142  ratio 2.36  ctrl_id 0.066  chance 0.052 | PR 1.9 (emp 3.3)  count 11.4 | 37 s
+[model1] N=100 S=20 | self 0.958  noTF 0.047  PT_rot 0.914  ctrl 0.911  ratio 1.00  ctrl_id 0.054  chance 0.046 | PR 7.9 (emp 15.2)  count 11.6 | 37 s
+[model3] N=100 S=20 | self 0.332  noTF 0.050  PT_rot 0.343  ctrl 0.145  ratio 2.43  ctrl_id 0.060  chance 0.049 | PR 1.9 (emp 3.3)  count 11.5 | 42 s
+[model1] N=  5 S=30 | self 0.139  noTF 0.034  PT_rot 0.050  ctrl 0.051  ratio 1.00  ctrl_id 0.035  chance 0.032 | PR 2.8 (emp 3.8)  count 11.9 | 88 s
+[model3] N=  5 S=30 | self 0.124  noTF 0.041  PT_rot 0.106  ctrl 0.045  ratio 2.36  ctrl_id 0.035  chance 0.033 | PR 1.4 (emp 2.3)  count 12.1 | 90 s
+[model1] N= 10 S=30 | self 0.207  noTF 0.035  PT_rot 0.083  ctrl 0.077  ratio 1.09  ctrl_id 0.029  chance 0.033 | PR 2.8 (emp 6.3)  count 11.6 | 93 s
+[model3] N= 10 S=30 | self 0.141  noTF 0.039  PT_rot 0.136  ctrl 0.053  ratio 2.62  ctrl_id 0.040  chance 0.035 | PR 1.6 (emp 2.9)  count 12.0 | 86 s
+[model1] N= 20 S=30 | self 0.379  noTF 0.031  PT_rot 0.160  ctrl 0.158  ratio 1.02  ctrl_id 0.032  chance 0.033 | PR 4.6 (emp 10.2)  count 12.4 | 86 s
+[model3] N= 20 S=30 | self 0.177  noTF 0.034  PT_rot 0.169  ctrl 0.059  ratio 2.88  ctrl_id 0.042  chance 0.033 | PR 1.6 (emp 3.1)  count 12.4 | 88 s
+[model1] N= 30 S=30 | self 0.506  noTF 0.029  PT_rot 0.268  ctrl 0.275  ratio 0.97  ctrl_id 0.032  chance 0.031 | PR 5.9 (emp 13.1)  count 12.4 | 88 s
+[model3] N= 30 S=30 | self 0.201  noTF 0.030  PT_rot 0.190  ctrl 0.070  ratio 2.74  ctrl_id 0.042  chance 0.033 | PR 1.7 (emp 3.2)  count 11.5 | 86 s
+[model1] N= 40 S=30 | self 0.623  noTF 0.035  PT_rot 0.390  ctrl 0.396  ratio 0.98  ctrl_id 0.030  chance 0.033 | PR 6.1 (emp 14.8)  count 12.0 | 86 s
+[model3] N= 40 S=30 | self 0.211  noTF 0.036  PT_rot 0.219  ctrl 0.072  ratio 3.10  ctrl_id 0.033  chance 0.033 | PR 1.8 (emp 3.2)  count 11.4 | 87 s
+[model1] N= 50 S=30 | self 0.724  noTF 0.038  PT_rot 0.510  ctrl 0.503  ratio 1.01  ctrl_id 0.033  chance 0.035 | PR 7.8 (emp 16.3)  count 11.8 | 89 s
+[model3] N= 50 S=30 | self 0.227  noTF 0.038  PT_rot 0.228  ctrl 0.079  ratio 2.94  ctrl_id 0.037  chance 0.034 | PR 1.7 (emp 3.3)  count 11.8 | 89 s
+[model1] N= 60 S=30 | self 0.774  noTF 0.035  PT_rot 0.588  ctrl 0.585  ratio 1.01  ctrl_id 0.037  chance 0.035 | PR 8.4 (emp 17.7)  count 11.3 | 89 s
+[model3] N= 60 S=30 | self 0.236  noTF 0.029  PT_rot 0.253  ctrl 0.085  ratio 3.01  ctrl_id 0.042  chance 0.033 | PR 1.8 (emp 3.3)  count 11.9 | 88 s
+[model1] N= 70 S=30 | self 0.828  noTF 0.034  PT_rot 0.671  ctrl 0.667  ratio 1.01  ctrl_id 0.033  chance 0.033 | PR 9.8 (emp 18.8)  count 11.8 | 87 s
+[model3] N= 70 S=30 | self 0.230  noTF 0.031  PT_rot 0.237  ctrl 0.084  ratio 2.87  ctrl_id 0.040  chance 0.033 | PR 1.9 (emp 3.6)  count 11.6 | 87 s
+[model1] N= 80 S=30 | self 0.888  noTF 0.032  PT_rot 0.755  ctrl 0.752  ratio 1.01  ctrl_id 0.032  chance 0.033 | PR 9.0 (emp 19.5)  count 11.6 | 87 s
+[model3] N= 80 S=30 | self 0.248  noTF 0.031  PT_rot 0.254  ctrl 0.084  ratio 3.03  ctrl_id 0.038  chance 0.032 | PR 1.9 (emp 3.4)  count 11.6 | 87 s
+[model1] N= 90 S=30 | self 0.924  noTF 0.036  PT_rot 0.825  ctrl 0.824  ratio 1.00  ctrl_id 0.033  chance 0.035 | PR 9.3 (emp 20.5)  count 11.6 | 88 s
+[model3] N= 90 S=30 | self 0.251  noTF 0.030  PT_rot 0.268  ctrl 0.088  ratio 3.08  ctrl_id 0.039  chance 0.032 | PR 1.9 (emp 3.4)  count 11.7 | 88 s
+[model1] N=100 S=30 | self 0.923  noTF 0.034  PT_rot 0.823  ctrl 0.823  ratio 1.00  ctrl_id 0.034  chance 0.036 | PR 9.7 (emp 20.8)  count 11.5 | 88 s
+[model3] N=100 S=30 | self 0.254  noTF 0.037  PT_rot 0.265  ctrl 0.094  ratio 2.86  ctrl_id 0.044  chance 0.036 | PR 1.9 (emp 3.4)  count 11.6 | 88 s
+[model1] N=  5 S=40 | self 0.096  noTF 0.025  PT_rot 0.040  ctrl 0.035  ratio 1.16  ctrl_id 0.026  chance 0.023 | PR 2.4 (emp 3.8)  count 10.7 | 148 s
+[model3] N=  5 S=40 | self 0.085  noTF 0.034  PT_rot 0.073  ctrl 0.031  ratio 2.41  ctrl_id 0.025  chance 0.023 | PR 1.4 (emp 2.3)  count 10.6 | 147 s
+[model1] N= 10 S=40 | self 0.205  noTF 0.029  PT_rot 0.054  ctrl 0.057  ratio 0.98  ctrl_id 0.024  chance 0.024 | PR 3.5 (emp 6.6)  count 11.6 | 149 s
+[model3] N= 10 S=40 | self 0.113  noTF 0.037  PT_rot 0.109  ctrl 0.040  ratio 2.81  ctrl_id 0.028  chance 0.028 | PR 1.5 (emp 2.8)  count 12.3 | 149 s
+[model1] N= 20 S=40 | self 0.286  noTF 0.023  PT_rot 0.097  ctrl 0.095  ratio 1.03  ctrl_id 0.026  chance 0.026 | PR 4.9 (emp 10.9)  count 11.4 | 149 s
+[model3] N= 20 S=40 | self 0.132  noTF 0.031  PT_rot 0.125  ctrl 0.047  ratio 2.79  ctrl_id 0.031  chance 0.026 | PR 1.7 (emp 3.6)  count 11.6 | 150 s
+[model1] N= 30 S=40 | self 0.432  noTF 0.023  PT_rot 0.181  ctrl 0.178  ratio 1.02  ctrl_id 0.025  chance 0.026 | PR 6.1 (emp 14.5)  count 11.8 | 149 s
+[model3] N= 30 S=40 | self 0.150  noTF 0.030  PT_rot 0.145  ctrl 0.049  ratio 3.08  ctrl_id 0.029  chance 0.025 | PR 1.7 (emp 3.4)  count 11.2 | 151 s
+[model1] N= 40 S=40 | self 0.523  noTF 0.024  PT_rot 0.284  ctrl 0.270  ratio 1.06  ctrl_id 0.025  chance 0.026 | PR 7.7 (emp 17.0)  count 11.3 | 150 s
+[model3] N= 40 S=40 | self 0.172  noTF 0.026  PT_rot 0.162  ctrl 0.055  ratio 3.02  ctrl_id 0.031  chance 0.023 | PR 1.8 (emp 3.4)  count 11.4 | 152 s
+[model1] N= 50 S=40 | self 0.643  noTF 0.026  PT_rot 0.389  ctrl 0.382  ratio 1.02  ctrl_id 0.025  chance 0.025 | PR 8.7 (emp 19.3)  count 11.9 | 155 s
+[model3] N= 50 S=40 | self 0.173  noTF 0.027  PT_rot 0.177  ctrl 0.060  ratio 3.04  ctrl_id 0.030  chance 0.025 | PR 1.8 (emp 3.5)  count 11.3 | 156 s
+[model1] N= 60 S=40 | self 0.731  noTF 0.021  PT_rot 0.478  ctrl 0.483  ratio 0.99  ctrl_id 0.024  chance 0.025 | PR 7.7 (emp 21.1)  count 11.8 | 157 s
+[model3] N= 60 S=40 | self 0.198  noTF 0.025  PT_rot 0.202  ctrl 0.059  ratio 3.50  ctrl_id 0.030  chance 0.025 | PR 1.8 (emp 3.3)  count 11.8 | 154 s
+[model1] N= 70 S=40 | self 0.807  noTF 0.028  PT_rot 0.573  ctrl 0.583  ratio 0.98  ctrl_id 0.024  chance 0.024 | PR 9.7 (emp 22.4)  count 11.7 | 153 s
+[model3] N= 70 S=40 | self 0.196  noTF 0.024  PT_rot 0.199  ctrl 0.059  ratio 3.43  ctrl_id 0.031  chance 0.025 | PR 1.8 (emp 3.5)  count 11.6 | 154 s
+[model1] N= 80 S=40 | self 0.844  noTF 0.024  PT_rot 0.661  ctrl 0.661  ratio 1.00  ctrl_id 0.022  chance 0.024 | PR 10.2 (emp 23.8)  count 11.3 | 156 s
+[model3] N= 80 S=40 | self 0.192  noTF 0.027  PT_rot 0.196  ctrl 0.064  ratio 3.14  ctrl_id 0.029  chance 0.022 | PR 1.8 (emp 3.5)  count 11.8 | 154 s
+[model1] N= 90 S=40 | self 0.916  noTF 0.025  PT_rot 0.774  ctrl 0.777  ratio 1.00  ctrl_id 0.027  chance 0.026 | PR 11.0 (emp 25.1)  count 11.9 | 154 s
+[model3] N= 90 S=40 | self 0.200  noTF 0.022  PT_rot 0.211  ctrl 0.067  ratio 3.24  ctrl_id 0.031  chance 0.025 | PR 1.9 (emp 3.5)  count 11.5 | 155 s
+[model1] N=100 S=40 | self 0.921  noTF 0.025  PT_rot 0.787  ctrl 0.784  ratio 1.01  ctrl_id 0.024  chance 0.026 | PR 12.6 (emp 25.9)  count 11.8 | 156 s
+[model3] N=100 S=40 | self 0.203  noTF 0.028  PT_rot 0.208  ctrl 0.071  ratio 2.94  ctrl_id 0.031  chance 0.023 | PR 1.9 (emp 3.5)  count 11.8 | 157 s
+[model1] N=  5 S=50 | self 0.102  noTF 0.021  PT_rot 0.031  ctrl 0.028  ratio 1.13  ctrl_id 0.021  chance 0.020 | PR 2.2 (emp 3.9)  count 13.7 | 231 s
+[model3] N=  5 S=50 | self 0.074  noTF 0.024  PT_rot 0.069  ctrl 0.027  ratio 2.67  ctrl_id 0.023  chance 0.021 | PR 1.4 (emp 2.3)  count 12.8 | 238 s
+[model1] N= 10 S=50 | self 0.138  noTF 0.018  PT_rot 0.036  ctrl 0.042  ratio 0.92  ctrl_id 0.019  chance 0.019 | PR 3.0 (emp 6.8)  count 10.8 | 235 s
+[model3] N= 10 S=50 | self 0.093  noTF 0.023  PT_rot 0.087  ctrl 0.032  ratio 2.79  ctrl_id 0.025  chance 0.021 | PR 1.6 (emp 2.9)  count 11.3 | 234 s
+[model1] N= 20 S=50 | self 0.297  noTF 0.018  PT_rot 0.078  ctrl 0.079  ratio 1.02  ctrl_id 0.021  chance 0.020 | PR 5.3 (emp 11.7)  count 11.4 | 234 s
+[model3] N= 20 S=50 | self 0.127  noTF 0.016  PT_rot 0.122  ctrl 0.036  ratio 3.42  ctrl_id 0.024  chance 0.022 | PR 1.7 (emp 3.2)  count 11.6 | 235 s
+[model1] N= 30 S=50 | self 0.400  noTF 0.021  PT_rot 0.137  ctrl 0.130  ratio 1.06  ctrl_id 0.020  chance 0.020 | PR 6.7 (emp 15.8)  count 10.7 | 235 s
+[model3] N= 30 S=50 | self 0.136  noTF 0.022  PT_rot 0.135  ctrl 0.037  ratio 3.74  ctrl_id 0.027  chance 0.021 | PR 1.7 (emp 3.3)  count 11.9 | 235 s
+[model1] N= 40 S=50 | self 0.520  noTF 0.018  PT_rot 0.211  ctrl 0.216  ratio 0.98  ctrl_id 0.019  chance 0.019 | PR 8.3 (emp 18.8)  count 11.8 | 239 s
+[model3] N= 40 S=50 | self 0.144  noTF 0.028  PT_rot 0.148  ctrl 0.040  ratio 3.78  ctrl_id 0.026  chance 0.020 | PR 1.8 (emp 3.4)  count 11.4 | 240 s
+[model1] N= 50 S=50 | self 0.635  noTF 0.018  PT_rot 0.295  ctrl 0.311  ratio 0.94  ctrl_id 0.022  chance 0.020 | PR 7.1 (emp 21.4)  count 11.8 | 240 s
+[model3] N= 50 S=50 | self 0.146  noTF 0.017  PT_rot 0.152  ctrl 0.046  ratio 3.37  ctrl_id 0.021  chance 0.020 | PR 1.8 (emp 3.5)  count 11.7 | 240 s
+[model1] N= 60 S=50 | self 0.717  noTF 0.020  PT_rot 0.408  ctrl 0.414  ratio 0.99  ctrl_id 0.018  chance 0.021 | PR 8.7 (emp 23.6)  count 11.9 | 239 s
+[model3] N= 60 S=50 | self 0.158  noTF 0.021  PT_rot 0.160  ctrl 0.047  ratio 3.52  ctrl_id 0.025  chance 0.020 | PR 1.8 (emp 3.5)  count 12.0 | 240 s
+[model1] N= 70 S=50 | self 0.782  noTF 0.022  PT_rot 0.491  ctrl 0.503  ratio 0.98  ctrl_id 0.020  chance 0.018 | PR 9.1 (emp 25.3)  count 11.1 | 243 s
+[model3] N= 70 S=50 | self 0.169  noTF 0.023  PT_rot 0.173  ctrl 0.044  ratio 4.06  ctrl_id 0.025  chance 0.020 | PR 1.8 (emp 3.4)  count 11.7 | 242 s
+[model1] N= 80 S=50 | self 0.843  noTF 0.021  PT_rot 0.585  ctrl 0.596  ratio 0.98  ctrl_id 0.020  chance 0.020 | PR 9.8 (emp 26.9)  count 12.0 | 243 s
+[model3] N= 80 S=50 | self 0.168  noTF 0.021  PT_rot 0.172  ctrl 0.048  ratio 3.59  ctrl_id 0.026  chance 0.020 | PR 1.8 (emp 3.4)  count 11.8 | 243 s
+[model1] N= 90 S=50 | self 0.866  noTF 0.022  PT_rot 0.662  ctrl 0.660  ratio 1.00  ctrl_id 0.020  chance 0.022 | PR 12.3 (emp 28.8)  count 11.5 | 248 s
+[model3] N= 90 S=50 | self 0.171  noTF 0.019  PT_rot 0.179  ctrl 0.049  ratio 3.75  ctrl_id 0.025  chance 0.019 | PR 1.9 (emp 3.5)  count 11.6 | 245 s
+[model1] N=100 S=50 | self 0.918  noTF 0.022  PT_rot 0.751  ctrl 0.737  ratio 1.02  ctrl_id 0.022  chance 0.019 | PR 11.7 (emp 30.0)  count 12.0 | 247 s
+[model3] N=100 S=50 | self 0.166  noTF 0.019  PT_rot 0.173  ctrl 0.052  ratio 3.36  ctrl_id 0.024  chance 0.020 | PR 1.9 (emp 3.5)  count 11.5 | 249 s
+
+All results in C:\Git Repos\cue-invariant-population-geometry\decoding-analysis\Simulations_v2\code\decoding_scripts\..\..\results\decoding_outputs\sweep_N_S_results.mat
+Total time: 196.1 min
+MATLAB exit code: 0
