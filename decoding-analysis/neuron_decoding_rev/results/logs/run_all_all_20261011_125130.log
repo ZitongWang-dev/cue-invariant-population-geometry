@@ -1,0 +1,127 @@
+run_all('all') started 2026-10-11 12:51:30 on DESKTOP-3OBL0M0
+Log: D:\Github repos\cue-invariant-population-geometry\decoding-analysis\neuron_decoding_rev\code\decoding_scripts\..\..\results\logs\run_all_all_20261011_125130.log
+
+  job 1/5  run_cue_transfer_incremental   cue transfer vs N (Fig 3b, 4c)                ~8.3 h
+  job 2/5  run_across_area                across areas (Fig 4b, 12)                     ~1.1 h
+  job 3/5  run_halves_incremental         within-area halves vs size (Fig 4a, 13)       ~2.7 h
+  job 4/5  run_pc_sweep                   PC sweep: cue transfer and across areas       ~1.7 h
+  job 5/5  run_pc_sweep                   PC sweep: within-area halves                  ~6.2 h
+  total ~20.0 h at the 2026-10-11 speed (8 workers)
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+Parallel pool: 8 workers
+
+################ job 1/5: cue transfer vs N (Fig 3b, 4c) (run_cue_transfer_incremental) | started 2026-10-11 12:51:51 ################
+
+===== FR V1: N = [10 20 24 30 40 48] | 20 draws, 10 folds, 10 permutations =====
+[FR V1] point 1/6: N = 10, 20 draws x 6 pairs = 120 calls
+
+Job 1 failed: Undefined function 'zscore' for input arguments of type 'double'.
+Undefined function 'zscore' for input arguments of type 'double'.
+
+Error in run_cue_transfer_incremental (line 173)
+                pr = population_pr(zscore(pop.data{c}(:, idx{d})), pop.labels, ...
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run (line 100)
+evalin('caller', strcat(scriptStem, ';'));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_driver (line 22)
+run(fullfile(fileparts(mfilename('fullpath')), [driver '.m']));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_all (line 98)
+        run_driver(jobs{j, 1}, jobs{j, 2});
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+################ job 2/5: across areas (Fig 4b, 12) (run_across_area) | started 2026-10-11 12:51:51 ################
+
+Job 2 failed: Undefined function 'zscore' for input arguments of type 'double'.
+Undefined function 'zscore' for input arguments of type 'double'.
+
+Error in run_across_area (line 136)
+                    pr = population_pr(zscore(pops{a}.data{c}(:, idx{a})), pops{a}.labels, ...
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run (line 100)
+evalin('caller', strcat(scriptStem, ';'));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_driver (line 22)
+run(fullfile(fileparts(mfilename('fullpath')), [driver '.m']));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_all (line 98)
+        run_driver(jobs{j, 1}, jobs{j, 2});
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+################ job 3/5: within-area halves vs size (Fig 4a, 13) (run_halves_incremental) | started 2026-10-11 12:51:54 ################
+
+===== FR V1 halves: h = [5 10 20 24] | 20 draws, 10 folds, 10 permutations =====
+[FR V1] point 1/4: half size 5, 20 draws x 3 renderings = 60 calls
+
+Job 3 failed: Undefined function 'zscore' for input arguments of type 'double'.
+Undefined function 'zscore' for input arguments of type 'double'.
+
+Error in run_halves_incremental (line 153)
+                    pr = population_pr(zscore(pop.data{r}(:, cols)), pop.labels, ...
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run (line 100)
+evalin('caller', strcat(scriptStem, ';'));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_driver (line 22)
+run(fullfile(fileparts(mfilename('fullpath')), [driver '.m']));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_all (line 98)
+        run_driver(jobs{j, 1}, jobs{j, 2});
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+################ job 4/5: PC sweep: cue transfer and across areas (run_pc_sweep) | started 2026-10-11 12:51:54 ################
+cfg_override applied: comparisons
+
+Job 4 failed: Undefined function 'zscore' for input arguments of type 'double'.
+Undefined function 'zscore' for input arguments of type 'double'.
+
+Error in run_pc_sweep>run_cue (line 147)
+    pr = population_pr(zscore(pop.data{c}), pop.labels, struct('n_split', cfg.pr_splits, 'seed', cfg.base_seed + c));
+                       ^^^^^^^^^^^^^^^^^^^
+Error in run_pc_sweep (line 104)
+                run_cue(cfg, cfg.populations{ip, 1}, cfg.populations{ip, 2}, out_dir);
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run (line 100)
+evalin('caller', strcat(scriptStem, ';'));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_driver (line 22)
+run(fullfile(fileparts(mfilename('fullpath')), [driver '.m']));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_all (line 98)
+        run_driver(jobs{j, 1}, jobs{j, 2});
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+################ job 5/5: PC sweep: within-area halves (run_pc_sweep) | started 2026-10-11 12:51:55 ################
+cfg_override applied: comparisons
+
+===== FR V1 halves PC sweep: 24 + 24 neurons, k = [1 2 3 4 5 6 7 8 9 10 15 20 24], 20 draws =====
+[FR V1 halves] draw 1/20: 13 k values x 3 renderings = 39 calls
+
+Job 5 failed: Undefined function 'zscore' for input arguments of type 'double'.
+Undefined function 'zscore' for input arguments of type 'double'.
+
+Error in run_pc_sweep>run_halves (line 226)
+            pr = population_pr(zscore(data{r}(:, cols)), labels, ...
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_pc_sweep (line 108)
+                run_halves(cfg, cfg.populations{ip, 1}, cfg.populations{ip, 2}, out_dir);
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run (line 100)
+evalin('caller', strcat(scriptStem, ';'));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_driver (line 22)
+run(fullfile(fileparts(mfilename('fullpath')), [driver '.m']));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in run_all (line 98)
+        run_driver(jobs{j, 1}, jobs{j, 2});
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+################ run_all('all') finished 2026-10-11 12:51:55, 0.00 h ################
+  job 1  cue transfer vs N (Fig 3b, 4c)                FAILED after 0.00 h: Undefined function 'zscore' for input arguments of type 'double'.
+  job 2  across areas (Fig 4b, 12)                     FAILED after 0.00 h: Undefined function 'zscore' for input arguments of type 'double'.
+  job 3  within-area halves vs size (Fig 4a, 13)       FAILED after 0.00 h: Undefined function 'zscore' for input arguments of type 'double'.
+  job 4  PC sweep: cue transfer and across areas       FAILED after 0.00 h: Undefined function 'zscore' for input arguments of type 'double'.
+  job 5  PC sweep: within-area halves                  FAILED after 0.00 h: Undefined function 'zscore' for input arguments of type 'double'.
+Log: D:\Github repos\cue-invariant-population-geometry\decoding-analysis\neuron_decoding_rev\code\decoding_scripts\..\..\results\logs\run_all_all_20261011_125130.log
