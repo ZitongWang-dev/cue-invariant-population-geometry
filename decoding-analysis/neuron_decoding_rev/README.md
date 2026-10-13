@@ -28,11 +28,22 @@ neuron_decoding_rev/
       run_all.m                      MASTER: runs the drivers back to back, unattended, with a log
       run_driver.m                   runs one driver in its own workspace (used by run_all)
       progress_queue.m               progress lines inside the parfor loops
-    visualization_scripts/           (to come)
+    visualization_scripts/           one script per figure series; each writes results/figures/<NN_series>/
+      plot_sanity_old_vs_new.m           01  rerun vs published pipeline, bar by bar
+      plot_paper_style_bars.m            02  Figs 3b, 4a, 4b, 12 in the published style + corrected control (full, k = 5)
+      plot_paper_style_curves.m          03  Figs 4c, 13 in the published style + corrected control
+      plot_normalized_metric_bars.m      04  PT/control, headroom, PT - control: full space vs k = 5, per pair, matched size
+      plot_normalized_metrics_vs_size.m  05  the same metrics vs number of neurons / half size
+      plot_pc_sweep_accuracy.m           06  self, PT, control, non-PT vs number of PCs
+      plot_pc_sweep_metrics.m            07  PT/control, headroom, PT - control vs number of PCs
+      plot_dimensionality.m              08  participation ratio and variance spectra
+      helpers/                           figure_settings, load_all_results, plot_grouped_bars, bootstrap_metrics,
+                                         to_resampling_units, mean_sem, save_figure, save_table
   results/
     decoding_outputs/<analysis>/<monkey>_<area>.mat   (across-area: <monkey>.mat)
     logs/run_all_<set>_<date>.log
-    figures/
+    figures/<NN_series>/             figures (.png, .fig) + a .csv of every plotted number;
+                                     index in results/figures/README.md
 ```
 
 ## How every comparison is decoded (`pt_transfer_core.m`)

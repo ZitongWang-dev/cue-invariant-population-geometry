@@ -71,3 +71,9 @@ REVISION DECODING (added 2026-10-11)
   k = 1..49 PC sweep for cue transfer, within-area halves and across-area decoding. One shared
   decoder (pt_transfer_core.m) and four drivers that run all populations by default. Data are
   read from neuronal_decoding/neuronal_data. See neuron_decoding_rev/README.md.
+* `ANN_decoding_rev/` (added 2026-10-12): the same reruns for the CNN units (AlexNet pool1, 2, 5;
+  VGG-19 pool1-5): cue transfer vs number of units (Fig 3d = the 96 / 64-unit point, Fig 4d =
+  the curve), AlexNet pool2 <-> pool5 layer-to-layer decoding (rebuttal point 1), and a
+  k = 1..49 PC sweep of both. The drivers call neuron_decoding_rev's pt_transfer_core.m, so
+  CNN units and neurons share one decoder. Trials are read from ANN_decoding/ANN_response_data
+  (the published Poisson draws). See ANN_decoding_rev/README.md.

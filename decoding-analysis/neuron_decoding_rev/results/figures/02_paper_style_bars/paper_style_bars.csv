@@ -1,0 +1,517 @@
+figure,monkey,group,series,mean,sem
+fig3b_cue_transfer_full,KO,EC-AC,V1 self-decoding,0.426,0.0171126299925861
+fig3b_cue_transfer_full,KO,EC-AC,V2 self-decoding,0.24845,0.00290345809721886
+fig3b_cue_transfer_full,KO,EC-AC,V1 non-PT-decoding,0.095,0.00819178021909125
+fig3b_cue_transfer_full,KO,EC-AC,V2 non-PT-decoding,0.0603,0.00162368898339151
+fig3b_cue_transfer_full,KO,EC-AC,V1 PT-decoding (rotation only),0.219,0.0138772816995412
+fig3b_cue_transfer_full,KO,EC-AC,V2 PT-decoding (rotation only),0.16895,0.00238357868937047
+fig3b_cue_transfer_full,KO,EC-AC,V1 PT control (corrected),0.1358,0.00429418211071678
+fig3b_cue_transfer_full,KO,EC-AC,V2 PT control (corrected),0.111055,0.00107960934060465
+fig3b_cue_transfer_full,KO,EC-EX,V1 self-decoding,0.502,0.0296612453158024
+fig3b_cue_transfer_full,KO,EC-EX,V2 self-decoding,0.35315,0.0065250774201036
+fig3b_cue_transfer_full,KO,EC-EX,V1 non-PT-decoding,0.095,0.0113206843758159
+fig3b_cue_transfer_full,KO,EC-EX,V2 non-PT-decoding,0.04345,0.00145362523223473
+fig3b_cue_transfer_full,KO,EC-EX,V1 PT-decoding (rotation only),0.28,0.0242790791466754
+fig3b_cue_transfer_full,KO,EC-EX,V2 PT-decoding (rotation only),0.1747,0.00340937451543038
+fig3b_cue_transfer_full,KO,EC-EX,V1 PT control (corrected),0.17,0.013210044025585
+fig3b_cue_transfer_full,KO,EC-EX,V2 PT control (corrected),0.15294,0.00248506133215287
+fig3b_cue_transfer_full,KO,AC-EX,V1 self-decoding,0.559,0.021149841358121
+fig3b_cue_transfer_full,KO,AC-EX,V2 self-decoding,0.3619,0.00619976351719749
+fig3b_cue_transfer_full,KO,AC-EX,V1 non-PT-decoding,0.077,0.00714879452480589
+fig3b_cue_transfer_full,KO,AC-EX,V2 non-PT-decoding,0.05295,0.00144167952389706
+fig3b_cue_transfer_full,KO,AC-EX,V1 PT-decoding (rotation only),0.261,0.0198136051078147
+fig3b_cue_transfer_full,KO,AC-EX,V2 PT-decoding (rotation only),0.19535,0.00411043585978342
+fig3b_cue_transfer_full,KO,AC-EX,V1 PT control (corrected),0.2157,0.0161116335870111
+fig3b_cue_transfer_full,KO,AC-EX,V2 PT control (corrected),0.17225,0.00321777546565456
+fig3b_cue_transfer_full,FR,EC-AC,V1 self-decoding,0.213,0.0156457493807171
+fig3b_cue_transfer_full,FR,EC-AC,V2 self-decoding,0.17695,0.00273091348657879
+fig3b_cue_transfer_full,FR,EC-AC,V1 non-PT-decoding,0.049,0.00703001085572269
+fig3b_cue_transfer_full,FR,EC-AC,V2 non-PT-decoding,0.0426,0.00148276649922638
+fig3b_cue_transfer_full,FR,EC-AC,V1 PT-decoding (rotation only),0.108,0.0107996101294152
+fig3b_cue_transfer_full,FR,EC-AC,V2 PT-decoding (rotation only),0.0904999999999999,0.00210486368390439
+fig3b_cue_transfer_full,FR,EC-AC,V1 PT control (corrected),0.0728,0.0032844129492274
+fig3b_cue_transfer_full,FR,EC-AC,V2 PT control (corrected),0.06359,0.000818966736986751
+fig3b_cue_transfer_full,FR,EC-EX,V1 self-decoding,0.259,0.0267335783337419
+fig3b_cue_transfer_full,FR,EC-EX,V2 self-decoding,0.23685,0.00377933886488617
+fig3b_cue_transfer_full,FR,EC-EX,V1 non-PT-decoding,0.033,0.00653331543141121
+fig3b_cue_transfer_full,FR,EC-EX,V2 non-PT-decoding,0.0388,0.00132506206408765
+fig3b_cue_transfer_full,FR,EC-EX,V1 PT-decoding (rotation only),0.102,0.0125572373763625
+fig3b_cue_transfer_full,FR,EC-EX,V2 PT-decoding (rotation only),0.0963499999999999,0.00216237912000801
+fig3b_cue_transfer_full,FR,EC-EX,V1 PT control (corrected),0.0904,0.00597644499153486
+fig3b_cue_transfer_full,FR,EC-EX,V2 PT control (corrected),0.084115,0.00117864964045188
+fig3b_cue_transfer_full,FR,AC-EX,V1 self-decoding,0.311,0.0187770856995547
+fig3b_cue_transfer_full,FR,AC-EX,V2 self-decoding,0.2235,0.00423783826767344
+fig3b_cue_transfer_full,FR,AC-EX,V1 non-PT-decoding,0.045,0.00540467633774581
+fig3b_cue_transfer_full,FR,AC-EX,V2 non-PT-decoding,0.0372,0.0013017820829458
+fig3b_cue_transfer_full,FR,AC-EX,V1 PT-decoding (rotation only),0.122,0.0128062484748657
+fig3b_cue_transfer_full,FR,AC-EX,V2 PT-decoding (rotation only),0.09035,0.00230607647787416
+fig3b_cue_transfer_full,FR,AC-EX,V1 PT control (corrected),0.096,0.00582011032631911
+fig3b_cue_transfer_full,FR,AC-EX,V2 PT control (corrected),0.08143,0.00141658198184157
+fig4a_halves_full,KO,AC,V1 self-decoding,0.3494,0.00597803349121687
+fig4a_halves_full,KO,AC,V2 self-decoding,0.1695,0.00382253960675702
+fig4a_halves_full,KO,AC,V1 non-PT-decoding (different neurons),0.0373,0.00187915034793674
+fig4a_halves_full,KO,AC,V2 non-PT-decoding (different neurons),0.033,0.00169983741463144
+fig4a_halves_full,KO,AC,V1 PT-decoding (rotation only),0.2549,0.00462676830245725
+fig4a_halves_full,KO,AC,V2 PT-decoding (rotation only),0.1428,0.00375383221274034
+fig4a_halves_full,KO,AC,V1 PT control (corrected),0.09852,0.00145969226467009
+fig4a_halves_full,KO,AC,V2 PT control (corrected),0.07666,0.0013865187235859
+fig4a_halves_full,KO,EX,V1 self-decoding,0.4821,0.0053074281879126
+fig4a_halves_full,KO,EX,V2 self-decoding,0.2967,0.00512512286897695
+fig4a_halves_full,KO,EX,V1 non-PT-decoding (different neurons),0.0433,0.00230262031205918
+fig4a_halves_full,KO,EX,V2 non-PT-decoding (different neurons),0.0424,0.00231907103217243
+fig4a_halves_full,KO,EX,V1 PT-decoding (rotation only),0.3134,0.00491558898560253
+fig4a_halves_full,KO,EX,V2 PT-decoding (rotation only),0.2201,0.00390463582226597
+fig4a_halves_full,KO,EX,V1 PT control (corrected),0.13423,0.00168595603106767
+fig4a_halves_full,KO,EX,V2 PT control (corrected),0.11865,0.00176099203996614
+fig4a_halves_full,KO,EC,V1 self-decoding,0.2927,0.00501290294937968
+fig4a_halves_full,KO,EC,V2 self-decoding,0.1683,0.0038444046660284
+fig4a_halves_full,KO,EC,V1 non-PT-decoding (different neurons),0.0438,0.00221638485129393
+fig4a_halves_full,KO,EC,V2 non-PT-decoding (different neurons),0.0473,0.00221087990396329
+fig4a_halves_full,KO,EC,V1 PT-decoding (rotation only),0.2059,0.0040195439627328
+fig4a_halves_full,KO,EC,V2 PT-decoding (rotation only),0.1533,0.00385745379087601
+fig4a_halves_full,KO,EC,V1 PT control (corrected),0.07748,0.00119826004509805
+fig4a_halves_full,KO,EC,V2 PT control (corrected),0.07314,0.00123284285597869
+fig4a_halves_full,FR,AC,V1 self-decoding,0.1734,0.00394970897725707
+fig4a_halves_full,FR,AC,V2 self-decoding,0.1215,0.00347261360161632
+fig4a_halves_full,FR,AC,V1 non-PT-decoding (different neurons),0.0428,0.0023297939176014
+fig4a_halves_full,FR,AC,V2 non-PT-decoding (different neurons),0.0348,0.00200622147907841
+fig4a_halves_full,FR,AC,V1 PT-decoding (rotation only),0.1109,0.00336937881038022
+fig4a_halves_full,FR,AC,V2 PT-decoding (rotation only),0.0978000000000001,0.00303675971188678
+fig4a_halves_full,FR,AC,V1 PT control (corrected),0.05167,0.000901119069762397
+fig4a_halves_full,FR,AC,V2 PT control (corrected),0.04516,0.000850818110577362
+fig4a_halves_full,FR,EX,V1 self-decoding,0.236,0.00491945169964353
+fig4a_halves_full,FR,EX,V2 self-decoding,0.196,0.00490513012136658
+fig4a_halves_full,FR,EX,V1 non-PT-decoding (different neurons),0.0436,0.00220442679339487
+fig4a_halves_full,FR,EX,V2 non-PT-decoding (different neurons),0.0368,0.00209061074003069
+fig4a_halves_full,FR,EX,V1 PT-decoding (rotation only),0.1261,0.00352791452624955
+fig4a_halves_full,FR,EX,V2 PT-decoding (rotation only),0.1254,0.00309874346393444
+fig4a_halves_full,FR,EX,V1 PT control (corrected),0.06224,0.00109961711015459
+fig4a_halves_full,FR,EX,V2 PT control (corrected),0.06174,0.000971380409261731
+fig4a_halves_full,FR,EC,V1 self-decoding,0.1214,0.00334456733424016
+fig4a_halves_full,FR,EC,V2 self-decoding,0.1261,0.00387544129437289
+fig4a_halves_full,FR,EC,V1 non-PT-decoding (different neurons),0.038,0.00207400760309321
+fig4a_halves_full,FR,EC,V2 non-PT-decoding (different neurons),0.0379,0.00186691641066817
+fig4a_halves_full,FR,EC,V1 PT-decoding (rotation only),0.099,0.0029459110576864
+fig4a_halves_full,FR,EC,V2 PT-decoding (rotation only),0.1043,0.00315711687060732
+fig4a_halves_full,FR,EC,V1 PT control (corrected),0.0446,0.000739006531274475
+fig4a_halves_full,FR,EC,V2 PT control (corrected),0.04932,0.000920174770377998
+fig4b_across_area_full,KO,AC → AC|EX|EC,V1 self-decoding,0.481466666666667,0.00266529736686047
+fig4b_across_area_full,KO,AC → AC|EX|EC,V2 self-decoding,0.255133333333333,0.00235579616092855
+fig4b_across_area_full,KO,AC → AC|EX|EC,V1-to-V2 non-PT (different neurons),0.0252666666666667,0.000889181458065904
+fig4b_across_area_full,KO,AC → AC|EX|EC,V2-to-V1 non-PT (different neurons),0.0206333333333334,0.000825577710972151
+fig4b_across_area_full,KO,AC → AC|EX|EC,V1-to-V2 PT (rotation only),0.193366666666667,0.00234170491218518
+fig4b_across_area_full,KO,AC → AC|EX|EC,V2-to-V1 PT (rotation only),0.299266666666667,0.00359978873635553
+fig4b_across_area_full,KO,AC → AC|EX|EC,V1-to-V2 PT control (corrected),0.134813333333333,0.00191841027366715
+fig4b_across_area_full,KO,AC → AC|EX|EC,V2-to-V1 PT control (corrected),0.21752,0.00318585395810982
+fig4b_across_area_full,KO,EX → AC|EX|EC,V1 self-decoding,0.626533333333333,0.00250852155526876
+fig4b_across_area_full,KO,EX → AC|EX|EC,V2 self-decoding,0.4576,0.00302785436555116
+fig4b_across_area_full,KO,EX → AC|EX|EC,V1-to-V2 non-PT (different neurons),0.0247666666666667,0.00086926006396343
+fig4b_across_area_full,KO,EX → AC|EX|EC,V2-to-V1 non-PT (different neurons),0.0284333333333333,0.000956667335609445
+fig4b_across_area_full,KO,EX → AC|EX|EC,V1-to-V2 PT (rotation only),0.149466666666667,0.00269329498531905
+fig4b_across_area_full,KO,EX → AC|EX|EC,V2-to-V1 PT (rotation only),0.255033333333333,0.00436125991166148
+fig4b_across_area_full,KO,EX → AC|EX|EC,V1-to-V2 PT control (corrected),0.118973333333333,0.0015618714191024
+fig4b_across_area_full,KO,EX → AC|EX|EC,V2-to-V1 PT control (corrected),0.20576,0.00305824621217263
+fig4b_across_area_full,KO,EC → AC|EX|EC,V1 self-decoding,0.375866666666667,0.00260865673570826
+fig4b_across_area_full,KO,EC → AC|EX|EC,V2 self-decoding,0.234233333333333,0.00246310975481306
+fig4b_across_area_full,KO,EC → AC|EX|EC,V1-to-V2 non-PT (different neurons),0.0310333333333333,0.00109757578439287
+fig4b_across_area_full,KO,EC → AC|EX|EC,V2-to-V1 non-PT (different neurons),0.0245,0.000899282469181257
+fig4b_across_area_full,KO,EC → AC|EX|EC,V1-to-V2 PT (rotation only),0.1682,0.00202794610055487
+fig4b_across_area_full,KO,EC → AC|EX|EC,V2-to-V1 PT (rotation only),0.270833333333333,0.00283686643442363
+fig4b_across_area_full,KO,EC → AC|EX|EC,V1-to-V2 PT control (corrected),0.117103333333333,0.00151484730689199
+fig4b_across_area_full,KO,EC → AC|EX|EC,V2-to-V1 PT control (corrected),0.18992,0.00265736351615353
+fig4b_across_area_full,FR,AC → AC|EX|EC,V1 self-decoding,0.269266666666667,0.0024896431734577
+fig4b_across_area_full,FR,AC → AC|EX|EC,V2 self-decoding,0.175966666666667,0.00223758513536116
+fig4b_across_area_full,FR,AC → AC|EX|EC,V1-to-V2 non-PT (different neurons),0.0233666666666667,0.000897655595727091
+fig4b_across_area_full,FR,AC → AC|EX|EC,V2-to-V1 non-PT (different neurons),0.0272666666666667,0.000990097510885179
+fig4b_across_area_full,FR,AC → AC|EX|EC,V1-to-V2 PT (rotation only),0.116733333333333,0.00188246553696657
+fig4b_across_area_full,FR,AC → AC|EX|EC,V2-to-V1 PT (rotation only),0.133966666666667,0.00234725910402501
+fig4b_across_area_full,FR,AC → AC|EX|EC,V1-to-V2 PT control (corrected),0.0772466666666666,0.000981435205268593
+fig4b_across_area_full,FR,AC → AC|EX|EC,V2-to-V1 PT control (corrected),0.0882499999999999,0.00107201787063901
+fig4b_across_area_full,FR,EX → AC|EX|EC,V1 self-decoding,0.3607,0.00260094263978855
+fig4b_across_area_full,FR,EX → AC|EX|EC,V2 self-decoding,0.2825,0.00278513124248048
+fig4b_across_area_full,FR,EX → AC|EX|EC,V1-to-V2 non-PT (different neurons),0.0263666666666667,0.000963553022801524
+fig4b_across_area_full,FR,EX → AC|EX|EC,V2-to-V1 non-PT (different neurons),0.0241,0.000882517393864286
+fig4b_across_area_full,FR,EX → AC|EX|EC,V1-to-V2 PT (rotation only),0.115566666666667,0.00271181555599194
+fig4b_across_area_full,FR,EX → AC|EX|EC,V2-to-V1 PT (rotation only),0.128166666666667,0.00313398772455936
+fig4b_across_area_full,FR,EX → AC|EX|EC,V1-to-V2 PT control (corrected),0.07486,0.000953948301675961
+fig4b_across_area_full,FR,EX → AC|EX|EC,V2-to-V1 PT control (corrected),0.0891233333333333,0.00109709850719222
+fig4b_across_area_full,FR,EC → AC|EX|EC,V1 self-decoding,0.159533333333333,0.00203412001166382
+fig4b_across_area_full,FR,EC → AC|EX|EC,V2 self-decoding,0.1937,0.0024514120946205
+fig4b_across_area_full,FR,EC → AC|EX|EC,V1-to-V2 non-PT (different neurons),0.0253,0.000879409550485266
+fig4b_across_area_full,FR,EC → AC|EX|EC,V2-to-V1 non-PT (different neurons),0.0238,0.000844201802510014
+fig4b_across_area_full,FR,EC → AC|EX|EC,V1-to-V2 PT (rotation only),0.110033333333333,0.00188895932086873
+fig4b_across_area_full,FR,EC → AC|EX|EC,V2-to-V1 PT (rotation only),0.133866666666667,0.00196110576434763
+fig4b_across_area_full,FR,EC → AC|EX|EC,V1-to-V2 PT control (corrected),0.0736566666666666,0.000928035594642264
+fig4b_across_area_full,FR,EC → AC|EX|EC,V2-to-V1 PT control (corrected),0.0873733333333333,0.00109372212368748
+fig12_across_area_all_combos_full,KO,AC → AC,V1 self-decoding,0.4826,0.00447732421886153
+fig12_across_area_all_combos_full,KO,AC → AC,V2 self-decoding,0.2533,0.00399063602441979
+fig12_across_area_all_combos_full,KO,AC → AC,V1-to-V2 non-PT (different neurons),0.0262,0.00148959540559234
+fig12_across_area_all_combos_full,KO,AC → AC,V2-to-V1 non-PT (different neurons),0.024,0.00166549372461552
+fig12_across_area_all_combos_full,KO,AC → AC,V1-to-V2 PT (rotation only),0.2014,0.00389951678490796
+fig12_across_area_all_combos_full,KO,AC → AC,V2-to-V1 PT (rotation only),0.3083,0.00400571827447617
+fig12_across_area_all_combos_full,KO,AC → AC,V1-to-V2 PT control (corrected),0.11002,0.00157435413893249
+fig12_across_area_all_combos_full,KO,AC → AC,V2-to-V1 PT control (corrected),0.18578,0.00187808252477074
+fig12_across_area_all_combos_full,KO,AC → EX,V1 self-decoding,0.482,0.00474474054233425
+fig12_across_area_all_combos_full,KO,AC → EX,V2 self-decoding,0.2582,0.00423953633569858
+fig12_across_area_all_combos_full,KO,AC → EX,V1-to-V2 non-PT (different neurons),0.026,0.00153354451972215
+fig12_across_area_all_combos_full,KO,AC → EX,V2-to-V1 non-PT (different neurons),0.0184,0.00126300272343213
+fig12_across_area_all_combos_full,KO,AC → EX,V1-to-V2 PT (rotation only),0.2218,0.00366756803295889
+fig12_across_area_all_combos_full,KO,AC → EX,V2-to-V1 PT (rotation only),0.3781,0.0040712189968857
+fig12_across_area_all_combos_full,KO,AC → EX,V1-to-V2 PT control (corrected),0.1922,0.00200642185076222
+fig12_across_area_all_combos_full,KO,AC → EX,V2-to-V1 PT control (corrected),0.31901,0.00203526682655527
+fig12_across_area_all_combos_full,KO,AC → EC,V1 self-decoding,0.4798,0.00464409713409989
+fig12_across_area_all_combos_full,KO,AC → EC,V2 self-decoding,0.2539,0.0040180434749806
+fig12_across_area_all_combos_full,KO,AC → EC,V1-to-V2 non-PT (different neurons),0.0236,0.00159622670648391
+fig12_across_area_all_combos_full,KO,AC → EC,V2-to-V1 non-PT (different neurons),0.0195,0.00130278017366881
+fig12_across_area_all_combos_full,KO,AC → EC,V1-to-V2 PT (rotation only),0.1569,0.0031290421094343
+fig12_across_area_all_combos_full,KO,AC → EC,V2-to-V1 PT (rotation only),0.2114,0.00373630833845388
+fig12_across_area_all_combos_full,KO,AC → EC,V1-to-V2 PT control (corrected),0.10222,0.00132405574583945
+fig12_across_area_all_combos_full,KO,AC → EC,V2-to-V1 PT control (corrected),0.14777,0.0016473018902399
+fig12_across_area_all_combos_full,KO,EX → AC,V1 self-decoding,0.6251,0.00474261658373323
+fig12_across_area_all_combos_full,KO,EX → AC,V2 self-decoding,0.457,0.005200985604314
+fig12_across_area_all_combos_full,KO,EX → AC,V1-to-V2 non-PT (different neurons),0.0203,0.00137074604636238
+fig12_across_area_all_combos_full,KO,EX → AC,V2-to-V1 non-PT (different neurons),0.0301,0.00171307417106729
+fig12_across_area_all_combos_full,KO,EX → AC,V1-to-V2 PT (rotation only),0.129,0.00294249748636875
+fig12_across_area_all_combos_full,KO,EX → AC,V2-to-V1 PT (rotation only),0.1932,0.00350861108685388
+fig12_across_area_all_combos_full,KO,EX → AC,V1-to-V2 PT control (corrected),0.0974,0.0012319857729388
+fig12_across_area_all_combos_full,KO,EX → AC,V2-to-V1 PT control (corrected),0.17484,0.00200819226691682
+fig12_across_area_all_combos_full,KO,EX → EX,V1 self-decoding,0.6276,0.00429457996612325
+fig12_across_area_all_combos_full,KO,EX → EX,V2 self-decoding,0.4601,0.00531518635892955
+fig12_across_area_all_combos_full,KO,EX → EX,V1-to-V2 non-PT (different neurons),0.0216,0.00142737063675605
+fig12_across_area_all_combos_full,KO,EX → EX,V2-to-V1 non-PT (different neurons),0.0319,0.00175995374539493
+fig12_across_area_all_combos_full,KO,EX → EX,V1-to-V2 PT (rotation only),0.2167,0.00376916209714744
+fig12_across_area_all_combos_full,KO,EX → EX,V2-to-V1 PT (rotation only),0.3877,0.00409357260634486
+fig12_across_area_all_combos_full,KO,EX → EX,V1-to-V2 PT control (corrected),0.16522,0.00170289673393079
+fig12_across_area_all_combos_full,KO,EX → EX,V2-to-V1 PT control (corrected),0.30211,0.00227015583995646
+fig12_across_area_all_combos_full,KO,EX → EC,V1 self-decoding,0.6269,0.00398388083816061
+fig12_across_area_all_combos_full,KO,EX → EC,V2 self-decoding,0.4557,0.00523781668427699
+fig12_across_area_all_combos_full,KO,EX → EC,V1-to-V2 non-PT (different neurons),0.0324,0.0015695596796362
+fig12_across_area_all_combos_full,KO,EX → EC,V2-to-V1 non-PT (different neurons),0.0233,0.00142326328975345
+fig12_across_area_all_combos_full,KO,EX → EC,V1-to-V2 PT (rotation only),0.1027,0.00261298458514608
+fig12_across_area_all_combos_full,KO,EX → EC,V2-to-V1 PT (rotation only),0.1842,0.00313383224225756
+fig12_across_area_all_combos_full,KO,EX → EC,V1-to-V2 PT control (corrected),0.0943,0.00121056903435313
+fig12_across_area_all_combos_full,KO,EX → EC,V2-to-V1 PT control (corrected),0.14033,0.00151798448095562
+fig12_across_area_all_combos_full,KO,EC → AC,V1 self-decoding,0.374,0.00473413775692127
+fig12_across_area_all_combos_full,KO,EC → AC,V2 self-decoding,0.2355,0.00409052711276939
+fig12_across_area_all_combos_full,KO,EC → AC,V1-to-V2 non-PT (different neurons),0.0194,0.00137391345832071
+fig12_across_area_all_combos_full,KO,EC → AC,V2-to-V1 non-PT (different neurons),0.0208,0.0014307463702136
+fig12_across_area_all_combos_full,KO,EC → AC,V1-to-V2 PT (rotation only),0.1497,0.00335197384285977
+fig12_across_area_all_combos_full,KO,EC → AC,V2-to-V1 PT (rotation only),0.2427,0.00414965640037896
+fig12_across_area_all_combos_full,KO,EC → AC,V1-to-V2 PT control (corrected),0.09663,0.00121378824740881
+fig12_across_area_all_combos_full,KO,EC → AC,V2-to-V1 PT control (corrected),0.16495,0.00169817741495502
+fig12_across_area_all_combos_full,KO,EC → EX,V1 self-decoding,0.3777,0.00447702678618535
+fig12_across_area_all_combos_full,KO,EC → EX,V2 self-decoding,0.2353,0.00448106569341978
+fig12_across_area_all_combos_full,KO,EC → EX,V1-to-V2 non-PT (different neurons),0.0248,0.00139085310576245
+fig12_across_area_all_combos_full,KO,EC → EX,V2-to-V1 non-PT (different neurons),0.021,0.00136540162884047
+fig12_across_area_all_combos_full,KO,EC → EX,V1-to-V2 PT (rotation only),0.1846,0.00354358362743468
+fig12_across_area_all_combos_full,KO,EC → EX,V2-to-V1 PT (rotation only),0.3302,0.00357262061944062
+fig12_across_area_all_combos_full,KO,EC → EX,V1-to-V2 PT control (corrected),0.16242,0.00156414537488331
+fig12_across_area_all_combos_full,KO,EC → EX,V2-to-V1 PT control (corrected),0.27338,0.00191315940121893
+fig12_across_area_all_combos_full,KO,EC → EC,V1 self-decoding,0.3759,0.00435439476492936
+fig12_across_area_all_combos_full,KO,EC → EC,V2 self-decoding,0.2319,0.00423457294661469
+fig12_across_area_all_combos_full,KO,EC → EC,V1-to-V2 non-PT (different neurons),0.0489,0.00213935368063681
+fig12_across_area_all_combos_full,KO,EC → EC,V2-to-V1 non-PT (different neurons),0.0317,0.00173221036938909
+fig12_across_area_all_combos_full,KO,EC → EC,V1-to-V2 PT (rotation only),0.1703,0.00320168768309785
+fig12_across_area_all_combos_full,KO,EC → EC,V2-to-V1 PT (rotation only),0.2396,0.00401244295815683
+fig12_across_area_all_combos_full,KO,EC → EC,V1-to-V2 PT control (corrected),0.09226,0.00112908643641863
+fig12_across_area_all_combos_full,KO,EC → EC,V2-to-V1 PT control (corrected),0.13143,0.0013768639262312
+fig12_across_area_all_combos_full,FR,AC → AC,V1 self-decoding,0.2677,0.00465638913741055
+fig12_across_area_all_combos_full,FR,AC → AC,V2 self-decoding,0.1796,0.00366693770887972
+fig12_across_area_all_combos_full,FR,AC → AC,V1-to-V2 non-PT (different neurons),0.0306,0.0017242579060666
+fig12_across_area_all_combos_full,FR,AC → AC,V2-to-V1 non-PT (different neurons),0.0333,0.00193501197846006
+fig12_across_area_all_combos_full,FR,AC → AC,V1-to-V2 PT (rotation only),0.1296,0.00320790480942494
+fig12_across_area_all_combos_full,FR,AC → AC,V2-to-V1 PT (rotation only),0.1723,0.00378751585896476
+fig12_across_area_all_combos_full,FR,AC → AC,V1-to-V2 PT control (corrected),0.05948,0.000937573045730519
+fig12_across_area_all_combos_full,FR,AC → AC,V2-to-V1 PT control (corrected),0.08315,0.00119768935830414
+fig12_across_area_all_combos_full,FR,AC → EX,V1 self-decoding,0.2694,0.00404723368518703
+fig12_across_area_all_combos_full,FR,AC → EX,V2 self-decoding,0.1732,0.0038448294588758
+fig12_across_area_all_combos_full,FR,AC → EX,V1-to-V2 non-PT (different neurons),0.0209,0.00142693050050321
+fig12_across_area_all_combos_full,FR,AC → EX,V2-to-V1 non-PT (different neurons),0.023,0.00152533051035805
+fig12_across_area_all_combos_full,FR,AC → EX,V1-to-V2 PT (rotation only),0.1205,0.00329286574644649
+fig12_across_area_all_combos_full,FR,AC → EX,V2-to-V1 PT (rotation only),0.1397,0.00336842417267113
+fig12_across_area_all_combos_full,FR,AC → EX,V1-to-V2 PT control (corrected),0.10032,0.00136866879534706
+fig12_across_area_all_combos_full,FR,AC → EX,V2-to-V1 PT control (corrected),0.11497,0.00133073278637889
+fig12_across_area_all_combos_full,FR,AC → EC,V1 self-decoding,0.2707,0.00422930076071957
+fig12_across_area_all_combos_full,FR,AC → EC,V2 self-decoding,0.1751,0.00410783660921904
+fig12_across_area_all_combos_full,FR,AC → EC,V1-to-V2 non-PT (different neurons),0.0186,0.00136363392720964
+fig12_across_area_all_combos_full,FR,AC → EC,V2-to-V1 non-PT (different neurons),0.0255,0.00157835548282089
+fig12_across_area_all_combos_full,FR,AC → EC,V1-to-V2 PT (rotation only),0.1001,0.00292793682827204
+fig12_across_area_all_combos_full,FR,AC → EC,V2-to-V1 PT (rotation only),0.0899,0.00259879175636772
+fig12_across_area_all_combos_full,FR,AC → EC,V1-to-V2 PT control (corrected),0.07194,0.00124205292857709
+fig12_across_area_all_combos_full,FR,AC → EC,V2-to-V1 PT control (corrected),0.06663,0.0010512091625921
+fig12_across_area_all_combos_full,FR,EX → AC,V1 self-decoding,0.3613,0.00434695642383884
+fig12_across_area_all_combos_full,FR,EX → AC,V2 self-decoding,0.2838,0.00462762081115764
+fig12_across_area_all_combos_full,FR,EX → AC,V1-to-V2 non-PT (different neurons),0.0232,0.00161923115945151
+fig12_across_area_all_combos_full,FR,EX → AC,V2-to-V1 non-PT (different neurons),0.0215,0.00144540512656469
+fig12_across_area_all_combos_full,FR,EX → AC,V1-to-V2 PT (rotation only),0.0651,0.00240183137831307
+fig12_across_area_all_combos_full,FR,EX → AC,V2-to-V1 PT (rotation only),0.086,0.00272343265514969
+fig12_across_area_all_combos_full,FR,EX → AC,V1-to-V2 PT control (corrected),0.05731,0.000979446823672429
+fig12_across_area_all_combos_full,FR,EX → AC,V2-to-V1 PT control (corrected),0.08411,0.00125615649730782
+fig12_across_area_all_combos_full,FR,EX → EX,V1 self-decoding,0.3615,0.00435356378016214
+fig12_across_area_all_combos_full,FR,EX → EX,V2 self-decoding,0.2812,0.00506567917733034
+fig12_across_area_all_combos_full,FR,EX → EX,V1-to-V2 non-PT (different neurons),0.0337,0.00177971540833735
+fig12_across_area_all_combos_full,FR,EX → EX,V2-to-V1 non-PT (different neurons),0.0277,0.00160199310533714
+fig12_across_area_all_combos_full,FR,EX → EX,V1-to-V2 PT (rotation only),0.186,0.00362570388245042
+fig12_across_area_all_combos_full,FR,EX → EX,V2-to-V1 PT (rotation only),0.2185,0.00379880303814413
+fig12_across_area_all_combos_full,FR,EX → EX,V1-to-V2 PT control (corrected),0.09727,0.00136136035275391
+fig12_across_area_all_combos_full,FR,EX → EX,V2-to-V1 PT control (corrected),0.11652,0.0014387487584529
+fig12_across_area_all_combos_full,FR,EX → EC,V1 self-decoding,0.3593,0.00481909414119589
+fig12_across_area_all_combos_full,FR,EX → EC,V2 self-decoding,0.2825,0.00479098294590366
+fig12_across_area_all_combos_full,FR,EX → EC,V1-to-V2 non-PT (different neurons),0.0222,0.00147876085569699
+fig12_across_area_all_combos_full,FR,EX → EC,V2-to-V1 non-PT (different neurons),0.0231,0.00150775216229809
+fig12_across_area_all_combos_full,FR,EX → EC,V1-to-V2 PT (rotation only),0.0956,0.00278603841507099
+fig12_across_area_all_combos_full,FR,EX → EC,V2-to-V1 PT (rotation only),0.0800000000000001,0.00229046527058999
+fig12_across_area_all_combos_full,FR,EX → EC,V1-to-V2 PT control (corrected),0.07,0.00110221339669743
+fig12_across_area_all_combos_full,FR,EX → EC,V2-to-V1 PT control (corrected),0.06674,0.000897378650409656
+fig12_across_area_all_combos_full,FR,EC → AC,V1 self-decoding,0.16,0.00358668671729776
+fig12_across_area_all_combos_full,FR,EC → AC,V2 self-decoding,0.1961,0.00456488123651838
+fig12_across_area_all_combos_full,FR,EC → AC,V1-to-V2 non-PT (different neurons),0.0256,0.00146764091290964
+fig12_across_area_all_combos_full,FR,EC → AC,V2-to-V1 non-PT (different neurons),0.0196,0.00132967672800761
+fig12_across_area_all_combos_full,FR,EC → AC,V1-to-V2 PT (rotation only),0.0851000000000001,0.00244331721128774
+fig12_across_area_all_combos_full,FR,EC → AC,V2-to-V1 PT (rotation only),0.1224,0.00326565806738325
+fig12_across_area_all_combos_full,FR,EC → AC,V1-to-V2 PT control (corrected),0.05753,0.000964284565684887
+fig12_across_area_all_combos_full,FR,EC → AC,V2-to-V1 PT control (corrected),0.08173,0.00122869195472176
+fig12_across_area_all_combos_full,FR,EC → EX,V1 self-decoding,0.1598,0.00356980637961496
+fig12_across_area_all_combos_full,FR,EC → EX,V2 self-decoding,0.191,0.00396656883738434
+fig12_across_area_all_combos_full,FR,EC → EX,V1-to-V2 non-PT (different neurons),0.0201,0.00136354179662956
+fig12_across_area_all_combos_full,FR,EC → EX,V2-to-V1 non-PT (different neurons),0.0213,0.00133809660060954
+fig12_across_area_all_combos_full,FR,EC → EX,V1-to-V2 PT (rotation only),0.1169,0.00319892412818583
+fig12_across_area_all_combos_full,FR,EC → EX,V2-to-V1 PT (rotation only),0.147,0.00342837699855502
+fig12_across_area_all_combos_full,FR,EC → EX,V1-to-V2 PT control (corrected),0.09494,0.00133930980499989
+fig12_across_area_all_combos_full,FR,EC → EX,V2-to-V1 PT control (corrected),0.11487,0.00142529746520563
+fig12_across_area_all_combos_full,FR,EC → EC,V1 self-decoding,0.1588,0.00342805451954089
+fig12_across_area_all_combos_full,FR,EC → EC,V2 self-decoding,0.194,0.00419858794162009
+fig12_across_area_all_combos_full,FR,EC → EC,V1-to-V2 non-PT (different neurons),0.0302,0.00164723004895214
+fig12_across_area_all_combos_full,FR,EC → EC,V2-to-V1 non-PT (different neurons),0.0305,0.00159103960829889
+fig12_across_area_all_combos_full,FR,EC → EC,V1-to-V2 PT (rotation only),0.1281,0.00331919194622417
+fig12_across_area_all_combos_full,FR,EC → EC,V2-to-V1 PT (rotation only),0.1322,0.00328171422296428
+fig12_across_area_all_combos_full,FR,EC → EC,V1-to-V2 PT control (corrected),0.0685,0.00115621545174516
+fig12_across_area_all_combos_full,FR,EC → EC,V2-to-V1 PT control (corrected),0.06552,0.000949608753076549
+fig3b_cue_transfer_k5,KO,EC-AC,V1 self-decoding,0.399,0.0143251710745732
+fig3b_cue_transfer_k5,KO,EC-AC,V2 self-decoding,0.278,0.0136805663163789
+fig3b_cue_transfer_k5,KO,EC-AC,V1 non-PT-decoding,0.091,0.0103084022959301
+fig3b_cue_transfer_k5,KO,EC-AC,V2 non-PT-decoding,0.069,0.00623656450636929
+fig3b_cue_transfer_k5,KO,EC-AC,V1 PT-decoding (rotation only),0.117,0.00824301937526854
+fig3b_cue_transfer_k5,KO,EC-AC,V2 PT-decoding (rotation only),0.113,0.0083697450127795
+fig3b_cue_transfer_k5,KO,EC-AC,V1 PT control (corrected),0.0342,0.00169146464094847
+fig3b_cue_transfer_k5,KO,EC-AC,V2 PT control (corrected),0.0371,0.00181499601275479
+fig3b_cue_transfer_k5,KO,EC-EX,V1 self-decoding,0.397,0.0198029769160306
+fig3b_cue_transfer_k5,KO,EC-EX,V2 self-decoding,0.308,0.0137189841575748
+fig3b_cue_transfer_k5,KO,EC-EX,V1 non-PT-decoding,0.103,0.00861760743447605
+fig3b_cue_transfer_k5,KO,EC-EX,V2 non-PT-decoding,0.034,0.00563821546982824
+fig3b_cue_transfer_k5,KO,EC-EX,V1 PT-decoding (rotation only),0.12,0.0090611954596452
+fig3b_cue_transfer_k5,KO,EC-EX,V2 PT-decoding (rotation only),0.044,0.00642364054837573
+fig3b_cue_transfer_k5,KO,EC-EX,V1 PT control (corrected),0.0424,0.00250305077013926
+fig3b_cue_transfer_k5,KO,EC-EX,V2 PT control (corrected),0.0334,0.00154987266030403
+fig3b_cue_transfer_k5,KO,AC-EX,V1 self-decoding,0.447,0.0159786041153063
+fig3b_cue_transfer_k5,KO,AC-EX,V2 self-decoding,0.265,0.0107483168817017
+fig3b_cue_transfer_k5,KO,AC-EX,V1 non-PT-decoding,0.081,0.00839486058315005
+fig3b_cue_transfer_k5,KO,AC-EX,V2 non-PT-decoding,0.037,0.0079835356894839
+fig3b_cue_transfer_k5,KO,AC-EX,V1 PT-decoding (rotation only),0.081,0.00687864735785199
+fig3b_cue_transfer_k5,KO,AC-EX,V2 PT-decoding (rotation only),0.053,0.00811431483633448
+fig3b_cue_transfer_k5,KO,AC-EX,V1 PT control (corrected),0.043,0.00194395148304196
+fig3b_cue_transfer_k5,KO,AC-EX,V2 PT control (corrected),0.0352,0.00205400763592082
+fig3b_cue_transfer_k5,FR,EC-AC,V1 self-decoding,0.217,0.0139378318936173
+fig3b_cue_transfer_k5,FR,EC-AC,V2 self-decoding,0.27,0.0122689166510118
+fig3b_cue_transfer_k5,FR,EC-AC,V1 non-PT-decoding,0.049,0.00672387732753874
+fig3b_cue_transfer_k5,FR,EC-AC,V2 non-PT-decoding,0.063,0.00743745853593042
+fig3b_cue_transfer_k5,FR,EC-AC,V1 PT-decoding (rotation only),0.084,0.00642364054837573
+fig3b_cue_transfer_k5,FR,EC-AC,V2 PT-decoding (rotation only),0.074,0.00741264921745611
+fig3b_cue_transfer_k5,FR,EC-AC,V1 PT control (corrected),0.0338,0.00162804370819382
+fig3b_cue_transfer_k5,FR,EC-AC,V2 PT control (corrected),0.0358,0.0022613456636539
+fig3b_cue_transfer_k5,FR,EC-EX,V1 self-decoding,0.235,0.0177037016646683
+fig3b_cue_transfer_k5,FR,EC-EX,V2 self-decoding,0.296,0.0151205680762122
+fig3b_cue_transfer_k5,FR,EC-EX,V1 non-PT-decoding,0.039,0.00532620137176877
+fig3b_cue_transfer_k5,FR,EC-EX,V2 non-PT-decoding,0.05,0.00672778997106307
+fig3b_cue_transfer_k5,FR,EC-EX,V1 PT-decoding (rotation only),0.058,0.00647261437458661
+fig3b_cue_transfer_k5,FR,EC-EX,V2 PT-decoding (rotation only),0.062,0.00724023843748111
+fig3b_cue_transfer_k5,FR,EC-EX,V1 PT control (corrected),0.0358,0.00186321736449842
+fig3b_cue_transfer_k5,FR,EC-EX,V2 PT control (corrected),0.0379,0.00282274595683744
+fig3b_cue_transfer_k5,FR,AC-EX,V1 self-decoding,0.265,0.0135238580605575
+fig3b_cue_transfer_k5,FR,AC-EX,V2 self-decoding,0.298,0.0195690410705546
+fig3b_cue_transfer_k5,FR,AC-EX,V1 non-PT-decoding,0.057,0.00637016070193061
+fig3b_cue_transfer_k5,FR,AC-EX,V2 non-PT-decoding,0.039,0.00687864735785199
+fig3b_cue_transfer_k5,FR,AC-EX,V1 PT-decoding (rotation only),0.065,0.00693958894581243
+fig3b_cue_transfer_k5,FR,AC-EX,V2 PT-decoding (rotation only),0.046,0.0068210201428726
+fig3b_cue_transfer_k5,FR,AC-EX,V1 PT control (corrected),0.0384,0.00167709021192879
+fig3b_cue_transfer_k5,FR,AC-EX,V2 PT control (corrected),0.0374,0.00189792130057015
+fig4a_halves_k5,KO,AC,V1 self-decoding,0.3173,0.00505781151155637
+fig4a_halves_k5,KO,AC,V2 self-decoding,0.19,0.00414801520618642
+fig4a_halves_k5,KO,AC,V1 PT-decoding (rotation only),0.2201,0.00443262799643438
+fig4a_halves_k5,KO,AC,V2 PT-decoding (rotation only),0.136,0.00358668671729776
+fig4a_halves_k5,KO,AC,V1 PT control (corrected),0.039,0.000601672710243083
+fig4a_halves_k5,KO,AC,V2 PT control (corrected),0.03496,0.000580410528772134
+fig4a_halves_k5,KO,EX,V1 self-decoding,0.3797,0.00524663567723625
+fig4a_halves_k5,KO,EX,V2 self-decoding,0.252,0.00455011182147645
+fig4a_halves_k5,KO,EX,V1 PT-decoding (rotation only),0.2127,0.00410705362117859
+fig4a_halves_k5,KO,EX,V2 PT-decoding (rotation only),0.1374,0.00348812774649659
+fig4a_halves_k5,KO,EX,V1 PT control (corrected),0.03949,0.000593769577831156
+fig4a_halves_k5,KO,EX,V2 PT control (corrected),0.03544,0.000577842112983891
+fig4a_halves_k5,KO,EC,V1 self-decoding,0.2963,0.00493592613743063
+fig4a_halves_k5,KO,EC,V2 self-decoding,0.2225,0.00419364798440277
+fig4a_halves_k5,KO,EC,V1 PT-decoding (rotation only),0.2156,0.00417977903289386
+fig4a_halves_k5,KO,EC,V2 PT-decoding (rotation only),0.1749,0.00389819569137328
+fig4a_halves_k5,KO,EC,V1 PT control (corrected),0.0356,0.000563192622153594
+fig4a_halves_k5,KO,EC,V2 PT control (corrected),0.03378,0.000565825762907495
+fig4a_halves_k5,FR,AC,V1 self-decoding,0.1715,0.0042353798189838
+fig4a_halves_k5,FR,AC,V2 self-decoding,0.2045,0.0042282550423925
+fig4a_halves_k5,FR,AC,V1 PT-decoding (rotation only),0.1017,0.00299338466602506
+fig4a_halves_k5,FR,AC,V2 PT-decoding (rotation only),0.1643,0.0036281354487079
+fig4a_halves_k5,FR,AC,V1 PT control (corrected),0.03363,0.000546358893220386
+fig4a_halves_k5,FR,AC,V2 PT control (corrected),0.03601,0.000595206564371863
+fig4a_halves_k5,FR,EX,V1 self-decoding,0.2055,0.00463098044689216
+fig4a_halves_k5,FR,EX,V2 self-decoding,0.2548,0.00490767013262437
+fig4a_halves_k5,FR,EX,V1 PT-decoding (rotation only),0.0998,0.0028319427073102
+fig4a_halves_k5,FR,EX,V2 PT-decoding (rotation only),0.1511,0.00349212322564877
+fig4a_halves_k5,FR,EX,V1 PT control (corrected),0.0344,0.000586789236472689
+fig4a_halves_k5,FR,EX,V2 PT control (corrected),0.03723,0.000622634619457298
+fig4a_halves_k5,FR,EC,V1 self-decoding,0.1278,0.00353813396577899
+fig4a_halves_k5,FR,EC,V2 self-decoding,0.2152,0.00432182727035381
+fig4a_halves_k5,FR,EC,V1 PT-decoding (rotation only),0.0963,0.00314819083405663
+fig4a_halves_k5,FR,EC,V2 PT-decoding (rotation only),0.1731,0.00379790341527517
+fig4a_halves_k5,FR,EC,V1 PT control (corrected),0.03109,0.000493739194271428
+fig4a_halves_k5,FR,EC,V2 PT control (corrected),0.03623,0.00055205008512128
+fig4b_across_area_k5,KO,AC → AC|EX|EC,V1 self-decoding,0.446666666666667,0.0108631331960558
+fig4b_across_area_k5,KO,AC → AC|EX|EC,V2 self-decoding,0.246666666666667,0.010026784054094
+fig4b_across_area_k5,KO,AC → AC|EX|EC,V1-to-V2 PT (rotation only),0.0986666666666667,0.00888927202239433
+fig4b_across_area_k5,KO,AC → AC|EX|EC,V2-to-V1 PT (rotation only),0.124,0.0104782204332738
+fig4b_across_area_k5,KO,AC → AC|EX|EC,V1-to-V2 PT control (corrected),0.0362666666666667,0.00152747506579595
+fig4b_across_area_k5,KO,AC → AC|EX|EC,V2-to-V1 PT control (corrected),0.0400666666666667,0.0016315378355442
+fig4b_across_area_k5,KO,EX → AC|EX|EC,V1 self-decoding,0.451333333333333,0.013885685454323
+fig4b_across_area_k5,KO,EX → AC|EX|EC,V2 self-decoding,0.296,0.0129508354144061
+fig4b_across_area_k5,KO,EX → AC|EX|EC,V1-to-V2 PT (rotation only),0.0666666666666667,0.00609000185594093
+fig4b_across_area_k5,KO,EX → AC|EX|EC,V2-to-V1 PT (rotation only),0.0673333333333334,0.00745767110011885
+fig4b_across_area_k5,KO,EX → AC|EX|EC,V1-to-V2 PT control (corrected),0.0352,0.00137498171356701
+fig4b_across_area_k5,KO,EX → AC|EX|EC,V2-to-V1 PT control (corrected),0.0384,0.00167304526530818
+fig4b_across_area_k5,KO,EC → AC|EX|EC,V1 self-decoding,0.354666666666667,0.0114644210578455
+fig4b_across_area_k5,KO,EC → AC|EX|EC,V2 self-decoding,0.309333333333333,0.0104489270563227
+fig4b_across_area_k5,KO,EC → AC|EX|EC,V1-to-V2 PT (rotation only),0.0853333333333334,0.0105887962188336
+fig4b_across_area_k5,KO,EC → AC|EX|EC,V2-to-V1 PT (rotation only),0.111333333333333,0.0116533585838386
+fig4b_across_area_k5,KO,EC → AC|EX|EC,V1-to-V2 PT control (corrected),0.0331333333333334,0.00135165571802757
+fig4b_across_area_k5,KO,EC → AC|EX|EC,V2-to-V1 PT control (corrected),0.0359333333333333,0.00126303168691272
+fig4b_across_area_k5,FR,AC → AC|EX|EC,V1 self-decoding,0.254,0.0106414932838556
+fig4b_across_area_k5,FR,AC → AC|EX|EC,V2 self-decoding,0.262666666666667,0.0121950935426265
+fig4b_across_area_k5,FR,AC → AC|EX|EC,V1-to-V2 PT (rotation only),0.120666666666667,0.0139451580467986
+fig4b_across_area_k5,FR,AC → AC|EX|EC,V2-to-V1 PT (rotation only),0.0926666666666667,0.00849520937796585
+fig4b_across_area_k5,FR,AC → AC|EX|EC,V1-to-V2 PT control (corrected),0.0384666666666667,0.001430965700235
+fig4b_across_area_k5,FR,AC → AC|EX|EC,V2-to-V1 PT control (corrected),0.0344,0.00147125718389051
+fig4b_across_area_k5,FR,EX → AC|EX|EC,V1 self-decoding,0.275333333333333,0.0114141808687358
+fig4b_across_area_k5,FR,EX → AC|EX|EC,V2 self-decoding,0.327333333333333,0.0137793226176313
+fig4b_across_area_k5,FR,EX → AC|EX|EC,V1-to-V2 PT (rotation only),0.1,0.00868344970910609
+fig4b_across_area_k5,FR,EX → AC|EX|EC,V2-to-V1 PT (rotation only),0.068,0.00839266236716308
+fig4b_across_area_k5,FR,EX → AC|EX|EC,V1-to-V2 PT control (corrected),0.0422666666666667,0.00149399820995241
+fig4b_across_area_k5,FR,EX → AC|EX|EC,V2-to-V1 PT control (corrected),0.0324666666666667,0.00188321889592306
+fig4b_across_area_k5,FR,EC → AC|EX|EC,V1 self-decoding,0.183333333333333,0.00915176427100429
+fig4b_across_area_k5,FR,EC → AC|EX|EC,V2 self-decoding,0.280666666666667,0.0103937794541252
+fig4b_across_area_k5,FR,EC → AC|EX|EC,V1-to-V2 PT (rotation only),0.0993333333333334,0.0122233367656227
+fig4b_across_area_k5,FR,EC → AC|EX|EC,V2-to-V1 PT (rotation only),0.0673333333333334,0.00701285082034065
+fig4b_across_area_k5,FR,EC → AC|EX|EC,V1-to-V2 PT control (corrected),0.0397333333333333,0.0014754179874015
+fig4b_across_area_k5,FR,EC → AC|EX|EC,V2-to-V1 PT control (corrected),0.033,0.00138215224472061
+fig12_across_area_all_combos_k5,KO,AC → AC,V1 self-decoding,0.45,0.0152752523165195
+fig12_across_area_all_combos_k5,KO,AC → AC,V2 self-decoding,0.26,0.0154919333848297
+fig12_across_area_all_combos_k5,KO,AC → AC,V1-to-V2 PT (rotation only),0.104,0.0139204086785474
+fig12_across_area_all_combos_k5,KO,AC → AC,V2-to-V1 PT (rotation only),0.186,0.0126666666666667
+fig12_across_area_all_combos_k5,KO,AC → AC,V1-to-V2 PT control (corrected),0.0354,0.00284487843911358
+fig12_across_area_all_combos_k5,KO,AC → AC,V2-to-V1 PT control (corrected),0.0404,0.00306666666666667
+fig12_across_area_all_combos_k5,KO,AC → EX,V1 self-decoding,0.444,0.0162754074876449
+fig12_across_area_all_combos_k5,KO,AC → EX,V2 self-decoding,0.234,0.0208806130178211
+fig12_across_area_all_combos_k5,KO,AC → EX,V1-to-V2 PT (rotation only),0.058,0.00813770374382247
+fig12_across_area_all_combos_k5,KO,AC → EX,V2-to-V1 PT (rotation only),0.074,0.0103494497975067
+fig12_across_area_all_combos_k5,KO,AC → EX,V1-to-V2 PT control (corrected),0.0368,0.00276807193227023
+fig12_across_area_all_combos_k5,KO,AC → EX,V2-to-V1 PT control (corrected),0.0432,0.00328227563335765
+fig12_across_area_all_combos_k5,KO,AC → EC,V1 self-decoding,0.446,0.0253070038614697
+fig12_across_area_all_combos_k5,KO,AC → EC,V2 self-decoding,0.246,0.0160692943909253
+fig12_across_area_all_combos_k5,KO,AC → EC,V1-to-V2 PT (rotation only),0.134,0.0133499895963339
+fig12_across_area_all_combos_k5,KO,AC → EC,V2-to-V1 PT (rotation only),0.112,0.0085374989832438
+fig12_across_area_all_combos_k5,KO,AC → EC,V1-to-V2 PT control (corrected),0.0366,0.0025828494170414
+fig12_across_area_all_combos_k5,KO,AC → EC,V2-to-V1 PT control (corrected),0.0366,0.0017650936393165
+fig12_across_area_all_combos_k5,KO,EX → AC,V1 self-decoding,0.452,0.0263649599110469
+fig12_across_area_all_combos_k5,KO,EX → AC,V2 self-decoding,0.302,0.0187260958735842
+fig12_across_area_all_combos_k5,KO,EX → AC,V1-to-V2 PT (rotation only),0.054,0.006
+fig12_across_area_all_combos_k5,KO,EX → AC,V2-to-V1 PT (rotation only),0.048,0.0108320512061813
+fig12_across_area_all_combos_k5,KO,EX → AC,V1-to-V2 PT control (corrected),0.0336,0.00245492701860293
+fig12_across_area_all_combos_k5,KO,EX → AC,V2-to-V1 PT control (corrected),0.0374,0.00383028864592619
+fig12_across_area_all_combos_k5,KO,EX → EX,V1 self-decoding,0.452,0.0287827108598972
+fig12_across_area_all_combos_k5,KO,EX → EX,V2 self-decoding,0.3,0.0229007520497569
+fig12_across_area_all_combos_k5,KO,EX → EX,V1-to-V2 PT (rotation only),0.078,0.00813770374382247
+fig12_across_area_all_combos_k5,KO,EX → EX,V2-to-V1 PT (rotation only),0.102,0.00916515138991168
+fig12_across_area_all_combos_k5,KO,EX → EX,V1-to-V2 PT control (corrected),0.0328,0.00233238075793812
+fig12_across_area_all_combos_k5,KO,EX → EX,V2-to-V1 PT control (corrected),0.0424,0.00257854394744183
+fig12_across_area_all_combos_k5,KO,EX → EC,V1 self-decoding,0.45,0.0184390889145858
+fig12_across_area_all_combos_k5,KO,EX → EC,V2 self-decoding,0.286,0.0270061721340388
+fig12_across_area_all_combos_k5,KO,EX → EC,V1-to-V2 PT (rotation only),0.068,0.0149666295470958
+fig12_across_area_all_combos_k5,KO,EX → EC,V2-to-V1 PT (rotation only),0.052,0.0116237305161085
+fig12_across_area_all_combos_k5,KO,EX → EC,V1-to-V2 PT control (corrected),0.0392,0.00202649122047609
+fig12_across_area_all_combos_k5,KO,EX → EC,V2-to-V1 PT control (corrected),0.0354,0.00168786518682295
+fig12_across_area_all_combos_k5,KO,EC → AC,V1 self-decoding,0.356,0.0173333333333333
+fig12_across_area_all_combos_k5,KO,EC → AC,V2 self-decoding,0.32,0.0229007520497569
+fig12_across_area_all_combos_k5,KO,EC → AC,V1-to-V2 PT (rotation only),0.074,0.0133499895963339
+fig12_across_area_all_combos_k5,KO,EC → AC,V2-to-V1 PT (rotation only),0.084,0.00884433277428107
+fig12_across_area_all_combos_k5,KO,EC → AC,V1-to-V2 PT control (corrected),0.0318,0.00277208305150557
+fig12_across_area_all_combos_k5,KO,EC → AC,V2-to-V1 PT control (corrected),0.0326,0.0015790292376436
+fig12_across_area_all_combos_k5,KO,EC → EX,V1 self-decoding,0.358,0.0211765068990248
+fig12_across_area_all_combos_k5,KO,EC → EX,V2 self-decoding,0.302,0.0138082101181387
+fig12_across_area_all_combos_k5,KO,EC → EX,V1-to-V2 PT (rotation only),0.036,0.0106666666666667
+fig12_across_area_all_combos_k5,KO,EC → EX,V2-to-V1 PT (rotation only),0.064,0.0102415276638248
+fig12_across_area_all_combos_k5,KO,EC → EX,V1-to-V2 PT control (corrected),0.0328,0.00225487127003837
+fig12_across_area_all_combos_k5,KO,EC → EX,V2-to-V1 PT control (corrected),0.0396,0.00262974438977547
+fig12_across_area_all_combos_k5,KO,EC → EC,V1 self-decoding,0.35,0.0227547308878347
+fig12_across_area_all_combos_k5,KO,EC → EC,V2 self-decoding,0.306,0.0179009621094634
+fig12_across_area_all_combos_k5,KO,EC → EC,V1-to-V2 PT (rotation only),0.146,0.00991071249821233
+fig12_across_area_all_combos_k5,KO,EC → EC,V2-to-V1 PT (rotation only),0.186,0.0133499895963339
+fig12_across_area_all_combos_k5,KO,EC → EC,V1-to-V2 PT control (corrected),0.0348,0.00209125161884775
+fig12_across_area_all_combos_k5,KO,EC → EC,V2-to-V1 PT control (corrected),0.0356,0.0018086213288334
+fig12_across_area_all_combos_k5,FR,AC → AC,V1 self-decoding,0.256,0.0142361043360418
+fig12_across_area_all_combos_k5,FR,AC → AC,V2 self-decoding,0.272,0.0231324687638633
+fig12_across_area_all_combos_k5,FR,AC → AC,V1-to-V2 PT (rotation only),0.212,0.0104136662345422
+fig12_across_area_all_combos_k5,FR,AC → AC,V2-to-V1 PT (rotation only),0.138,0.00916515138991168
+fig12_across_area_all_combos_k5,FR,AC → AC,V1-to-V2 PT control (corrected),0.0378,0.00231804515342849
+fig12_across_area_all_combos_k5,FR,AC → AC,V2-to-V1 PT control (corrected),0.0364,0.0021249836600679
+fig12_across_area_all_combos_k5,FR,AC → EX,V1 self-decoding,0.254,0.0270061721340388
+fig12_across_area_all_combos_k5,FR,AC → EX,V2 self-decoding,0.268,0.0240739601136904
+fig12_across_area_all_combos_k5,FR,AC → EX,V1-to-V2 PT (rotation only),0.046,0.00896908269804914
+fig12_across_area_all_combos_k5,FR,AC → EX,V2-to-V1 PT (rotation only),0.064,0.00979795897113271
+fig12_across_area_all_combos_k5,FR,AC → EX,V1-to-V2 PT control (corrected),0.04,0.00274873708374511
+fig12_across_area_all_combos_k5,FR,AC → EX,V2-to-V1 PT control (corrected),0.0372,0.0031580584752872
+fig12_across_area_all_combos_k5,FR,AC → EC,V1 self-decoding,0.252,0.0127191893522259
+fig12_across_area_all_combos_k5,FR,AC → EC,V2 self-decoding,0.248,0.016918103387266
+fig12_across_area_all_combos_k5,FR,AC → EC,V1-to-V2 PT (rotation only),0.104,0.0106666666666667
+fig12_across_area_all_combos_k5,FR,AC → EC,V2-to-V1 PT (rotation only),0.076,0.0129271462864435
+fig12_across_area_all_combos_k5,FR,AC → EC,V1-to-V2 PT control (corrected),0.0376,0.00254383787044519
+fig12_across_area_all_combos_k5,FR,AC → EC,V2-to-V1 PT control (corrected),0.0296,0.0016
+fig12_across_area_all_combos_k5,FR,EX → AC,V1 self-decoding,0.284,0.0236267268622258
+fig12_across_area_all_combos_k5,FR,EX → AC,V2 self-decoding,0.32,0.0274873708374511
+fig12_across_area_all_combos_k5,FR,EX → AC,V1-to-V2 PT (rotation only),0.09,0.0116428327977153
+fig12_across_area_all_combos_k5,FR,EX → AC,V2-to-V1 PT (rotation only),0.046,0.0103494497975067
+fig12_across_area_all_combos_k5,FR,EX → AC,V1-to-V2 PT control (corrected),0.0446,0.00284487843911358
+fig12_across_area_all_combos_k5,FR,EX → AC,V2-to-V1 PT control (corrected),0.0278,0.00252014108952477
+fig12_across_area_all_combos_k5,FR,EX → EX,V1 self-decoding,0.276,0.0170749979664876
+fig12_across_area_all_combos_k5,FR,EX → EX,V2 self-decoding,0.334,0.0279761803444764
+fig12_across_area_all_combos_k5,FR,EX → EX,V1-to-V2 PT (rotation only),0.146,0.0123107902084129
+fig12_across_area_all_combos_k5,FR,EX → EX,V2-to-V1 PT (rotation only),0.112,0.0152606975230128
+fig12_across_area_all_combos_k5,FR,EX → EX,V1-to-V2 PT control (corrected),0.0406,0.00236737078727529
+fig12_across_area_all_combos_k5,FR,EX → EX,V2-to-V1 PT control (corrected),0.0374,0.00407758098223281
+fig12_across_area_all_combos_k5,FR,EX → EC,V1 self-decoding,0.266,0.0197877627728744
+fig12_across_area_all_combos_k5,FR,EX → EC,V2 self-decoding,0.328,0.016918103387266
+fig12_across_area_all_combos_k5,FR,EX → EC,V1-to-V2 PT (rotation only),0.064,0.00718021974284601
+fig12_across_area_all_combos_k5,FR,EX → EC,V2-to-V1 PT (rotation only),0.046,0.0042687494916219
+fig12_across_area_all_combos_k5,FR,EX → EC,V1-to-V2 PT control (corrected),0.0416,0.00262974438977547
+fig12_across_area_all_combos_k5,FR,EX → EC,V2-to-V1 PT control (corrected),0.0322,0.00248461935381123
+fig12_across_area_all_combos_k5,FR,EC → AC,V1 self-decoding,0.182,0.018
+fig12_across_area_all_combos_k5,FR,EC → AC,V2 self-decoding,0.284,0.0129271462864435
+fig12_across_area_all_combos_k5,FR,EC → AC,V1-to-V2 PT (rotation only),0.084,0.0139204086785474
+fig12_across_area_all_combos_k5,FR,EC → AC,V2-to-V1 PT (rotation only),0.054,0.0103494497975067
+fig12_across_area_all_combos_k5,FR,EC → AC,V1-to-V2 PT control (corrected),0.0392,0.00292422829326151
+fig12_across_area_all_combos_k5,FR,EC → AC,V2-to-V1 PT control (corrected),0.0352,0.00217460085737335
+fig12_across_area_all_combos_k5,FR,EC → EX,V1 self-decoding,0.18,0.00988826464946088
+fig12_across_area_all_combos_k5,FR,EC → EX,V2 self-decoding,0.276,0.0228619042659763
+fig12_across_area_all_combos_k5,FR,EC → EX,V1-to-V2 PT (rotation only),0.044,0.0077746025264604
+fig12_across_area_all_combos_k5,FR,EC → EX,V2-to-V1 PT (rotation only),0.052,0.00742368581710669
+fig12_across_area_all_combos_k5,FR,EC → EX,V1-to-V2 PT control (corrected),0.0404,0.00266333124739176
+fig12_across_area_all_combos_k5,FR,EC → EX,V2-to-V1 PT control (corrected),0.0322,0.00257250418420997
+fig12_across_area_all_combos_k5,FR,EC → EC,V1 self-decoding,0.188,0.0195959179422654
+fig12_across_area_all_combos_k5,FR,EC → EC,V2 self-decoding,0.282,0.0187260958735842
+fig12_across_area_all_combos_k5,FR,EC → EC,V1-to-V2 PT (rotation only),0.17,0.0163978318349985
+fig12_across_area_all_combos_k5,FR,EC → EC,V2-to-V1 PT (rotation only),0.096,0.0132664991614216
+fig12_across_area_all_combos_k5,FR,EC → EC,V1-to-V2 PT control (corrected),0.0396,0.00230554886210541
+fig12_across_area_all_combos_k5,FR,EC → EC,V2-to-V1 PT control (corrected),0.0316,0.0025086516962969

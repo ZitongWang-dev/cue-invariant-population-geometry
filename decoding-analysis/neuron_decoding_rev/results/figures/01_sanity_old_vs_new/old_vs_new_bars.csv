@@ -1,0 +1,289 @@
+analysis,population,item,metric,old,new
+cue transfer,KO_V1,"ac->ec",self,0.374576,0.372
+cue transfer,KO_V1,"ac->ec",non-PT,0.100986666666667,0.086
+cue transfer,KO_V1,"ac->ec",PT (rotation only),0.236906666666667,0.244
+cue transfer,KO_V1,"ac->ec",control,0.0202133333333333,0.1374
+cue transfer,KO_V1,"ec->ac",self,0.480685333333333,0.48
+cue transfer,KO_V1,"ec->ac",non-PT,0.10664,0.104
+cue transfer,KO_V1,"ec->ac",PT (rotation only),0.193093333333333,0.194
+cue transfer,KO_V1,"ec->ac",control,0.0225066666666667,0.1342
+cue transfer,KO_V1,"ec->ex",self,0.627733333333333,0.616
+cue transfer,KO_V1,"ec->ex",non-PT,0.0766133333333333,0.074
+cue transfer,KO_V1,"ec->ex",PT (rotation only),0.186746666666667,0.2
+cue transfer,KO_V1,"ec->ex",control,0.01912,0.1148
+cue transfer,KO_V1,"ex->ec",self,0.375778666666667,0.388
+cue transfer,KO_V1,"ex->ec",non-PT,0.116533333333333,0.116
+cue transfer,KO_V1,"ex->ec",PT (rotation only),0.360746666666667,0.36
+cue transfer,KO_V1,"ex->ec",control,0.02176,0.2252
+cue transfer,KO_V1,"ac->ex",self,0.627464,0.634
+cue transfer,KO_V1,"ac->ex",non-PT,0.0755199999999999,0.072
+cue transfer,KO_V1,"ac->ex",PT (rotation only),0.195813333333333,0.186
+cue transfer,KO_V1,"ac->ex",control,0.02032,0.1482
+cue transfer,KO_V1,"ex->ac",self,0.480498666666666,0.484
+cue transfer,KO_V1,"ex->ac",non-PT,0.0955199999999999,0.082
+cue transfer,KO_V1,"ex->ac",PT (rotation only),0.362026666666667,0.336
+cue transfer,KO_V1,"ex->ac",control,0.0217066666666667,0.2832
+halves,KO_V1,"AC",self,0.346181333333333,0.3494
+halves,KO_V1,"AC",non-PT,0.0244533333333333,0.0373
+halves,KO_V1,"AC",PT (rotation only),0.285146666666667,0.2549
+halves,KO_V1,"AC",control,0.0216,0.09852
+halves,KO_V1,"EC",self,0.273021333333333,0.2927
+halves,KO_V1,"EC",non-PT,0.0347733333333333,0.0438
+halves,KO_V1,"EC",PT (rotation only),0.247546666666667,0.2059
+halves,KO_V1,"EC",control,0.02088,0.07748
+halves,KO_V1,"EX",self,0.467229333333333,0.4821
+halves,KO_V1,"EX",non-PT,0.0317066666666666,0.0433
+halves,KO_V1,"EX",PT (rotation only),0.36928,0.3134
+halves,KO_V1,"EX",control,0.0202933333333333,0.13423
+cue transfer,KO_V2,"ac->ec",self,0.238074666666667,0.2363
+cue transfer,KO_V2,"ac->ec",non-PT,0.0665866666666666,0.063
+cue transfer,KO_V2,"ac->ec",PT (rotation only),0.174773333333333,0.1683
+cue transfer,KO_V2,"ac->ec",control,0.0194133333333333,0.10865
+cue transfer,KO_V2,"ec->ac",self,0.252992,0.2606
+cue transfer,KO_V2,"ec->ac",non-PT,0.0589333333333332,0.0576
+cue transfer,KO_V2,"ec->ac",PT (rotation only),0.164746666666667,0.1696
+cue transfer,KO_V2,"ec->ac",control,0.01944,0.11346
+cue transfer,KO_V2,"ec->ex",self,0.469914666666667,0.4677
+cue transfer,KO_V2,"ec->ex",non-PT,0.0371466666666666,0.0381
+cue transfer,KO_V2,"ec->ex",PT (rotation only),0.123333333333333,0.126
+cue transfer,KO_V2,"ec->ex",control,0.0207733333333333,0.10996
+cue transfer,KO_V2,"ex->ec",self,0.237344,0.2386
+cue transfer,KO_V2,"ex->ec",non-PT,0.0462399999999999,0.0488
+cue transfer,KO_V2,"ex->ec",PT (rotation only),0.21576,0.2234
+cue transfer,KO_V2,"ex->ec",control,0.0199466666666667,0.19592
+cue transfer,KO_V2,"ac->ex",self,0.457226666666667,0.467
+cue transfer,KO_V2,"ac->ex",non-PT,0.0515466666666666,0.0514
+cue transfer,KO_V2,"ac->ex",PT (rotation only),0.13656,0.1329
+cue transfer,KO_V2,"ac->ex",control,0.02016,0.11472
+cue transfer,KO_V2,"ex->ac",self,0.250261333333333,0.2568
+cue transfer,KO_V2,"ex->ac",non-PT,0.0513866666666666,0.0545
+cue transfer,KO_V2,"ex->ac",PT (rotation only),0.248506666666667,0.2578
+cue transfer,KO_V2,"ex->ac",control,0.0213066666666667,0.22978
+halves,KO_V2,"AC",self,0.174018666666667,0.1695
+halves,KO_V2,"AC",non-PT,0.0241866666666667,0.033
+halves,KO_V2,"AC",PT (rotation only),0.15168,0.1428
+halves,KO_V2,"AC",control,0.01976,0.07666
+halves,KO_V2,"EC",self,0.174322666666667,0.1683
+halves,KO_V2,"EC",non-PT,0.0370666666666666,0.0473
+halves,KO_V2,"EC",PT (rotation only),0.166026666666667,0.1533
+halves,KO_V2,"EC",control,0.0208266666666667,0.07314
+halves,KO_V2,"EX",self,0.31164,0.2967
+halves,KO_V2,"EX",non-PT,0.03056,0.0424
+halves,KO_V2,"EX",PT (rotation only),0.23696,0.2201
+halves,KO_V2,"EX",control,0.02032,0.11865
+across areas,KO V1-to-V2,"train AC, test AC",self,0.481277333333333,0.4826
+across areas,KO V1-to-V2,"train AC, test AC",non-PT,0.02176,0.0262
+across areas,KO V1-to-V2,"train AC, test AC",PT (rotation only),0.207386666666667,0.2014
+across areas,KO V1-to-V2,"train AC, test AC",control,0.0198933333333333,0.11002
+across areas,KO V1-to-V2,"train AC, test EC",self,0.480834666666666,0.4798
+across areas,KO V1-to-V2,"train AC, test EC",non-PT,0.02112,0.0236
+across areas,KO V1-to-V2,"train AC, test EC",PT (rotation only),0.161653333333333,0.1569
+across areas,KO V1-to-V2,"train AC, test EC",control,0.0218933333333333,0.10222
+across areas,KO V1-to-V2,"train AC, test EX",self,0.480448,0.482
+across areas,KO V1-to-V2,"train AC, test EX",non-PT,0.0236,0.026
+across areas,KO V1-to-V2,"train AC, test EX",PT (rotation only),0.22128,0.2218
+across areas,KO V1-to-V2,"train AC, test EX",control,0.0207466666666667,0.1922
+across areas,KO V1-to-V2,"train EC, test AC",self,0.375312,0.374
+across areas,KO V1-to-V2,"train EC, test AC",non-PT,0.0188,0.0194
+across areas,KO V1-to-V2,"train EC, test AC",PT (rotation only),0.153013333333333,0.1497
+across areas,KO V1-to-V2,"train EC, test AC",control,0.0196,0.09663
+across areas,KO V1-to-V2,"train EC, test EC",self,0.374981333333333,0.3759
+across areas,KO V1-to-V2,"train EC, test EC",non-PT,0.0402666666666666,0.0489
+across areas,KO V1-to-V2,"train EC, test EC",PT (rotation only),0.175413333333333,0.1703
+across areas,KO V1-to-V2,"train EC, test EC",control,0.02152,0.09226
+across areas,KO V1-to-V2,"train EC, test EX",self,0.376165333333333,0.3777
+across areas,KO V1-to-V2,"train EC, test EX",non-PT,0.0206133333333333,0.0248
+across areas,KO V1-to-V2,"train EC, test EX",PT (rotation only),0.175466666666667,0.1846
+across areas,KO V1-to-V2,"train EC, test EX",control,0.02008,0.16242
+across areas,KO V1-to-V2,"train EX, test AC",self,0.627304,0.6251
+across areas,KO V1-to-V2,"train EX, test AC",non-PT,0.0178133333333333,0.0203
+across areas,KO V1-to-V2,"train EX, test AC",PT (rotation only),0.132506666666667,0.129
+across areas,KO V1-to-V2,"train EX, test AC",control,0.02016,0.0974
+across areas,KO V1-to-V2,"train EX, test EC",self,0.627426666666667,0.6269
+across areas,KO V1-to-V2,"train EX, test EC",non-PT,0.0276533333333333,0.0324
+across areas,KO V1-to-V2,"train EX, test EC",PT (rotation only),0.105333333333333,0.1027
+across areas,KO V1-to-V2,"train EX, test EC",control,0.0194133333333333,0.0943
+across areas,KO V1-to-V2,"train EX, test EX",self,0.627034666666667,0.6276
+across areas,KO V1-to-V2,"train EX, test EX",non-PT,0.0209066666666667,0.0216
+across areas,KO V1-to-V2,"train EX, test EX",PT (rotation only),0.218026666666667,0.2167
+across areas,KO V1-to-V2,"train EX, test EX",control,0.0221066666666667,0.16522
+across areas,KO V2-to-V1,"train AC, test AC",self,0.257693333333333,0.2533
+across areas,KO V2-to-V1,"train AC, test AC",non-PT,0.0207733333333333,0.024
+across areas,KO V2-to-V1,"train AC, test AC",PT (rotation only),0.30872,0.3083
+across areas,KO V2-to-V1,"train AC, test AC",control,0.02064,0.18578
+across areas,KO V2-to-V1,"train AC, test EC",self,0.249637333333333,0.2539
+across areas,KO V2-to-V1,"train AC, test EC",non-PT,0.0171466666666667,0.0195
+across areas,KO V2-to-V1,"train AC, test EC",PT (rotation only),0.215626666666667,0.2114
+across areas,KO V2-to-V1,"train AC, test EC",control,0.0192266666666667,0.14777
+across areas,KO V2-to-V1,"train AC, test EX",self,0.256088,0.2582
+across areas,KO V2-to-V1,"train AC, test EX",non-PT,0.0153066666666667,0.0184
+across areas,KO V2-to-V1,"train AC, test EX",PT (rotation only),0.378053333333333,0.3781
+across areas,KO V2-to-V1,"train AC, test EX",control,0.02152,0.31901
+across areas,KO V2-to-V1,"train EC, test AC",self,0.234533333333333,0.2355
+across areas,KO V2-to-V1,"train EC, test AC",non-PT,0.0186666666666667,0.0208
+across areas,KO V2-to-V1,"train EC, test AC",PT (rotation only),0.24432,0.2427
+across areas,KO V2-to-V1,"train EC, test AC",control,0.0201066666666667,0.16495
+across areas,KO V2-to-V1,"train EC, test EC",self,0.233021333333333,0.2319
+across areas,KO V2-to-V1,"train EC, test EC",non-PT,0.0321866666666666,0.0317
+across areas,KO V2-to-V1,"train EC, test EC",PT (rotation only),0.24696,0.2396
+across areas,KO V2-to-V1,"train EC, test EC",control,0.0228533333333333,0.13143
+across areas,KO V2-to-V1,"train EC, test EX",self,0.233544,0.2353
+across areas,KO V2-to-V1,"train EC, test EX",non-PT,0.0230666666666667,0.021
+across areas,KO V2-to-V1,"train EC, test EX",PT (rotation only),0.329973333333334,0.3302
+across areas,KO V2-to-V1,"train EC, test EX",control,0.0212266666666667,0.27338
+across areas,KO V2-to-V1,"train EX, test AC",self,0.472029333333333,0.457
+across areas,KO V2-to-V1,"train EX, test AC",non-PT,0.02168,0.0301
+across areas,KO V2-to-V1,"train EX, test AC",PT (rotation only),0.196773333333333,0.1932
+across areas,KO V2-to-V1,"train EX, test AC",control,0.01888,0.17484
+across areas,KO V2-to-V1,"train EX, test EC",self,0.471189333333333,0.4557
+across areas,KO V2-to-V1,"train EX, test EC",non-PT,0.0214933333333333,0.0233
+across areas,KO V2-to-V1,"train EX, test EC",PT (rotation only),0.18088,0.1842
+across areas,KO V2-to-V1,"train EX, test EC",control,0.0216,0.14033
+across areas,KO V2-to-V1,"train EX, test EX",self,0.474749333333333,0.4601
+across areas,KO V2-to-V1,"train EX, test EX",non-PT,0.0292,0.0319
+across areas,KO V2-to-V1,"train EX, test EX",PT (rotation only),0.395173333333334,0.3877
+across areas,KO V2-to-V1,"train EX, test EX",control,0.0208,0.30211
+cue transfer,FR_V1,"ac->ec",self,0.159741333333333,0.158
+cue transfer,FR_V1,"ac->ec",non-PT,0.0445333333333333,0.052
+cue transfer,FR_V1,"ac->ec",PT (rotation only),0.10848,0.1
+cue transfer,FR_V1,"ac->ec",control,0.0189866666666667,0.08
+cue transfer,FR_V1,"ec->ac",self,0.270088,0.268
+cue transfer,FR_V1,"ec->ac",non-PT,0.0517866666666666,0.046
+cue transfer,FR_V1,"ec->ac",PT (rotation only),0.114133333333333,0.116
+cue transfer,FR_V1,"ec->ac",control,0.02016,0.0656
+cue transfer,FR_V1,"ec->ex",self,0.360848,0.362
+cue transfer,FR_V1,"ec->ex",non-PT,0.02488,0.026
+cue transfer,FR_V1,"ec->ex",PT (rotation only),0.0712799999999999,0.072
+cue transfer,FR_V1,"ec->ex",control,0.02072,0.0706
+cue transfer,FR_V1,"ex->ec",self,0.159933333333333,0.156
+cue transfer,FR_V1,"ex->ec",non-PT,0.0307733333333333,0.04
+cue transfer,FR_V1,"ex->ec",PT (rotation only),0.12832,0.132
+cue transfer,FR_V1,"ex->ec",control,0.01952,0.1102
+cue transfer,FR_V1,"ac->ex",self,0.361205333333333,0.368
+cue transfer,FR_V1,"ac->ex",non-PT,0.0571466666666666,0.056
+cue transfer,FR_V1,"ac->ex",PT (rotation only),0.0948799999999999,0.084
+cue transfer,FR_V1,"ac->ex",control,0.0208266666666667,0.0766
+cue transfer,FR_V1,"ex->ac",self,0.270096,0.254
+cue transfer,FR_V1,"ex->ac",non-PT,0.0440266666666666,0.034
+cue transfer,FR_V1,"ex->ac",PT (rotation only),0.15784,0.16
+cue transfer,FR_V1,"ex->ac",control,0.0198666666666667,0.1154
+halves,FR_V1,"AC",self,0.168821333333333,0.1734
+halves,FR_V1,"AC",non-PT,0.02384,0.0428
+halves,FR_V1,"AC",PT (rotation only),0.122293333333333,0.1109
+halves,FR_V1,"AC",control,0.0213333333333333,0.05167
+halves,FR_V1,"EC",self,0.122725333333333,0.1214
+halves,FR_V1,"EC",non-PT,0.0292266666666666,0.038
+halves,FR_V1,"EC",PT (rotation only),0.120106666666667,0.099
+halves,FR_V1,"EC",control,0.01968,0.0446
+halves,FR_V1,"EX",self,0.231536,0.236
+halves,FR_V1,"EX",non-PT,0.0253333333333333,0.0436
+halves,FR_V1,"EX",PT (rotation only),0.14184,0.1261
+halves,FR_V1,"EX",control,0.02056,0.06224
+cue transfer,FR_V2,"ac->ec",self,0.196032,0.1886
+cue transfer,FR_V2,"ac->ec",non-PT,0.0401599999999999,0.0356
+cue transfer,FR_V2,"ac->ec",PT (rotation only),0.0840533333333332,0.0798
+cue transfer,FR_V2,"ac->ec",control,0.0192,0.0582
+cue transfer,FR_V2,"ec->ac",self,0.181426666666667,0.1653
+cue transfer,FR_V2,"ec->ac",non-PT,0.0488266666666666,0.0496
+cue transfer,FR_V2,"ec->ac",PT (rotation only),0.104773333333333,0.1012
+cue transfer,FR_V2,"ec->ac",control,0.0201066666666667,0.06898
+cue transfer,FR_V2,"ec->ex",self,0.277514666666667,0.2814
+cue transfer,FR_V2,"ec->ex",non-PT,0.0371999999999999,0.0389
+cue transfer,FR_V2,"ec->ex",PT (rotation only),0.0901599999999999,0.0846
+cue transfer,FR_V2,"ec->ex",control,0.0195466666666667,0.06937
+cue transfer,FR_V2,"ex->ec",self,0.195898666666667,0.1923
+cue transfer,FR_V2,"ex->ec",non-PT,0.0433333333333333,0.0387
+cue transfer,FR_V2,"ex->ec",PT (rotation only),0.11016,0.1081
+cue transfer,FR_V2,"ex->ec",control,0.0192266666666667,0.09886
+cue transfer,FR_V2,"ac->ex",self,0.293290666666667,0.28
+cue transfer,FR_V2,"ac->ex",non-PT,0.0393599999999999,0.0346
+cue transfer,FR_V2,"ac->ex",PT (rotation only),0.0675199999999999,0.0625
+cue transfer,FR_V2,"ac->ex",control,0.02,0.05905
+cue transfer,FR_V2,"ex->ac",self,0.182738666666667,0.167
+cue transfer,FR_V2,"ex->ac",non-PT,0.0453333333333333,0.0398
+cue transfer,FR_V2,"ex->ac",PT (rotation only),0.119306666666667,0.1182
+cue transfer,FR_V2,"ex->ac",control,0.0203733333333333,0.10381
+halves,FR_V2,"AC",self,0.116984,0.1215
+halves,FR_V2,"AC",non-PT,0.026,0.0348
+halves,FR_V2,"AC",PT (rotation only),0.107626666666667,0.0978000000000001
+halves,FR_V2,"AC",control,0.0208,0.04516
+halves,FR_V2,"EC",self,0.131264,0.1261
+halves,FR_V2,"EC",non-PT,0.0301333333333333,0.0379
+halves,FR_V2,"EC",PT (rotation only),0.114666666666667,0.1043
+halves,FR_V2,"EC",control,0.0196533333333333,0.04932
+halves,FR_V2,"EX",self,0.188970666666667,0.196
+halves,FR_V2,"EX",non-PT,0.0326133333333333,0.0368
+halves,FR_V2,"EX",PT (rotation only),0.131066666666667,0.1254
+halves,FR_V2,"EX",control,0.02072,0.06174
+across areas,FR V1-to-V2,"train AC, test AC",self,0.270138666666667,0.2677
+across areas,FR V1-to-V2,"train AC, test AC",non-PT,0.0221333333333333,0.0306
+across areas,FR V1-to-V2,"train AC, test AC",PT (rotation only),0.128773333333333,0.1296
+across areas,FR V1-to-V2,"train AC, test AC",control,0.0209333333333333,0.05948
+across areas,FR V1-to-V2,"train AC, test EC",self,0.270216,0.2707
+across areas,FR V1-to-V2,"train AC, test EC",non-PT,0.0192266666666667,0.0186
+across areas,FR V1-to-V2,"train AC, test EC",PT (rotation only),0.105866666666667,0.1001
+across areas,FR V1-to-V2,"train AC, test EC",control,0.0182933333333333,0.07194
+across areas,FR V1-to-V2,"train AC, test EX",self,0.270114666666667,0.2694
+across areas,FR V1-to-V2,"train AC, test EX",non-PT,0.0163466666666667,0.0209
+across areas,FR V1-to-V2,"train AC, test EX",PT (rotation only),0.124053333333333,0.1205
+across areas,FR V1-to-V2,"train AC, test EX",control,0.0196533333333333,0.10032
+across areas,FR V1-to-V2,"train EC, test AC",self,0.159837333333333,0.16
+across areas,FR V1-to-V2,"train EC, test AC",non-PT,0.0214933333333334,0.0256
+across areas,FR V1-to-V2,"train EC, test AC",PT (rotation only),0.0923466666666666,0.0851000000000001
+across areas,FR V1-to-V2,"train EC, test AC",control,0.0208266666666667,0.05753
+across areas,FR V1-to-V2,"train EC, test EC",self,0.159514666666667,0.1588
+across areas,FR V1-to-V2,"train EC, test EC",non-PT,0.02616,0.0302
+across areas,FR V1-to-V2,"train EC, test EC",PT (rotation only),0.13472,0.1281
+across areas,FR V1-to-V2,"train EC, test EC",control,0.0190933333333333,0.0685
+across areas,FR V1-to-V2,"train EC, test EX",self,0.159333333333333,0.1598
+across areas,FR V1-to-V2,"train EC, test EX",non-PT,0.0205333333333333,0.0201
+across areas,FR V1-to-V2,"train EC, test EX",PT (rotation only),0.120613333333333,0.1169
+across areas,FR V1-to-V2,"train EC, test EX",control,0.0184,0.09494
+across areas,FR V1-to-V2,"train EX, test AC",self,0.36112,0.3613
+across areas,FR V1-to-V2,"train EX, test AC",non-PT,0.02144,0.0232
+across areas,FR V1-to-V2,"train EX, test AC",PT (rotation only),0.0674399999999999,0.0651
+across areas,FR V1-to-V2,"train EX, test AC",control,0.0189866666666667,0.05731
+across areas,FR V1-to-V2,"train EX, test EC",self,0.361370666666666,0.3593
+across areas,FR V1-to-V2,"train EX, test EC",non-PT,0.02184,0.0222
+across areas,FR V1-to-V2,"train EX, test EC",PT (rotation only),0.0939199999999999,0.0956
+across areas,FR V1-to-V2,"train EX, test EC",control,0.0184533333333333,0.07
+across areas,FR V1-to-V2,"train EX, test EX",self,0.361498666666666,0.3615
+across areas,FR V1-to-V2,"train EX, test EX",non-PT,0.0279466666666666,0.0337
+across areas,FR V1-to-V2,"train EX, test EX",PT (rotation only),0.192933333333333,0.186
+across areas,FR V1-to-V2,"train EX, test EX",control,0.02128,0.09727
+across areas,FR V2-to-V1,"train AC, test AC",self,0.172778666666667,0.1796
+across areas,FR V2-to-V1,"train AC, test AC",non-PT,0.0252533333333333,0.0333
+across areas,FR V2-to-V1,"train AC, test AC",PT (rotation only),0.173626666666667,0.1723
+across areas,FR V2-to-V1,"train AC, test AC",control,0.0207466666666667,0.08315
+across areas,FR V2-to-V1,"train AC, test EC",self,0.176749333333333,0.1751
+across areas,FR V2-to-V1,"train AC, test EC",non-PT,0.02024,0.0255
+across areas,FR V2-to-V1,"train AC, test EC",PT (rotation only),0.0915466666666666,0.0899
+across areas,FR V2-to-V1,"train AC, test EC",control,0.02016,0.06663
+across areas,FR V2-to-V1,"train AC, test EX",self,0.176378666666667,0.1732
+across areas,FR V2-to-V1,"train AC, test EX",non-PT,0.01912,0.023
+across areas,FR V2-to-V1,"train AC, test EX",PT (rotation only),0.14336,0.1397
+across areas,FR V2-to-V1,"train AC, test EX",control,0.0203733333333333,0.11497
+across areas,FR V2-to-V1,"train EC, test AC",self,0.198450666666667,0.1961
+across areas,FR V2-to-V1,"train EC, test AC",non-PT,0.01952,0.0196
+across areas,FR V2-to-V1,"train EC, test AC",PT (rotation only),0.12256,0.1224
+across areas,FR V2-to-V1,"train EC, test AC",control,0.02072,0.08173
+across areas,FR V2-to-V1,"train EC, test EC",self,0.199074666666667,0.194
+across areas,FR V2-to-V1,"train EC, test EC",non-PT,0.0287733333333333,0.0305
+across areas,FR V2-to-V1,"train EC, test EC",PT (rotation only),0.135546666666667,0.1322
+across areas,FR V2-to-V1,"train EC, test EC",control,0.0204266666666667,0.06552
+across areas,FR V2-to-V1,"train EC, test EX",self,0.193010666666667,0.191
+across areas,FR V2-to-V1,"train EC, test EX",non-PT,0.0224266666666667,0.0213
+across areas,FR V2-to-V1,"train EC, test EX",PT (rotation only),0.145413333333333,0.147
+across areas,FR V2-to-V1,"train EC, test EX",control,0.01952,0.11487
+across areas,FR V2-to-V1,"train EX, test AC",self,0.291205333333333,0.2838
+across areas,FR V2-to-V1,"train EX, test AC",non-PT,0.0189333333333333,0.0215
+across areas,FR V2-to-V1,"train EX, test AC",PT (rotation only),0.0842399999999999,0.086
+across areas,FR V2-to-V1,"train EX, test AC",control,0.01992,0.08411
+across areas,FR V2-to-V1,"train EX, test EC",self,0.292624,0.2825
+across areas,FR V2-to-V1,"train EX, test EC",non-PT,0.02152,0.0231
+across areas,FR V2-to-V1,"train EX, test EC",PT (rotation only),0.0765866666666666,0.0800000000000001
+across areas,FR V2-to-V1,"train EX, test EC",control,0.0210666666666667,0.06674
+across areas,FR V2-to-V1,"train EX, test EX",self,0.280504,0.2812
+across areas,FR V2-to-V1,"train EX, test EX",non-PT,0.02416,0.0277
+across areas,FR V2-to-V1,"train EX, test EX",PT (rotation only),0.220533333333333,0.2185
+across areas,FR V2-to-V1,"train EX, test EX",control,0.0212266666666667,0.11652

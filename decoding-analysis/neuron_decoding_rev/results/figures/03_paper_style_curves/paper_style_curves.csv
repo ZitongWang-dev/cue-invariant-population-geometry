@@ -1,0 +1,313 @@
+figure,population,size,series,mean,sem
+fig4c_cue_transfer_vs_N,KO_V1,10,self-decoding,0.128183333333333,0.00178727618918939
+fig4c_cue_transfer_vs_N,KO_V1,20,self-decoding,0.209383333333333,0.0024579227521218
+fig4c_cue_transfer_vs_N,KO_V1,30,self-decoding,0.277233333333333,0.00280746436779585
+fig4c_cue_transfer_vs_N,KO_V1,40,self-decoding,0.30455,0.00283357743964721
+fig4c_cue_transfer_vs_N,KO_V1,50,self-decoding,0.350483333333333,0.00306691652503787
+fig4c_cue_transfer_vs_N,KO_V1,54,self-decoding,0.355616666666667,0.00300057260621304
+fig4c_cue_transfer_vs_N,KO_V1,60,self-decoding,0.38045,0.0031982233956555
+fig4c_cue_transfer_vs_N,KO_V1,70,self-decoding,0.410033333333333,0.00321502574027187
+fig4c_cue_transfer_vs_N,KO_V1,80,self-decoding,0.438366666666667,0.00334662335339979
+fig4c_cue_transfer_vs_N,KO_V1,90,self-decoding,0.454633333333333,0.00344823899190678
+fig4c_cue_transfer_vs_N,KO_V1,100,self-decoding,0.474583333333333,0.00346100960419177
+fig4c_cue_transfer_vs_N,KO_V1,109,self-decoding,0.495666666666667,0.0149733598965408
+fig4c_cue_transfer_vs_N,KO_V1,10,PT-decoding (rotation only),0.0518499999999999,0.000909244600575272
+fig4c_cue_transfer_vs_N,KO_V1,20,PT-decoding (rotation only),0.0828833333333332,0.001197492882637
+fig4c_cue_transfer_vs_N,KO_V1,30,PT-decoding (rotation only),0.113166666666667,0.00139600254058455
+fig4c_cue_transfer_vs_N,KO_V1,40,PT-decoding (rotation only),0.131383333333333,0.0015208914143018
+fig4c_cue_transfer_vs_N,KO_V1,50,PT-decoding (rotation only),0.15725,0.0016475955724691
+fig4c_cue_transfer_vs_N,KO_V1,54,PT-decoding (rotation only),0.16545,0.00175095926685461
+fig4c_cue_transfer_vs_N,KO_V1,60,PT-decoding (rotation only),0.177866666666667,0.00184530651888579
+fig4c_cue_transfer_vs_N,KO_V1,70,PT-decoding (rotation only),0.199233333333333,0.00212836834492879
+fig4c_cue_transfer_vs_N,KO_V1,80,PT-decoding (rotation only),0.216483333333333,0.00224493370037117
+fig4c_cue_transfer_vs_N,KO_V1,90,PT-decoding (rotation only),0.23035,0.00226722134008759
+fig4c_cue_transfer_vs_N,KO_V1,100,PT-decoding (rotation only),0.242166666666667,0.00245945247893798
+fig4c_cue_transfer_vs_N,KO_V1,109,PT-decoding (rotation only),0.253333333333333,0.0117089628779018
+fig4c_cue_transfer_vs_N,KO_V1,10,PT control (corrected),0.035705,0.000279455428273343
+fig4c_cue_transfer_vs_N,KO_V1,20,PT control (corrected),0.0535383333333333,0.000429140962843419
+fig4c_cue_transfer_vs_N,KO_V1,30,PT control (corrected),0.071915,0.000604070228515355
+fig4c_cue_transfer_vs_N,KO_V1,40,PT control (corrected),0.0880133333333333,0.000776961759997835
+fig4c_cue_transfer_vs_N,KO_V1,50,PT control (corrected),0.104596666666667,0.00094078678745284
+fig4c_cue_transfer_vs_N,KO_V1,54,PT control (corrected),0.110906666666667,0.00100370371487424
+fig4c_cue_transfer_vs_N,KO_V1,60,PT control (corrected),0.118723333333333,0.00111692695276421
+fig4c_cue_transfer_vs_N,KO_V1,70,PT control (corrected),0.133655,0.00133015254371326
+fig4c_cue_transfer_vs_N,KO_V1,80,PT control (corrected),0.145833333333333,0.00147751911577022
+fig4c_cue_transfer_vs_N,KO_V1,90,PT control (corrected),0.15647,0.00154612497764029
+fig4c_cue_transfer_vs_N,KO_V1,100,PT control (corrected),0.166696666666667,0.00166498753057539
+fig4c_cue_transfer_vs_N,KO_V1,109,PT control (corrected),0.173833333333333,0.00816915677475626
+fig4c_cue_transfer_vs_N,KO_V1,10,non-PT-decoding,0.0422499999999999,0.000862819324392044
+fig4c_cue_transfer_vs_N,KO_V1,20,non-PT-decoding,0.0553833333333332,0.00100195238470952
+fig4c_cue_transfer_vs_N,KO_V1,30,non-PT-decoding,0.0621166666666665,0.00103960482626427
+fig4c_cue_transfer_vs_N,KO_V1,40,non-PT-decoding,0.0638666666666665,0.00103526190571207
+fig4c_cue_transfer_vs_N,KO_V1,50,non-PT-decoding,0.0707499999999998,0.00104557163527016
+fig4c_cue_transfer_vs_N,KO_V1,54,non-PT-decoding,0.0726166666666665,0.00110417349230217
+fig4c_cue_transfer_vs_N,KO_V1,60,non-PT-decoding,0.0775833333333332,0.00109355012107211
+fig4c_cue_transfer_vs_N,KO_V1,70,non-PT-decoding,0.0790499999999998,0.00112547429226127
+fig4c_cue_transfer_vs_N,KO_V1,80,non-PT-decoding,0.0826333333333331,0.00111016691417685
+fig4c_cue_transfer_vs_N,KO_V1,90,non-PT-decoding,0.0839999999999998,0.00110901479569471
+fig4c_cue_transfer_vs_N,KO_V1,100,non-PT-decoding,0.0874333333333332,0.00113677338549077
+fig4c_cue_transfer_vs_N,KO_V1,109,non-PT-decoding,0.089,0.00525991127935317
+fig4c_cue_transfer_vs_N,KO_V2,10,self-decoding,0.0839333333333332,0.00129857245743465
+fig4c_cue_transfer_vs_N,KO_V2,20,self-decoding,0.11255,0.0016097158181774
+fig4c_cue_transfer_vs_N,KO_V2,30,self-decoding,0.1554,0.0019276978250345
+fig4c_cue_transfer_vs_N,KO_V2,40,self-decoding,0.17995,0.00215128363256059
+fig4c_cue_transfer_vs_N,KO_V2,50,self-decoding,0.196366666666667,0.00249349426885206
+fig4c_cue_transfer_vs_N,KO_V2,54,self-decoding,0.220483333333333,0.0024594740971943
+fig4c_cue_transfer_vs_N,KO_V2,60,self-decoding,0.2288,0.00279618469956148
+fig4c_cue_transfer_vs_N,KO_V2,70,self-decoding,0.25115,0.00285649898668627
+fig4c_cue_transfer_vs_N,KO_V2,80,self-decoding,0.2666,0.00297086772608131
+fig4c_cue_transfer_vs_N,KO_V2,90,self-decoding,0.287633333333333,0.00322914155827989
+fig4c_cue_transfer_vs_N,KO_V2,100,self-decoding,0.302366666666667,0.0034057138804504
+fig4c_cue_transfer_vs_N,KO_V2,109,self-decoding,0.321166666666667,0.00348386473646615
+fig4c_cue_transfer_vs_N,KO_V2,110,self-decoding,0.31985,0.00345690866850665
+fig4c_cue_transfer_vs_N,KO_V2,120,self-decoding,0.334633333333333,0.00365839020925553
+fig4c_cue_transfer_vs_N,KO_V2,130,self-decoding,0.350183333333333,0.00385574965988695
+fig4c_cue_transfer_vs_N,KO_V2,140,self-decoding,0.361183333333333,0.00396841852783752
+fig4c_cue_transfer_vs_N,KO_V2,146,self-decoding,0.37,0.0187490112733662
+fig4c_cue_transfer_vs_N,KO_V2,10,PT-decoding (rotation only),0.0371833333333332,0.000787940655918679
+fig4c_cue_transfer_vs_N,KO_V2,20,PT-decoding (rotation only),0.0480333333333332,0.000922097165314768
+fig4c_cue_transfer_vs_N,KO_V2,30,PT-decoding (rotation only),0.0700166666666665,0.00107593267809454
+fig4c_cue_transfer_vs_N,KO_V2,40,PT-decoding (rotation only),0.0822166666666665,0.0012002987264479
+fig4c_cue_transfer_vs_N,KO_V2,50,PT-decoding (rotation only),0.0975833333333332,0.00135102378489515
+fig4c_cue_transfer_vs_N,KO_V2,54,PT-decoding (rotation only),0.108933333333333,0.00135072614730432
+fig4c_cue_transfer_vs_N,KO_V2,60,PT-decoding (rotation only),0.115883333333333,0.00147390980398296
+fig4c_cue_transfer_vs_N,KO_V2,70,PT-decoding (rotation only),0.13085,0.00157755952363063
+fig4c_cue_transfer_vs_N,KO_V2,80,PT-decoding (rotation only),0.142666666666667,0.00161007623207083
+fig4c_cue_transfer_vs_N,KO_V2,90,PT-decoding (rotation only),0.156666666666667,0.00177498970513655
+fig4c_cue_transfer_vs_N,KO_V2,100,PT-decoding (rotation only),0.168216666666667,0.00183882533477384
+fig4c_cue_transfer_vs_N,KO_V2,109,PT-decoding (rotation only),0.179666666666667,0.00197507872378701
+fig4c_cue_transfer_vs_N,KO_V2,110,PT-decoding (rotation only),0.175566666666667,0.00193622510525861
+fig4c_cue_transfer_vs_N,KO_V2,120,PT-decoding (rotation only),0.190016666666667,0.00203418102849202
+fig4c_cue_transfer_vs_N,KO_V2,130,PT-decoding (rotation only),0.19955,0.00205298134816226
+fig4c_cue_transfer_vs_N,KO_V2,140,PT-decoding (rotation only),0.207816666666667,0.00213068315849586
+fig4c_cue_transfer_vs_N,KO_V2,146,PT-decoding (rotation only),0.217333333333333,0.0101788155623508
+fig4c_cue_transfer_vs_N,KO_V2,10,PT control (corrected),0.0320049999999999,0.000248358483518956
+fig4c_cue_transfer_vs_N,KO_V2,20,PT control (corrected),0.0414916666666666,0.000336110804764468
+fig4c_cue_transfer_vs_N,KO_V2,30,PT control (corrected),0.05745,0.000454854426544007
+fig4c_cue_transfer_vs_N,KO_V2,40,PT control (corrected),0.0691933333333333,0.000594621399270175
+fig4c_cue_transfer_vs_N,KO_V2,50,PT control (corrected),0.0823916666666666,0.000811165786840816
+fig4c_cue_transfer_vs_N,KO_V2,54,PT control (corrected),0.0883033333333333,0.000815178493507113
+fig4c_cue_transfer_vs_N,KO_V2,60,PT control (corrected),0.0959583333333333,0.000971948049694899
+fig4c_cue_transfer_vs_N,KO_V2,70,PT control (corrected),0.108106666666667,0.00107499000993175
+fig4c_cue_transfer_vs_N,KO_V2,80,PT control (corrected),0.115115,0.00113185978282352
+fig4c_cue_transfer_vs_N,KO_V2,90,PT control (corrected),0.126991666666667,0.00136446418861364
+fig4c_cue_transfer_vs_N,KO_V2,100,PT control (corrected),0.135591666666667,0.00143350915948685
+fig4c_cue_transfer_vs_N,KO_V2,109,PT control (corrected),0.145415,0.00158335476844862
+fig4c_cue_transfer_vs_N,KO_V2,110,PT control (corrected),0.142491666666667,0.00148934728970956
+fig4c_cue_transfer_vs_N,KO_V2,120,PT control (corrected),0.151976666666667,0.00158205800297877
+fig4c_cue_transfer_vs_N,KO_V2,130,PT control (corrected),0.161123333333333,0.00178467157923336
+fig4c_cue_transfer_vs_N,KO_V2,140,PT control (corrected),0.165835,0.00181562797828148
+fig4c_cue_transfer_vs_N,KO_V2,146,PT control (corrected),0.172466666666667,0.00906715269551398
+fig4c_cue_transfer_vs_N,KO_V2,10,non-PT-decoding,0.0276333333333332,0.000694150600421292
+fig4c_cue_transfer_vs_N,KO_V2,20,non-PT-decoding,0.0308333333333332,0.000691486146309822
+fig4c_cue_transfer_vs_N,KO_V2,30,non-PT-decoding,0.0361333333333332,0.000809854970192692
+fig4c_cue_transfer_vs_N,KO_V2,40,non-PT-decoding,0.0357666666666665,0.000737463412184633
+fig4c_cue_transfer_vs_N,KO_V2,50,non-PT-decoding,0.0398666666666665,0.000780629164403734
+fig4c_cue_transfer_vs_N,KO_V2,54,non-PT-decoding,0.0403499999999999,0.000814900247344451
+fig4c_cue_transfer_vs_N,KO_V2,60,non-PT-decoding,0.0412666666666665,0.000809174984360375
+fig4c_cue_transfer_vs_N,KO_V2,70,non-PT-decoding,0.0454666666666665,0.000822999029443545
+fig4c_cue_transfer_vs_N,KO_V2,80,non-PT-decoding,0.0463833333333332,0.000819684019801332
+fig4c_cue_transfer_vs_N,KO_V2,90,non-PT-decoding,0.0466166666666665,0.000841259359960944
+fig4c_cue_transfer_vs_N,KO_V2,100,non-PT-decoding,0.0497999999999999,0.000840634680861232
+fig4c_cue_transfer_vs_N,KO_V2,109,non-PT-decoding,0.0522333333333332,0.000892784012785463
+fig4c_cue_transfer_vs_N,KO_V2,110,non-PT-decoding,0.0492833333333332,0.000850265975274271
+fig4c_cue_transfer_vs_N,KO_V2,120,non-PT-decoding,0.0520666666666665,0.000879947850621164
+fig4c_cue_transfer_vs_N,KO_V2,130,non-PT-decoding,0.0533499999999999,0.000909030544284423
+fig4c_cue_transfer_vs_N,KO_V2,140,non-PT-decoding,0.0554166666666665,0.000881335701036978
+fig4c_cue_transfer_vs_N,KO_V2,146,non-PT-decoding,0.0553333333333333,0.00420832284498329
+fig4c_cue_transfer_vs_N,FR_V1,10,self-decoding,0.106916666666667,0.00156425522301926
+fig4c_cue_transfer_vs_N,FR_V1,20,self-decoding,0.151166666666667,0.00202115009956113
+fig4c_cue_transfer_vs_N,FR_V1,24,self-decoding,0.163083333333333,0.0020548821802526
+fig4c_cue_transfer_vs_N,FR_V1,30,self-decoding,0.2046,0.00245948657823615
+fig4c_cue_transfer_vs_N,FR_V1,40,self-decoding,0.2348,0.00260817559372784
+fig4c_cue_transfer_vs_N,FR_V1,48,self-decoding,0.261,0.0129616993375681
+fig4c_cue_transfer_vs_N,FR_V1,10,PT-decoding (rotation only),0.0431666666666665,0.000848540696760038
+fig4c_cue_transfer_vs_N,FR_V1,20,PT-decoding (rotation only),0.0612333333333331,0.00100671041077972
+fig4c_cue_transfer_vs_N,FR_V1,24,PT-decoding (rotation only),0.0670499999999998,0.00102402234748081
+fig4c_cue_transfer_vs_N,FR_V1,30,PT-decoding (rotation only),0.0820666666666665,0.00112755892110498
+fig4c_cue_transfer_vs_N,FR_V1,40,PT-decoding (rotation only),0.0972166666666665,0.00132129951435515
+fig4c_cue_transfer_vs_N,FR_V1,48,PT-decoding (rotation only),0.110666666666667,0.00694557806189924
+fig4c_cue_transfer_vs_N,FR_V1,10,PT control (corrected),0.0337399999999999,0.000265051334980879
+fig4c_cue_transfer_vs_N,FR_V1,20,PT control (corrected),0.0462266666666666,0.000363341711778481
+fig4c_cue_transfer_vs_N,FR_V1,24,PT control (corrected),0.051895,0.000411212371410309
+fig4c_cue_transfer_vs_N,FR_V1,30,PT control (corrected),0.0619083333333333,0.000501802364954761
+fig4c_cue_transfer_vs_N,FR_V1,40,PT control (corrected),0.0752816666666666,0.000643139624852141
+fig4c_cue_transfer_vs_N,FR_V1,48,PT control (corrected),0.0864,0.00320691343589295
+fig4c_cue_transfer_vs_N,FR_V1,10,non-PT-decoding,0.0327999999999999,0.000732971831943096
+fig4c_cue_transfer_vs_N,FR_V1,20,non-PT-decoding,0.0374499999999999,0.000782327120976017
+fig4c_cue_transfer_vs_N,FR_V1,24,non-PT-decoding,0.0383499999999999,0.000798739711354269
+fig4c_cue_transfer_vs_N,FR_V1,30,non-PT-decoding,0.0415666666666665,0.000796614442216997
+fig4c_cue_transfer_vs_N,FR_V1,40,non-PT-decoding,0.0413333333333332,0.000820685221724663
+fig4c_cue_transfer_vs_N,FR_V1,48,non-PT-decoding,0.0423333333333333,0.00371564615717756
+fig4c_cue_transfer_vs_N,FR_V2,10,self-decoding,0.0921333333333332,0.00133933317848386
+fig4c_cue_transfer_vs_N,FR_V2,20,self-decoding,0.1259,0.00160946343004932
+fig4c_cue_transfer_vs_N,FR_V2,24,self-decoding,0.147733333333333,0.00174353619135384
+fig4c_cue_transfer_vs_N,FR_V2,30,self-decoding,0.167616666666667,0.00185781484505784
+fig4c_cue_transfer_vs_N,FR_V2,40,self-decoding,0.203683333333333,0.00213697600243712
+fig4c_cue_transfer_vs_N,FR_V2,48,self-decoding,0.212433333333333,0.00222567702442037
+fig4c_cue_transfer_vs_N,FR_V2,50,self-decoding,0.225533333333333,0.00228885362010412
+fig4c_cue_transfer_vs_N,FR_V2,60,self-decoding,0.25455,0.00236294560970126
+fig4c_cue_transfer_vs_N,FR_V2,70,self-decoding,0.276683333333333,0.00243663079519668
+fig4c_cue_transfer_vs_N,FR_V2,80,self-decoding,0.287366666666666,0.00257763507429211
+fig4c_cue_transfer_vs_N,FR_V2,90,self-decoding,0.3061,0.00266748510515255
+fig4c_cue_transfer_vs_N,FR_V2,100,self-decoding,0.326416666666667,0.00290587582463873
+fig4c_cue_transfer_vs_N,FR_V2,110,self-decoding,0.33825,0.00296367651910078
+fig4c_cue_transfer_vs_N,FR_V2,112,self-decoding,0.336333333333333,0.0131268618085824
+fig4c_cue_transfer_vs_N,FR_V2,10,PT-decoding (rotation only),0.0410999999999999,0.000854491477601328
+fig4c_cue_transfer_vs_N,FR_V2,20,PT-decoding (rotation only),0.0516833333333332,0.000916821327969168
+fig4c_cue_transfer_vs_N,FR_V2,24,PT-decoding (rotation only),0.0619166666666665,0.001020771098453
+fig4c_cue_transfer_vs_N,FR_V2,30,PT-decoding (rotation only),0.0695833333333332,0.00107767281454483
+fig4c_cue_transfer_vs_N,FR_V2,40,PT-decoding (rotation only),0.0871999999999998,0.00120656161752803
+fig4c_cue_transfer_vs_N,FR_V2,48,PT-decoding (rotation only),0.0923999999999998,0.00126749310937717
+fig4c_cue_transfer_vs_N,FR_V2,50,PT-decoding (rotation only),0.0995666666666666,0.00131049066553333
+fig4c_cue_transfer_vs_N,FR_V2,60,PT-decoding (rotation only),0.115766666666667,0.00143879261103029
+fig4c_cue_transfer_vs_N,FR_V2,70,PT-decoding (rotation only),0.127083333333333,0.0014880189821202
+fig4c_cue_transfer_vs_N,FR_V2,80,PT-decoding (rotation only),0.136333333333333,0.00153557269602337
+fig4c_cue_transfer_vs_N,FR_V2,90,PT-decoding (rotation only),0.148466666666667,0.00160871848515796
+fig4c_cue_transfer_vs_N,FR_V2,100,PT-decoding (rotation only),0.157566666666667,0.00167287445513325
+fig4c_cue_transfer_vs_N,FR_V2,110,PT-decoding (rotation only),0.167716666666667,0.00174096493386167
+fig4c_cue_transfer_vs_N,FR_V2,112,PT-decoding (rotation only),0.171666666666667,0.00831976296200075
+fig4c_cue_transfer_vs_N,FR_V2,10,PT control (corrected),0.0328816666666666,0.000259979037063998
+fig4c_cue_transfer_vs_N,FR_V2,20,PT control (corrected),0.0437283333333333,0.000335064420076146
+fig4c_cue_transfer_vs_N,FR_V2,24,PT control (corrected),0.0494683333333333,0.000377892695062446
+fig4c_cue_transfer_vs_N,FR_V2,30,PT control (corrected),0.0565333333333333,0.000471968374972657
+fig4c_cue_transfer_vs_N,FR_V2,40,PT control (corrected),0.0705666666666666,0.000594417703837259
+fig4c_cue_transfer_vs_N,FR_V2,48,PT control (corrected),0.0763783333333333,0.000721314670936608
+fig4c_cue_transfer_vs_N,FR_V2,50,PT control (corrected),0.0800083333333333,0.000684047097339065
+fig4c_cue_transfer_vs_N,FR_V2,60,PT control (corrected),0.0908683333333333,0.00080000138859809
+fig4c_cue_transfer_vs_N,FR_V2,70,PT control (corrected),0.101585,0.000907037527741057
+fig4c_cue_transfer_vs_N,FR_V2,80,PT control (corrected),0.108983333333333,0.00102470445933797
+fig4c_cue_transfer_vs_N,FR_V2,90,PT control (corrected),0.11687,0.00113345384811172
+fig4c_cue_transfer_vs_N,FR_V2,100,PT control (corrected),0.124501666666667,0.00119819099486675
+fig4c_cue_transfer_vs_N,FR_V2,110,PT control (corrected),0.131416666666667,0.00124810884649813
+fig4c_cue_transfer_vs_N,FR_V2,112,PT control (corrected),0.1369,0.00578805022643453
+fig4c_cue_transfer_vs_N,FR_V2,10,non-PT-decoding,0.0298833333333332,0.000714821670987986
+fig4c_cue_transfer_vs_N,FR_V2,20,non-PT-decoding,0.0345666666666665,0.000740698350808835
+fig4c_cue_transfer_vs_N,FR_V2,24,non-PT-decoding,0.0349333333333332,0.000757317498375886
+fig4c_cue_transfer_vs_N,FR_V2,30,non-PT-decoding,0.0348833333333332,0.000732208902396811
+fig4c_cue_transfer_vs_N,FR_V2,40,non-PT-decoding,0.0371833333333332,0.000758823395773678
+fig4c_cue_transfer_vs_N,FR_V2,48,non-PT-decoding,0.0395333333333332,0.000794292026856211
+fig4c_cue_transfer_vs_N,FR_V2,50,non-PT-decoding,0.0412999999999999,0.000828819579899309
+fig4c_cue_transfer_vs_N,FR_V2,60,non-PT-decoding,0.0433999999999999,0.000816721273840551
+fig4c_cue_transfer_vs_N,FR_V2,70,non-PT-decoding,0.0448999999999999,0.000831338173180673
+fig4c_cue_transfer_vs_N,FR_V2,80,non-PT-decoding,0.0446166666666665,0.000814290484212534
+fig4c_cue_transfer_vs_N,FR_V2,90,non-PT-decoding,0.0466166666666665,0.000837284350663611
+fig4c_cue_transfer_vs_N,FR_V2,100,non-PT-decoding,0.0464166666666665,0.0008562967585096
+fig4c_cue_transfer_vs_N,FR_V2,110,non-PT-decoding,0.0488333333333332,0.000886358587032277
+fig4c_cue_transfer_vs_N,FR_V2,112,non-PT-decoding,0.0516666666666667,0.00366049814975113
+fig13_halves_vs_size,KO_V1,5,self-decoding,0.0706999999999999,0.00206980706345083
+fig13_halves_vs_size,KO_V1,10,self-decoding,0.1325,0.00286762773293382
+fig13_halves_vs_size,KO_V1,20,self-decoding,0.206666666666667,0.00344660088909936
+fig13_halves_vs_size,KO_V1,30,self-decoding,0.249433333333333,0.00370827082225517
+fig13_halves_vs_size,KO_V1,40,self-decoding,0.308833333333333,0.00397319319237608
+fig13_halves_vs_size,KO_V1,50,self-decoding,0.353866666666667,0.00433150168900349
+fig13_halves_vs_size,KO_V1,54,self-decoding,0.374733333333333,0.0045140469972167
+fig13_halves_vs_size,KO_V1,5,PT-decoding (rotation only),0.0399,0.00119867530295502
+fig13_halves_vs_size,KO_V1,10,PT-decoding (rotation only),0.0678999999999999,0.00154018153285442
+fig13_halves_vs_size,KO_V1,20,PT-decoding (rotation only),0.115333333333333,0.00210501516664133
+fig13_halves_vs_size,KO_V1,30,PT-decoding (rotation only),0.166933333333333,0.00273762574046596
+fig13_halves_vs_size,KO_V1,40,PT-decoding (rotation only),0.208733333333333,0.00302495525490775
+fig13_halves_vs_size,KO_V1,50,PT-decoding (rotation only),0.252666666666667,0.00340697724844676
+fig13_halves_vs_size,KO_V1,54,PT-decoding (rotation only),0.258066666666667,0.0031716596550605
+fig13_halves_vs_size,KO_V1,5,PT control (corrected),0.0273766666666666,0.000341633744358975
+fig13_halves_vs_size,KO_V1,10,PT control (corrected),0.0357933333333333,0.000398879807829898
+fig13_halves_vs_size,KO_V1,20,PT control (corrected),0.05197,0.000613490202169555
+fig13_halves_vs_size,KO_V1,30,PT control (corrected),0.06974,0.000865050459958783
+fig13_halves_vs_size,KO_V1,40,PT control (corrected),0.0872266666666666,0.00108982389378209
+fig13_halves_vs_size,KO_V1,50,PT control (corrected),0.102186666666667,0.00135669888624117
+fig13_halves_vs_size,KO_V1,54,PT control (corrected),0.10341,0.0012750627555562
+fig13_halves_vs_size,KO_V1,5,non-PT (different neurons),0.0264333333333334,0.000931079837744991
+fig13_halves_vs_size,KO_V1,10,non-PT (different neurons),0.0295333333333333,0.000950455084352514
+fig13_halves_vs_size,KO_V1,20,non-PT (different neurons),0.0343,0.00106873668785052
+fig13_halves_vs_size,KO_V1,30,non-PT (different neurons),0.0362,0.00115100304663176
+fig13_halves_vs_size,KO_V1,40,non-PT (different neurons),0.0408,0.00116479617921796
+fig13_halves_vs_size,KO_V1,50,non-PT (different neurons),0.0428999999999999,0.00123858617587986
+fig13_halves_vs_size,KO_V1,54,non-PT (different neurons),0.0414666666666666,0.00123965876313105
+fig13_halves_vs_size,KO_V2,5,self-decoding,0.0587999999999999,0.00156543066838429
+fig13_halves_vs_size,KO_V2,10,self-decoding,0.0731333333333332,0.00171843043309987
+fig13_halves_vs_size,KO_V2,20,self-decoding,0.1268,0.00240446625793157
+fig13_halves_vs_size,KO_V2,30,self-decoding,0.152733333333333,0.0026648839338713
+fig13_halves_vs_size,KO_V2,40,self-decoding,0.176033333333333,0.00290747665780386
+fig13_halves_vs_size,KO_V2,50,self-decoding,0.2119,0.00350031161662314
+fig13_halves_vs_size,KO_V2,54,self-decoding,0.2115,0.00349618203397523
+fig13_halves_vs_size,KO_V2,60,self-decoding,0.224233333333333,0.00374895545954541
+fig13_halves_vs_size,KO_V2,70,self-decoding,0.250366666666667,0.00408858480295645
+fig13_halves_vs_size,KO_V2,73,self-decoding,0.251533333333333,0.0039406381712623
+fig13_halves_vs_size,KO_V2,5,PT-decoding (rotation only),0.0358333333333333,0.00115708763281802
+fig13_halves_vs_size,KO_V2,10,PT-decoding (rotation only),0.0510999999999999,0.0012411893160179
+fig13_halves_vs_size,KO_V2,20,PT-decoding (rotation only),0.0788333333333332,0.00170271260008228
+fig13_halves_vs_size,KO_V2,30,PT-decoding (rotation only),0.111,0.00190728329024525
+fig13_halves_vs_size,KO_V2,40,PT-decoding (rotation only),0.127566666666667,0.00213279721630282
+fig13_halves_vs_size,KO_V2,50,PT-decoding (rotation only),0.1538,0.00241686248319179
+fig13_halves_vs_size,KO_V2,54,PT-decoding (rotation only),0.172066666666667,0.00261786026319838
+fig13_halves_vs_size,KO_V2,60,PT-decoding (rotation only),0.18,0.00273480015476039
+fig13_halves_vs_size,KO_V2,70,PT-decoding (rotation only),0.204166666666667,0.00312687710271883
+fig13_halves_vs_size,KO_V2,73,PT-decoding (rotation only),0.209233333333333,0.00327604385881315
+fig13_halves_vs_size,KO_V2,5,PT control (corrected),0.0253333333333333,0.000301495684149458
+fig13_halves_vs_size,KO_V2,10,PT control (corrected),0.0320766666666666,0.000383059736385554
+fig13_halves_vs_size,KO_V2,20,PT control (corrected),0.0446,0.000525562475272522
+fig13_halves_vs_size,KO_V2,30,PT control (corrected),0.05746,0.000695803943244513
+fig13_halves_vs_size,KO_V2,40,PT control (corrected),0.0696466666666666,0.000853075703666583
+fig13_halves_vs_size,KO_V2,50,PT control (corrected),0.0818266666666666,0.00105544402265417
+fig13_halves_vs_size,KO_V2,54,PT control (corrected),0.0894833333333333,0.0011992343983868
+fig13_halves_vs_size,KO_V2,60,PT control (corrected),0.0940866666666667,0.00122237930560011
+fig13_halves_vs_size,KO_V2,70,PT control (corrected),0.107766666666667,0.00154207844671371
+fig13_halves_vs_size,KO_V2,73,PT control (corrected),0.110523333333333,0.00160523600108523
+fig13_halves_vs_size,KO_V2,5,non-PT (different neurons),0.025,0.000964881394068104
+fig13_halves_vs_size,KO_V2,10,non-PT (different neurons),0.0281333333333333,0.000973078537479826
+fig13_halves_vs_size,KO_V2,20,non-PT (different neurons),0.0336333333333333,0.00110354229729954
+fig13_halves_vs_size,KO_V2,30,non-PT (different neurons),0.0327,0.00105553368652233
+fig13_halves_vs_size,KO_V2,40,non-PT (different neurons),0.0345,0.00111728713897467
+fig13_halves_vs_size,KO_V2,50,non-PT (different neurons),0.0393333333333333,0.00112012665897485
+fig13_halves_vs_size,KO_V2,54,non-PT (different neurons),0.0409,0.00123110538889869
+fig13_halves_vs_size,KO_V2,60,non-PT (different neurons),0.0400666666666666,0.00122485542891393
+fig13_halves_vs_size,KO_V2,70,non-PT (different neurons),0.0390333333333333,0.00119710201606892
+fig13_halves_vs_size,KO_V2,73,non-PT (different neurons),0.0394333333333333,0.00113747239209354
+fig13_halves_vs_size,FR_V1,5,self-decoding,0.0678999999999999,0.00175054963941808
+fig13_halves_vs_size,FR_V1,10,self-decoding,0.107566666666667,0.00234030717115329
+fig13_halves_vs_size,FR_V1,20,self-decoding,0.1552,0.00279546496561066
+fig13_halves_vs_size,FR_V1,24,self-decoding,0.176933333333333,0.00305138579924982
+fig13_halves_vs_size,FR_V1,5,PT-decoding (rotation only),0.0402,0.00119819006521808
+fig13_halves_vs_size,FR_V1,10,PT-decoding (rotation only),0.0571333333333333,0.0014002437713413
+fig13_halves_vs_size,FR_V1,20,PT-decoding (rotation only),0.0955999999999999,0.0018631415956533
+fig13_halves_vs_size,FR_V1,24,PT-decoding (rotation only),0.112,0.00194984410717696
+fig13_halves_vs_size,FR_V1,5,PT control (corrected),0.0275133333333333,0.000309351077916779
+fig13_halves_vs_size,FR_V1,10,PT control (corrected),0.03349,0.0003666689684756
+fig13_halves_vs_size,FR_V1,20,PT control (corrected),0.0477,0.000536196751237679
+fig13_halves_vs_size,FR_V1,24,PT control (corrected),0.0528366666666666,0.000609934434869476
+fig13_halves_vs_size,FR_V1,5,non-PT (different neurons),0.0270666666666667,0.000953623166343565
+fig13_halves_vs_size,FR_V1,10,non-PT (different neurons),0.0261,0.000944294291205286
+fig13_halves_vs_size,FR_V1,20,non-PT (different neurons),0.0337333333333333,0.00103639573496727
+fig13_halves_vs_size,FR_V1,24,non-PT (different neurons),0.0414666666666666,0.0012750651486769
+fig13_halves_vs_size,FR_V2,5,self-decoding,0.0540666666666666,0.00149686867868121
+fig13_halves_vs_size,FR_V2,10,self-decoding,0.0934333333333333,0.00207009024058254
+fig13_halves_vs_size,FR_V2,20,self-decoding,0.126933333333333,0.00247095387629994
+fig13_halves_vs_size,FR_V2,24,self-decoding,0.147866666666667,0.00275732914840557
+fig13_halves_vs_size,FR_V2,30,self-decoding,0.174833333333333,0.00278339906086692
+fig13_halves_vs_size,FR_V2,40,self-decoding,0.202033333333333,0.00325690881321875
+fig13_halves_vs_size,FR_V2,50,self-decoding,0.225466666666667,0.00334530515685325
+fig13_halves_vs_size,FR_V2,56,self-decoding,0.244433333333333,0.00328188199013057
+fig13_halves_vs_size,FR_V2,5,PT-decoding (rotation only),0.0376,0.00112113306228566
+fig13_halves_vs_size,FR_V2,10,PT-decoding (rotation only),0.0610333333333333,0.00133336046160493
+fig13_halves_vs_size,FR_V2,20,PT-decoding (rotation only),0.0898666666666666,0.00184604235593131
+fig13_halves_vs_size,FR_V2,24,PT-decoding (rotation only),0.109166666666667,0.00184935078122066
+fig13_halves_vs_size,FR_V2,30,PT-decoding (rotation only),0.118466666666667,0.0019692893484538
+fig13_halves_vs_size,FR_V2,40,PT-decoding (rotation only),0.148233333333333,0.00234463081049961
+fig13_halves_vs_size,FR_V2,50,PT-decoding (rotation only),0.177033333333333,0.0025362806128384
+fig13_halves_vs_size,FR_V2,56,PT-decoding (rotation only),0.187466666666667,0.00266563140728057
+fig13_halves_vs_size,FR_V2,5,PT control (corrected),0.0257533333333333,0.000304791513686097
+fig13_halves_vs_size,FR_V2,10,PT control (corrected),0.0333033333333333,0.000354605572748198
+fig13_halves_vs_size,FR_V2,20,PT control (corrected),0.0457199999999999,0.000497229273547938
+fig13_halves_vs_size,FR_V2,24,PT control (corrected),0.0520733333333333,0.000601030401938959
+fig13_halves_vs_size,FR_V2,30,PT control (corrected),0.05476,0.000671175846742844
+fig13_halves_vs_size,FR_V2,40,PT control (corrected),0.06846,0.000845125866098801
+fig13_halves_vs_size,FR_V2,50,PT control (corrected),0.0809866666666667,0.0010851246608507
+fig13_halves_vs_size,FR_V2,56,PT control (corrected),0.0859466666666666,0.00113166383302532
+fig13_halves_vs_size,FR_V2,5,non-PT (different neurons),0.0272666666666667,0.000959266862826044
+fig13_halves_vs_size,FR_V2,10,non-PT (different neurons),0.0304,0.000975926140048087
+fig13_halves_vs_size,FR_V2,20,non-PT (different neurons),0.0353666666666666,0.0010731707311932
+fig13_halves_vs_size,FR_V2,24,non-PT (different neurons),0.0365,0.00114823665346214
+fig13_halves_vs_size,FR_V2,30,non-PT (different neurons),0.0373666666666666,0.00111078004713555
+fig13_halves_vs_size,FR_V2,40,non-PT (different neurons),0.0441666666666666,0.00121434494632856
+fig13_halves_vs_size,FR_V2,50,non-PT (different neurons),0.0455333333333333,0.00121942784385542
+fig13_halves_vs_size,FR_V2,56,non-PT (different neurons),0.0499666666666666,0.00126596574344943
