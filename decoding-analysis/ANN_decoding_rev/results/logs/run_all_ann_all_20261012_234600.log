@@ -1,0 +1,882 @@
+run_all_ann('all') started 2026-10-12 23:46:00 on DESKTOP-3OBL0M0
+Log: D:\Github repos\cue-invariant-population-geometry\decoding-analysis\ANN_decoding_rev\code\decoding_scripts\..\..\results\logs\run_all_ann_all_20261012_234600.log
+
+  job 1/3  run_ann_cue_transfer_incremental   cue transfer vs units, 8 layers (Fig 3d, 4d)         ~9.5 h
+  job 2/3  run_ann_hierarchy                  AlexNet pool2 <-> pool5                              ~0.2 h
+  job 3/3  run_ann_pc_sweep                   PC sweep: cue transfer and hierarchy                 ~1.7 h
+  total ~11.4 h at the 2026-10-12 speed (8 workers)
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+Parallel pool: 8 workers
+
+################ job 1/3: cue transfer vs units, 8 layers (Fig 3d, 4d) (run_ann_cue_transfer_incremental) | started 2026-10-12 23:46:35 ################
+
+===== AlexNet pool1 (96 units; constant within AC/EC/EX: [0 3 0]): N = [10 20 40 64 80 96] | 20 draws, 10 folds, 10 permutations =====
+[AlexNet pool1] point 1/6: N = 10, 20 draws x 6 pairs = 120 calls
+    AlexNet pool1 N = 10: 12/120 calls ( 10%) | 1.4 min elapsed, ~12.3 min left
+    AlexNet pool1 N = 10: 24/120 calls ( 20%) | 1.9 min elapsed, ~7.6 min left
+    AlexNet pool1 N = 10: 36/120 calls ( 30%) | 2.9 min elapsed, ~6.8 min left
+    AlexNet pool1 N = 10: 48/120 calls ( 40%) | 3.4 min elapsed, ~5.1 min left
+    AlexNet pool1 N = 10: 60/120 calls ( 50%) | 4.4 min elapsed, ~4.4 min left
+    AlexNet pool1 N = 10: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.3 min left
+    AlexNet pool1 N = 10: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    AlexNet pool1 N = 10: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    AlexNet pool1 N = 10: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    AlexNet pool1 N = 10: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[AlexNet pool1] N =  10 (20 draws): self 0.951  nonPT 0.058  PT 0.116  ctrl 0.077  PT/ctrl 1.50  headroom 0.04  PR 5.3 | 483 s | AlexNet pool1: ~0.5 h left
+[AlexNet pool1] point 2/6: N = 20, 20 draws x 6 pairs = 120 calls
+    AlexNet pool1 N = 20: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.6 min left
+    AlexNet pool1 N = 20: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.3 min left
+    AlexNet pool1 N = 20: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.1 min left
+    AlexNet pool1 N = 20: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    AlexNet pool1 N = 20: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    AlexNet pool1 N = 20: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.1 min left
+    AlexNet pool1 N = 20: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    AlexNet pool1 N = 20: 96/120 calls ( 80%) | 6.3 min elapsed, ~1.6 min left
+    AlexNet pool1 N = 20: 108/120 calls ( 90%) | 7.3 min elapsed, ~0.8 min left
+    AlexNet pool1 N = 20: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[AlexNet pool1] N =  20 (20 draws): self 0.984  nonPT 0.077  PT 0.254  ctrl 0.176  PT/ctrl 1.45  headroom 0.10  PR 7.0 | 472 s | AlexNet pool1: ~0.4 h left
+[AlexNet pool1] point 3/6: N = 40, 20 draws x 6 pairs = 120 calls
+    AlexNet pool1 N = 40: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.7 min left
+    AlexNet pool1 N = 40: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    AlexNet pool1 N = 40: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    AlexNet pool1 N = 40: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.9 min left
+    AlexNet pool1 N = 40: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    AlexNet pool1 N = 40: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    AlexNet pool1 N = 40: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    AlexNet pool1 N = 40: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    AlexNet pool1 N = 40: 108/120 calls ( 90%) | 7.3 min elapsed, ~0.8 min left
+    AlexNet pool1 N = 40: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[AlexNet pool1] N =  40 (20 draws): self 0.996  nonPT 0.095  PT 0.519  ctrl 0.403  PT/ctrl 1.29  headroom 0.20  PR 8.3 | 473 s | AlexNet pool1: ~0.3 h left
+[AlexNet pool1] point 4/6: N = 64, 20 draws x 6 pairs = 120 calls
+    AlexNet pool1 N = 64: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.6 min left
+    AlexNet pool1 N = 64: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    AlexNet pool1 N = 64: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.2 min left
+    AlexNet pool1 N = 64: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    AlexNet pool1 N = 64: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    AlexNet pool1 N = 64: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    AlexNet pool1 N = 64: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    AlexNet pool1 N = 64: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    AlexNet pool1 N = 64: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    AlexNet pool1 N = 64: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[AlexNet pool1] N =  64 (20 draws): self 0.998  nonPT 0.114  PT 0.676  ctrl 0.567  PT/ctrl 1.19  headroom 0.25  PR 9.0 | 476 s | AlexNet pool1: ~0.1 h left
+[AlexNet pool1] point 5/6: N = 80, 20 draws x 6 pairs = 120 calls
+    AlexNet pool1 N = 80: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.7 min left
+    AlexNet pool1 N = 80: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    AlexNet pool1 N = 80: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    AlexNet pool1 N = 80: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    AlexNet pool1 N = 80: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    AlexNet pool1 N = 80: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    AlexNet pool1 N = 80: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    AlexNet pool1 N = 80: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    AlexNet pool1 N = 80: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    AlexNet pool1 N = 80: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[AlexNet pool1] N =  80 (20 draws): self 0.998  nonPT 0.123  PT 0.722  ctrl 0.629  PT/ctrl 1.15  headroom 0.25  PR 9.2 | 483 s | AlexNet pool1: ~0.0 h left
+[AlexNet pool1] point 6/6: N = 96, 1 draws x 6 pairs = 6 calls
+    AlexNet pool1 N = 96: 1/6 calls ( 17%) | 0.5 min elapsed, ~2.3 min left
+    AlexNet pool1 N = 96: 2/6 calls ( 33%) | 0.5 min elapsed, ~1.0 min left
+    AlexNet pool1 N = 96: 3/6 calls ( 50%) | 0.5 min elapsed, ~0.5 min left
+    AlexNet pool1 N = 96: 4/6 calls ( 67%) | 0.5 min elapsed, ~0.2 min left
+    AlexNet pool1 N = 96: 5/6 calls ( 83%) | 0.5 min elapsed, ~0.1 min left
+    AlexNet pool1 N = 96: 6/6 calls (100%) | 0.5 min elapsed, ~0.0 min left
+[AlexNet pool1] N =  96 ( 1 draws): self 0.999  nonPT 0.133  PT 0.750  ctrl 0.669  PT/ctrl 1.12  headroom 0.24  PR 9.4 | 29 s | AlexNet pool1: ~0.0 h left
+
+===== AlexNet pool2 (250 units; constant within AC/EC/EX: [23 8 6]): N = [10 20 40 64 80 96 160 250] | 20 draws, 10 folds, 10 permutations =====
+[AlexNet pool2] point 1/8: N = 10, 20 draws x 6 pairs = 120 calls
+    AlexNet pool2 N = 10: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.0 min left
+    AlexNet pool2 N = 10: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.0 min left
+    AlexNet pool2 N = 10: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.8 min left
+    AlexNet pool2 N = 10: 48/120 calls ( 40%) | 3.0 min elapsed, ~4.5 min left
+    AlexNet pool2 N = 10: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    AlexNet pool2 N = 10: 72/120 calls ( 60%) | 4.5 min elapsed, ~3.0 min left
+    AlexNet pool2 N = 10: 84/120 calls ( 70%) | 5.5 min elapsed, ~2.4 min left
+    AlexNet pool2 N = 10: 96/120 calls ( 80%) | 6.0 min elapsed, ~1.5 min left
+    AlexNet pool2 N = 10: 108/120 calls ( 90%) | 7.0 min elapsed, ~0.8 min left
+    AlexNet pool2 N = 10: 120/120 calls (100%) | 7.5 min elapsed, ~0.0 min left
+[AlexNet pool2] N =  10 (20 draws): self 0.956  nonPT 0.049  PT 0.107  ctrl 0.084  PT/ctrl 1.27  headroom 0.03  PR 6.2 | 451 s | AlexNet pool2: ~0.8 h left
+[AlexNet pool2] point 2/8: N = 20, 20 draws x 6 pairs = 120 calls
+    AlexNet pool2 N = 20: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.1 min left
+    AlexNet pool2 N = 20: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    AlexNet pool2 N = 20: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    AlexNet pool2 N = 20: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.6 min left
+    AlexNet pool2 N = 20: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    AlexNet pool2 N = 20: 72/120 calls ( 60%) | 4.6 min elapsed, ~3.1 min left
+    AlexNet pool2 N = 20: 84/120 calls ( 70%) | 5.6 min elapsed, ~2.4 min left
+    AlexNet pool2 N = 20: 96/120 calls ( 80%) | 6.1 min elapsed, ~1.5 min left
+    AlexNet pool2 N = 20: 108/120 calls ( 90%) | 7.1 min elapsed, ~0.8 min left
+    AlexNet pool2 N = 20: 120/120 calls (100%) | 7.6 min elapsed, ~0.0 min left
+[AlexNet pool2] N =  20 (20 draws): self 0.991  nonPT 0.067  PT 0.285  ctrl 0.223  PT/ctrl 1.28  headroom 0.08  PR 9.3 | 458 s | AlexNet pool2: ~0.6 h left
+[AlexNet pool2] point 3/8: N = 40, 20 draws x 6 pairs = 120 calls
+    AlexNet pool2 N = 40: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.3 min left
+    AlexNet pool2 N = 40: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.2 min left
+    AlexNet pool2 N = 40: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.1 min left
+    AlexNet pool2 N = 40: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.7 min left
+    AlexNet pool2 N = 40: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    AlexNet pool2 N = 40: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.1 min left
+    AlexNet pool2 N = 40: 84/120 calls ( 70%) | 5.7 min elapsed, ~2.4 min left
+    AlexNet pool2 N = 40: 96/120 calls ( 80%) | 6.2 min elapsed, ~1.6 min left
+    AlexNet pool2 N = 40: 108/120 calls ( 90%) | 7.2 min elapsed, ~0.8 min left
+    AlexNet pool2 N = 40: 120/120 calls (100%) | 7.7 min elapsed, ~0.0 min left
+[AlexNet pool2] N =  40 (20 draws): self 0.998  nonPT 0.093  PT 0.648  ctrl 0.559  PT/ctrl 1.16  headroom 0.20  PR 12.3 | 465 s | AlexNet pool2: ~0.5 h left
+[AlexNet pool2] point 4/8: N = 64, 20 draws x 6 pairs = 120 calls
+    AlexNet pool2 N = 64: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.5 min left
+    AlexNet pool2 N = 64: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.3 min left
+    AlexNet pool2 N = 64: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.2 min left
+    AlexNet pool2 N = 64: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    AlexNet pool2 N = 64: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    AlexNet pool2 N = 64: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    AlexNet pool2 N = 64: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    AlexNet pool2 N = 64: 96/120 calls ( 80%) | 6.3 min elapsed, ~1.6 min left
+    AlexNet pool2 N = 64: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    AlexNet pool2 N = 64: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[AlexNet pool2] N =  64 (20 draws): self 0.999  nonPT 0.102  PT 0.818  ctrl 0.758  PT/ctrl 1.08  headroom 0.25  PR 13.7 | 475 s | AlexNet pool2: ~0.4 h left
+[AlexNet pool2] point 5/8: N = 80, 20 draws x 6 pairs = 120 calls
+    AlexNet pool2 N = 80: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.6 min left
+    AlexNet pool2 N = 80: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    AlexNet pool2 N = 80: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.2 min left
+    AlexNet pool2 N = 80: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    AlexNet pool2 N = 80: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    AlexNet pool2 N = 80: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    AlexNet pool2 N = 80: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    AlexNet pool2 N = 80: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    AlexNet pool2 N = 80: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    AlexNet pool2 N = 80: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[AlexNet pool2] N =  80 (20 draws): self 0.999  nonPT 0.112  PT 0.863  ctrl 0.815  PT/ctrl 1.06  headroom 0.26  PR 14.5 | 481 s | AlexNet pool2: ~0.3 h left
+[AlexNet pool2] point 6/8: N = 96, 20 draws x 6 pairs = 120 calls
+    AlexNet pool2 N = 96: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.8 min left
+    AlexNet pool2 N = 96: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    AlexNet pool2 N = 96: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    AlexNet pool2 N = 96: 48/120 calls ( 40%) | 3.3 min elapsed, ~4.9 min left
+    AlexNet pool2 N = 96: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    AlexNet pool2 N = 96: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.3 min left
+    AlexNet pool2 N = 96: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    AlexNet pool2 N = 96: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    AlexNet pool2 N = 96: 108/120 calls ( 90%) | 7.6 min elapsed, ~0.8 min left
+    AlexNet pool2 N = 96: 120/120 calls (100%) | 8.1 min elapsed, ~0.0 min left
+[AlexNet pool2] N =  96 (20 draws): self 1.000  nonPT 0.113  PT 0.898  ctrl 0.856  PT/ctrl 1.05  headroom 0.29  PR 14.9 | 488 s | AlexNet pool2: ~0.1 h left
+[AlexNet pool2] point 7/8: N = 160, 20 draws x 6 pairs = 120 calls
+    AlexNet pool2 N = 160: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.3 min left
+    AlexNet pool2 N = 160: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.9 min left
+    AlexNet pool2 N = 160: 36/120 calls ( 30%) | 2.9 min elapsed, ~6.7 min left
+    AlexNet pool2 N = 160: 48/120 calls ( 40%) | 3.4 min elapsed, ~5.2 min left
+    AlexNet pool2 N = 160: 60/120 calls ( 50%) | 4.6 min elapsed, ~4.6 min left
+    AlexNet pool2 N = 160: 72/120 calls ( 60%) | 5.2 min elapsed, ~3.4 min left
+    AlexNet pool2 N = 160: 84/120 calls ( 70%) | 6.3 min elapsed, ~2.7 min left
+    AlexNet pool2 N = 160: 96/120 calls ( 80%) | 6.9 min elapsed, ~1.7 min left
+    AlexNet pool2 N = 160: 108/120 calls ( 90%) | 8.0 min elapsed, ~0.9 min left
+    AlexNet pool2 N = 160: 120/120 calls (100%) | 8.6 min elapsed, ~0.0 min left
+[AlexNet pool2] N = 160 (20 draws): self 1.000  nonPT 0.133  PT 0.944  ctrl 0.921  PT/ctrl 1.02  headroom 0.29  PR 16.0 | 516 s | AlexNet pool2: ~0.0 h left
+[AlexNet pool2] point 8/8: N = 250, 1 draws x 6 pairs = 6 calls
+    AlexNet pool2 N = 250: 1/6 calls ( 17%) | 0.5 min elapsed, ~2.7 min left
+    AlexNet pool2 N = 250: 2/6 calls ( 33%) | 0.6 min elapsed, ~1.1 min left
+    AlexNet pool2 N = 250: 3/6 calls ( 50%) | 0.6 min elapsed, ~0.6 min left
+    AlexNet pool2 N = 250: 4/6 calls ( 67%) | 0.6 min elapsed, ~0.3 min left
+    AlexNet pool2 N = 250: 5/6 calls ( 83%) | 0.6 min elapsed, ~0.1 min left
+    AlexNet pool2 N = 250: 6/6 calls (100%) | 0.6 min elapsed, ~0.0 min left
+[AlexNet pool2] N = 250 ( 1 draws): self 1.000  nonPT 0.158  PT 0.957  ctrl 0.946  PT/ctrl 1.01  headroom 0.19  PR 16.7 | 34 s | AlexNet pool2: ~0.0 h left
+
+===== AlexNet pool5 (249 units; constant within AC/EC/EX: [89 67 13]): N = [10 20 40 64 80 96 160 249] | 20 draws, 10 folds, 10 permutations =====
+[AlexNet pool5] point 1/8: N = 10, 20 draws x 6 pairs = 120 calls
+    AlexNet pool5 N = 10: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.0 min left
+    AlexNet pool5 N = 10: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.0 min left
+    AlexNet pool5 N = 10: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    AlexNet pool5 N = 10: 48/120 calls ( 40%) | 3.0 min elapsed, ~4.5 min left
+    AlexNet pool5 N = 10: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    AlexNet pool5 N = 10: 72/120 calls ( 60%) | 4.5 min elapsed, ~3.0 min left
+    AlexNet pool5 N = 10: 84/120 calls ( 70%) | 5.5 min elapsed, ~2.4 min left
+    AlexNet pool5 N = 10: 96/120 calls ( 80%) | 6.0 min elapsed, ~1.5 min left
+    AlexNet pool5 N = 10: 108/120 calls ( 90%) | 7.0 min elapsed, ~0.8 min left
+    AlexNet pool5 N = 10: 120/120 calls (100%) | 7.5 min elapsed, ~0.0 min left
+[AlexNet pool5] N =  10 (20 draws): self 0.485  nonPT 0.027  PT 0.067  ctrl 0.059  PT/ctrl 1.14  headroom 0.02  PR 5.7 | 450 s | AlexNet pool5: ~0.8 h left
+[AlexNet pool5] point 2/8: N = 20, 20 draws x 6 pairs = 120 calls
+    AlexNet pool5 N = 20: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.2 min left
+    AlexNet pool5 N = 20: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    AlexNet pool5 N = 20: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    AlexNet pool5 N = 20: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.6 min left
+    AlexNet pool5 N = 20: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    AlexNet pool5 N = 20: 72/120 calls ( 60%) | 4.6 min elapsed, ~3.1 min left
+    AlexNet pool5 N = 20: 84/120 calls ( 70%) | 5.6 min elapsed, ~2.4 min left
+    AlexNet pool5 N = 20: 96/120 calls ( 80%) | 6.1 min elapsed, ~1.5 min left
+    AlexNet pool5 N = 20: 108/120 calls ( 90%) | 7.1 min elapsed, ~0.8 min left
+    AlexNet pool5 N = 20: 120/120 calls (100%) | 7.6 min elapsed, ~0.0 min left
+[AlexNet pool5] N =  20 (20 draws): self 0.750  nonPT 0.033  PT 0.160  ctrl 0.139  PT/ctrl 1.15  headroom 0.03  PR 9.2 | 456 s | AlexNet pool5: ~0.6 h left
+[AlexNet pool5] point 3/8: N = 40, 20 draws x 6 pairs = 120 calls
+    AlexNet pool5 N = 40: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.3 min left
+    AlexNet pool5 N = 40: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.2 min left
+    AlexNet pool5 N = 40: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.0 min left
+    AlexNet pool5 N = 40: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.7 min left
+    AlexNet pool5 N = 40: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    AlexNet pool5 N = 40: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.1 min left
+    AlexNet pool5 N = 40: 84/120 calls ( 70%) | 5.7 min elapsed, ~2.4 min left
+    AlexNet pool5 N = 40: 96/120 calls ( 80%) | 6.2 min elapsed, ~1.6 min left
+    AlexNet pool5 N = 40: 108/120 calls ( 90%) | 7.3 min elapsed, ~0.8 min left
+    AlexNet pool5 N = 40: 120/120 calls (100%) | 7.7 min elapsed, ~0.0 min left
+[AlexNet pool5] N =  40 (20 draws): self 0.893  nonPT 0.041  PT 0.338  ctrl 0.316  PT/ctrl 1.07  headroom 0.04  PR 13.5 | 466 s | AlexNet pool5: ~0.5 h left
+[AlexNet pool5] point 4/8: N = 64, 20 draws x 6 pairs = 120 calls
+    AlexNet pool5 N = 64: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.5 min left
+    AlexNet pool5 N = 64: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    AlexNet pool5 N = 64: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.2 min left
+    AlexNet pool5 N = 64: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    AlexNet pool5 N = 64: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    AlexNet pool5 N = 64: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    AlexNet pool5 N = 64: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    AlexNet pool5 N = 64: 96/120 calls ( 80%) | 6.3 min elapsed, ~1.6 min left
+    AlexNet pool5 N = 64: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    AlexNet pool5 N = 64: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[AlexNet pool5] N =  64 (20 draws): self 0.943  nonPT 0.045  PT 0.513  ctrl 0.488  PT/ctrl 1.05  headroom 0.06  PR 15.9 | 474 s | AlexNet pool5: ~0.4 h left
+[AlexNet pool5] point 5/8: N = 80, 20 draws x 6 pairs = 120 calls
+    AlexNet pool5 N = 80: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.7 min left
+    AlexNet pool5 N = 80: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    AlexNet pool5 N = 80: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.2 min left
+    AlexNet pool5 N = 80: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    AlexNet pool5 N = 80: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    AlexNet pool5 N = 80: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    AlexNet pool5 N = 80: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    AlexNet pool5 N = 80: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    AlexNet pool5 N = 80: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    AlexNet pool5 N = 80: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[AlexNet pool5] N =  80 (20 draws): self 0.957  nonPT 0.045  PT 0.593  ctrl 0.563  PT/ctrl 1.05  headroom 0.08  PR 17.2 | 481 s | AlexNet pool5: ~0.3 h left
+[AlexNet pool5] point 6/8: N = 96, 20 draws x 6 pairs = 120 calls
+    AlexNet pool5 N = 96: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.8 min left
+    AlexNet pool5 N = 96: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    AlexNet pool5 N = 96: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    AlexNet pool5 N = 96: 48/120 calls ( 40%) | 3.3 min elapsed, ~4.9 min left
+    AlexNet pool5 N = 96: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    AlexNet pool5 N = 96: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.3 min left
+    AlexNet pool5 N = 96: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    AlexNet pool5 N = 96: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    AlexNet pool5 N = 96: 108/120 calls ( 90%) | 7.6 min elapsed, ~0.8 min left
+    AlexNet pool5 N = 96: 120/120 calls (100%) | 8.1 min elapsed, ~0.0 min left
+[AlexNet pool5] N =  96 (20 draws): self 0.963  nonPT 0.041  PT 0.639  ctrl 0.610  PT/ctrl 1.05  headroom 0.08  PR 17.6 | 488 s | AlexNet pool5: ~0.1 h left
+[AlexNet pool5] point 7/8: N = 160, 20 draws x 6 pairs = 120 calls
+    AlexNet pool5 N = 160: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.3 min left
+    AlexNet pool5 N = 160: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.9 min left
+    AlexNet pool5 N = 160: 36/120 calls ( 30%) | 2.8 min elapsed, ~6.6 min left
+    AlexNet pool5 N = 160: 48/120 calls ( 40%) | 3.4 min elapsed, ~5.1 min left
+    AlexNet pool5 N = 160: 60/120 calls ( 50%) | 4.6 min elapsed, ~4.6 min left
+    AlexNet pool5 N = 160: 72/120 calls ( 60%) | 5.1 min elapsed, ~3.4 min left
+    AlexNet pool5 N = 160: 84/120 calls ( 70%) | 6.3 min elapsed, ~2.7 min left
+    AlexNet pool5 N = 160: 96/120 calls ( 80%) | 6.9 min elapsed, ~1.7 min left
+    AlexNet pool5 N = 160: 108/120 calls ( 90%) | 8.0 min elapsed, ~0.9 min left
+    AlexNet pool5 N = 160: 120/120 calls (100%) | 8.5 min elapsed, ~0.0 min left
+[AlexNet pool5] N = 160 (20 draws): self 0.979  nonPT 0.042  PT 0.744  ctrl 0.703  PT/ctrl 1.06  headroom 0.15  PR 19.7 | 514 s | AlexNet pool5: ~0.0 h left
+[AlexNet pool5] point 8/8: N = 249, 1 draws x 6 pairs = 6 calls
+    AlexNet pool5 N = 249: 1/6 calls ( 17%) | 0.6 min elapsed, ~2.8 min left
+    AlexNet pool5 N = 249: 2/6 calls ( 33%) | 0.6 min elapsed, ~1.1 min left
+    AlexNet pool5 N = 249: 3/6 calls ( 50%) | 0.6 min elapsed, ~0.6 min left
+    AlexNet pool5 N = 249: 4/6 calls ( 67%) | 0.6 min elapsed, ~0.3 min left
+    AlexNet pool5 N = 249: 5/6 calls ( 83%) | 0.6 min elapsed, ~0.1 min left
+    AlexNet pool5 N = 249: 6/6 calls (100%) | 0.6 min elapsed, ~0.0 min left
+[AlexNet pool5] N = 249 ( 1 draws): self 0.986  nonPT 0.036  PT 0.809  ctrl 0.750  PT/ctrl 1.08  headroom 0.25  PR 20.8 | 34 s | AlexNet pool5: ~0.0 h left
+
+===== VGG pool1 (64 units; constant within AC/EC/EX: [1 5 0]): N = [10 20 40 64] | 20 draws, 10 folds, 10 permutations =====
+[VGG pool1] point 1/4: N = 10, 20 draws x 6 pairs = 120 calls
+    VGG pool1 N = 10: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.1 min left
+    VGG pool1 N = 10: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    VGG pool1 N = 10: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool1 N = 10: 48/120 calls ( 40%) | 3.0 min elapsed, ~4.5 min left
+    VGG pool1 N = 10: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    VGG pool1 N = 10: 72/120 calls ( 60%) | 4.5 min elapsed, ~3.0 min left
+    VGG pool1 N = 10: 84/120 calls ( 70%) | 5.5 min elapsed, ~2.4 min left
+    VGG pool1 N = 10: 96/120 calls ( 80%) | 6.0 min elapsed, ~1.5 min left
+    VGG pool1 N = 10: 108/120 calls ( 90%) | 7.0 min elapsed, ~0.8 min left
+    VGG pool1 N = 10: 120/120 calls (100%) | 7.5 min elapsed, ~0.0 min left
+[VGG pool1] N =  10 (20 draws): self 0.961  nonPT 0.026  PT 0.066  ctrl 0.056  PT/ctrl 1.17  headroom 0.01  PR 3.2 | 451 s | VGG pool1: ~0.3 h left
+[VGG pool1] point 2/4: N = 20, 20 draws x 6 pairs = 120 calls
+    VGG pool1 N = 20: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.2 min left
+    VGG pool1 N = 20: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.2 min left
+    VGG pool1 N = 20: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool1 N = 20: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.6 min left
+    VGG pool1 N = 20: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    VGG pool1 N = 20: 72/120 calls ( 60%) | 4.6 min elapsed, ~3.1 min left
+    VGG pool1 N = 20: 84/120 calls ( 70%) | 5.6 min elapsed, ~2.4 min left
+    VGG pool1 N = 20: 96/120 calls ( 80%) | 6.1 min elapsed, ~1.5 min left
+    VGG pool1 N = 20: 108/120 calls ( 90%) | 7.1 min elapsed, ~0.8 min left
+    VGG pool1 N = 20: 120/120 calls (100%) | 7.6 min elapsed, ~0.0 min left
+[VGG pool1] N =  20 (20 draws): self 0.987  nonPT 0.026  PT 0.120  ctrl 0.095  PT/ctrl 1.27  headroom 0.03  PR 4.1 | 457 s | VGG pool1: ~0.1 h left
+[VGG pool1] point 3/4: N = 40, 20 draws x 6 pairs = 120 calls
+    VGG pool1 N = 40: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.4 min left
+    VGG pool1 N = 40: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.2 min left
+    VGG pool1 N = 40: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.0 min left
+    VGG pool1 N = 40: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.7 min left
+    VGG pool1 N = 40: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    VGG pool1 N = 40: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.1 min left
+    VGG pool1 N = 40: 84/120 calls ( 70%) | 5.7 min elapsed, ~2.4 min left
+    VGG pool1 N = 40: 96/120 calls ( 80%) | 6.2 min elapsed, ~1.6 min left
+    VGG pool1 N = 40: 108/120 calls ( 90%) | 7.2 min elapsed, ~0.8 min left
+    VGG pool1 N = 40: 120/120 calls (100%) | 7.7 min elapsed, ~0.0 min left
+[VGG pool1] N =  40 (20 draws): self 0.995  nonPT 0.031  PT 0.192  ctrl 0.141  PT/ctrl 1.37  headroom 0.06  PR 4.6 | 465 s | VGG pool1: ~0.0 h left
+[VGG pool1] point 4/4: N = 64, 1 draws x 6 pairs = 6 calls
+    VGG pool1 N = 64: 1/6 calls ( 17%) | 0.5 min elapsed, ~2.3 min left
+    VGG pool1 N = 64: 2/6 calls ( 33%) | 0.5 min elapsed, ~0.9 min left
+    VGG pool1 N = 64: 3/6 calls ( 50%) | 0.5 min elapsed, ~0.5 min left
+    VGG pool1 N = 64: 4/6 calls ( 67%) | 0.5 min elapsed, ~0.2 min left
+    VGG pool1 N = 64: 5/6 calls ( 83%) | 0.5 min elapsed, ~0.1 min left
+    VGG pool1 N = 64: 6/6 calls (100%) | 0.5 min elapsed, ~0.0 min left
+[VGG pool1] N =  64 ( 1 draws): self 0.999  nonPT 0.030  PT 0.224  ctrl 0.166  PT/ctrl 1.34  headroom 0.07  PR 4.6 | 28 s | VGG pool1: ~0.0 h left
+
+===== VGG pool2 (128 units; constant within AC/EC/EX: [0 1 0]): N = [10 20 40 64 80 96 128] | 20 draws, 10 folds, 10 permutations =====
+[VGG pool2] point 1/7: N = 10, 20 draws x 6 pairs = 120 calls
+    VGG pool2 N = 10: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.1 min left
+    VGG pool2 N = 10: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    VGG pool2 N = 10: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool2 N = 10: 48/120 calls ( 40%) | 3.0 min elapsed, ~4.5 min left
+    VGG pool2 N = 10: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    VGG pool2 N = 10: 72/120 calls ( 60%) | 4.5 min elapsed, ~3.0 min left
+    VGG pool2 N = 10: 84/120 calls ( 70%) | 5.5 min elapsed, ~2.4 min left
+    VGG pool2 N = 10: 96/120 calls ( 80%) | 6.0 min elapsed, ~1.5 min left
+    VGG pool2 N = 10: 108/120 calls ( 90%) | 7.0 min elapsed, ~0.8 min left
+    VGG pool2 N = 10: 120/120 calls (100%) | 7.5 min elapsed, ~0.0 min left
+[VGG pool2] N =  10 (20 draws): self 0.998  nonPT 0.039  PT 0.101  ctrl 0.083  PT/ctrl 1.21  headroom 0.02  PR 6.0 | 451 s | VGG pool2: ~0.6 h left
+[VGG pool2] point 2/7: N = 20, 20 draws x 6 pairs = 120 calls
+    VGG pool2 N = 20: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.2 min left
+    VGG pool2 N = 20: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    VGG pool2 N = 20: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool2 N = 20: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.6 min left
+    VGG pool2 N = 20: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    VGG pool2 N = 20: 72/120 calls ( 60%) | 4.6 min elapsed, ~3.1 min left
+    VGG pool2 N = 20: 84/120 calls ( 70%) | 5.6 min elapsed, ~2.4 min left
+    VGG pool2 N = 20: 96/120 calls ( 80%) | 6.1 min elapsed, ~1.5 min left
+    VGG pool2 N = 20: 108/120 calls ( 90%) | 7.1 min elapsed, ~0.8 min left
+    VGG pool2 N = 20: 120/120 calls (100%) | 7.6 min elapsed, ~0.0 min left
+[VGG pool2] N =  20 (20 draws): self 1.000  nonPT 0.037  PT 0.239  ctrl 0.195  PT/ctrl 1.23  headroom 0.05  PR 8.1 | 456 s | VGG pool2: ~0.5 h left
+[VGG pool2] point 3/7: N = 40, 20 draws x 6 pairs = 120 calls
+    VGG pool2 N = 40: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.3 min left
+    VGG pool2 N = 40: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.2 min left
+    VGG pool2 N = 40: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.0 min left
+    VGG pool2 N = 40: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.7 min left
+    VGG pool2 N = 40: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    VGG pool2 N = 40: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.1 min left
+    VGG pool2 N = 40: 84/120 calls ( 70%) | 5.7 min elapsed, ~2.4 min left
+    VGG pool2 N = 40: 96/120 calls ( 80%) | 6.2 min elapsed, ~1.6 min left
+    VGG pool2 N = 40: 108/120 calls ( 90%) | 7.2 min elapsed, ~0.8 min left
+    VGG pool2 N = 40: 120/120 calls (100%) | 7.7 min elapsed, ~0.0 min left
+[VGG pool2] N =  40 (20 draws): self 1.000  nonPT 0.041  PT 0.450  ctrl 0.388  PT/ctrl 1.16  headroom 0.10  PR 10.1 | 465 s | VGG pool2: ~0.4 h left
+[VGG pool2] point 4/7: N = 64, 20 draws x 6 pairs = 120 calls
+    VGG pool2 N = 64: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.5 min left
+    VGG pool2 N = 64: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    VGG pool2 N = 64: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.2 min left
+    VGG pool2 N = 64: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    VGG pool2 N = 64: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    VGG pool2 N = 64: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    VGG pool2 N = 64: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    VGG pool2 N = 64: 96/120 calls ( 80%) | 6.3 min elapsed, ~1.6 min left
+    VGG pool2 N = 64: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    VGG pool2 N = 64: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[VGG pool2] N =  64 (20 draws): self 1.000  nonPT 0.042  PT 0.592  ctrl 0.520  PT/ctrl 1.14  headroom 0.15  PR 10.9 | 475 s | VGG pool2: ~0.3 h left
+[VGG pool2] point 5/7: N = 80, 20 draws x 6 pairs = 120 calls
+    VGG pool2 N = 80: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.6 min left
+    VGG pool2 N = 80: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    VGG pool2 N = 80: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.2 min left
+    VGG pool2 N = 80: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    VGG pool2 N = 80: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    VGG pool2 N = 80: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    VGG pool2 N = 80: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    VGG pool2 N = 80: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    VGG pool2 N = 80: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    VGG pool2 N = 80: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[VGG pool2] N =  80 (20 draws): self 1.000  nonPT 0.035  PT 0.637  ctrl 0.564  PT/ctrl 1.13  headroom 0.17  PR 11.3 | 480 s | VGG pool2: ~0.1 h left
+[VGG pool2] point 6/7: N = 96, 20 draws x 6 pairs = 120 calls
+    VGG pool2 N = 96: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.8 min left
+    VGG pool2 N = 96: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    VGG pool2 N = 96: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    VGG pool2 N = 96: 48/120 calls ( 40%) | 3.3 min elapsed, ~4.9 min left
+    VGG pool2 N = 96: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    VGG pool2 N = 96: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.3 min left
+    VGG pool2 N = 96: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    VGG pool2 N = 96: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    VGG pool2 N = 96: 108/120 calls ( 90%) | 7.6 min elapsed, ~0.8 min left
+    VGG pool2 N = 96: 120/120 calls (100%) | 8.1 min elapsed, ~0.0 min left
+[VGG pool2] N =  96 (20 draws): self 1.000  nonPT 0.036  PT 0.675  ctrl 0.607  PT/ctrl 1.11  headroom 0.17  PR 11.6 | 488 s | VGG pool2: ~0.0 h left
+[VGG pool2] point 7/7: N = 128, 1 draws x 6 pairs = 6 calls
+    VGG pool2 N = 128: 1/6 calls ( 17%) | 0.5 min elapsed, ~2.4 min left
+    VGG pool2 N = 128: 2/6 calls ( 33%) | 0.5 min elapsed, ~1.0 min left
+    VGG pool2 N = 128: 3/6 calls ( 50%) | 0.5 min elapsed, ~0.5 min left
+    VGG pool2 N = 128: 4/6 calls ( 67%) | 0.5 min elapsed, ~0.2 min left
+    VGG pool2 N = 128: 5/6 calls ( 83%) | 0.5 min elapsed, ~0.1 min left
+    VGG pool2 N = 128: 6/6 calls (100%) | 0.5 min elapsed, ~0.0 min left
+[VGG pool2] N = 128 ( 1 draws): self 1.000  nonPT 0.033  PT 0.718  ctrl 0.645  PT/ctrl 1.11  headroom 0.21  PR 12.0 | 30 s | VGG pool2: ~0.0 h left
+
+===== VGG pool3 (256 units; constant within AC/EC/EX: [4 2 0]): N = [10 20 40 64 80 96 160 256] | 20 draws, 10 folds, 10 permutations =====
+[VGG pool3] point 1/8: N = 10, 20 draws x 6 pairs = 120 calls
+    VGG pool3 N = 10: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.1 min left
+    VGG pool3 N = 10: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    VGG pool3 N = 10: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.8 min left
+    VGG pool3 N = 10: 48/120 calls ( 40%) | 3.0 min elapsed, ~4.5 min left
+    VGG pool3 N = 10: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    VGG pool3 N = 10: 72/120 calls ( 60%) | 4.5 min elapsed, ~3.0 min left
+    VGG pool3 N = 10: 84/120 calls ( 70%) | 5.5 min elapsed, ~2.3 min left
+    VGG pool3 N = 10: 96/120 calls ( 80%) | 6.0 min elapsed, ~1.5 min left
+    VGG pool3 N = 10: 108/120 calls ( 90%) | 7.0 min elapsed, ~0.8 min left
+    VGG pool3 N = 10: 120/120 calls (100%) | 7.5 min elapsed, ~0.0 min left
+[VGG pool3] N =  10 (20 draws): self 1.000  nonPT 0.055  PT 0.122  ctrl 0.084  PT/ctrl 1.45  headroom 0.04  PR 6.1 | 450 s | VGG pool3: ~0.8 h left
+[VGG pool3] point 2/8: N = 20, 20 draws x 6 pairs = 120 calls
+    VGG pool3 N = 20: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.1 min left
+    VGG pool3 N = 20: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    VGG pool3 N = 20: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool3 N = 20: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.6 min left
+    VGG pool3 N = 20: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    VGG pool3 N = 20: 72/120 calls ( 60%) | 4.6 min elapsed, ~3.1 min left
+    VGG pool3 N = 20: 84/120 calls ( 70%) | 5.6 min elapsed, ~2.4 min left
+    VGG pool3 N = 20: 96/120 calls ( 80%) | 6.1 min elapsed, ~1.5 min left
+    VGG pool3 N = 20: 108/120 calls ( 90%) | 7.1 min elapsed, ~0.8 min left
+    VGG pool3 N = 20: 120/120 calls (100%) | 7.6 min elapsed, ~0.0 min left
+[VGG pool3] N =  20 (20 draws): self 1.000  nonPT 0.060  PT 0.282  ctrl 0.209  PT/ctrl 1.35  headroom 0.09  PR 8.4 | 457 s | VGG pool3: ~0.6 h left
+[VGG pool3] point 3/8: N = 40, 20 draws x 6 pairs = 120 calls
+    VGG pool3 N = 40: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.3 min left
+    VGG pool3 N = 40: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.2 min left
+    VGG pool3 N = 40: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.0 min left
+    VGG pool3 N = 40: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.7 min left
+    VGG pool3 N = 40: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    VGG pool3 N = 40: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.1 min left
+    VGG pool3 N = 40: 84/120 calls ( 70%) | 5.7 min elapsed, ~2.4 min left
+    VGG pool3 N = 40: 96/120 calls ( 80%) | 6.2 min elapsed, ~1.6 min left
+    VGG pool3 N = 40: 108/120 calls ( 90%) | 7.2 min elapsed, ~0.8 min left
+    VGG pool3 N = 40: 120/120 calls (100%) | 7.7 min elapsed, ~0.0 min left
+[VGG pool3] N =  40 (20 draws): self 1.000  nonPT 0.071  PT 0.510  ctrl 0.429  PT/ctrl 1.19  headroom 0.14  PR 10.0 | 465 s | VGG pool3: ~0.5 h left
+[VGG pool3] point 4/8: N = 64, 20 draws x 6 pairs = 120 calls
+    VGG pool3 N = 64: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.6 min left
+    VGG pool3 N = 64: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    VGG pool3 N = 64: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.1 min left
+    VGG pool3 N = 64: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.7 min left
+    VGG pool3 N = 64: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    VGG pool3 N = 64: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.2 min left
+    VGG pool3 N = 64: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    VGG pool3 N = 64: 96/120 calls ( 80%) | 6.3 min elapsed, ~1.6 min left
+    VGG pool3 N = 64: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    VGG pool3 N = 64: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[VGG pool3] N =  64 (20 draws): self 1.000  nonPT 0.075  PT 0.653  ctrl 0.576  PT/ctrl 1.13  headroom 0.18  PR 11.1 | 473 s | VGG pool3: ~0.4 h left
+[VGG pool3] point 5/8: N = 80, 20 draws x 6 pairs = 120 calls
+    VGG pool3 N = 80: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.7 min left
+    VGG pool3 N = 80: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    VGG pool3 N = 80: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    VGG pool3 N = 80: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    VGG pool3 N = 80: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    VGG pool3 N = 80: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    VGG pool3 N = 80: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    VGG pool3 N = 80: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    VGG pool3 N = 80: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    VGG pool3 N = 80: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[VGG pool3] N =  80 (20 draws): self 1.000  nonPT 0.080  PT 0.720  ctrl 0.650  PT/ctrl 1.11  headroom 0.20  PR 11.8 | 482 s | VGG pool3: ~0.3 h left
+[VGG pool3] point 6/8: N = 96, 20 draws x 6 pairs = 120 calls
+    VGG pool3 N = 96: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.7 min left
+    VGG pool3 N = 96: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    VGG pool3 N = 96: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    VGG pool3 N = 96: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.9 min left
+    VGG pool3 N = 96: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    VGG pool3 N = 96: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.2 min left
+    VGG pool3 N = 96: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    VGG pool3 N = 96: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    VGG pool3 N = 96: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    VGG pool3 N = 96: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[VGG pool3] N =  96 (20 draws): self 1.000  nonPT 0.078  PT 0.751  ctrl 0.684  PT/ctrl 1.10  headroom 0.21  PR 11.9 | 484 s | VGG pool3: ~0.1 h left
+[VGG pool3] point 7/8: N = 160, 20 draws x 6 pairs = 120 calls
+    VGG pool3 N = 160: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.3 min left
+    VGG pool3 N = 160: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.9 min left
+    VGG pool3 N = 160: 36/120 calls ( 30%) | 2.9 min elapsed, ~6.7 min left
+    VGG pool3 N = 160: 48/120 calls ( 40%) | 3.4 min elapsed, ~5.1 min left
+    VGG pool3 N = 160: 60/120 calls ( 50%) | 4.6 min elapsed, ~4.6 min left
+    VGG pool3 N = 160: 72/120 calls ( 60%) | 5.1 min elapsed, ~3.4 min left
+    VGG pool3 N = 160: 84/120 calls ( 70%) | 6.3 min elapsed, ~2.7 min left
+    VGG pool3 N = 160: 96/120 calls ( 80%) | 6.9 min elapsed, ~1.7 min left
+    VGG pool3 N = 160: 108/120 calls ( 90%) | 8.0 min elapsed, ~0.9 min left
+    VGG pool3 N = 160: 120/120 calls (100%) | 8.6 min elapsed, ~0.0 min left
+[VGG pool3] N = 160 (20 draws): self 1.000  nonPT 0.075  PT 0.810  ctrl 0.756  PT/ctrl 1.07  headroom 0.22  PR 12.6 | 515 s | VGG pool3: ~0.0 h left
+[VGG pool3] point 8/8: N = 256, 1 draws x 6 pairs = 6 calls
+    VGG pool3 N = 256: 1/6 calls ( 17%) | 0.5 min elapsed, ~2.7 min left
+    VGG pool3 N = 256: 2/6 calls ( 33%) | 0.6 min elapsed, ~1.1 min left
+    VGG pool3 N = 256: 3/6 calls ( 50%) | 0.6 min elapsed, ~0.6 min left
+    VGG pool3 N = 256: 4/6 calls ( 67%) | 0.6 min elapsed, ~0.3 min left
+    VGG pool3 N = 256: 5/6 calls ( 83%) | 0.6 min elapsed, ~0.1 min left
+    VGG pool3 N = 256: 6/6 calls (100%) | 0.6 min elapsed, ~0.0 min left
+[VGG pool3] N = 256 ( 1 draws): self 1.000  nonPT 0.071  PT 0.838  ctrl 0.795  PT/ctrl 1.05  headroom 0.21  PR 12.9 | 34 s | VGG pool3: ~0.0 h left
+
+===== VGG pool4 (511 units; constant within AC/EC/EX: [52 47 2]): N = [10 20 40 64 80 96 160 320 511] | 20 draws, 10 folds, 10 permutations =====
+[VGG pool4] point 1/9: N = 10, 20 draws x 6 pairs = 120 calls
+    VGG pool4 N = 10: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.0 min left
+    VGG pool4 N = 10: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.0 min left
+    VGG pool4 N = 10: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool4 N = 10: 48/120 calls ( 40%) | 3.0 min elapsed, ~4.5 min left
+    VGG pool4 N = 10: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    VGG pool4 N = 10: 72/120 calls ( 60%) | 4.5 min elapsed, ~3.0 min left
+    VGG pool4 N = 10: 84/120 calls ( 70%) | 5.5 min elapsed, ~2.4 min left
+    VGG pool4 N = 10: 96/120 calls ( 80%) | 6.0 min elapsed, ~1.5 min left
+    VGG pool4 N = 10: 108/120 calls ( 90%) | 7.0 min elapsed, ~0.8 min left
+    VGG pool4 N = 10: 120/120 calls (100%) | 7.5 min elapsed, ~0.0 min left
+[VGG pool4] N =  10 (20 draws): self 0.837  nonPT 0.030  PT 0.087  ctrl 0.074  PT/ctrl 1.17  headroom 0.02  PR 7.5 | 451 s | VGG pool4: ~0.9 h left
+[VGG pool4] point 2/9: N = 20, 20 draws x 6 pairs = 120 calls
+    VGG pool4 N = 20: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.2 min left
+    VGG pool4 N = 20: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    VGG pool4 N = 20: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool4 N = 20: 48/120 calls ( 40%) | 3.0 min elapsed, ~4.6 min left
+    VGG pool4 N = 20: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    VGG pool4 N = 20: 72/120 calls ( 60%) | 4.6 min elapsed, ~3.0 min left
+    VGG pool4 N = 20: 84/120 calls ( 70%) | 5.6 min elapsed, ~2.4 min left
+    VGG pool4 N = 20: 96/120 calls ( 80%) | 6.1 min elapsed, ~1.5 min left
+    VGG pool4 N = 20: 108/120 calls ( 90%) | 7.1 min elapsed, ~0.8 min left
+    VGG pool4 N = 20: 120/120 calls (100%) | 7.6 min elapsed, ~0.0 min left
+[VGG pool4] N =  20 (20 draws): self 0.974  nonPT 0.038  PT 0.200  ctrl 0.191  PT/ctrl 1.05  headroom 0.01  PR 12.0 | 455 s | VGG pool4: ~0.8 h left
+[VGG pool4] point 3/9: N = 40, 20 draws x 6 pairs = 120 calls
+    VGG pool4 N = 40: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.4 min left
+    VGG pool4 N = 40: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.2 min left
+    VGG pool4 N = 40: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.0 min left
+    VGG pool4 N = 40: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.7 min left
+    VGG pool4 N = 40: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    VGG pool4 N = 40: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.1 min left
+    VGG pool4 N = 40: 84/120 calls ( 70%) | 5.7 min elapsed, ~2.4 min left
+    VGG pool4 N = 40: 96/120 calls ( 80%) | 6.2 min elapsed, ~1.6 min left
+    VGG pool4 N = 40: 108/120 calls ( 90%) | 7.2 min elapsed, ~0.8 min left
+    VGG pool4 N = 40: 120/120 calls (100%) | 7.7 min elapsed, ~0.0 min left
+[VGG pool4] N =  40 (20 draws): self 0.997  nonPT 0.042  PT 0.434  ctrl 0.425  PT/ctrl 1.02  headroom 0.02  PR 17.5 | 465 s | VGG pool4: ~0.6 h left
+[VGG pool4] point 4/9: N = 64, 20 draws x 6 pairs = 120 calls
+    VGG pool4 N = 64: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.5 min left
+    VGG pool4 N = 64: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.3 min left
+    VGG pool4 N = 64: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.1 min left
+    VGG pool4 N = 64: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.7 min left
+    VGG pool4 N = 64: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    VGG pool4 N = 64: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.2 min left
+    VGG pool4 N = 64: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    VGG pool4 N = 64: 96/120 calls ( 80%) | 6.3 min elapsed, ~1.6 min left
+    VGG pool4 N = 64: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    VGG pool4 N = 64: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[VGG pool4] N =  64 (20 draws): self 0.999  nonPT 0.052  PT 0.618  ctrl 0.601  PT/ctrl 1.03  headroom 0.04  PR 21.2 | 473 s | VGG pool4: ~0.5 h left
+[VGG pool4] point 5/9: N = 80, 20 draws x 6 pairs = 120 calls
+    VGG pool4 N = 80: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.6 min left
+    VGG pool4 N = 80: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    VGG pool4 N = 80: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.2 min left
+    VGG pool4 N = 80: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    VGG pool4 N = 80: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    VGG pool4 N = 80: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    VGG pool4 N = 80: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    VGG pool4 N = 80: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    VGG pool4 N = 80: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    VGG pool4 N = 80: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[VGG pool4] N =  80 (20 draws): self 1.000  nonPT 0.048  PT 0.699  ctrl 0.674  PT/ctrl 1.04  headroom 0.08  PR 22.5 | 480 s | VGG pool4: ~0.4 h left
+[VGG pool4] point 6/9: N = 96, 20 draws x 6 pairs = 120 calls
+    VGG pool4 N = 96: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.8 min left
+    VGG pool4 N = 96: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    VGG pool4 N = 96: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    VGG pool4 N = 96: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.9 min left
+    VGG pool4 N = 96: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    VGG pool4 N = 96: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.3 min left
+    VGG pool4 N = 96: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    VGG pool4 N = 96: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    VGG pool4 N = 96: 108/120 calls ( 90%) | 7.6 min elapsed, ~0.8 min left
+    VGG pool4 N = 96: 120/120 calls (100%) | 8.1 min elapsed, ~0.0 min left
+[VGG pool4] N =  96 (20 draws): self 1.000  nonPT 0.050  PT 0.746  ctrl 0.717  PT/ctrl 1.04  headroom 0.10  PR 23.8 | 488 s | VGG pool4: ~0.3 h left
+[VGG pool4] point 7/9: N = 160, 20 draws x 6 pairs = 120 calls
+    VGG pool4 N = 160: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.3 min left
+    VGG pool4 N = 160: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.9 min left
+    VGG pool4 N = 160: 36/120 calls ( 30%) | 2.9 min elapsed, ~6.7 min left
+    VGG pool4 N = 160: 48/120 calls ( 40%) | 3.4 min elapsed, ~5.2 min left
+    VGG pool4 N = 160: 60/120 calls ( 50%) | 4.6 min elapsed, ~4.6 min left
+    VGG pool4 N = 160: 72/120 calls ( 60%) | 5.2 min elapsed, ~3.4 min left
+    VGG pool4 N = 160: 84/120 calls ( 70%) | 6.3 min elapsed, ~2.7 min left
+    VGG pool4 N = 160: 96/120 calls ( 80%) | 6.9 min elapsed, ~1.7 min left
+    VGG pool4 N = 160: 108/120 calls ( 90%) | 8.0 min elapsed, ~0.9 min left
+    VGG pool4 N = 160: 120/120 calls (100%) | 8.5 min elapsed, ~0.0 min left
+[VGG pool4] N = 160 (20 draws): self 1.000  nonPT 0.054  PT 0.852  ctrl 0.816  PT/ctrl 1.04  headroom 0.19  PR 26.4 | 514 s | VGG pool4: ~0.1 h left
+[VGG pool4] point 8/9: N = 320, 20 draws x 6 pairs = 120 calls
+    VGG pool4 N = 320: 12/120 calls ( 10%) | 1.4 min elapsed, ~12.2 min left
+    VGG pool4 N = 320: 24/120 calls ( 20%) | 2.0 min elapsed, ~8.1 min left
+    VGG pool4 N = 320: 36/120 calls ( 30%) | 3.3 min elapsed, ~7.8 min left
+    VGG pool4 N = 320: 48/120 calls ( 40%) | 4.0 min elapsed, ~6.1 min left
+    VGG pool4 N = 320: 60/120 calls ( 50%) | 5.3 min elapsed, ~5.3 min left
+    VGG pool4 N = 320: 72/120 calls ( 60%) | 6.1 min elapsed, ~4.0 min left
+    VGG pool4 N = 320: 84/120 calls ( 70%) | 7.3 min elapsed, ~3.1 min left
+    VGG pool4 N = 320: 96/120 calls ( 80%) | 8.1 min elapsed, ~2.0 min left
+    VGG pool4 N = 320: 108/120 calls ( 90%) | 9.3 min elapsed, ~1.0 min left
+    VGG pool4 N = 320: 120/120 calls (100%) | 10.0 min elapsed, ~0.0 min left
+[VGG pool4] N = 320 (20 draws): self 1.000  nonPT 0.063  PT 0.926  ctrl 0.898  PT/ctrl 1.03  headroom 0.28  PR 28.9 | 604 s | VGG pool4: ~0.0 h left
+[VGG pool4] point 9/9: N = 511, 1 draws x 6 pairs = 6 calls
+    VGG pool4 N = 511: 1/6 calls ( 17%) | 0.9 min elapsed, ~4.3 min left
+    VGG pool4 N = 511: 2/6 calls ( 33%) | 0.9 min elapsed, ~1.8 min left
+    VGG pool4 N = 511: 3/6 calls ( 50%) | 0.9 min elapsed, ~0.9 min left
+    VGG pool4 N = 511: 4/6 calls ( 67%) | 0.9 min elapsed, ~0.4 min left
+    VGG pool4 N = 511: 5/6 calls ( 83%) | 0.9 min elapsed, ~0.2 min left
+    VGG pool4 N = 511: 6/6 calls (100%) | 0.9 min elapsed, ~0.0 min left
+[VGG pool4] N = 511 ( 1 draws): self 1.000  nonPT 0.061  PT 0.955  ctrl 0.921  PT/ctrl 1.04  headroom 0.43  PR 29.9 | 54 s | VGG pool4: ~0.0 h left
+
+===== VGG pool5 (507 units; constant within AC/EC/EX: [131 206 2]): N = [10 20 40 64 80 96 160 320 507] | 20 draws, 10 folds, 10 permutations =====
+[VGG pool5] point 1/9: N = 10, 20 draws x 6 pairs = 120 calls
+    VGG pool5 N = 10: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.1 min left
+    VGG pool5 N = 10: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    VGG pool5 N = 10: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool5 N = 10: 48/120 calls ( 40%) | 3.0 min elapsed, ~4.5 min left
+    VGG pool5 N = 10: 60/120 calls ( 50%) | 4.0 min elapsed, ~4.0 min left
+    VGG pool5 N = 10: 72/120 calls ( 60%) | 4.5 min elapsed, ~3.0 min left
+    VGG pool5 N = 10: 84/120 calls ( 70%) | 5.5 min elapsed, ~2.4 min left
+    VGG pool5 N = 10: 96/120 calls ( 80%) | 6.0 min elapsed, ~1.5 min left
+    VGG pool5 N = 10: 108/120 calls ( 90%) | 7.0 min elapsed, ~0.8 min left
+    VGG pool5 N = 10: 120/120 calls (100%) | 7.5 min elapsed, ~0.0 min left
+[VGG pool5] N =  10 (20 draws): self 0.352  nonPT 0.024  PT 0.055  ctrl 0.056  PT/ctrl 0.99  headroom -0.00  PR 6.4 | 451 s | VGG pool5: ~0.9 h left
+[VGG pool5] point 2/9: N = 20, 20 draws x 6 pairs = 120 calls
+    VGG pool5 N = 20: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.1 min left
+    VGG pool5 N = 20: 24/120 calls ( 20%) | 1.5 min elapsed, ~6.1 min left
+    VGG pool5 N = 20: 36/120 calls ( 30%) | 2.5 min elapsed, ~5.9 min left
+    VGG pool5 N = 20: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.6 min left
+    VGG pool5 N = 20: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    VGG pool5 N = 20: 72/120 calls ( 60%) | 4.6 min elapsed, ~3.1 min left
+    VGG pool5 N = 20: 84/120 calls ( 70%) | 5.6 min elapsed, ~2.4 min left
+    VGG pool5 N = 20: 96/120 calls ( 80%) | 6.1 min elapsed, ~1.5 min left
+    VGG pool5 N = 20: 108/120 calls ( 90%) | 7.1 min elapsed, ~0.8 min left
+    VGG pool5 N = 20: 120/120 calls (100%) | 7.6 min elapsed, ~0.0 min left
+[VGG pool5] N =  20 (20 draws): self 0.629  nonPT 0.029  PT 0.149  ctrl 0.140  PT/ctrl 1.07  headroom 0.02  PR 10.6 | 457 s | VGG pool5: ~0.8 h left
+[VGG pool5] point 3/9: N = 40, 20 draws x 6 pairs = 120 calls
+    VGG pool5 N = 40: 12/120 calls ( 10%) | 1.0 min elapsed, ~9.3 min left
+    VGG pool5 N = 40: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.2 min left
+    VGG pool5 N = 40: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.1 min left
+    VGG pool5 N = 40: 48/120 calls ( 40%) | 3.1 min elapsed, ~4.7 min left
+    VGG pool5 N = 40: 60/120 calls ( 50%) | 4.1 min elapsed, ~4.1 min left
+    VGG pool5 N = 40: 72/120 calls ( 60%) | 4.7 min elapsed, ~3.1 min left
+    VGG pool5 N = 40: 84/120 calls ( 70%) | 5.7 min elapsed, ~2.4 min left
+    VGG pool5 N = 40: 96/120 calls ( 80%) | 6.2 min elapsed, ~1.6 min left
+    VGG pool5 N = 40: 108/120 calls ( 90%) | 7.3 min elapsed, ~0.8 min left
+    VGG pool5 N = 40: 120/120 calls (100%) | 7.7 min elapsed, ~0.0 min left
+[VGG pool5] N =  40 (20 draws): self 0.810  nonPT 0.030  PT 0.310  ctrl 0.297  PT/ctrl 1.05  headroom 0.03  PR 15.3 | 466 s | VGG pool5: ~0.6 h left
+[VGG pool5] point 4/9: N = 64, 20 draws x 6 pairs = 120 calls
+    VGG pool5 N = 64: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.5 min left
+    VGG pool5 N = 64: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    VGG pool5 N = 64: 36/120 calls ( 30%) | 2.6 min elapsed, ~6.2 min left
+    VGG pool5 N = 64: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    VGG pool5 N = 64: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    VGG pool5 N = 64: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    VGG pool5 N = 64: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    VGG pool5 N = 64: 96/120 calls ( 80%) | 6.3 min elapsed, ~1.6 min left
+    VGG pool5 N = 64: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    VGG pool5 N = 64: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[VGG pool5] N =  64 (20 draws): self 0.893  nonPT 0.032  PT 0.467  ctrl 0.453  PT/ctrl 1.03  headroom 0.03  PR 18.5 | 474 s | VGG pool5: ~0.5 h left
+[VGG pool5] point 5/9: N = 80, 20 draws x 6 pairs = 120 calls
+    VGG pool5 N = 80: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.6 min left
+    VGG pool5 N = 80: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.4 min left
+    VGG pool5 N = 80: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.2 min left
+    VGG pool5 N = 80: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    VGG pool5 N = 80: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    VGG pool5 N = 80: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    VGG pool5 N = 80: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    VGG pool5 N = 80: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    VGG pool5 N = 80: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    VGG pool5 N = 80: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[VGG pool5] N =  80 (20 draws): self 0.923  nonPT 0.034  PT 0.531  ctrl 0.522  PT/ctrl 1.02  headroom 0.02  PR 19.8 | 481 s | VGG pool5: ~0.4 h left
+[VGG pool5] point 6/9: N = 96, 20 draws x 6 pairs = 120 calls
+    VGG pool5 N = 96: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.8 min left
+    VGG pool5 N = 96: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    VGG pool5 N = 96: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    VGG pool5 N = 96: 48/120 calls ( 40%) | 3.3 min elapsed, ~4.9 min left
+    VGG pool5 N = 96: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    VGG pool5 N = 96: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.3 min left
+    VGG pool5 N = 96: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    VGG pool5 N = 96: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    VGG pool5 N = 96: 108/120 calls ( 90%) | 7.6 min elapsed, ~0.8 min left
+    VGG pool5 N = 96: 120/120 calls (100%) | 8.1 min elapsed, ~0.0 min left
+[VGG pool5] N =  96 (20 draws): self 0.932  nonPT 0.032  PT 0.567  ctrl 0.555  PT/ctrl 1.02  headroom 0.03  PR 21.0 | 488 s | VGG pool5: ~0.3 h left
+[VGG pool5] point 7/9: N = 160, 20 draws x 6 pairs = 120 calls
+    VGG pool5 N = 160: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.3 min left
+    VGG pool5 N = 160: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.9 min left
+    VGG pool5 N = 160: 36/120 calls ( 30%) | 2.9 min elapsed, ~6.7 min left
+    VGG pool5 N = 160: 48/120 calls ( 40%) | 3.4 min elapsed, ~5.2 min left
+    VGG pool5 N = 160: 60/120 calls ( 50%) | 4.6 min elapsed, ~4.6 min left
+    VGG pool5 N = 160: 72/120 calls ( 60%) | 5.2 min elapsed, ~3.4 min left
+    VGG pool5 N = 160: 84/120 calls ( 70%) | 6.3 min elapsed, ~2.7 min left
+    VGG pool5 N = 160: 96/120 calls ( 80%) | 6.9 min elapsed, ~1.7 min left
+    VGG pool5 N = 160: 108/120 calls ( 90%) | 8.0 min elapsed, ~0.9 min left
+    VGG pool5 N = 160: 120/120 calls (100%) | 8.5 min elapsed, ~0.0 min left
+[VGG pool5] N = 160 (20 draws): self 0.965  nonPT 0.035  PT 0.657  ctrl 0.644  PT/ctrl 1.02  headroom 0.04  PR 23.8 | 515 s | VGG pool5: ~0.1 h left
+[VGG pool5] point 8/9: N = 320, 20 draws x 6 pairs = 120 calls
+    VGG pool5 N = 320: 12/120 calls ( 10%) | 1.4 min elapsed, ~12.3 min left
+    VGG pool5 N = 320: 24/120 calls ( 20%) | 2.0 min elapsed, ~8.2 min left
+    VGG pool5 N = 320: 36/120 calls ( 30%) | 3.4 min elapsed, ~7.9 min left
+    VGG pool5 N = 320: 48/120 calls ( 40%) | 4.1 min elapsed, ~6.1 min left
+    VGG pool5 N = 320: 60/120 calls ( 50%) | 5.4 min elapsed, ~5.4 min left
+    VGG pool5 N = 320: 72/120 calls ( 60%) | 6.1 min elapsed, ~4.1 min left
+    VGG pool5 N = 320: 84/120 calls ( 70%) | 7.4 min elapsed, ~3.2 min left
+    VGG pool5 N = 320: 96/120 calls ( 80%) | 8.1 min elapsed, ~2.0 min left
+    VGG pool5 N = 320: 108/120 calls ( 90%) | 9.4 min elapsed, ~1.0 min left
+    VGG pool5 N = 320: 120/120 calls (100%) | 10.1 min elapsed, ~0.0 min left
+[VGG pool5] N = 320 (20 draws): self 0.984  nonPT 0.039  PT 0.696  ctrl 0.676  PT/ctrl 1.03  headroom 0.07  PR 26.2 | 606 s | VGG pool5: ~0.0 h left
+[VGG pool5] point 9/9: N = 507, 1 draws x 6 pairs = 6 calls
+    VGG pool5 N = 507: 1/6 calls ( 17%) | 0.9 min elapsed, ~4.3 min left
+    VGG pool5 N = 507: 2/6 calls ( 33%) | 0.9 min elapsed, ~1.7 min left
+    VGG pool5 N = 507: 3/6 calls ( 50%) | 0.9 min elapsed, ~0.9 min left
+    VGG pool5 N = 507: 4/6 calls ( 67%) | 0.9 min elapsed, ~0.4 min left
+    VGG pool5 N = 507: 5/6 calls ( 83%) | 0.9 min elapsed, ~0.2 min left
+    VGG pool5 N = 507: 6/6 calls (100%) | 0.9 min elapsed, ~0.0 min left
+[VGG pool5] N = 507 ( 1 draws): self 0.991  nonPT 0.037  PT 0.711  ctrl 0.692  PT/ctrl 1.03  headroom 0.06  PR 27.2 | 53 s | VGG pool5: ~0.0 h left
+
+Done in 412.2 min. Results in D:\Github repos\cue-invariant-population-geometry\decoding-analysis\ANN_decoding_rev\code\decoding_scripts\..\..\results\decoding_outputs\ann_cue_transfer_incremental
+
+################ job 2/3: AlexNet pool2 <-> pool5 (run_ann_hierarchy) | started 2026-10-13 06:38:49 ################
+
+===== alexnet: pool2 250 / pool5 249 units, matched to 249 | 5 draws, 10 folds, 10 permutations =====
+[alexnet] direction 1/2: pool2-to-pool5 (train pool2, test pool5), 5 draws x 9 rendering combinations = 45 calls
+    alexnet pool2-to-pool5 (train pool2, test pool5): 5/45 calls ( 11%) | 0.6 min elapsed, ~5.1 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 10/45 calls ( 22%) | 1.3 min elapsed, ~4.4 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 15/45 calls ( 33%) | 1.3 min elapsed, ~2.5 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 20/45 calls ( 44%) | 1.9 min elapsed, ~2.4 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 25/45 calls ( 56%) | 2.4 min elapsed, ~1.9 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 30/45 calls ( 67%) | 2.5 min elapsed, ~1.3 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 35/45 calls ( 78%) | 3.1 min elapsed, ~0.9 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 40/45 calls ( 89%) | 3.2 min elapsed, ~0.4 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 45/45 calls (100%) | 3.6 min elapsed, ~0.0 min left
+[alexnet pool2-to-pool5 (train pool2, test pool5)] all 9 combos: self 1.000  nonPT(sanity) 0.020  PT 0.863  ctrl 0.828  PT/ctrl 1.04  headroom 0.20 | 218 s
+[alexnet] direction 2/2: pool5-to-pool2 (train pool5, test pool2), 5 draws x 9 rendering combinations = 45 calls
+    alexnet pool5-to-pool2 (train pool5, test pool2): 5/45 calls ( 11%) | 0.6 min elapsed, ~5.1 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 10/45 calls ( 22%) | 1.2 min elapsed, ~4.4 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 15/45 calls ( 33%) | 1.3 min elapsed, ~2.5 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 20/45 calls ( 44%) | 1.9 min elapsed, ~2.4 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 25/45 calls ( 56%) | 2.4 min elapsed, ~1.9 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 30/45 calls ( 67%) | 2.5 min elapsed, ~1.3 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 35/45 calls ( 78%) | 3.1 min elapsed, ~0.9 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 40/45 calls ( 89%) | 3.2 min elapsed, ~0.4 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 45/45 calls (100%) | 3.6 min elapsed, ~0.0 min left
+[alexnet pool5-to-pool2 (train pool5, test pool2)] all 9 combos: self 0.986  nonPT(sanity) 0.019  PT 0.904  ctrl 0.883  PT/ctrl 1.02  headroom 0.21 | 218 s
+
+Done in 7.3 min. Results in D:\Github repos\cue-invariant-population-geometry\decoding-analysis\ANN_decoding_rev\code\decoding_scripts\..\..\results\decoding_outputs\ann_hierarchy
+
+################ job 3/3: PC sweep: cue transfer and hierarchy (run_ann_pc_sweep) | started 2026-10-13 06:46:07 ################
+
+===== AlexNet pool1 cue PC sweep: N = 96, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[AlexNet pool1 cue] 18 k values x 6 pairs = 108 calls
+    AlexNet pool1 cue PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~8.9 min left
+    AlexNet pool1 cue PC sweep: 22/108 calls ( 20%) | 1.5 min elapsed, ~6.0 min left
+    AlexNet pool1 cue PC sweep: 33/108 calls ( 31%) | 2.4 min elapsed, ~5.5 min left
+    AlexNet pool1 cue PC sweep: 44/108 calls ( 41%) | 3.0 min elapsed, ~4.4 min left
+    AlexNet pool1 cue PC sweep: 55/108 calls ( 51%) | 3.6 min elapsed, ~3.5 min left
+    AlexNet pool1 cue PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    AlexNet pool1 cue PC sweep: 77/108 calls ( 71%) | 5.1 min elapsed, ~2.0 min left
+    AlexNet pool1 cue PC sweep: 88/108 calls ( 81%) | 5.7 min elapsed, ~1.3 min left
+    AlexNet pool1 cue PC sweep: 99/108 calls ( 92%) | 6.6 min elapsed, ~0.6 min left
+    AlexNet pool1 cue PC sweep: 108/108 calls (100%) | 7.0 min elapsed, ~0.0 min left
+[AlexNet pool1 cue] k = 5: self 0.992  nonPT 0.071  PT 0.121  ctrl 0.042  PT/ctrl 2.87  headroom 0.08
+
+===== AlexNet pool2 cue PC sweep: N = 250, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[AlexNet pool2 cue] 18 k values x 6 pairs = 108 calls
+    AlexNet pool2 cue PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~8.9 min left
+    AlexNet pool2 cue PC sweep: 22/108 calls ( 20%) | 1.5 min elapsed, ~5.9 min left
+    AlexNet pool2 cue PC sweep: 33/108 calls ( 31%) | 2.4 min elapsed, ~5.5 min left
+    AlexNet pool2 cue PC sweep: 44/108 calls ( 41%) | 3.0 min elapsed, ~4.4 min left
+    AlexNet pool2 cue PC sweep: 55/108 calls ( 51%) | 3.6 min elapsed, ~3.4 min left
+    AlexNet pool2 cue PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    AlexNet pool2 cue PC sweep: 77/108 calls ( 71%) | 5.0 min elapsed, ~2.0 min left
+    AlexNet pool2 cue PC sweep: 88/108 calls ( 81%) | 5.6 min elapsed, ~1.3 min left
+    AlexNet pool2 cue PC sweep: 99/108 calls ( 92%) | 6.6 min elapsed, ~0.6 min left
+    AlexNet pool2 cue PC sweep: 108/108 calls (100%) | 6.9 min elapsed, ~0.0 min left
+[AlexNet pool2 cue] k = 5: self 1.000  nonPT 0.053  PT 0.096  ctrl 0.043  PT/ctrl 2.24  headroom 0.06
+
+===== AlexNet pool5 cue PC sweep: N = 249, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[AlexNet pool5 cue] 18 k values x 6 pairs = 108 calls
+    AlexNet pool5 cue PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~8.8 min left
+    AlexNet pool5 cue PC sweep: 22/108 calls ( 20%) | 1.5 min elapsed, ~5.9 min left
+    AlexNet pool5 cue PC sweep: 33/108 calls ( 31%) | 2.4 min elapsed, ~5.5 min left
+    AlexNet pool5 cue PC sweep: 44/108 calls ( 41%) | 3.0 min elapsed, ~4.4 min left
+    AlexNet pool5 cue PC sweep: 55/108 calls ( 51%) | 3.6 min elapsed, ~3.4 min left
+    AlexNet pool5 cue PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    AlexNet pool5 cue PC sweep: 77/108 calls ( 71%) | 5.0 min elapsed, ~2.0 min left
+    AlexNet pool5 cue PC sweep: 88/108 calls ( 81%) | 5.6 min elapsed, ~1.3 min left
+    AlexNet pool5 cue PC sweep: 99/108 calls ( 92%) | 6.5 min elapsed, ~0.6 min left
+    AlexNet pool5 cue PC sweep: 108/108 calls (100%) | 6.9 min elapsed, ~0.0 min left
+[AlexNet pool5 cue] k = 5: self 0.954  nonPT 0.033  PT 0.053  ctrl 0.042  PT/ctrl 1.27  headroom 0.01
+
+===== VGG pool1 cue PC sweep: N = 64, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[VGG pool1 cue] 18 k values x 6 pairs = 108 calls
+    VGG pool1 cue PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~8.8 min left
+    VGG pool1 cue PC sweep: 22/108 calls ( 20%) | 1.5 min elapsed, ~5.9 min left
+    VGG pool1 cue PC sweep: 33/108 calls ( 31%) | 2.4 min elapsed, ~5.5 min left
+    VGG pool1 cue PC sweep: 44/108 calls ( 41%) | 3.0 min elapsed, ~4.4 min left
+    VGG pool1 cue PC sweep: 55/108 calls ( 51%) | 3.5 min elapsed, ~3.4 min left
+    VGG pool1 cue PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    VGG pool1 cue PC sweep: 77/108 calls ( 71%) | 5.0 min elapsed, ~2.0 min left
+    VGG pool1 cue PC sweep: 88/108 calls ( 81%) | 5.6 min elapsed, ~1.3 min left
+    VGG pool1 cue PC sweep: 99/108 calls ( 92%) | 6.5 min elapsed, ~0.6 min left
+    VGG pool1 cue PC sweep: 108/108 calls (100%) | 6.9 min elapsed, ~0.0 min left
+[VGG pool1 cue] k = 5: self 0.992  nonPT 0.014  PT 0.058  ctrl 0.042  PT/ctrl 1.38  headroom 0.02
+
+===== VGG pool2 cue PC sweep: N = 128, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[VGG pool2 cue] 18 k values x 6 pairs = 108 calls
+    VGG pool2 cue PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~8.9 min left
+    VGG pool2 cue PC sweep: 22/108 calls ( 20%) | 1.5 min elapsed, ~5.9 min left
+    VGG pool2 cue PC sweep: 33/108 calls ( 31%) | 2.4 min elapsed, ~5.6 min left
+    VGG pool2 cue PC sweep: 44/108 calls ( 41%) | 3.0 min elapsed, ~4.4 min left
+    VGG pool2 cue PC sweep: 55/108 calls ( 51%) | 3.6 min elapsed, ~3.4 min left
+    VGG pool2 cue PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    VGG pool2 cue PC sweep: 77/108 calls ( 71%) | 5.1 min elapsed, ~2.0 min left
+    VGG pool2 cue PC sweep: 88/108 calls ( 81%) | 5.6 min elapsed, ~1.3 min left
+    VGG pool2 cue PC sweep: 99/108 calls ( 92%) | 6.6 min elapsed, ~0.6 min left
+    VGG pool2 cue PC sweep: 108/108 calls (100%) | 7.0 min elapsed, ~0.0 min left
+[VGG pool2 cue] k = 5: self 1.000  nonPT 0.038  PT 0.072  ctrl 0.043  PT/ctrl 1.67  headroom 0.03
+
+===== VGG pool3 cue PC sweep: N = 256, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[VGG pool3 cue] 18 k values x 6 pairs = 108 calls
+    VGG pool3 cue PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~8.8 min left
+    VGG pool3 cue PC sweep: 22/108 calls ( 20%) | 1.5 min elapsed, ~5.9 min left
+    VGG pool3 cue PC sweep: 33/108 calls ( 31%) | 2.4 min elapsed, ~5.5 min left
+    VGG pool3 cue PC sweep: 44/108 calls ( 41%) | 3.0 min elapsed, ~4.4 min left
+    VGG pool3 cue PC sweep: 55/108 calls ( 51%) | 3.6 min elapsed, ~3.4 min left
+    VGG pool3 cue PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    VGG pool3 cue PC sweep: 77/108 calls ( 71%) | 5.1 min elapsed, ~2.0 min left
+    VGG pool3 cue PC sweep: 88/108 calls ( 81%) | 5.6 min elapsed, ~1.3 min left
+    VGG pool3 cue PC sweep: 99/108 calls ( 92%) | 6.5 min elapsed, ~0.6 min left
+    VGG pool3 cue PC sweep: 108/108 calls (100%) | 6.9 min elapsed, ~0.0 min left
+[VGG pool3 cue] k = 5: self 1.000  nonPT 0.054  PT 0.076  ctrl 0.044  PT/ctrl 1.73  headroom 0.03
+
+===== VGG pool4 cue PC sweep: N = 511, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[VGG pool4 cue] 18 k values x 6 pairs = 108 calls
+    VGG pool4 cue PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~8.8 min left
+    VGG pool4 cue PC sweep: 22/108 calls ( 20%) | 1.5 min elapsed, ~5.9 min left
+    VGG pool4 cue PC sweep: 33/108 calls ( 31%) | 2.5 min elapsed, ~5.6 min left
+    VGG pool4 cue PC sweep: 44/108 calls ( 41%) | 3.0 min elapsed, ~4.4 min left
+    VGG pool4 cue PC sweep: 55/108 calls ( 51%) | 3.6 min elapsed, ~3.5 min left
+    VGG pool4 cue PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    VGG pool4 cue PC sweep: 77/108 calls ( 71%) | 5.0 min elapsed, ~2.0 min left
+    VGG pool4 cue PC sweep: 88/108 calls ( 81%) | 5.6 min elapsed, ~1.3 min left
+    VGG pool4 cue PC sweep: 99/108 calls ( 92%) | 6.5 min elapsed, ~0.6 min left
+    VGG pool4 cue PC sweep: 108/108 calls (100%) | 6.9 min elapsed, ~0.0 min left
+[VGG pool4 cue] k = 5: self 1.000  nonPT 0.046  PT 0.085  ctrl 0.041  PT/ctrl 2.08  headroom 0.05
+
+===== VGG pool5 cue PC sweep: N = 507, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[VGG pool5 cue] 18 k values x 6 pairs = 108 calls
+    VGG pool5 cue PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~8.9 min left
+    VGG pool5 cue PC sweep: 22/108 calls ( 20%) | 1.5 min elapsed, ~5.9 min left
+    VGG pool5 cue PC sweep: 33/108 calls ( 31%) | 2.4 min elapsed, ~5.5 min left
+    VGG pool5 cue PC sweep: 44/108 calls ( 41%) | 3.0 min elapsed, ~4.4 min left
+    VGG pool5 cue PC sweep: 55/108 calls ( 51%) | 3.6 min elapsed, ~3.4 min left
+    VGG pool5 cue PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    VGG pool5 cue PC sweep: 77/108 calls ( 71%) | 5.0 min elapsed, ~2.0 min left
+    VGG pool5 cue PC sweep: 88/108 calls ( 81%) | 5.6 min elapsed, ~1.3 min left
+    VGG pool5 cue PC sweep: 99/108 calls ( 92%) | 6.5 min elapsed, ~0.6 min left
+    VGG pool5 cue PC sweep: 108/108 calls (100%) | 6.9 min elapsed, ~0.0 min left
+[VGG pool5 cue] k = 5: self 0.968  nonPT 0.030  PT 0.048  ctrl 0.040  PT/ctrl 1.20  headroom 0.01
+
+===== alexnet layer-to-layer PC sweep: pool2 250 vs pool5 249 units, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[alexnet hierarchy] direction 1/2: pool2-to-pool5 (train pool2, test pool5), 18 k values x 9 rendering combinations = 162 calls
+    alexnet pool2-to-pool5 (train pool2, test pool5): 17/162 calls ( 10%) | 1.4 min elapsed, ~12.0 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 34/162 calls ( 21%) | 2.5 min elapsed, ~9.3 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 51/162 calls ( 31%) | 3.5 min elapsed, ~7.6 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 68/162 calls ( 42%) | 4.5 min elapsed, ~6.2 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 85/162 calls ( 52%) | 5.5 min elapsed, ~5.0 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 102/162 calls ( 63%) | 6.6 min elapsed, ~3.9 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 119/162 calls ( 73%) | 7.6 min elapsed, ~2.7 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 136/162 calls ( 84%) | 8.6 min elapsed, ~1.6 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 153/162 calls ( 94%) | 9.7 min elapsed, ~0.6 min left
+    alexnet pool2-to-pool5 (train pool2, test pool5): 162/162 calls (100%) | 10.3 min elapsed, ~0.0 min left
+[alexnet pool2-to-pool5 (train pool2, test pool5)] k = 5: self 1.000  PT 0.074  ctrl 0.047  PT/ctrl 1.59  headroom 0.03 | 617 s
+[alexnet hierarchy] direction 2/2: pool5-to-pool2 (train pool5, test pool2), 18 k values x 9 rendering combinations = 162 calls
+    alexnet pool5-to-pool2 (train pool5, test pool2): 17/162 calls ( 10%) | 1.4 min elapsed, ~12.3 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 34/162 calls ( 21%) | 2.5 min elapsed, ~9.4 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 51/162 calls ( 31%) | 3.5 min elapsed, ~7.6 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 68/162 calls ( 42%) | 4.5 min elapsed, ~6.2 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 85/162 calls ( 52%) | 5.5 min elapsed, ~5.0 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 102/162 calls ( 63%) | 6.6 min elapsed, ~3.9 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 119/162 calls ( 73%) | 7.6 min elapsed, ~2.7 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 136/162 calls ( 84%) | 8.6 min elapsed, ~1.6 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 153/162 calls ( 94%) | 9.6 min elapsed, ~0.6 min left
+    alexnet pool5-to-pool2 (train pool5, test pool2): 162/162 calls (100%) | 10.3 min elapsed, ~0.0 min left
+[alexnet pool5-to-pool2 (train pool5, test pool2)] k = 5: self 0.955  PT 0.111  ctrl 0.040  PT/ctrl 2.77  headroom 0.08 | 619 s
+
+Done in 76.2 min.
+
+################ run_all_ann('all') finished 2026-10-13 08:02:20, 8.26 h ################
+  job 1  cue transfer vs units, 8 layers (Fig 3d, 4d)         done in 6.87 h
+  job 2  AlexNet pool2 <-> pool5                              done in 0.12 h
+  job 3  PC sweep: cue transfer and hierarchy                 done in 1.27 h
+Log: D:\Github repos\cue-invariant-population-geometry\decoding-analysis\ANN_decoding_rev\code\decoding_scripts\..\..\results\logs\run_all_ann_all_20261012_234600.log
