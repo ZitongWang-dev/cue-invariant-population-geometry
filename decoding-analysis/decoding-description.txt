@@ -77,3 +77,9 @@ REVISION DECODING (added 2026-10-11)
   k = 1..49 PC sweep of both. The drivers call neuron_decoding_rev's pt_transfer_core.m, so
   CNN units and neurons share one decoder. Trials are read from ANN_decoding/ANN_response_data
   (the published Poisson draws). See ANN_decoding_rev/README.md.
+* `Gabor_decoding_rev/` (added 2026-10-15): the same reruns for the Gabor-filter cell models
+  (simple, 192 cells; complex, 48 cells): cue transfer vs number of cells on the 10-cell grid of
+  the neural sweep plus 48 (Fig 15a = the 48-cell point, Fig 15b = the whole models, rebuttal
+  point 9 = the curve), and a k = 1..49 PC sweep. The drivers call neuron_decoding_rev's
+  pt_transfer_core.m. Trials are read from Gabor_decoding/Gabor_filters_response_data/sampled_trials
+  (the published Poisson draws). See Gabor_decoding_rev/README.md.

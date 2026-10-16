@@ -1,0 +1,1369 @@
+analysis,layer,item,metric,old,new
+Fig 3d,AlexNet pool1,"ac->ec",self,0.997826689481735,0.998
+Fig 3d,AlexNet pool1,"ac->ec",non-PT,0.139439999471108,0.138
+Fig 3d,AlexNet pool1,"ac->ec",PT (rotation only),0.837413326183955,0.842
+Fig 3d,AlexNet pool1,"ac->ec",control,0.0202666662136714,0.6726
+Fig 4d,AlexNet pool1,"ac->ec N=10",self,0.912620045145353,0.9149
+Fig 4d,AlexNet pool1,"ac->ec N=10",non-PT,0.0573999991888801,0.0497
+Fig 4d,AlexNet pool1,"ac->ec N=10",PT (rotation only),0.13059999961406,0.1248
+Fig 4d,AlexNet pool1,"ac->ec N=10",control,0.022199999516209,0.07737
+Fig 4d,AlexNet pool1,"ac->ec N=20",self,0.978526680270831,0.9643
+Fig 4d,AlexNet pool1,"ac->ec N=20",non-PT,0.0701333324114482,0.077
+Fig 4d,AlexNet pool1,"ac->ec N=20",PT (rotation only),0.316800000195702,0.3048
+Fig 4d,AlexNet pool1,"ac->ec N=20",control,0.0223333328341444,0.17728
+Fig 4d,AlexNet pool1,"ac->ec N=40",self,0.991380009651184,0.9906
+Fig 4d,AlexNet pool1,"ac->ec N=40",non-PT,0.0928666657706102,0.1018
+Fig 4d,AlexNet pool1,"ac->ec N=40",PT (rotation only),0.588133334815502,0.5711
+Fig 4d,AlexNet pool1,"ac->ec N=40",control,0.0196666662270824,0.40485
+Fig 4d,AlexNet pool1,"ac->ec N=80",self,0.9962466776371,0.9962
+Fig 4d,AlexNet pool1,"ac->ec N=80",non-PT,0.123866666456064,0.1281
+Fig 4d,AlexNet pool1,"ac->ec N=80",PT (rotation only),0.801999992926915,0.8012
+Fig 4d,AlexNet pool1,"ac->ec N=80",control,0.0199333328877886,0.6293
+Fig 4d,AlexNet pool1,"ac->ec N=96",self,0.997853356599808,0.998
+Fig 4d,AlexNet pool1,"ac->ec N=96",non-PT,0.140733332708478,0.138
+Fig 4d,AlexNet pool1,"ac->ec N=96",PT (rotation only),0.837466658949852,0.842
+Fig 4d,AlexNet pool1,"ac->ec N=96",control,0.02353333281974,0.6726
+Fig 3d,AlexNet pool1,"ec->ac",self,0.998536018848419,1
+Fig 3d,AlexNet pool1,"ec->ac",non-PT,0.119013332684835,0.12
+Fig 3d,AlexNet pool1,"ec->ac",PT (rotation only),0.770319992542267,0.768
+Fig 3d,AlexNet pool1,"ec->ac",control,0.0211733328650395,0.6368
+Fig 4d,AlexNet pool1,"ec->ac N=10",self,0.95271335820357,0.958
+Fig 4d,AlexNet pool1,"ec->ac N=10",non-PT,0.0482666659355164,0.0436
+Fig 4d,AlexNet pool1,"ec->ac N=10",PT (rotation only),0.119066666215658,0.1251
+Fig 4d,AlexNet pool1,"ec->ac N=10",control,0.0222666661689679,0.07297
+Fig 4d,AlexNet pool1,"ec->ac N=20",self,0.990040005644163,0.9912
+Fig 4d,AlexNet pool1,"ec->ac N=20",non-PT,0.0758666657283902,0.0692
+Fig 4d,AlexNet pool1,"ec->ac N=20",PT (rotation only),0.273599999820193,0.2684
+Fig 4d,AlexNet pool1,"ec->ac N=20",control,0.0179999996100863,0.16089
+Fig 4d,AlexNet pool1,"ec->ac N=40",self,0.998080003857613,0.9981
+Fig 4d,AlexNet pool1,"ec->ac N=40",non-PT,0.0966666657974323,0.0919
+Fig 4d,AlexNet pool1,"ec->ac N=40",PT (rotation only),0.562666667699814,0.5354
+Fig 4d,AlexNet pool1,"ec->ac N=40",control,0.0183333329235514,0.36805
+Fig 4d,AlexNet pool1,"ec->ac N=80",self,0.998600015044212,0.9986
+Fig 4d,AlexNet pool1,"ec->ac N=80",non-PT,0.112333332685133,0.1085
+Fig 4d,AlexNet pool1,"ec->ac N=80",PT (rotation only),0.7460666680336,0.748
+Fig 4d,AlexNet pool1,"ec->ac N=80",control,0.0213333328689138,0.59729
+Fig 4d,AlexNet pool1,"ec->ac N=96",self,0.998460019826889,1
+Fig 4d,AlexNet pool1,"ec->ac N=96",non-PT,0.119999999391536,0.12
+Fig 4d,AlexNet pool1,"ec->ac N=96",PT (rotation only),0.768999992609024,0.768
+Fig 4d,AlexNet pool1,"ec->ac N=96",control,0.0207333328699072,0.6368
+Fig 3d,AlexNet pool1,"ec->ex",self,1,1
+Fig 3d,AlexNet pool1,"ec->ex",non-PT,0.0893333325932423,0.084
+Fig 3d,AlexNet pool1,"ec->ex",PT (rotation only),0.549946669340134,0.544
+Fig 3d,AlexNet pool1,"ec->ex",control,0.0226666661699613,0.508
+Fig 4d,AlexNet pool1,"ec->ex N=10",self,0.979760006666183,0.9822
+Fig 4d,AlexNet pool1,"ec->ex N=10",non-PT,0.0589333324382703,0.0653
+Fig 4d,AlexNet pool1,"ec->ex N=10",PT (rotation only),0.108599999286234,0.1041
+Fig 4d,AlexNet pool1,"ec->ex N=10",control,0.0208666662002603,0.06752
+Fig 4d,AlexNet pool1,"ec->ex N=20",self,0.99752000828584,0.9974
+Fig 4d,AlexNet pool1,"ec->ex N=20",non-PT,0.0695999991024534,0.0747
+Fig 4d,AlexNet pool1,"ec->ex N=20",PT (rotation only),0.210066665845613,0.1904
+Fig 4d,AlexNet pool1,"ec->ex N=20",control,0.0200666662181417,0.13953
+Fig 4d,AlexNet pool1,"ec->ex N=40",self,0.999940000772476,1
+Fig 4d,AlexNet pool1,"ec->ex N=40",non-PT,0.0934666660303871,0.094
+Fig 4d,AlexNet pool1,"ec->ex N=40",PT (rotation only),0.401799999376138,0.4028
+Fig 4d,AlexNet pool1,"ec->ex N=40",control,0.0217999995251497,0.30923
+Fig 4d,AlexNet pool1,"ec->ex N=80",self,1,1
+Fig 4d,AlexNet pool1,"ec->ex N=80",non-PT,0.0960666659101844,0.0936
+Fig 4d,AlexNet pool1,"ec->ex N=80",PT (rotation only),0.5290666654706,0.5337
+Fig 4d,AlexNet pool1,"ec->ex N=80",control,0.0199999995529652,0.48632
+Fig 4d,AlexNet pool1,"ec->ex N=96",self,1,1
+Fig 4d,AlexNet pool1,"ec->ex N=96",non-PT,0.0897999992842476,0.084
+Fig 4d,AlexNet pool1,"ec->ex N=96",PT (rotation only),0.547200001577536,0.544
+Fig 4d,AlexNet pool1,"ec->ex N=96",control,0.0231999994814396,0.508
+Fig 3d,AlexNet pool1,"ex->ec",self,0.997882690429687,0.996
+Fig 3d,AlexNet pool1,"ex->ec",non-PT,0.118666665812333,0.118
+Fig 3d,AlexNet pool1,"ex->ec",PT (rotation only),0.894479994455973,0.89
+Fig 3d,AlexNet pool1,"ex->ec",control,0.0176533329437176,0.7488
+Fig 4d,AlexNet pool1,"ex->ec N=10",self,0.8888667289416,0.9136
+Fig 4d,AlexNet pool1,"ex->ec N=10",non-PT,0.0491333325083057,0.0499
+Fig 4d,AlexNet pool1,"ex->ec N=10",PT (rotation only),0.112466666239003,0.1119
+Fig 4d,AlexNet pool1,"ex->ec N=10",control,0.0202666662136714,0.08335
+Fig 4d,AlexNet pool1,"ex->ec N=20",self,0.974780014157295,0.9639
+Fig 4d,AlexNet pool1,"ex->ec N=20",non-PT,0.0605333324149251,0.0633
+Fig 4d,AlexNet pool1,"ex->ec N=20",PT (rotation only),0.262199999963244,0.2716
+Fig 4d,AlexNet pool1,"ex->ec N=20",control,0.0199999995529652,0.19649
+Fig 4d,AlexNet pool1,"ex->ec N=40",self,0.99194000462691,0.9904
+Fig 4d,AlexNet pool1,"ex->ec N=40",non-PT,0.0822666657343507,0.0738
+Fig 4d,AlexNet pool1,"ex->ec N=40",PT (rotation only),0.583800002634525,0.6097
+Fig 4d,AlexNet pool1,"ex->ec N=40",control,0.0194666662315528,0.46854
+Fig 4d,AlexNet pool1,"ex->ec N=80",self,0.996946677764257,0.996
+Fig 4d,AlexNet pool1,"ex->ec N=80",non-PT,0.0977333326886098,0.1103
+Fig 4d,AlexNet pool1,"ex->ec N=80",PT (rotation only),0.85559999525547,0.8436
+Fig 4d,AlexNet pool1,"ex->ec N=80",control,0.0173999996110797,0.70467
+Fig 4d,AlexNet pool1,"ex->ec N=96",self,0.997840023040771,0.996
+Fig 4d,AlexNet pool1,"ex->ec N=96",non-PT,0.117199999267856,0.118
+Fig 4d,AlexNet pool1,"ex->ec N=96",PT (rotation only),0.892533325950305,0.89
+Fig 4d,AlexNet pool1,"ex->ec N=96",control,0.0158666663244367,0.7488
+Fig 3d,AlexNet pool1,"ac->ex",self,1,1
+Fig 3d,AlexNet pool1,"ac->ex",non-PT,0.14501333262523,0.146
+Fig 3d,AlexNet pool1,"ac->ex",PT (rotation only),0.64181333843867,0.642
+Fig 3d,AlexNet pool1,"ac->ex",control,0.0212533328582843,0.6202
+Fig 4d,AlexNet pool1,"ac->ex N=10",self,0.98006667971611,0.9816
+Fig 4d,AlexNet pool1,"ac->ex N=10",non-PT,0.0624666658788919,0.0548
+Fig 4d,AlexNet pool1,"ac->ex N=10",PT (rotation only),0.0979333324357867,0.098
+Fig 4d,AlexNet pool1,"ac->ex N=10",control,0.0215333328520258,0.07559
+Fig 4d,AlexNet pool1,"ac->ex N=20",self,0.997973340352376,0.9972
+Fig 4d,AlexNet pool1,"ac->ex N=20",non-PT,0.0655999989186724,0.0731
+Fig 4d,AlexNet pool1,"ac->ex N=20",PT (rotation only),0.220533333768447,0.216
+Fig 4d,AlexNet pool1,"ac->ex N=20",control,0.0205333328743776,0.16703
+Fig 4d,AlexNet pool1,"ac->ex N=40",self,0.999800002574921,1
+Fig 4d,AlexNet pool1,"ac->ex N=40",non-PT,0.0971333325902621,0.0928
+Fig 4d,AlexNet pool1,"ac->ex N=40",PT (rotation only),0.41879999935627,0.4197
+Fig 4d,AlexNet pool1,"ac->ex N=40",control,0.021799999512732,0.36478
+Fig 4d,AlexNet pool1,"ac->ex N=80",self,1,1
+Fig 4d,AlexNet pool1,"ac->ex N=80",non-PT,0.121133332699537,0.1207
+Fig 4d,AlexNet pool1,"ac->ex N=80",PT (rotation only),0.615666671991348,0.6152
+Fig 4d,AlexNet pool1,"ac->ex N=80",control,0.0179999995976686,0.57653
+Fig 4d,AlexNet pool1,"ac->ex N=96",self,1,1
+Fig 4d,AlexNet pool1,"ac->ex N=96",non-PT,0.142666665812333,0.146
+Fig 4d,AlexNet pool1,"ac->ex N=96",PT (rotation only),0.641533337831497,0.642
+Fig 4d,AlexNet pool1,"ac->ex N=96",control,0.0207333328699072,0.6202
+Fig 3d,AlexNet pool1,"ex->ac",self,0.998458686510722,0.998
+Fig 3d,AlexNet pool1,"ex->ac",non-PT,0.191653336385886,0.19
+Fig 3d,AlexNet pool1,"ex->ac",PT (rotation only),0.815786659797033,0.812
+Fig 3d,AlexNet pool1,"ex->ac",control,0.0174933329423269,0.8286
+Fig 4d,AlexNet pool1,"ex->ac N=10",self,0.955766689181328,0.9557
+Fig 4d,AlexNet pool1,"ex->ac N=10",non-PT,0.0874666658664743,0.0844
+Fig 4d,AlexNet pool1,"ex->ac N=10",PT (rotation only),0.128999999798834,0.1336
+Fig 4d,AlexNet pool1,"ex->ac N=10",control,0.02106666619579,0.08759
+Fig 4d,AlexNet pool1,"ex->ac N=20",self,0.991840010881424,0.9905
+Fig 4d,AlexNet pool1,"ex->ac N=20",non-PT,0.109599999586741,0.1072
+Fig 4d,AlexNet pool1,"ex->ac N=20",PT (rotation only),0.29933333526055,0.2735
+Fig 4d,AlexNet pool1,"ex->ac N=20",control,0.0184666662539045,0.21371
+Fig 4d,AlexNet pool1,"ex->ac N=40",self,0.997346674203873,0.9984
+Fig 4d,AlexNet pool1,"ex->ac N=40",non-PT,0.120066666454077,0.1187
+Fig 4d,AlexNet pool1,"ex->ac N=40",PT (rotation only),0.56333333671093,0.5726
+Fig 4d,AlexNet pool1,"ex->ac N=40",control,0.0188666662697991,0.49962
+Fig 4d,AlexNet pool1,"ex->ac N=80",self,0.999120011329651,0.9987
+Fig 4d,AlexNet pool1,"ex->ac N=80",non-PT,0.170133334894975,0.1775
+Fig 4d,AlexNet pool1,"ex->ac N=80",PT (rotation only),0.774799994826317,0.7879
+Fig 4d,AlexNet pool1,"ex->ac N=80",control,0.0195999995743235,0.77903
+Fig 4d,AlexNet pool1,"ex->ac N=96",self,0.998486686150233,0.998
+Fig 4d,AlexNet pool1,"ex->ac N=96",non-PT,0.193200002710025,0.19
+Fig 4d,AlexNet pool1,"ex->ac N=96",PT (rotation only),0.815466660062472,0.812
+Fig 4d,AlexNet pool1,"ex->ac N=96",control,0.0195999995619059,0.8286
+Fig 3d,AlexNet pool2,"ac->ec",self,1,1
+Fig 3d,AlexNet pool2,"ac->ec",non-PT,0.121839999650915,0.1211
+Fig 3d,AlexNet pool2,"ac->ec",PT (rotation only),0.903279995759328,0.8932
+Fig 3d,AlexNet pool2,"ac->ec",control,0.0225066661884387,0.85338
+Fig 4d,AlexNet pool2,"ac->ec N=10",self,0.982600009441376,0.9763
+Fig 4d,AlexNet pool2,"ac->ec N=10",non-PT,0.0541333325083057,0.0508
+Fig 4d,AlexNet pool2,"ac->ec N=10",PT (rotation only),0.124933333235482,0.115
+Fig 4d,AlexNet pool2,"ac->ec N=10",control,0.0192666662360231,0.08335
+Fig 4d,AlexNet pool2,"ac->ec N=20",self,0.997486671408018,0.9969
+Fig 4d,AlexNet pool2,"ac->ec N=20",non-PT,0.0648666656886538,0.064
+Fig 4d,AlexNet pool2,"ac->ec N=20",PT (rotation only),0.322200001080831,0.2872
+Fig 4d,AlexNet pool2,"ac->ec N=20",control,0.0208666662002603,0.2116
+Fig 4d,AlexNet pool2,"ac->ec N=40",self,0.998920010924339,0.9993
+Fig 4d,AlexNet pool2,"ac->ec N=40",non-PT,0.0859333323811491,0.0878
+Fig 4d,AlexNet pool2,"ac->ec N=40",PT (rotation only),0.635533338884513,0.645
+Fig 4d,AlexNet pool2,"ac->ec N=40",control,0.0215999995172024,0.53577
+Fig 4d,AlexNet pool2,"ac->ec N=80",self,0.999626671473185,0.9998
+Fig 4d,AlexNet pool2,"ac->ec N=80",non-PT,0.107266666057209,0.1162
+Fig 4d,AlexNet pool2,"ac->ec N=80",PT (rotation only),0.875799993872643,0.8762
+Fig 4d,AlexNet pool2,"ac->ec N=80",control,0.0205999995643894,0.81245
+Fig 4d,AlexNet pool2,"ac->ec N=160",self,1,1
+Fig 4d,AlexNet pool2,"ac->ec N=160",non-PT,0.154933333570759,0.1604
+Fig 4d,AlexNet pool2,"ac->ec N=160",PT (rotation only),0.946066664258639,0.9603
+Fig 4d,AlexNet pool2,"ac->ec N=160",control,0.0231999994814396,0.92665
+Fig 4d,AlexNet pool2,"ac->ec N=250",self,1,1
+Fig 4d,AlexNet pool2,"ac->ec N=250",non-PT,0.213200000027816,0.21
+Fig 4d,AlexNet pool2,"ac->ec N=250",PT (rotation only),0.965799998442332,0.962
+Fig 4d,AlexNet pool2,"ac->ec N=250",control,0.0207999995350838,0.9588
+Fig 3d,AlexNet pool2,"ec->ac",self,0.997922676006953,0.9992
+Fig 3d,AlexNet pool2,"ec->ac",non-PT,0.0971199992845456,0.1
+Fig 3d,AlexNet pool2,"ec->ac",PT (rotation only),0.88714666112264,0.8946
+Fig 3d,AlexNet pool2,"ec->ac",control,0.0204533328860998,0.8127
+Fig 4d,AlexNet pool2,"ec->ac N=10",self,0.910693381627401,0.9243
+Fig 4d,AlexNet pool2,"ec->ac N=10",non-PT,0.0341333325952291,0.0362
+Fig 4d,AlexNet pool2,"ec->ac N=10",PT (rotation only),0.111266666104396,0.0918
+Fig 4d,AlexNet pool2,"ec->ac N=10",control,0.0215333328520258,0.08054
+Fig 4d,AlexNet pool2,"ec->ac N=20",self,0.981426674723625,0.9821
+Fig 4d,AlexNet pool2,"ec->ac N=20",non-PT,0.0531999990219871,0.0445
+Fig 4d,AlexNet pool2,"ec->ac N=20",PT (rotation only),0.296000000983477,0.2933
+Fig 4d,AlexNet pool2,"ec->ac N=20",control,0.0195333328967293,0.2048
+Fig 4d,AlexNet pool2,"ec->ac N=40",self,0.993420007030169,0.9949
+Fig 4d,AlexNet pool2,"ec->ac N=40",non-PT,0.0727999989812573,0.0859
+Fig 4d,AlexNet pool2,"ec->ac N=40",PT (rotation only),0.682866671880086,0.6681
+Fig 4d,AlexNet pool2,"ec->ac N=40",control,0.0194666662439704,0.50514
+Fig 4d,AlexNet pool2,"ec->ac N=80",self,0.99700667599837,0.9975
+Fig 4d,AlexNet pool2,"ec->ac N=80",non-PT,0.090799999050796,0.1006
+Fig 4d,AlexNet pool2,"ec->ac N=80",PT (rotation only),0.85939999461174,0.8596
+Fig 4d,AlexNet pool2,"ec->ac N=80",control,0.0196666662270824,0.76458
+Fig 4d,AlexNet pool2,"ec->ac N=160",self,0.998313335776329,0.9992
+Fig 4d,AlexNet pool2,"ec->ac N=160",non-PT,0.117133332540592,0.103
+Fig 4d,AlexNet pool2,"ec->ac N=160",PT (rotation only),0.920466664234797,0.9243
+Fig 4d,AlexNet pool2,"ec->ac N=160",control,0.0187333329270283,0.89047
+Fig 4d,AlexNet pool2,"ec->ac N=250",self,1,1
+Fig 4d,AlexNet pool2,"ec->ac N=250",non-PT,0.124733332432806,0.13
+Fig 4d,AlexNet pool2,"ec->ac N=250",PT (rotation only),0.940133330821991,0.94
+Fig 4d,AlexNet pool2,"ec->ac N=250",control,0.0212666662161549,0.926
+Fig 3d,AlexNet pool2,"ec->ex",self,1,1
+Fig 3d,AlexNet pool2,"ec->ex",non-PT,0.107386666019758,0.0966
+Fig 3d,AlexNet pool2,"ec->ex",PT (rotation only),0.884346662203471,0.8881
+Fig 3d,AlexNet pool2,"ec->ex",control,0.018186666260163,0.84417
+Fig 4d,AlexNet pool2,"ec->ex N=10",self,0.976846680442492,0.9664
+Fig 4d,AlexNet pool2,"ec->ex N=10",non-PT,0.0522666659081976,0.0528
+Fig 4d,AlexNet pool2,"ec->ex N=10",PT (rotation only),0.111733332599203,0.1033
+Fig 4d,AlexNet pool2,"ec->ex N=10",control,0.0209999995306134,0.07995
+Fig 4d,AlexNet pool2,"ec->ex N=20",self,0.996160007317861,0.9957
+Fig 4d,AlexNet pool2,"ec->ex N=20",non-PT,0.0650666656469305,0.073
+Fig 4d,AlexNet pool2,"ec->ex N=20",PT (rotation only),0.290066666702429,0.2785
+Fig 4d,AlexNet pool2,"ec->ex N=20",control,0.0193999995787938,0.21511
+Fig 4d,AlexNet pool2,"ec->ex N=40",self,0.999800002574921,0.9995
+Fig 4d,AlexNet pool2,"ec->ex N=40",non-PT,0.0815999993433555,0.0892
+Fig 4d,AlexNet pool2,"ec->ex N=40",PT (rotation only),0.629000005821387,0.6516
+Fig 4d,AlexNet pool2,"ec->ex N=40",control,0.0205999995395541,0.56798
+Fig 4d,AlexNet pool2,"ec->ex N=80",self,1,1
+Fig 4d,AlexNet pool2,"ec->ex N=80",non-PT,0.103533332956334,0.1019
+Fig 4d,AlexNet pool2,"ec->ex N=80",PT (rotation only),0.862133327722549,0.8512
+Fig 4d,AlexNet pool2,"ec->ex N=80",control,0.0185999995966752,0.81217
+Fig 4d,AlexNet pool2,"ec->ex N=160",self,1,1
+Fig 4d,AlexNet pool2,"ec->ex N=160",non-PT,0.114999999403954,0.1038
+Fig 4d,AlexNet pool2,"ec->ex N=160",PT (rotation only),0.928599997162819,0.9302
+Fig 4d,AlexNet pool2,"ec->ex N=160",control,0.0181333329280217,0.91073
+Fig 4d,AlexNet pool2,"ec->ex N=250",self,1,1
+Fig 4d,AlexNet pool2,"ec->ex N=250",non-PT,0.108333332551022,0.108
+Fig 4d,AlexNet pool2,"ec->ex N=250",PT (rotation only),0.959533312320709,0.96
+Fig 4d,AlexNet pool2,"ec->ex N=250",control,0.017599999619027,0.9332
+Fig 3d,AlexNet pool2,"ex->ec",self,0.999818669001261,1
+Fig 3d,AlexNet pool2,"ex->ec",non-PT,0.14480000038445,0.1339
+Fig 3d,AlexNet pool2,"ex->ec",PT (rotation only),0.96586666560173,0.9592
+Fig 3d,AlexNet pool2,"ex->ec",control,0.0215733328610659,0.95837
+Fig 4d,AlexNet pool2,"ex->ec N=10",self,0.978653349876404,0.9768
+Fig 4d,AlexNet pool2,"ex->ec N=10",non-PT,0.0503999991963307,0.0462
+Fig 4d,AlexNet pool2,"ex->ec N=10",PT (rotation only),0.142066666359703,0.135
+Fig 4d,AlexNet pool2,"ex->ec N=10",control,0.0203333328788479,0.09941
+Fig 4d,AlexNet pool2,"ex->ec N=20",self,0.996206669211388,0.9966
+Fig 4d,AlexNet pool2,"ex->ec N=20",non-PT,0.0786666655292114,0.0797
+Fig 4d,AlexNet pool2,"ex->ec N=20",PT (rotation only),0.363600000639757,0.3619
+Fig 4d,AlexNet pool2,"ex->ec N=20",control,0.0194666662315528,0.28332
+Fig 4d,AlexNet pool2,"ex->ec N=40",self,0.999080009460449,0.9994
+Fig 4d,AlexNet pool2,"ex->ec N=40",non-PT,0.110666666142642,0.108
+Fig 4d,AlexNet pool2,"ex->ec N=40",PT (rotation only),0.710133336782455,0.7589
+Fig 4d,AlexNet pool2,"ex->ec N=40",control,0.0195999995743235,0.70014
+Fig 4d,AlexNet pool2,"ex->ec N=80",self,0.99990000128746,0.9998
+Fig 4d,AlexNet pool2,"ex->ec N=80",non-PT,0.130666666502754,0.1348
+Fig 4d,AlexNet pool2,"ex->ec N=80",PT (rotation only),0.952666661540667,0.9485
+Fig 4d,AlexNet pool2,"ex->ec N=80",control,0.0195999995743235,0.93855
+Fig 4d,AlexNet pool2,"ex->ec N=160",self,1,1
+Fig 4d,AlexNet pool2,"ex->ec N=160",non-PT,0.15833333397905,0.1647
+Fig 4d,AlexNet pool2,"ex->ec N=160",PT (rotation only),0.977866681416829,0.976599999999999
+Fig 4d,AlexNet pool2,"ex->ec N=160",control,0.0186666662618518,0.98985
+Fig 4d,AlexNet pool2,"ex->ec N=250",self,1,1
+Fig 4d,AlexNet pool2,"ex->ec N=250",non-PT,0.193400002618631,0.196
+Fig 4d,AlexNet pool2,"ex->ec N=250",PT (rotation only),0.980000019073486,0.98
+Fig 4d,AlexNet pool2,"ex->ec N=250",control,0.0198666662350297,0.995
+Fig 3d,AlexNet pool2,"ac->ex",self,1,1
+Fig 3d,AlexNet pool2,"ac->ex",non-PT,0.0887999991675218,0.0818000000000001
+Fig 3d,AlexNet pool2,"ac->ex",PT (rotation only),0.841253326654434,0.8473
+Fig 3d,AlexNet pool2,"ac->ex",control,0.0220266661743323,0.77977
+Fig 4d,AlexNet pool2,"ac->ex N=10",self,0.96826001783212,0.9667
+Fig 4d,AlexNet pool2,"ac->ex N=10",non-PT,0.0441999992355704,0.0571
+Fig 4d,AlexNet pool2,"ac->ex N=10",PT (rotation only),0.0941333325703939,0.089
+Fig 4d,AlexNet pool2,"ac->ex N=10",control,0.0203333328788479,0.07396
+Fig 4d,AlexNet pool2,"ac->ex N=20",self,0.996426675915718,0.9955
+Fig 4d,AlexNet pool2,"ac->ex N=20",non-PT,0.0700666657462716,0.0703
+Fig 4d,AlexNet pool2,"ac->ex N=20",PT (rotation only),0.242266665274898,0.2133
+Fig 4d,AlexNet pool2,"ac->ex N=20",control,0.0202666662136714,0.18454
+Fig 4d,AlexNet pool2,"ac->ex N=40",self,0.999213339885076,0.9995
+Fig 4d,AlexNet pool2,"ac->ex N=40",non-PT,0.0783333324020108,0.0768
+Fig 4d,AlexNet pool2,"ac->ex N=40",PT (rotation only),0.514933332900206,0.5424
+Fig 4d,AlexNet pool2,"ac->ex N=40",control,0.0212666662037373,0.47647
+Fig 4d,AlexNet pool2,"ac->ex N=80",self,1,1
+Fig 4d,AlexNet pool2,"ac->ex N=80",non-PT,0.0903999991342425,0.0849
+Fig 4d,AlexNet pool2,"ac->ex N=80",PT (rotation only),0.821199992497762,0.7901
+Fig 4d,AlexNet pool2,"ac->ex N=80",control,0.0209333328778545,0.72875
+Fig 4d,AlexNet pool2,"ac->ex N=160",self,1,1
+Fig 4d,AlexNet pool2,"ac->ex N=160",non-PT,0.0905333327005307,0.0961
+Fig 4d,AlexNet pool2,"ac->ex N=160",PT (rotation only),0.906066662669182,0.9099
+Fig 4d,AlexNet pool2,"ac->ex N=160",control,0.018933332922558,0.85785
+Fig 4d,AlexNet pool2,"ac->ex N=250",self,1,1
+Fig 4d,AlexNet pool2,"ac->ex N=250",non-PT,0.114133331701159,0.11
+Fig 4d,AlexNet pool2,"ac->ex N=250",PT (rotation only),0.919933333396912,0.92
+Fig 4d,AlexNet pool2,"ac->ex N=250",control,0.0230666661635041,0.8876
+Fig 3d,AlexNet pool2,"ex->ac",self,0.997506675879161,0.999
+Fig 3d,AlexNet pool2,"ex->ac",non-PT,0.135146666417519,0.142
+Fig 3d,AlexNet pool2,"ex->ac",PT (rotation only),0.900159996032715,0.9078
+Fig 3d,AlexNet pool2,"ex->ac",control,0.0219733328421911,0.88837
+Fig 4d,AlexNet pool2,"ex->ac N=10",self,0.915986709396044,0.9248
+Fig 4d,AlexNet pool2,"ex->ac N=10",non-PT,0.0667999991029501,0.0524
+Fig 4d,AlexNet pool2,"ex->ac N=10",PT (rotation only),0.126399999658267,0.1053
+Fig 4d,AlexNet pool2,"ex->ac N=10",control,0.02106666619579,0.08714
+Fig 4d,AlexNet pool2,"ex->ac N=20",self,0.984000011483828,0.982
+Fig 4d,AlexNet pool2,"ex->ac N=20",non-PT,0.075066665870448,0.0711000000000001
+Fig 4d,AlexNet pool2,"ex->ac N=20",PT (rotation only),0.290933333685001,0.2744
+Fig 4d,AlexNet pool2,"ex->ac N=20",control,0.0203333328912656,0.23591
+Fig 4d,AlexNet pool2,"ex->ac N=40",self,0.993946675459544,0.9948
+Fig 4d,AlexNet pool2,"ex->ac N=40",non-PT,0.108066665877899,0.112
+Fig 4d,AlexNet pool2,"ex->ac N=40",PT (rotation only),0.620666669110457,0.6212
+Fig 4d,AlexNet pool2,"ex->ac N=40",control,0.0206666662047307,0.57009
+Fig 4d,AlexNet pool2,"ex->ac N=80",self,0.996980007688204,0.9972
+Fig 4d,AlexNet pool2,"ex->ac N=80",non-PT,0.13919999986887,0.1343
+Fig 4d,AlexNet pool2,"ex->ac N=80",PT (rotation only),0.869799995223681,0.8499
+Fig 4d,AlexNet pool2,"ex->ac N=80",control,0.0189999995877345,0.83614
+Fig 4d,AlexNet pool2,"ex->ac N=160",self,0.998966674606005,0.9992
+Fig 4d,AlexNet pool2,"ex->ac N=160",non-PT,0.160800000230471,0.1679
+Fig 4d,AlexNet pool2,"ex->ac N=160",PT (rotation only),0.969933333396912,0.9616
+Fig 4d,AlexNet pool2,"ex->ac N=160",control,0.0201333328957359,0.95162
+Fig 4d,AlexNet pool2,"ex->ac N=250",self,1,1
+Fig 4d,AlexNet pool2,"ex->ac N=250",non-PT,0.195933336714904,0.192
+Fig 4d,AlexNet pool2,"ex->ac N=250",PT (rotation only),0.977733347813288,0.978
+Fig 4d,AlexNet pool2,"ex->ac N=250",control,0.0198666662350297,0.9772
+Fig 3d,AlexNet pool5,"ac->ec",self,0.989061343272527,0.9916
+Fig 3d,AlexNet pool5,"ac->ec",non-PT,0.0485599991927544,0.0515
+Fig 3d,AlexNet pool5,"ac->ec",PT (rotation only),0.583466669559479,0.5829
+Fig 3d,AlexNet pool5,"ac->ec",control,0.0234933328231176,0.55951
+Fig 4d,AlexNet pool5,"ac->ec N=10",self,0.597353699207306,0.6449
+Fig 4d,AlexNet pool5,"ac->ec N=10",non-PT,0.0229999994859099,0.0259
+Fig 4d,AlexNet pool5,"ac->ec N=10",PT (rotation only),0.0524666658292214,0.0576
+Fig 4d,AlexNet pool5,"ac->ec N=10",control,0.0213999995216727,0.05203
+Fig 4d,AlexNet pool5,"ac->ec N=20",self,0.871333406964938,0.8669
+Fig 4d,AlexNet pool5,"ac->ec N=20",non-PT,0.0319333326568206,0.035
+Fig 4d,AlexNet pool5,"ac->ec N=20",PT (rotation only),0.131399999546508,0.1506
+Fig 4d,AlexNet pool5,"ac->ec N=20",control,0.0201333328833183,0.13069
+Fig 4d,AlexNet pool5,"ac->ec N=40",self,0.964233350157738,0.9641
+Fig 4d,AlexNet pool5,"ac->ec N=40",non-PT,0.0415333324298263,0.0405
+Fig 4d,AlexNet pool5,"ac->ec N=40",PT (rotation only),0.292866667111715,0.3012
+Fig 4d,AlexNet pool5,"ac->ec N=40",control,0.0213999995216727,0.27986
+Fig 4d,AlexNet pool5,"ac->ec N=80",self,0.986473342776299,0.9842
+Fig 4d,AlexNet pool5,"ac->ec N=80",non-PT,0.0505333323776722,0.0439
+Fig 4d,AlexNet pool5,"ac->ec N=80",PT (rotation only),0.522133331795533,0.5199
+Fig 4d,AlexNet pool5,"ac->ec N=80",control,0.0234666661421458,0.50898
+Fig 4d,AlexNet pool5,"ac->ec N=160",self,0.994826670487722,0.9957
+Fig 4d,AlexNet pool5,"ac->ec N=160",non-PT,0.0526666657005747,0.0577
+Fig 4d,AlexNet pool5,"ac->ec N=160",PT (rotation only),0.718266669313113,0.7256
+Fig 4d,AlexNet pool5,"ac->ec N=160",control,0.0216666661947966,0.69876
+Fig 4d,AlexNet pool5,"ac->ec N=249",self,0.998000025749207,0.998
+Fig 4d,AlexNet pool5,"ac->ec N=249",non-PT,0.073133332071205,0.072
+Fig 4d,AlexNet pool5,"ac->ec N=249",PT (rotation only),0.843933328986168,0.836
+Fig 4d,AlexNet pool5,"ac->ec N=249",control,0.020799999559919,0.7812
+Fig 3d,AlexNet pool5,"ec->ac",self,0.916221377690633,0.9153
+Fig 3d,AlexNet pool5,"ec->ac",non-PT,0.0649866657902797,0.0605
+Fig 3d,AlexNet pool5,"ec->ac",PT (rotation only),0.667040005524953,0.6652
+Fig 3d,AlexNet pool5,"ec->ac",control,0.0206666662096977,0.63181
+Fig 4d,AlexNet pool5,"ec->ac N=10",self,0.250933692653974,0.2699
+Fig 4d,AlexNet pool5,"ec->ac N=10",non-PT,0.0343333325659235,0.0289
+Fig 4d,AlexNet pool5,"ec->ac N=10",PT (rotation only),0.0584666657323639,0.0499
+Fig 4d,AlexNet pool5,"ec->ac N=10",control,0.0203999995440245,0.04822
+Fig 4d,AlexNet pool5,"ec->ac N=20",self,0.551767159104347,0.5537
+Fig 4d,AlexNet pool5,"ec->ac N=20",non-PT,0.0459333326419195,0.0459
+Fig 4d,AlexNet pool5,"ec->ac N=20",PT (rotation only),0.143333333233992,0.1477
+Fig 4d,AlexNet pool5,"ec->ac N=20",control,0.0247999994456768,0.10914
+Fig 4d,AlexNet pool5,"ec->ac N=40",self,0.773893493413925,0.7791
+Fig 4d,AlexNet pool5,"ec->ac N=40",non-PT,0.0498666658749183,0.0615
+Fig 4d,AlexNet pool5,"ec->ac N=40",PT (rotation only),0.310533333867788,0.306
+Fig 4d,AlexNet pool5,"ec->ac N=40",control,0.0192666662360231,0.27496
+Fig 4d,AlexNet pool5,"ec->ac N=80",self,0.904673383633296,0.9057
+Fig 4d,AlexNet pool5,"ec->ac N=80",non-PT,0.0693333324417472,0.0733
+Fig 4d,AlexNet pool5,"ec->ac N=80",PT (rotation only),0.607200005054474,0.5911
+Fig 4d,AlexNet pool5,"ec->ac N=80",control,0.0203999995564421,0.56862
+Fig 4d,AlexNet pool5,"ec->ac N=160",self,0.943366697231928,0.9487
+Fig 4d,AlexNet pool5,"ec->ac N=160",non-PT,0.0600666656220953,0.0693
+Fig 4d,AlexNet pool5,"ec->ac N=160",PT (rotation only),0.787666662534078,0.7806
+Fig 4d,AlexNet pool5,"ec->ac N=160",control,0.0207333328699072,0.73773
+Fig 4d,AlexNet pool5,"ec->ac N=249",self,0.960506691733996,0.962
+Fig 4d,AlexNet pool5,"ec->ac N=249",non-PT,0.0387999991327524,0.04
+Fig 4d,AlexNet pool5,"ec->ac N=249",PT (rotation only),0.825399993062019,0.818
+Fig 4d,AlexNet pool5,"ec->ac N=249",control,0.0244666661446293,0.786
+Fig 3d,AlexNet pool5,"ec->ex",self,0.981592011372248,0.9829
+Fig 3d,AlexNet pool5,"ec->ex",non-PT,0.0461866657137871,0.0447
+Fig 3d,AlexNet pool5,"ec->ex",PT (rotation only),0.614400003830592,0.61
+Fig 3d,AlexNet pool5,"ec->ex",control,0.0205333328743776,0.58638
+Fig 4d,AlexNet pool5,"ec->ex N=10",self,0.498013851046562,0.541
+Fig 4d,AlexNet pool5,"ec->ex N=10",non-PT,0.0225333328420917,0.0269
+Fig 4d,AlexNet pool5,"ec->ex N=10",PT (rotation only),0.0688666658227642,0.0787
+Fig 4d,AlexNet pool5,"ec->ex N=10",control,0.0197999995698531,0.06084
+Fig 4d,AlexNet pool5,"ec->ex N=20",self,0.825060094594955,0.831
+Fig 4d,AlexNet pool5,"ec->ex N=20",non-PT,0.031666666145126,0.0357
+Fig 4d,AlexNet pool5,"ec->ex N=20",PT (rotation only),0.172066666732232,0.147
+Fig 4d,AlexNet pool5,"ec->ex N=20",control,0.0201333328833183,0.13304
+Fig 4d,AlexNet pool5,"ec->ex N=40",self,0.932860036293666,0.9375
+Fig 4d,AlexNet pool5,"ec->ex N=40",non-PT,0.0427333324526747,0.0484
+Fig 4d,AlexNet pool5,"ec->ex N=40",PT (rotation only),0.355200000529488,0.3421
+Fig 4d,AlexNet pool5,"ec->ex N=40",control,0.0201999995484948,0.31176
+Fig 4d,AlexNet pool5,"ec->ex N=80",self,0.980506680607796,0.9815
+Fig 4d,AlexNet pool5,"ec->ex N=80",non-PT,0.0397333324452241,0.0462
+Fig 4d,AlexNet pool5,"ec->ex N=80",PT (rotation only),0.584000002046426,0.5658
+Fig 4d,AlexNet pool5,"ec->ex N=80",control,0.0184666662539045,0.53192
+Fig 4d,AlexNet pool5,"ec->ex N=160",self,0.991360009908676,0.9922
+Fig 4d,AlexNet pool5,"ec->ex N=160",non-PT,0.0506666656086842,0.0487
+Fig 4d,AlexNet pool5,"ec->ex N=160",PT (rotation only),0.712400004466375,0.6992
+Fig 4d,AlexNet pool5,"ec->ex N=160",control,0.0235999994849165,0.6383
+Fig 4d,AlexNet pool5,"ec->ex N=249",self,0.999993333419164,1
+Fig 4d,AlexNet pool5,"ec->ex N=249",non-PT,0.0449333323289951,0.048
+Fig 4d,AlexNet pool5,"ec->ex N=249",PT (rotation only),0.782933327953021,0.776
+Fig 4d,AlexNet pool5,"ec->ex N=249",control,0.0211333328733842,0.6716
+Fig 3d,AlexNet pool5,"ex->ec",self,0.989402673323949,0.9914
+Fig 3d,AlexNet pool5,"ex->ec",non-PT,0.0270399994701147,0.0334
+Fig 3d,AlexNet pool5,"ex->ec",PT (rotation only),0.779919996420542,0.7605
+Fig 3d,AlexNet pool5,"ex->ec",control,0.0233333328266939,0.72694
+Fig 4d,AlexNet pool5,"ex->ec N=10",self,0.607807071805,0.648
+Fig 4d,AlexNet pool5,"ex->ec N=10",non-PT,0.031533332640926,0.0341
+Fig 4d,AlexNet pool5,"ex->ec N=10",PT (rotation only),0.0724666658788919,0.0845
+Fig 4d,AlexNet pool5,"ex->ec N=10",control,0.0227999994903803,0.07229
+Fig 4d,AlexNet pool5,"ex->ec N=20",self,0.898340054750443,0.8672
+Fig 4d,AlexNet pool5,"ex->ec N=20",non-PT,0.031799999413391,0.0278
+Fig 4d,AlexNet pool5,"ex->ec N=20",PT (rotation only),0.208866665835182,0.2079
+Fig 4d,AlexNet pool5,"ex->ec N=20",control,0.0184666662539045,0.18034
+Fig 4d,AlexNet pool5,"ex->ec N=40",self,0.963973354299863,0.9645
+Fig 4d,AlexNet pool5,"ex->ec N=40",non-PT,0.0279999994238218,0.0298
+Fig 4d,AlexNet pool5,"ex->ec N=40",PT (rotation only),0.457133331100146,0.4537
+Fig 4d,AlexNet pool5,"ex->ec N=40",control,0.0242666661242644,0.43493
+Fig 4d,AlexNet pool5,"ex->ec N=80",self,0.98621334473292,0.9839
+Fig 4d,AlexNet pool5,"ex->ec N=80",non-PT,0.0275999994203448,0.0306
+Fig 4d,AlexNet pool5,"ex->ec N=80",PT (rotation only),0.742800001700719,0.7378
+Fig 4d,AlexNet pool5,"ex->ec N=80",control,0.0249333327884475,0.68537
+Fig 4d,AlexNet pool5,"ex->ec N=160",self,0.995846672256788,0.9956
+Fig 4d,AlexNet pool5,"ex->ec N=160",non-PT,0.0269333328182499,0.0289
+Fig 4d,AlexNet pool5,"ex->ec N=160",PT (rotation only),0.859266660412153,0.8562
+Fig 4d,AlexNet pool5,"ex->ec N=160",control,0.0240666661411524,0.82248
+Fig 4d,AlexNet pool5,"ex->ec N=249",self,0.998000025749207,0.998
+Fig 4d,AlexNet pool5,"ex->ec N=249",non-PT,0.00793333315600952,0.008
+Fig 4d,AlexNet pool5,"ex->ec N=249",PT (rotation only),0.903466663559278,0.902
+Fig 4d,AlexNet pool5,"ex->ec N=249",control,0.0247333328177532,0.871
+Fig 3d,AlexNet pool5,"ac->ex",self,0.982602677027384,0.9829
+Fig 3d,AlexNet pool5,"ac->ex",non-PT,0.0291999993920326,0.0298
+Fig 3d,AlexNet pool5,"ac->ex",PT (rotation only),0.502453331987063,0.5066
+Fig 3d,AlexNet pool5,"ac->ex",control,0.0240533327956994,0.47365
+Fig 4d,AlexNet pool5,"ac->ex N=10",self,0.585880460341771,0.5425
+Fig 4d,AlexNet pool5,"ac->ex N=10",non-PT,0.0208666662002603,0.0241
+Fig 4d,AlexNet pool5,"ac->ex N=10",PT (rotation only),0.0669999991729855,0.0579
+Fig 4d,AlexNet pool5,"ac->ex N=10",control,0.0195333328967293,0.06007
+Fig 4d,AlexNet pool5,"ac->ex N=20",self,0.800626777410507,0.832
+Fig 4d,AlexNet pool5,"ac->ex N=20",non-PT,0.0299999994163712,0.0306
+Fig 4d,AlexNet pool5,"ac->ex N=20",PT (rotation only),0.146800000307461,0.1552
+Fig 4d,AlexNet pool5,"ac->ex N=20",control,0.0206666662047307,0.13792
+Fig 4d,AlexNet pool5,"ac->ex N=40",self,0.93116003771623,0.9364
+Fig 4d,AlexNet pool5,"ac->ex N=40",non-PT,0.0367333325122794,0.0346
+Fig 4d,AlexNet pool5,"ac->ex N=40",PT (rotation only),0.279200000117222,0.2662
+Fig 4d,AlexNet pool5,"ac->ex N=40",control,0.0238666661332051,0.2546
+Fig 4d,AlexNet pool5,"ac->ex N=80",self,0.975493348240852,0.982
+Fig 4d,AlexNet pool5,"ac->ex N=80",non-PT,0.0406666659067074,0.042
+Fig 4d,AlexNet pool5,"ac->ex N=80",PT (rotation only),0.453333331346512,0.472
+Fig 4d,AlexNet pool5,"ac->ex N=80",control,0.0248666661108534,0.4411
+Fig 4d,AlexNet pool5,"ac->ex N=160",self,0.994500004847844,0.9922
+Fig 4d,AlexNet pool5,"ac->ex N=160",non-PT,0.0359333325798313,0.0287
+Fig 4d,AlexNet pool5,"ac->ex N=160",PT (rotation only),0.598666669428349,0.5915
+Fig 4d,AlexNet pool5,"ac->ex N=160",control,0.0281999993820985,0.55058
+Fig 4d,AlexNet pool5,"ac->ex N=249",self,0.999993333419164,1
+Fig 4d,AlexNet pool5,"ac->ex N=249",non-PT,0.0365999991819263,0.036
+Fig 4d,AlexNet pool5,"ac->ex N=249",PT (rotation only),0.653200005690257,0.654
+Fig 4d,AlexNet pool5,"ac->ex N=249",control,0.0294666660452882,0.5858
+Fig 3d,AlexNet pool5,"ex->ac",self,0.916152045726776,0.9167
+Fig 3d,AlexNet pool5,"ex->ac",non-PT,0.0262933327555656,0.0278
+Fig 3d,AlexNet pool5,"ex->ac",PT (rotation only),0.720160002787908,0.7097
+Fig 3d,AlexNet pool5,"ex->ac",control,0.020853332867225,0.67949
+Fig 4d,AlexNet pool5,"ex->ac N=10",self,0.313020434379578,0.2653
+Fig 4d,AlexNet pool5,"ex->ac N=10",non-PT,0.0214666662116845,0.0237
+Fig 4d,AlexNet pool5,"ex->ac N=10",PT (rotation only),0.0692666657144825,0.0713
+Fig 4d,AlexNet pool5,"ex->ac N=10",control,0.0192666662484407,0.05802
+Fig 4d,AlexNet pool5,"ex->ac N=20",self,0.581520434220632,0.5521
+Fig 4d,AlexNet pool5,"ex->ac N=20",non-PT,0.0327333326637745,0.0233
+Fig 4d,AlexNet pool5,"ex->ac N=20",PT (rotation only),0.166866667419672,0.1533
+Fig 4d,AlexNet pool5,"ex->ac N=20",control,0.0189333329101404,0.1455
+Fig 4d,AlexNet pool5,"ex->ac N=40",self,0.786760142842929,0.7779
+Fig 4d,AlexNet pool5,"ex->ac N=40",non-PT,0.0293333327025175,0.0301
+Fig 4d,AlexNet pool5,"ex->ac N=40",PT (rotation only),0.383066667268674,0.3595
+Fig 4d,AlexNet pool5,"ex->ac N=40",control,0.0203333329036832,0.34187
+Fig 4d,AlexNet pool5,"ex->ac N=80",self,0.90351338048776,0.906
+Fig 4d,AlexNet pool5,"ex->ac N=80",non-PT,0.0313999993850788,0.0353
+Fig 4d,AlexNet pool5,"ex->ac N=80",PT (rotation only),0.646600006222725,0.6738
+Fig 4d,AlexNet pool5,"ex->ac N=80",control,0.0217999995251497,0.64214
+Fig 4d,AlexNet pool5,"ex->ac N=160",self,0.947846693396568,0.9474
+Fig 4d,AlexNet pool5,"ex->ac N=160",non-PT,0.015133332995077,0.0177
+Fig 4d,AlexNet pool5,"ex->ac N=160",PT (rotation only),0.819999993046125,0.8137
+Fig 4d,AlexNet pool5,"ex->ac N=160",control,0.0200666662181417,0.77113
+Fig 4d,AlexNet pool5,"ex->ac N=249",self,0.960266688863436,0.958
+Fig 4d,AlexNet pool5,"ex->ac N=249",non-PT,0.0122666663924853,0.012
+Fig 4d,AlexNet pool5,"ex->ac N=249",PT (rotation only),0.872199994921684,0.87
+Fig 4d,AlexNet pool5,"ex->ac N=249",control,0.0179999995976686,0.8066
+Fig 3d,VGG pool1,"ac->ec",self,0.995536003510157,0.998
+Fig 3d,VGG pool1,"ac->ec",non-PT,0.0199999995529652,0.02
+Fig 3d,VGG pool1,"ac->ec",PT (rotation only),0.295306668162346,0.286
+Fig 3d,VGG pool1,"ac->ec",control,0.019733332892259,0.1378
+Fig 4d,VGG pool1,"ac->ec N=10",self,0.92364003876845,0.9126
+Fig 4d,VGG pool1,"ac->ec N=10",non-PT,0.02606666619579,0.0206
+Fig 4d,VGG pool1,"ac->ec N=10",PT (rotation only),0.088066665691634,0.0739
+Fig 4d,VGG pool1,"ac->ec N=10",control,0.0192666662360231,0.05214
+Fig 4d,VGG pool1,"ac->ec N=20",self,0.968673348426819,0.9697
+Fig 4d,VGG pool1,"ac->ec N=20",non-PT,0.0252666661019127,0.022
+Fig 4d,VGG pool1,"ac->ec N=20",PT (rotation only),0.153666666696469,0.1378
+Fig 4d,VGG pool1,"ac->ec N=20",control,0.0201333328833183,0.08381
+Fig 4d,VGG pool1,"ac->ec N=40",self,0.988500007192294,0.9864
+Fig 4d,VGG pool1,"ac->ec N=40",non-PT,0.0215333328520258,0.0327
+Fig 4d,VGG pool1,"ac->ec N=40",PT (rotation only),0.211666667585572,0.23
+Fig 4d,VGG pool1,"ac->ec N=40",control,0.0205333328743776,0.11688
+Fig 4d,VGG pool1,"ac->ec N=64",self,0.995406669775645,0.998
+Fig 4d,VGG pool1,"ac->ec N=64",non-PT,0.0199999995529652,0.02
+Fig 4d,VGG pool1,"ac->ec N=64",PT (rotation only),0.296133335580428,0.286
+Fig 4d,VGG pool1,"ac->ec N=64",control,0.0209999995306134,0.1378
+Fig 3d,VGG pool1,"ec->ac",self,1,1
+Fig 3d,VGG pool1,"ec->ac",non-PT,0,0
+Fig 3d,VGG pool1,"ec->ac",PT (rotation only),0.277519999762376,0.284
+Fig 3d,VGG pool1,"ec->ac",control,0.0224266661703587,0.1756
+Fig 4d,VGG pool1,"ec->ac N=10",self,0.979640012582143,0.9782
+Fig 4d,VGG pool1,"ec->ac N=10",non-PT,0.0227333328252037,0.031
+Fig 4d,VGG pool1,"ec->ac N=10",PT (rotation only),0.0739999992897113,0.0648
+Fig 4d,VGG pool1,"ec->ac N=10",control,0.0201333328833183,0.05557
+Fig 4d,VGG pool1,"ec->ac N=20",self,0.996046673258146,0.993
+Fig 4d,VGG pool1,"ec->ac N=20",non-PT,0.019733332892259,0.0169
+Fig 4d,VGG pool1,"ec->ac N=20",PT (rotation only),0.144866666470965,0.1438
+Fig 4d,VGG pool1,"ec->ac N=20",control,0.0203999995440245,0.09961
+Fig 4d,VGG pool1,"ec->ac N=40",self,0.999326673746109,0.9997
+Fig 4d,VGG pool1,"ec->ac N=40",non-PT,0.00919999979436398,0.0092
+Fig 4d,VGG pool1,"ec->ac N=40",PT (rotation only),0.228533332198858,0.2332
+Fig 4d,VGG pool1,"ec->ac N=40",control,0.0212666661913196,0.14822
+Fig 4d,VGG pool1,"ec->ac N=64",self,1,1
+Fig 4d,VGG pool1,"ec->ac N=64",non-PT,0,0
+Fig 4d,VGG pool1,"ec->ac N=64",PT (rotation only),0.278933333853881,0.284
+Fig 4d,VGG pool1,"ec->ac N=64",control,0.0237333328152696,0.1756
+Fig 3d,VGG pool1,"ec->ex",self,1,1
+Fig 3d,VGG pool1,"ec->ex",non-PT,0.0434399990290403,0.046
+Fig 3d,VGG pool1,"ec->ex",PT (rotation only),0.174560001909733,0.17
+Fig 3d,VGG pool1,"ec->ex",control,0.0234399994810422,0.1528
+Fig 4d,VGG pool1,"ec->ex N=10",self,0.991826676328977,0.9925
+Fig 4d,VGG pool1,"ec->ex N=10",non-PT,0.0247333328425884,0.0327
+Fig 4d,VGG pool1,"ec->ex N=10",PT (rotation only),0.037733332576851,0.0504
+Fig 4d,VGG pool1,"ec->ex N=10",control,0.0202666662136714,0.05233
+Fig 4d,VGG pool1,"ec->ex N=20",self,0.998453346689542,0.9981
+Fig 4d,VGG pool1,"ec->ex N=20",non-PT,0.0241333327939113,0.0231
+Fig 4d,VGG pool1,"ec->ex N=20",PT (rotation only),0.0743999990945061,0.0864
+Fig 4d,VGG pool1,"ec->ex N=20",control,0.0199999995529652,0.08823
+Fig 4d,VGG pool1,"ec->ex N=40",self,0.998886681000392,0.9988
+Fig 4d,VGG pool1,"ec->ex N=40",non-PT,0.0340666659052173,0.0319
+Fig 4d,VGG pool1,"ec->ex N=40",PT (rotation only),0.147266666814685,0.1421
+Fig 4d,VGG pool1,"ec->ex N=40",control,0.0216666661823789,0.1306
+Fig 4d,VGG pool1,"ec->ex N=64",self,1,1
+Fig 4d,VGG pool1,"ec->ex N=64",non-PT,0.0436666656906406,0.046
+Fig 4d,VGG pool1,"ec->ex N=64",PT (rotation only),0.172266668851177,0.17
+Fig 4d,VGG pool1,"ec->ex N=64",control,0.02106666619579,0.1528
+Fig 3d,VGG pool1,"ex->ec",self,0.995416004339854,0.996
+Fig 3d,VGG pool1,"ex->ec",non-PT,0.0361866658578316,0.036
+Fig 3d,VGG pool1,"ex->ec",PT (rotation only),0.262773327509562,0.254
+Fig 3d,VGG pool1,"ex->ec",control,0.019733332892259,0.2116
+Fig 4d,VGG pool1,"ex->ec N=10",self,0.905140049854914,0.912
+Fig 4d,VGG pool1,"ex->ec N=10",non-PT,0.0269999995579322,0.0237
+Fig 4d,VGG pool1,"ex->ec N=10",PT (rotation only),0.0598666657134891,0.0691
+Fig 4d,VGG pool1,"ex->ec N=10",control,0.0188666662449638,0.06213
+Fig 4d,VGG pool1,"ex->ec N=20",self,0.972480017741521,0.9699
+Fig 4d,VGG pool1,"ex->ec N=20",non-PT,0.0335999992862344,0.0331
+Fig 4d,VGG pool1,"ex->ec N=20",PT (rotation only),0.121333333365619,0.1376
+Fig 4d,VGG pool1,"ex->ec N=20",control,0.0203999995440245,0.11491
+Fig 4d,VGG pool1,"ex->ec N=40",self,0.989313339193662,0.9869
+Fig 4d,VGG pool1,"ex->ec N=40",non-PT,0.033599999298652,0.0351
+Fig 4d,VGG pool1,"ex->ec N=40",PT (rotation only),0.20366666490833,0.2399
+Fig 4d,VGG pool1,"ex->ec N=40",control,0.0196666662270824,0.17718
+Fig 4d,VGG pool1,"ex->ec N=64",self,0.995626670320829,0.996
+Fig 4d,VGG pool1,"ex->ec N=64",non-PT,0.0359333325301607,0.036
+Fig 4d,VGG pool1,"ex->ec N=64",PT (rotation only),0.263399993826946,0.254
+Fig 4d,VGG pool1,"ex->ec N=64",control,0.0189999995753169,0.2116
+Fig 3d,VGG pool1,"ac->ex",self,0.999997333367666,1
+Fig 3d,VGG pool1,"ac->ex",non-PT,0.0399999991059303,0.04
+Fig 3d,VGG pool1,"ac->ex",PT (rotation only),0.171920002202193,0.17
+Fig 3d,VGG pool1,"ac->ex",control,0.0191466662387053,0.1224
+Fig 4d,VGG pool1,"ac->ex N=10",self,0.994613336920738,0.9921
+Fig 4d,VGG pool1,"ac->ex N=10",non-PT,0.0258666660885016,0.0319
+Fig 4d,VGG pool1,"ac->ex N=10",PT (rotation only),0.0781999990840753,0.0703
+Fig 4d,VGG pool1,"ac->ex N=10",control,0.0191999995708466,0.05051
+Fig 4d,VGG pool1,"ac->ex N=20",self,0.998940010666847,0.998
+Fig 4d,VGG pool1,"ac->ex N=20",non-PT,0.0357999991998076,0.0367
+Fig 4d,VGG pool1,"ac->ex N=20",PT (rotation only),0.0893999991690119,0.0866
+Fig 4d,VGG pool1,"ac->ex N=20",control,0.0170666662851969,0.07163
+Fig 4d,VGG pool1,"ac->ex N=40",self,0.998493352731069,0.9988
+Fig 4d,VGG pool1,"ac->ex N=40",non-PT,0.0393999991193414,0.0382
+Fig 4d,VGG pool1,"ac->ex N=40",PT (rotation only),0.119466666517158,0.1299
+Fig 4d,VGG pool1,"ac->ex N=40",control,0.020266666226089,0.1018
+Fig 4d,VGG pool1,"ac->ex N=64",self,1,1
+Fig 4d,VGG pool1,"ac->ex N=64",non-PT,0.0399999991059303,0.04
+Fig 4d,VGG pool1,"ac->ex N=64",PT (rotation only),0.170466668655475,0.17
+Fig 4d,VGG pool1,"ac->ex N=64",control,0.0197999995574355,0.1224
+Fig 3d,VGG pool1,"ex->ac",self,1,1
+Fig 3d,VGG pool1,"ex->ac",non-PT,0.0399999991059303,0.04
+Fig 3d,VGG pool1,"ex->ac",PT (rotation only),0.178000002384186,0.178
+Fig 3d,VGG pool1,"ex->ac",control,0.0226933328509331,0.1988
+Fig 4d,VGG pool1,"ex->ac N=10",self,0.975040015975634,0.9782
+Fig 4d,VGG pool1,"ex->ac N=10",non-PT,0.0247999994456768,0.0177
+Fig 4d,VGG pool1,"ex->ac N=10",PT (rotation only),0.0654666658118367,0.067
+Fig 4d,VGG pool1,"ex->ac N=10",control,0.0197999995574355,0.0644
+Fig 4d,VGG pool1,"ex->ac N=20",self,0.994686675270398,0.9929
+Fig 4d,VGG pool1,"ex->ac N=20",non-PT,0.0299333326642712,0.0233
+Fig 4d,VGG pool1,"ex->ac N=20",PT (rotation only),0.107999999361734,0.1304
+Fig 4d,VGG pool1,"ex->ac N=20",control,0.0193333329011997,0.11279
+Fig 4d,VGG pool1,"ex->ac N=40",self,0.999246670603752,0.9998
+Fig 4d,VGG pool1,"ex->ac N=40",non-PT,0.0386666658023993,0.0376
+Fig 4d,VGG pool1,"ex->ac N=40",PT (rotation only),0.173200000822544,0.1782
+Fig 4d,VGG pool1,"ex->ac N=40",control,0.0218666661779086,0.16899
+Fig 4d,VGG pool1,"ex->ac N=64",self,1,1
+Fig 4d,VGG pool1,"ex->ac N=64",non-PT,0.0399999991059303,0.04
+Fig 4d,VGG pool1,"ex->ac N=64",PT (rotation only),0.178000002155701,0.178
+Fig 4d,VGG pool1,"ex->ac N=64",control,0.0249333327760299,0.1988
+Fig 3d,VGG pool2,"ac->ec",self,1,1
+Fig 3d,VGG pool2,"ac->ec",non-PT,0.0505066659698884,0.0497
+Fig 3d,VGG pool2,"ac->ec",PT (rotation only),0.653706670840581,0.6731
+Fig 3d,VGG pool2,"ac->ec",control,0.0206399995535612,0.50909
+Fig 4d,VGG pool2,"ac->ec N=10",self,0.99252000828584,0.9959
+Fig 4d,VGG pool2,"ac->ec N=10",non-PT,0.0212666661913196,0.0329
+Fig 4d,VGG pool2,"ac->ec N=10",PT (rotation only),0.128199999729792,0.1091
+Fig 4d,VGG pool2,"ac->ec N=10",control,0.02106666619579,0.07437
+Fig 4d,VGG pool2,"ac->ec N=20",self,0.999406671325366,0.9992
+Fig 4d,VGG pool2,"ac->ec N=20",non-PT,0.0366666658471028,0.0242
+Fig 4d,VGG pool2,"ac->ec N=20",PT (rotation only),0.267200000137091,0.2618
+Fig 4d,VGG pool2,"ac->ec N=20",control,0.0190666662529111,0.17708
+Fig 4d,VGG pool2,"ac->ec N=40",self,0.999926667610804,0.9999
+Fig 4d,VGG pool2,"ac->ec N=40",non-PT,0.0481333326175809,0.0421
+Fig 4d,VGG pool2,"ac->ec N=40",PT (rotation only),0.478999998966853,0.476
+Fig 4d,VGG pool2,"ac->ec N=40",control,0.0203999995440245,0.35546
+Fig 4d,VGG pool2,"ac->ec N=80",self,1,1
+Fig 4d,VGG pool2,"ac->ec N=80",non-PT,0.0387333325420817,0.0382
+Fig 4d,VGG pool2,"ac->ec N=80",PT (rotation only),0.707800003488859,0.7091
+Fig 4d,VGG pool2,"ac->ec N=80",control,0.0206666662171483,0.56277
+Fig 4d,VGG pool2,"ac->ec N=128",self,1,1
+Fig 4d,VGG pool2,"ac->ec N=128",non-PT,0.0365333325167497,0.038
+Fig 4d,VGG pool2,"ac->ec N=128",PT (rotation only),0.814733331600825,0.812
+Fig 4d,VGG pool2,"ac->ec N=128",control,0.021799999512732,0.6598
+Fig 3d,VGG pool2,"ec->ac",self,1,1
+Fig 3d,VGG pool2,"ec->ac",non-PT,0.0150666663299004,0.0138
+Fig 3d,VGG pool2,"ec->ac",PT (rotation only),0.632773339271545,0.6306
+Fig 3d,VGG pool2,"ec->ac",control,0.0179199996044238,0.50398
+Fig 4d,VGG pool2,"ec->ac N=10",self,0.998726678490639,0.999
+Fig 4d,VGG pool2,"ec->ac N=10",non-PT,0.0195333328967293,0.0232
+Fig 4d,VGG pool2,"ec->ac N=10",PT (rotation only),0.109933332875371,0.1077
+Fig 4d,VGG pool2,"ec->ac N=10",control,0.0187999995797873,0.08998
+Fig 4d,VGG pool2,"ec->ac N=20",self,0.999800002574921,0.9999
+Fig 4d,VGG pool2,"ec->ac N=20",non-PT,0.0281999994441867,0.0185
+Fig 4d,VGG pool2,"ec->ac N=20",PT (rotation only),0.290200000355641,0.2523
+Fig 4d,VGG pool2,"ec->ac N=20",control,0.0209333328654369,0.1962
+Fig 4d,VGG pool2,"ec->ac N=40",self,1,1
+Fig 4d,VGG pool2,"ec->ac N=40",non-PT,0.0189333329101404,0.0206
+Fig 4d,VGG pool2,"ec->ac N=40",PT (rotation only),0.515333334803581,0.4971
+Fig 4d,VGG pool2,"ec->ac N=40",control,0.0178666662797332,0.38862
+Fig 4d,VGG pool2,"ec->ac N=80",self,1,1
+Fig 4d,VGG pool2,"ec->ac N=80",non-PT,0.0108666664237777,0.0098
+Fig 4d,VGG pool2,"ec->ac N=80",PT (rotation only),0.676533338427544,0.6786
+Fig 4d,VGG pool2,"ec->ac N=80",control,0.0165999996289611,0.54654
+Fig 4d,VGG pool2,"ec->ac N=128",self,1,1
+Fig 4d,VGG pool2,"ec->ac N=128",non-PT,0,0
+Fig 4d,VGG pool2,"ec->ac N=128",PT (rotation only),0.769599987069766,0.772
+Fig 4d,VGG pool2,"ec->ac N=128",control,0.0147999996691942,0.6222
+Fig 3d,VGG pool2,"ec->ex",self,1,1
+Fig 3d,VGG pool2,"ec->ex",non-PT,0.0606933322399855,0.0712
+Fig 3d,VGG pool2,"ec->ex",PT (rotation only),0.489893330812454,0.4929
+Fig 3d,VGG pool2,"ec->ex",control,0.015093332995971,0.43977
+Fig 4d,VGG pool2,"ec->ex N=10",self,0.999500006437302,0.9998
+Fig 4d,VGG pool2,"ec->ex N=10",non-PT,0.0486666657278935,0.0648
+Fig 4d,VGG pool2,"ec->ex N=10",PT (rotation only),0.102466666127245,0.1065
+Fig 4d,VGG pool2,"ec->ex N=10",control,0.0194666662315528,0.081
+Fig 4d,VGG pool2,"ec->ex N=20",self,1,1
+Fig 4d,VGG pool2,"ec->ex N=20",non-PT,0.0585333326334755,0.0561
+Fig 4d,VGG pool2,"ec->ex N=20",PT (rotation only),0.19886666610837,0.2011
+Fig 4d,VGG pool2,"ec->ex N=20",control,0.0187333329146107,0.17674
+Fig 4d,VGG pool2,"ec->ex N=40",self,1,1
+Fig 4d,VGG pool2,"ec->ex N=40",non-PT,0.0751333325356245,0.0668
+Fig 4d,VGG pool2,"ec->ex N=40",PT (rotation only),0.390266666909059,0.3755
+Fig 4d,VGG pool2,"ec->ex N=40",control,0.0153333329906066,0.3339
+Fig 4d,VGG pool2,"ec->ex N=80",self,1,1
+Fig 4d,VGG pool2,"ec->ex N=80",non-PT,0.062799998720487,0.0546
+Fig 4d,VGG pool2,"ec->ex N=80",PT (rotation only),0.530733335316181,0.5317
+Fig 4d,VGG pool2,"ec->ex N=80",control,0.0129333330442508,0.46513
+Fig 4d,VGG pool2,"ec->ex N=128",self,1,1
+Fig 4d,VGG pool2,"ec->ex N=128",non-PT,0.0399999991059303,0.04
+Fig 4d,VGG pool2,"ec->ex N=128",PT (rotation only),0.610333338578542,0.608
+Fig 4d,VGG pool2,"ec->ex N=128",control,0.0131333330397805,0.5232
+Fig 3d,VGG pool2,"ex->ec",self,1,1
+Fig 3d,VGG pool2,"ex->ec",non-PT,0.0475199993451436,0.0438
+Fig 3d,VGG pool2,"ex->ec",PT (rotation only),0.621466674009959,0.6212
+Fig 3d,VGG pool2,"ex->ec",control,0.0216266661882401,0.59087
+Fig 4d,VGG pool2,"ex->ec N=10",self,0.994333343108495,0.9955
+Fig 4d,VGG pool2,"ex->ec N=10",non-PT,0.0389333325251937,0.044
+Fig 4d,VGG pool2,"ex->ec N=10",PT (rotation only),0.118466665906211,0.0916
+Fig 4d,VGG pool2,"ex->ec N=10",control,0.0205333328867952,0.08628
+Fig 4d,VGG pool2,"ex->ec N=20",self,0.999153341253599,0.9991
+Fig 4d,VGG pool2,"ex->ec N=20",non-PT,0.0523333324491978,0.0495
+Fig 4d,VGG pool2,"ex->ec N=20",PT (rotation only),0.253533333440622,0.2415
+Fig 4d,VGG pool2,"ex->ec N=20",control,0.0234666661545634,0.21976
+Fig 4d,VGG pool2,"ex->ec N=40",self,1,0.9999
+Fig 4d,VGG pool2,"ex->ec N=40",non-PT,0.0521333324164152,0.0507
+Fig 4d,VGG pool2,"ex->ec N=40",PT (rotation only),0.464333330094814,0.4556
+Fig 4d,VGG pool2,"ex->ec N=40",control,0.0219999995082617,0.43331
+Fig 4d,VGG pool2,"ex->ec N=80",self,1,1
+Fig 4d,VGG pool2,"ex->ec N=80",non-PT,0.0419333324829737,0.0397
+Fig 4d,VGG pool2,"ex->ec N=80",PT (rotation only),0.695466672579447,0.6833
+Fig 4d,VGG pool2,"ex->ec N=80",control,0.0234666661421458,0.63654
+Fig 4d,VGG pool2,"ex->ec N=128",self,1,1
+Fig 4d,VGG pool2,"ex->ec N=128",non-PT,0.0539999987930059,0.054
+Fig 4d,VGG pool2,"ex->ec N=128",PT (rotation only),0.747266669273376,0.746
+Fig 4d,VGG pool2,"ex->ec N=128",control,0.0227333328376214,0.7254
+Fig 3d,VGG pool2,"ac->ex",self,1,1
+Fig 3d,VGG pool2,"ac->ex",non-PT,0.0237866661349932,0.0246
+Fig 3d,VGG pool2,"ac->ex",PT (rotation only),0.492933331648509,0.4915
+Fig 3d,VGG pool2,"ac->ex",control,0.0184266662547986,0.46093
+Fig 4d,VGG pool2,"ac->ex N=10",self,0.999493336876233,0.9998
+Fig 4d,VGG pool2,"ac->ex N=10",non-PT,0.035133332585295,0.0298
+Fig 4d,VGG pool2,"ac->ex N=10",PT (rotation only),0.0941333322723707,0.093
+Fig 4d,VGG pool2,"ac->ex N=10",control,0.0199333329002062,0.07392
+Fig 4d,VGG pool2,"ac->ex N=20",self,1,1
+Fig 4d,VGG pool2,"ac->ex N=20",non-PT,0.0303333326553305,0.037
+Fig 4d,VGG pool2,"ac->ex N=20",PT (rotation only),0.190266666834553,0.1941
+Fig 4d,VGG pool2,"ac->ex N=20",control,0.0186666662618518,0.16316
+Fig 4d,VGG pool2,"ac->ex N=40",self,1,1
+Fig 4d,VGG pool2,"ac->ex N=40",non-PT,0.0270666660616795,0.0279
+Fig 4d,VGG pool2,"ac->ex N=40",PT (rotation only),0.385600000868241,0.3839
+Fig 4d,VGG pool2,"ac->ex N=40",control,0.0185333329190811,0.33558
+Fig 4d,VGG pool2,"ac->ex N=80",self,1,1
+Fig 4d,VGG pool2,"ac->ex N=80",non-PT,0.0253333327670892,0.0225
+Fig 4d,VGG pool2,"ac->ex N=80",PT (rotation only),0.502199999392033,0.5244
+Fig 4d,VGG pool2,"ac->ex N=80",control,0.0191333329180876,0.50993
+Fig 4d,VGG pool2,"ac->ex N=128",self,1,1
+Fig 4d,VGG pool2,"ac->ex N=128",non-PT,0.0199999995529652,0.02
+Fig 4d,VGG pool2,"ac->ex N=128",PT (rotation only),0.574799988269806,0.574
+Fig 4d,VGG pool2,"ac->ex N=128",control,0.0182666662583749,0.5884
+Fig 3d,VGG pool2,"ex->ac",self,1,1
+Fig 3d,VGG pool2,"ex->ac",non-PT,0.0501866656740506,0.0517
+Fig 3d,VGG pool2,"ex->ac",PT (rotation only),0.651413336992264,0.6451
+Fig 3d,VGG pool2,"ex->ac",control,0.0204799995521704,0.61703
+Fig 4d,VGG pool2,"ex->ac N=10",self,0.999100005626678,0.9989
+Fig 4d,VGG pool2,"ex->ac N=10",non-PT,0.0349999992797772,0.0381
+Fig 4d,VGG pool2,"ex->ac N=10",PT (rotation only),0.107799999713898,0.0984
+Fig 4d,VGG pool2,"ex->ac N=10",control,0.0201999995609125,0.09485
+Fig 4d,VGG pool2,"ex->ac N=20",self,0.999800002574921,0.9999
+Fig 4d,VGG pool2,"ex->ac N=20",non-PT,0.0419333325947324,0.0355
+Fig 4d,VGG pool2,"ex->ac N=20",PT (rotation only),0.250466663390398,0.2819
+Fig 4d,VGG pool2,"ex->ac N=20",control,0.0214666661868493,0.23444
+Fig 4d,VGG pool2,"ex->ac N=40",self,1,1
+Fig 4d,VGG pool2,"ex->ac N=40",non-PT,0.0445999991645416,0.0364
+Fig 4d,VGG pool2,"ex->ac N=40",PT (rotation only),0.509600001275539,0.5091
+Fig 4d,VGG pool2,"ex->ac N=40",control,0.0207333328699072,0.48017
+Fig 4d,VGG pool2,"ex->ac N=80",self,1,1
+Fig 4d,VGG pool2,"ex->ac N=80",non-PT,0.0460666656369964,0.0453
+Fig 4d,VGG pool2,"ex->ac N=80",PT (rotation only),0.711200005014737,0.6931
+Fig 4d,VGG pool2,"ex->ac N=80",control,0.0205333328992128,0.66527
+Fig 4d,VGG pool2,"ex->ac N=128",self,1,1
+Fig 4d,VGG pool2,"ex->ac N=128",non-PT,0.0495999988913536,0.044
+Fig 4d,VGG pool2,"ex->ac N=128",PT (rotation only),0.798600009083748,0.798
+Fig 4d,VGG pool2,"ex->ac N=128",control,0.0185999995842576,0.7494
+Fig 3d,VGG pool3,"ac->ec",self,1,1
+Fig 3d,VGG pool3,"ac->ec",non-PT,0.123786665568749,0.1094
+Fig 3d,VGG pool3,"ac->ec",PT (rotation only),0.630906670292218,0.6307
+Fig 3d,VGG pool3,"ac->ec",control,0.0207999995499849,0.5267
+Fig 4d,VGG pool3,"ac->ec N=10",self,0.999780002832413,0.9999
+Fig 4d,VGG pool3,"ac->ec N=10",non-PT,0.0573333323622743,0.0618
+Fig 4d,VGG pool3,"ac->ec N=10",PT (rotation only),0.15093333290269,0.1334
+Fig 4d,VGG pool3,"ac->ec N=10",control,0.0185999995842576,0.08164
+Fig 4d,VGG pool3,"ac->ec N=20",self,1,1
+Fig 4d,VGG pool3,"ac->ec N=20",non-PT,0.0892666662484407,0.0805
+Fig 4d,VGG pool3,"ac->ec N=20",PT (rotation only),0.263666666497787,0.3107
+Fig 4d,VGG pool3,"ac->ec N=20",control,0.0201999995609125,0.1954
+Fig 4d,VGG pool3,"ac->ec N=40",self,1,1
+Fig 4d,VGG pool3,"ac->ec N=40",non-PT,0.0951999989897013,0.1045
+Fig 4d,VGG pool3,"ac->ec N=40",PT (rotation only),0.492133330802123,0.4943
+Fig 4d,VGG pool3,"ac->ec N=40",control,0.0198666662350297,0.38101
+Fig 4d,VGG pool3,"ac->ec N=80",self,1,1
+Fig 4d,VGG pool3,"ac->ec N=80",non-PT,0.130666666850448,0.1298
+Fig 4d,VGG pool3,"ac->ec N=80",PT (rotation only),0.692066670656204,0.6805
+Fig 4d,VGG pool3,"ac->ec N=80",control,0.0211333328609665,0.61172
+Fig 4d,VGG pool3,"ac->ec N=160",self,1,1
+Fig 4d,VGG pool3,"ac->ec N=160",non-PT,0.118066665604711,0.1239
+Fig 4d,VGG pool3,"ac->ec N=160",PT (rotation only),0.765399994651477,0.7624
+Fig 4d,VGG pool3,"ac->ec N=160",control,0.0220666661858559,0.72635
+Fig 4d,VGG pool3,"ac->ec N=256",self,1,1
+Fig 4d,VGG pool3,"ac->ec N=256",non-PT,0.119999997317791,0.12
+Fig 4d,VGG pool3,"ac->ec N=256",PT (rotation only),0.779999971389771,0.78
+Fig 4d,VGG pool3,"ac->ec N=256",control,0.0210666662330429,0.779
+Fig 3d,VGG pool3,"ec->ac",self,1,1
+Fig 3d,VGG pool3,"ec->ac",non-PT,0.0903733326494694,0.0978
+Fig 3d,VGG pool3,"ec->ac",PT (rotation only),0.738106667439143,0.7164
+Fig 3d,VGG pool3,"ec->ac",control,0.0190133329083522,0.54737
+Fig 4d,VGG pool3,"ec->ac N=10",self,0.999406674106916,0.9997
+Fig 4d,VGG pool3,"ec->ac N=10",non-PT,0.0587999989216526,0.0516
+Fig 4d,VGG pool3,"ec->ac N=10",PT (rotation only),0.13746666641285,0.1353
+Fig 4d,VGG pool3,"ec->ac N=10",control,0.0182666662583749,0.08142
+Fig 4d,VGG pool3,"ec->ac N=20",self,0.999700003862381,0.9999
+Fig 4d,VGG pool3,"ec->ac N=20",non-PT,0.0580666656792164,0.0661
+Fig 4d,VGG pool3,"ec->ac N=20",PT (rotation only),0.315933335125446,0.3136
+Fig 4d,VGG pool3,"ec->ac N=20",control,0.0195999995619059,0.20299
+Fig 4d,VGG pool3,"ec->ac N=40",self,1,0.9999
+Fig 4d,VGG pool3,"ec->ac N=40",non-PT,0.0965999995668729,0.0851
+Fig 4d,VGG pool3,"ec->ac N=40",PT (rotation only),0.54539999862512,0.5685
+Fig 4d,VGG pool3,"ec->ac N=40",control,0.0181999995931983,0.41296
+Fig 4d,VGG pool3,"ec->ac N=80",self,1,1
+Fig 4d,VGG pool3,"ec->ac N=80",non-PT,0.0953999991466602,0.0905
+Fig 4d,VGG pool3,"ec->ac N=80",PT (rotation only),0.808399994174639,0.7955
+Fig 4d,VGG pool3,"ec->ac N=80",control,0.0195999995619059,0.62426
+Fig 4d,VGG pool3,"ec->ac N=160",self,1,1
+Fig 4d,VGG pool3,"ec->ac N=160",non-PT,0.0957333327705661,0.097
+Fig 4d,VGG pool3,"ec->ac N=160",PT (rotation only),0.90213333149751,0.899
+Fig 4d,VGG pool3,"ec->ac N=160",control,0.0191333329180876,0.73379
+Fig 4d,VGG pool3,"ec->ac N=256",self,1,1
+Fig 4d,VGG pool3,"ec->ac N=256",non-PT,0.0946666672825813,0.092
+Fig 4d,VGG pool3,"ec->ac N=256",PT (rotation only),0.939999997615814,0.94
+Fig 4d,VGG pool3,"ec->ac N=256",control,0.0201999995609125,0.7738
+Fig 3d,VGG pool3,"ec->ex",self,1,1
+Fig 3d,VGG pool3,"ec->ex",non-PT,0.0916266658306122,0.0869
+Fig 3d,VGG pool3,"ec->ex",PT (rotation only),0.603386668920517,0.6074
+Fig 3d,VGG pool3,"ec->ex",control,0.0221066661775112,0.56399
+Fig 4d,VGG pool3,"ec->ex N=10",self,0.999320003390312,0.9999
+Fig 4d,VGG pool3,"ec->ex N=10",non-PT,0.0639333327238758,0.0596
+Fig 4d,VGG pool3,"ec->ex N=10",PT (rotation only),0.121133332860967,0.1047
+Fig 4d,VGG pool3,"ec->ex N=10",control,0.0195333328967293,0.08091
+Fig 4d,VGG pool3,"ec->ex N=20",self,0.999800002574921,1
+Fig 4d,VGG pool3,"ec->ex N=20",non-PT,0.0614666661247611,0.0741
+Fig 4d,VGG pool3,"ec->ex N=20",PT (rotation only),0.278333336263895,0.2691
+Fig 4d,VGG pool3,"ec->ex N=20",control,0.0211333328609665,0.20321
+Fig 4d,VGG pool3,"ec->ex N=40",self,1,1
+Fig 4d,VGG pool3,"ec->ex N=40",non-PT,0.0863999987890323,0.0808
+Fig 4d,VGG pool3,"ec->ex N=40",PT (rotation only),0.472533331016699,0.4877
+Fig 4d,VGG pool3,"ec->ex N=40",control,0.023733332802852,0.42913
+Fig 4d,VGG pool3,"ec->ex N=80",self,1,1
+Fig 4d,VGG pool3,"ec->ex N=80",non-PT,0.082266665759186,0.0952
+Fig 4d,VGG pool3,"ec->ex N=80",PT (rotation only),0.657666671276093,0.6498
+Fig 4d,VGG pool3,"ec->ex N=80",control,0.0221333328510324,0.62914
+Fig 4d,VGG pool3,"ec->ex N=160",self,1,1
+Fig 4d,VGG pool3,"ec->ex N=160",non-PT,0.0951999995609124,0.0871
+Fig 4d,VGG pool3,"ec->ex N=160",PT (rotation only),0.705400009353956,0.7142
+Fig 4d,VGG pool3,"ec->ex N=160",control,0.02106666619579,0.72147
+Fig 4d,VGG pool3,"ec->ex N=256",self,1,1
+Fig 4d,VGG pool3,"ec->ex N=256",non-PT,0.100000001490116,0.1
+Fig 4d,VGG pool3,"ec->ex N=256",PT (rotation only),0.744933338165283,0.744
+Fig 4d,VGG pool3,"ec->ex N=256",control,0.022399999499321,0.7594
+Fig 3d,VGG pool3,"ex->ec",self,1,1
+Fig 3d,VGG pool3,"ex->ec",non-PT,0.0514133321990569,0.05
+Fig 3d,VGG pool3,"ex->ec",PT (rotation only),0.634213338216146,0.6257
+Fig 3d,VGG pool3,"ex->ec",control,0.0210933328767618,0.58349
+Fig 4d,VGG pool3,"ex->ec N=10",self,0.999600005149841,0.9999
+Fig 4d,VGG pool3,"ex->ec N=10",non-PT,0.0409999992201726,0.0516
+Fig 4d,VGG pool3,"ex->ec N=10",PT (rotation only),0.110600000259777,0.1035
+Fig 4d,VGG pool3,"ex->ec N=10",control,0.0193999995663762,0.09029
+Fig 4d,VGG pool3,"ex->ec N=20",self,1,1
+Fig 4d,VGG pool3,"ex->ec N=20",non-PT,0.04759999897331,0.038
+Fig 4d,VGG pool3,"ex->ec N=20",PT (rotation only),0.270199999809265,0.259
+Fig 4d,VGG pool3,"ex->ec N=20",control,0.0190666662404935,0.22589
+Fig 4d,VGG pool3,"ex->ec N=40",self,1,1
+Fig 4d,VGG pool3,"ex->ec N=40",non-PT,0.0575333322708805,0.0537
+Fig 4d,VGG pool3,"ex->ec N=40",PT (rotation only),0.496666662991047,0.4697
+Fig 4d,VGG pool3,"ex->ec N=40",control,0.0205333328867952,0.42783
+Fig 4d,VGG pool3,"ex->ec N=80",self,1,1
+Fig 4d,VGG pool3,"ex->ec N=80",non-PT,0.0549333321054776,0.0557
+Fig 4d,VGG pool3,"ex->ec N=80",PT (rotation only),0.686333341598511,0.6921
+Fig 4d,VGG pool3,"ex->ec N=80",control,0.0211999995261431,0.64856
+Fig 4d,VGG pool3,"ex->ec N=160",self,1,1
+Fig 4d,VGG pool3,"ex->ec N=160",non-PT,0.0435999990254641,0.0403
+Fig 4d,VGG pool3,"ex->ec N=160",PT (rotation only),0.780266659458478,0.7611
+Fig 4d,VGG pool3,"ex->ec N=160",control,0.0217999995251497,0.75206
+Fig 4d,VGG pool3,"ex->ec N=256",self,1,1
+Fig 4d,VGG pool3,"ex->ec N=256",non-PT,0.0599999986588955,0.06
+Fig 4d,VGG pool3,"ex->ec N=256",PT (rotation only),0.800000011920929,0.8
+Fig 4d,VGG pool3,"ex->ec N=256",control,0.0239333328107993,0.7894
+Fig 3d,VGG pool3,"ac->ex",self,1,1
+Fig 3d,VGG pool3,"ac->ex",non-PT,0.0712799990922213,0.0693
+Fig 3d,VGG pool3,"ac->ex",PT (rotation only),0.660400006214778,0.6414
+Fig 3d,VGG pool3,"ac->ex",control,0.019946666225791,0.60441
+Fig 4d,VGG pool3,"ac->ex N=10",self,0.999706667462985,0.9999
+Fig 4d,VGG pool3,"ac->ex N=10",non-PT,0.0472666657095154,0.0601
+Fig 4d,VGG pool3,"ac->ex N=10",PT (rotation only),0.119199999744693,0.1248
+Fig 4d,VGG pool3,"ac->ex N=10",control,0.0221333328386148,0.08155
+Fig 4d,VGG pool3,"ac->ex N=20",self,1,1
+Fig 4d,VGG pool3,"ac->ex N=20",non-PT,0.0641999991610646,0.0653
+Fig 4d,VGG pool3,"ac->ex N=20",PT (rotation only),0.247866666913033,0.2461
+Fig 4d,VGG pool3,"ac->ex N=20",control,0.0214666661868493,0.19875
+Fig 4d,VGG pool3,"ac->ex N=40",self,1,1
+Fig 4d,VGG pool3,"ac->ex N=40",non-PT,0.0708666660264134,0.0649
+Fig 4d,VGG pool3,"ac->ex N=40",PT (rotation only),0.491799997389317,0.5136
+Fig 4d,VGG pool3,"ac->ex N=40",control,0.020799999559919,0.44858
+Fig 4d,VGG pool3,"ac->ex N=80",self,1,1
+Fig 4d,VGG pool3,"ac->ex N=80",non-PT,0.0693999990820885,0.0753
+Fig 4d,VGG pool3,"ac->ex N=80",PT (rotation only),0.708133334517479,0.7247
+Fig 4d,VGG pool3,"ac->ex N=80",control,0.0203999995564421,0.68101
+Fig 4d,VGG pool3,"ac->ex N=160",self,1,1
+Fig 4d,VGG pool3,"ac->ex N=160",non-PT,0.0625999987994631,0.067
+Fig 4d,VGG pool3,"ac->ex N=160",PT (rotation only),0.823933320641518,0.8213
+Fig 4d,VGG pool3,"ac->ex N=160",control,0.0184666662663221,0.78423
+Fig 4d,VGG pool3,"ac->ex N=256",self,1,1
+Fig 4d,VGG pool3,"ac->ex N=256",non-PT,0.0528666654850046,0.052
+Fig 4d,VGG pool3,"ac->ex N=256",PT (rotation only),0.839999973773956,0.84
+Fig 4d,VGG pool3,"ac->ex N=256",control,0.0189999995877345,0.82
+Fig 3d,VGG pool3,"ex->ac",self,1,1
+Fig 3d,VGG pool3,"ex->ac",non-PT,0.0370933326681455,0.0371
+Fig 3d,VGG pool3,"ex->ac",PT (rotation only),0.723573336283366,0.6947
+Fig 3d,VGG pool3,"ex->ac",control,0.0179466662704945,0.63177
+Fig 4d,VGG pool3,"ex->ac N=10",self,0.999606671531995,0.9997
+Fig 4d,VGG pool3,"ex->ac N=10",non-PT,0.0442666657269001,0.0439
+Fig 4d,VGG pool3,"ex->ac N=10",PT (rotation only),0.101199999302626,0.133
+Fig 4d,VGG pool3,"ex->ac N=10",control,0.0179999995976686,0.09071
+Fig 4d,VGG pool3,"ex->ac N=20",self,0.999700003862381,0.9999
+Fig 4d,VGG pool3,"ex->ac N=20",non-PT,0.0376666658247511,0.0351
+Fig 4d,VGG pool3,"ex->ac N=20",PT (rotation only),0.253666667913397,0.295
+Fig 4d,VGG pool3,"ex->ac N=20",control,0.0190666662404935,0.22784
+Fig 4d,VGG pool3,"ex->ac N=40",self,1,0.9999
+Fig 4d,VGG pool3,"ex->ac N=40",non-PT,0.0286666660259167,0.0359
+Fig 4d,VGG pool3,"ex->ac N=40",PT (rotation only),0.538600002527237,0.5285
+Fig 4d,VGG pool3,"ex->ac N=40",control,0.0203999995440245,0.4721
+Fig 4d,VGG pool3,"ex->ac N=80",self,1,1
+Fig 4d,VGG pool3,"ex->ac N=80",non-PT,0.0297333326687415,0.0309
+Fig 4d,VGG pool3,"ex->ac N=80",PT (rotation only),0.781733331680298,0.7765
+Fig 4d,VGG pool3,"ex->ac N=80",control,0.017799999602139,0.70708
+Fig 4d,VGG pool3,"ex->ac N=160",self,1,1
+Fig 4d,VGG pool3,"ex->ac N=160",non-PT,0.0201999995484948,0.0322
+Fig 4d,VGG pool3,"ex->ac N=160",PT (rotation only),0.884666662216187,0.9003
+Fig 4d,VGG pool3,"ex->ac N=160",control,0.0179999996225039,0.81686
+Fig 4d,VGG pool3,"ex->ac N=256",self,1,1
+Fig 4d,VGG pool3,"ex->ac N=256",non-PT,0,0
+Fig 4d,VGG pool3,"ex->ac N=256",PT (rotation only),0.925600011348724,0.926
+Fig 4d,VGG pool3,"ex->ac N=256",control,0.0147333330040177,0.8462
+Fig 3d,VGG pool4,"ac->ec",self,0.999245341698329,0.9991
+Fig 3d,VGG pool4,"ac->ec",non-PT,0.0587999990880489,0.0717
+Fig 3d,VGG pool4,"ac->ec",PT (rotation only),0.62650666975975,0.6182
+Fig 3d,VGG pool4,"ac->ec",control,0.0217066661814849,0.58864
+Fig 4d,VGG pool4,"ac->ec N=10",self,0.870053422252337,0.8259
+Fig 4d,VGG pool4,"ac->ec N=10",non-PT,0.0504666659360131,0.034
+Fig 4d,VGG pool4,"ac->ec N=10",PT (rotation only),0.100733332882325,0.0852
+Fig 4d,VGG pool4,"ac->ec N=10",control,0.0203999995440245,0.06819
+Fig 4d,VGG pool4,"ac->ec N=20",self,0.970613350669543,0.9699
+Fig 4d,VGG pool4,"ac->ec N=20",non-PT,0.0424666659658154,0.0493
+Fig 4d,VGG pool4,"ac->ec N=20",PT (rotation only),0.200200000132124,0.2144
+Fig 4d,VGG pool4,"ac->ec N=20",control,0.0230666661759218,0.18169
+Fig 4d,VGG pool4,"ac->ec N=40",self,0.997820010185242,0.996
+Fig 4d,VGG pool4,"ac->ec N=40",non-PT,0.0631999991834164,0.0492
+Fig 4d,VGG pool4,"ac->ec N=40",PT (rotation only),0.444599997103214,0.4159
+Fig 4d,VGG pool4,"ac->ec N=40",control,0.0224666661644975,0.39796
+Fig 4d,VGG pool4,"ac->ec N=80",self,0.999726670185725,0.9996
+Fig 4d,VGG pool4,"ac->ec N=80",non-PT,0.0601999990642071,0.0597
+Fig 4d,VGG pool4,"ac->ec N=80",PT (rotation only),0.709733336766561,0.6897
+Fig 4d,VGG pool4,"ac->ec N=80",control,0.0249333327884475,0.66093
+Fig 4d,VGG pool4,"ac->ec N=160",self,1,1
+Fig 4d,VGG pool4,"ac->ec N=160",non-PT,0.0623999994123975,0.0656
+Fig 4d,VGG pool4,"ac->ec N=160",PT (rotation only),0.844799991250038,0.8467
+Fig 4d,VGG pool4,"ac->ec N=160",control,0.0247333327929179,0.80876
+Fig 4d,VGG pool4,"ac->ec N=320",self,1,1
+Fig 4d,VGG pool4,"ac->ec N=320",non-PT,0.0679999988153577,0.0722
+Fig 4d,VGG pool4,"ac->ec N=320",PT (rotation only),0.926266666253408,0.9207
+Fig 4d,VGG pool4,"ac->ec N=320",control,0.0213999995340904,0.8994
+Fig 4d,VGG pool4,"ac->ec N=511",self,1,1
+Fig 4d,VGG pool4,"ac->ec N=511",non-PT,0.0599999986588955,0.06
+Fig 4d,VGG pool4,"ac->ec N=511",PT (rotation only),0.926133344173431,0.926
+Fig 4d,VGG pool4,"ac->ec N=511",control,0.0217999995251497,0.923
+Fig 3d,VGG pool4,"ec->ac",self,0.999360007047653,0.9992
+Fig 3d,VGG pool4,"ec->ac",non-PT,0.0539466657141844,0.0562
+Fig 3d,VGG pool4,"ec->ac",PT (rotation only),0.613813340226809,0.5898
+Fig 3d,VGG pool4,"ec->ac",control,0.0189333329151074,0.57723
+Fig 4d,VGG pool4,"ec->ac N=10",self,0.764813530445099,0.7878
+Fig 4d,VGG pool4,"ec->ac N=10",non-PT,0.040599999204278,0.0409
+Fig 4d,VGG pool4,"ec->ac N=10",PT (rotation only),0.0805999992787838,0.0977
+Fig 4d,VGG pool4,"ec->ac N=10",control,0.0196666662270824,0.06936
+Fig 4d,VGG pool4,"ec->ac N=20",self,0.953880028128624,0.9624
+Fig 4d,VGG pool4,"ec->ac N=20",non-PT,0.0407999990880489,0.0384
+Fig 4d,VGG pool4,"ec->ac N=20",PT (rotation only),0.215733332807819,0.2016
+Fig 4d,VGG pool4,"ec->ac N=20",control,0.018933332922558,0.17477
+Fig 4d,VGG pool4,"ec->ac N=40",self,0.997733342051506,0.9969
+Fig 4d,VGG pool4,"ec->ac N=40",non-PT,0.0458666658153137,0.0554
+Fig 4d,VGG pool4,"ec->ac N=40",PT (rotation only),0.446266665359338,0.406
+Fig 4d,VGG pool4,"ec->ac N=40",control,0.0182666662583749,0.40775
+Fig 4d,VGG pool4,"ec->ac N=80",self,0.99990000128746,0.9999
+Fig 4d,VGG pool4,"ec->ac N=80",non-PT,0.0551333325107892,0.064
+Fig 4d,VGG pool4,"ec->ac N=80",PT (rotation only),0.70400000333786,0.7095
+Fig 4d,VGG pool4,"ec->ac N=80",control,0.0239999994759758,0.67038
+Fig 4d,VGG pool4,"ec->ac N=160",self,0.99990000128746,1
+Fig 4d,VGG pool4,"ec->ac N=160",non-PT,0.069533331990242,0.0607
+Fig 4d,VGG pool4,"ec->ac N=160",PT (rotation only),0.849999990463257,0.8746
+Fig 4d,VGG pool4,"ec->ac N=160",control,0.0246666661277413,0.83114
+Fig 4d,VGG pool4,"ec->ac N=320",self,1,1
+Fig 4d,VGG pool4,"ec->ac N=320",non-PT,0.0823333320890864,0.0824
+Fig 4d,VGG pool4,"ec->ac N=320",PT (rotation only),0.958333333532015,0.9506
+Fig 4d,VGG pool4,"ec->ac N=320",control,0.0227333328252037,0.91734
+Fig 4d,VGG pool4,"ec->ac N=511",self,1,1
+Fig 4d,VGG pool4,"ec->ac N=511",non-PT,0.0822666660447915,0.086
+Fig 4d,VGG pool4,"ec->ac N=511",PT (rotation only),0.980800018310547,0.982
+Fig 4d,VGG pool4,"ec->ac N=511",control,0.0208666662002603,0.9476
+Fig 3d,VGG pool4,"ec->ex",self,0.999904001235962,1
+Fig 3d,VGG pool4,"ec->ex",non-PT,0.0436266657710075,0.0627
+Fig 3d,VGG pool4,"ec->ex",PT (rotation only),0.591386673013369,0.594
+Fig 3d,VGG pool4,"ec->ex",control,0.0222933328350385,0.56726
+Fig 4d,VGG pool4,"ec->ex N=10",self,0.872060067852338,0.8965
+Fig 4d,VGG pool4,"ec->ex N=10",non-PT,0.0321333326896032,0.0332
+Fig 4d,VGG pool4,"ec->ex N=10",PT (rotation only),0.0803999991590778,0.0826
+Fig 4d,VGG pool4,"ec->ex N=10",control,0.0201333328833183,0.0768
+Fig 4d,VGG pool4,"ec->ex N=20",self,0.99308000822862,0.9895
+Fig 4d,VGG pool4,"ec->ex N=20",non-PT,0.0445999990031123,0.0415
+Fig 4d,VGG pool4,"ec->ex N=20",PT (rotation only),0.187733332912127,0.1954
+Fig 4d,VGG pool4,"ec->ex N=20",control,0.0182666662583749,0.19435
+Fig 4d,VGG pool4,"ec->ex N=40",self,0.999693337281545,0.9994
+Fig 4d,VGG pool4,"ec->ex N=40",non-PT,0.0429333324233691,0.0413
+Fig 4d,VGG pool4,"ec->ex N=40",PT (rotation only),0.414533332983653,0.4145
+Fig 4d,VGG pool4,"ec->ex N=40",control,0.0219333328430851,0.41205
+Fig 4d,VGG pool4,"ec->ex N=80",self,1,1
+Fig 4d,VGG pool4,"ec->ex N=80",non-PT,0.0537999989713232,0.05
+Fig 4d,VGG pool4,"ec->ex N=80",PT (rotation only),0.672800003687541,0.6672
+Fig 4d,VGG pool4,"ec->ex N=80",control,0.0239999994759758,0.63559
+Fig 4d,VGG pool4,"ec->ex N=160",self,1,1
+Fig 4d,VGG pool4,"ec->ex N=160",non-PT,0.060666665310661,0.0669
+Fig 4d,VGG pool4,"ec->ex N=160",PT (rotation only),0.810066661834717,0.8056
+Fig 4d,VGG pool4,"ec->ex N=160",control,0.0255999994526307,0.7702
+Fig 4d,VGG pool4,"ec->ex N=320",self,1,1
+Fig 4d,VGG pool4,"ec->ex N=320",non-PT,0.0790666658555468,0.0763
+Fig 4d,VGG pool4,"ec->ex N=320",PT (rotation only),0.874266662200292,0.881
+Fig 4d,VGG pool4,"ec->ex N=320",control,0.0271999993920326,0.85308
+Fig 4d,VGG pool4,"ec->ex N=511",self,1,1
+Fig 4d,VGG pool4,"ec->ex N=511",non-PT,0.0799999982118607,0.08
+Fig 4d,VGG pool4,"ec->ex N=511",PT (rotation only),0.899999976158142,0.9
+Fig 4d,VGG pool4,"ec->ex N=511",control,0.0307999993612369,0.8758
+Fig 3d,VGG pool4,"ex->ec",self,0.999000004529953,0.999
+Fig 3d,VGG pool4,"ex->ec",non-PT,0.0281066660384337,0.0313
+Fig 3d,VGG pool4,"ex->ec",PT (rotation only),0.66677334022522,0.6552
+Fig 3d,VGG pool4,"ex->ec",control,0.021493332862854,0.64018
+Fig 4d,VGG pool4,"ex->ec N=10",self,0.857360086242358,0.8256
+Fig 4d,VGG pool4,"ex->ec N=10",non-PT,0.0319333326195677,0.0183
+Fig 4d,VGG pool4,"ex->ec N=10",PT (rotation only),0.0897333323334654,0.0811
+Fig 4d,VGG pool4,"ex->ec N=10",control,0.0196666662270824,0.07644
+Fig 4d,VGG pool4,"ex->ec N=20",self,0.98318667391936,0.9701
+Fig 4d,VGG pool4,"ex->ec N=20",non-PT,0.0323333326975505,0.0256
+Fig 4d,VGG pool4,"ex->ec N=20",PT (rotation only),0.203199999431769,0.1872
+Fig 4d,VGG pool4,"ex->ec N=20",control,0.0211333328609665,0.19948
+Fig 4d,VGG pool4,"ex->ec N=40",self,0.998086676398913,0.9961
+Fig 4d,VGG pool4,"ex->ec N=40",non-PT,0.0397333325445652,0.0303
+Fig 4d,VGG pool4,"ex->ec N=40",PT (rotation only),0.46093333174785,0.4634
+Fig 4d,VGG pool4,"ex->ec N=40",control,0.02106666619579,0.4525
+Fig 4d,VGG pool4,"ex->ec N=80",self,0.999800002574921,0.9996
+Fig 4d,VGG pool4,"ex->ec N=80",non-PT,0.0249999994412065,0.0347
+Fig 4d,VGG pool4,"ex->ec N=80",PT (rotation only),0.740933332840602,0.7359
+Fig 4d,VGG pool4,"ex->ec N=80",control,0.0225999995072683,0.71058
+Fig 4d,VGG pool4,"ex->ec N=160",self,1,1
+Fig 4d,VGG pool4,"ex->ec N=160",non-PT,0.0275333327179154,0.0287
+Fig 4d,VGG pool4,"ex->ec N=160",PT (rotation only),0.861866662303607,0.8612
+Fig 4d,VGG pool4,"ex->ec N=160",control,0.0219333328430851,0.82201
+Fig 4d,VGG pool4,"ex->ec N=320",self,1,1
+Fig 4d,VGG pool4,"ex->ec N=320",non-PT,0.0199333328877886,0.0271
+Fig 4d,VGG pool4,"ex->ec N=320",PT (rotation only),0.943666669329007,0.9446
+Fig 4d,VGG pool4,"ex->ec N=320",control,0.0267333327482144,0.90029
+Fig 4d,VGG pool4,"ex->ec N=511",self,1,1
+Fig 4d,VGG pool4,"ex->ec N=511",non-PT,0.0199999995529652,0.02
+Fig 4d,VGG pool4,"ex->ec N=511",PT (rotation only),0.998400001525879,0.998
+Fig 4d,VGG pool4,"ex->ec N=511",control,0.0280666660641631,0.916
+Fig 3d,VGG pool4,"ac->ex",self,1,1
+Fig 3d,VGG pool4,"ac->ex",non-PT,0.0353333326081435,0.042
+Fig 3d,VGG pool4,"ac->ex",PT (rotation only),0.610266671498617,0.5838
+Fig 3d,VGG pool4,"ac->ex",control,0.0213066661953926,0.5824
+Fig 4d,VGG pool4,"ac->ex N=10",self,0.896120053331057,0.8964
+Fig 4d,VGG pool4,"ac->ex N=10",non-PT,0.0165999996786316,0.0219
+Fig 4d,VGG pool4,"ac->ex N=10",PT (rotation only),0.0885333325092991,0.0759000000000001
+Fig 4d,VGG pool4,"ac->ex N=10",control,0.0187999995797873,0.07658
+Fig 4d,VGG pool4,"ac->ex N=20",self,0.990980006456375,0.9896
+Fig 4d,VGG pool4,"ac->ex N=20",non-PT,0.0308666659767429,0.0399
+Fig 4d,VGG pool4,"ac->ex N=20",PT (rotation only),0.212800000235438,0.1925
+Fig 4d,VGG pool4,"ac->ex N=20",control,0.0215999995544553,0.19654
+Fig 4d,VGG pool4,"ac->ex N=40",self,0.99940000474453,0.9994
+Fig 4d,VGG pool4,"ac->ex N=40",non-PT,0.0394666657969356,0.0339
+Fig 4d,VGG pool4,"ac->ex N=40",PT (rotation only),0.418199998438358,0.4304
+Fig 4d,VGG pool4,"ac->ex N=40",control,0.0221333328386148,0.41657
+Fig 4d,VGG pool4,"ac->ex N=80",self,1,1
+Fig 4d,VGG pool4,"ac->ex N=80",non-PT,0.0307999993115664,0.0418
+Fig 4d,VGG pool4,"ac->ex N=80",PT (rotation only),0.646866669654846,0.6575
+Fig 4d,VGG pool4,"ac->ex N=80",control,0.0205333328992128,0.64328
+Fig 4d,VGG pool4,"ac->ex N=160",self,1,1
+Fig 4d,VGG pool4,"ac->ex N=160",non-PT,0.0337333325917522,0.0356
+Fig 4d,VGG pool4,"ac->ex N=160",PT (rotation only),0.821266663471858,0.8208
+Fig 4d,VGG pool4,"ac->ex N=160",control,0.0206666662295659,0.79471
+Fig 4d,VGG pool4,"ac->ex N=320",self,1,1
+Fig 4d,VGG pool4,"ac->ex N=320",non-PT,0.0440666656816999,0.0506
+Fig 4d,VGG pool4,"ac->ex N=320",PT (rotation only),0.901999996304512,0.8955
+Fig 4d,VGG pool4,"ac->ex N=320",control,0.0214666661868493,0.87482
+Fig 4d,VGG pool4,"ac->ex N=511",self,1,1
+Fig 4d,VGG pool4,"ac->ex N=511",non-PT,0.0599999986588955,0.06
+Fig 4d,VGG pool4,"ac->ex N=511",PT (rotation only),0.920000009934107,0.922
+Fig 4d,VGG pool4,"ac->ex N=511",control,0.0203333329036832,0.899
+Fig 3d,VGG pool4,"ex->ac",self,0.999362671613693,0.9992
+Fig 3d,VGG pool4,"ex->ac",non-PT,0.0446933325181405,0.0504
+Fig 3d,VGG pool4,"ex->ac",PT (rotation only),0.675786671876907,0.669
+Fig 3d,VGG pool4,"ex->ac",control,0.0223466661671797,0.65077
+Fig 4d,VGG pool4,"ex->ac N=10",self,0.769666855136553,0.7875
+Fig 4d,VGG pool4,"ex->ac N=10",non-PT,0.0406666658322016,0.0302
+Fig 4d,VGG pool4,"ex->ac N=10",PT (rotation only),0.0930666661759218,0.0986
+Fig 4d,VGG pool4,"ex->ac N=10",control,0.0207333328699072,0.07697
+Fig 4d,VGG pool4,"ex->ac N=20",self,0.954873359799385,0.9626
+Fig 4d,VGG pool4,"ex->ac N=20",non-PT,0.0409999992822607,0.0339
+Fig 4d,VGG pool4,"ex->ac N=20",PT (rotation only),0.217533332506816,0.2076
+Fig 4d,VGG pool4,"ex->ac N=20",control,0.0214666661868493,0.19662
+Fig 4d,VGG pool4,"ex->ac N=40",self,0.996900009711583,0.9969
+Fig 4d,VGG pool4,"ex->ac N=40",non-PT,0.0427333323905865,0.0391
+Fig 4d,VGG pool4,"ex->ac N=40",PT (rotation only),0.503133329749107,0.4714
+Fig 4d,VGG pool4,"ex->ac N=40",control,0.0217333328475555,0.46302
+Fig 4d,VGG pool4,"ex->ac N=80",self,0.999800002574921,0.9999
+Fig 4d,VGG pool4,"ex->ac N=80",non-PT,0.0420666657264034,0.038
+Fig 4d,VGG pool4,"ex->ac N=80",PT (rotation only),0.750600000023842,0.7357
+Fig 4d,VGG pool4,"ex->ac N=80",control,0.0230666661635041,0.72475
+Fig 4d,VGG pool4,"ex->ac N=160",self,1,1
+Fig 4d,VGG pool4,"ex->ac N=160",non-PT,0.0571333321308096,0.0637
+Fig 4d,VGG pool4,"ex->ac N=160",PT (rotation only),0.892066658536593,0.9017
+Fig 4d,VGG pool4,"ex->ac N=160",control,0.0229999995107452,0.87046
+Fig 4d,VGG pool4,"ex->ac N=320",self,1,1
+Fig 4d,VGG pool4,"ex->ac N=320",non-PT,0.0629333319266637,0.069
+Fig 4d,VGG pool4,"ex->ac N=320",PT (rotation only),0.952333324154218,0.9642
+Fig 4d,VGG pool4,"ex->ac N=320",control,0.0198666662226121,0.94014
+Fig 4d,VGG pool4,"ex->ac N=511",self,1,1
+Fig 4d,VGG pool4,"ex->ac N=511",non-PT,0.0599999986588955,0.06
+Fig 4d,VGG pool4,"ex->ac N=511",PT (rotation only),1,1
+Fig 4d,VGG pool4,"ex->ac N=511",control,0.0213333328689138,0.9642
+Fig 3d,VGG pool5,"ac->ec",self,0.850128079732259,0.8491
+Fig 3d,VGG pool5,"ac->ec",non-PT,0.029359999358654,0.0254
+Fig 3d,VGG pool5,"ac->ec",PT (rotation only),0.408373332758745,0.4183
+Fig 3d,VGG pool5,"ac->ec",control,0.0185599995901187,0.39134
+Fig 4d,VGG pool5,"ac->ec N=10",self,0.295513755679131,0.2586
+Fig 4d,VGG pool5,"ac->ec N=10",non-PT,0.0191999995708466,0.0178
+Fig 4d,VGG pool5,"ac->ec N=10",PT (rotation only),0.0447333324328065,0.0437
+Fig 4d,VGG pool5,"ac->ec N=10",control,0.0192666662360231,0.04359
+Fig 4d,VGG pool5,"ac->ec N=20",self,0.491153882741928,0.5248
+Fig 4d,VGG pool5,"ac->ec N=20",non-PT,0.0184666662539045,0.0206
+Fig 4d,VGG pool5,"ac->ec N=20",PT (rotation only),0.108399999340375,0.1165
+Fig 4d,VGG pool5,"ac->ec N=20",control,0.0193999995663762,0.10854
+Fig 4d,VGG pool5,"ac->ec N=40",self,0.739720219969749,0.7128
+Fig 4d,VGG pool5,"ac->ec N=40",non-PT,0.0293999993428588,0.0267
+Fig 4d,VGG pool5,"ac->ec N=40",PT (rotation only),0.254666666537523,0.2488
+Fig 4d,VGG pool5,"ac->ec N=40",control,0.0205999995643894,0.22859
+Fig 4d,VGG pool5,"ac->ec N=80",self,0.892820058663686,0.8962
+Fig 4d,VGG pool5,"ac->ec N=80",non-PT,0.0285999993731578,0.0341
+Fig 4d,VGG pool5,"ac->ec N=80",PT (rotation only),0.503799998263518,0.5073
+Fig 4d,VGG pool5,"ac->ec N=80",control,0.0207333328699072,0.48147
+Fig 4d,VGG pool5,"ac->ec N=160",self,0.957860023975372,0.956
+Fig 4d,VGG pool5,"ac->ec N=160",non-PT,0.0325333326185743,0.0294
+Fig 4d,VGG pool5,"ac->ec N=160",PT (rotation only),0.689666673938433,0.7022
+Fig 4d,VGG pool5,"ac->ec N=160",control,0.0192666662360231,0.66863
+Fig 4d,VGG pool5,"ac->ec N=320",self,0.971553347110748,0.9714
+Fig 4d,VGG pool5,"ac->ec N=320",non-PT,0.0398666658004125,0.0422
+Fig 4d,VGG pool5,"ac->ec N=320",PT (rotation only),0.744799998402595,0.7372
+Fig 4d,VGG pool5,"ac->ec N=320",control,0.0199333328877886,0.69855
+Fig 4d,VGG pool5,"ac->ec N=507",self,0.975873345136642,0.974
+Fig 4d,VGG pool5,"ac->ec N=507",non-PT,0.0487333322440585,0.048
+Fig 4d,VGG pool5,"ac->ec N=507",PT (rotation only),0.748999999562899,0.744
+Fig 4d,VGG pool5,"ac->ec N=507",control,0.0191999995708466,0.7104
+Fig 3d,VGG pool5,"ec->ac",self,0.896261387427648,0.8946
+Fig 3d,VGG pool5,"ec->ac",non-PT,0.030613332649072,0.0305
+Fig 3d,VGG pool5,"ec->ac",PT (rotation only),0.421466665387154,0.4148
+Fig 3d,VGG pool5,"ec->ac",control,0.022479999507467,0.39941
+Fig 4d,VGG pool5,"ec->ac N=10",self,0.324333788752556,0.3086
+Fig 4d,VGG pool5,"ec->ac N=10",non-PT,0.0239999994635582,0.023
+Fig 4d,VGG pool5,"ec->ac N=10",PT (rotation only),0.0543999991441766,0.0421
+Fig 4d,VGG pool5,"ec->ac N=10",control,0.0202666662136714,0.04559
+Fig 4d,VGG pool5,"ec->ac N=20",self,0.574860466122627,0.6109
+Fig 4d,VGG pool5,"ec->ac N=20",non-PT,0.0207333328699072,0.0176
+Fig 4d,VGG pool5,"ec->ac N=20",PT (rotation only),0.112533332854509,0.1282
+Fig 4d,VGG pool5,"ec->ac N=20",control,0.0195999995743235,0.11503
+Fig 4d,VGG pool5,"ec->ac N=40",self,0.845540085037549,0.8175
+Fig 4d,VGG pool5,"ec->ac N=40",non-PT,0.0238666661332051,0.021
+Fig 4d,VGG pool5,"ec->ac N=40",PT (rotation only),0.278399999340375,0.2611
+Fig 4d,VGG pool5,"ec->ac N=40",control,0.0199999995529652,0.25278
+Fig 4d,VGG pool5,"ec->ac N=80",self,0.924986705382665,0.9217
+Fig 4d,VGG pool5,"ec->ac N=80",non-PT,0.0362666658684611,0.0319
+Fig 4d,VGG pool5,"ec->ac N=80",PT (rotation only),0.463466665148735,0.4863
+Fig 4d,VGG pool5,"ec->ac N=80",control,0.023133332816263,0.45962
+Fig 4d,VGG pool5,"ec->ac N=160",self,0.959920023282369,0.9602
+Fig 4d,VGG pool5,"ec->ac N=160",non-PT,0.0369333325202266,0.0284
+Fig 4d,VGG pool5,"ec->ac N=160",PT (rotation only),0.635400005777677,0.6093
+Fig 4d,VGG pool5,"ec->ac N=160",control,0.0237999994680285,0.59646
+Fig 4d,VGG pool5,"ec->ac N=320",self,0.987033346891403,0.9863
+Fig 4d,VGG pool5,"ec->ac N=320",non-PT,0.0367999992271264,0.0354
+Fig 4d,VGG pool5,"ec->ac N=320",PT (rotation only),0.694333341519038,0.6894
+Fig 4d,VGG pool5,"ec->ac N=320",control,0.0241999994715055,0.66734
+Fig 4d,VGG pool5,"ec->ac N=507",self,0.998000025749207,0.998
+Fig 4d,VGG pool5,"ec->ac N=507",non-PT,0.0354666658739249,0.036
+Fig 4d,VGG pool5,"ec->ac N=507",PT (rotation only),0.718133341670036,0.722
+Fig 4d,VGG pool5,"ec->ac N=507",control,0.01913333290567,0.698
+Fig 3d,VGG pool5,"ec->ex",self,0.940680031458537,0.9341
+Fig 3d,VGG pool5,"ec->ex",non-PT,0.0261599994152784,0.0292
+Fig 3d,VGG pool5,"ec->ex",PT (rotation only),0.362693334420522,0.3658
+Fig 3d,VGG pool5,"ec->ex",control,0.0230133328189452,0.36209
+Fig 4d,VGG pool5,"ec->ex N=10",self,0.47792060315609,0.4877
+Fig 4d,VGG pool5,"ec->ex N=10",non-PT,0.0219999995082617,0.0225
+Fig 4d,VGG pool5,"ec->ex N=10",PT (rotation only),0.0597999991476536,0.0585
+Fig 4d,VGG pool5,"ec->ex N=10",control,0.0206666662047307,0.05628
+Fig 4d,VGG pool5,"ec->ex N=20",self,0.741533511281014,0.7473
+Fig 4d,VGG pool5,"ec->ex N=20",non-PT,0.016466666298608,0.0266
+Fig 4d,VGG pool5,"ec->ex N=20",PT (rotation only),0.126533332814773,0.1446
+Fig 4d,VGG pool5,"ec->ex N=20",control,0.0215999995172024,0.13333
+Fig 4d,VGG pool5,"ec->ex N=40",self,0.872500065366427,0.9
+Fig 4d,VGG pool5,"ec->ex N=40",non-PT,0.0251333327715596,0.028
+Fig 4d,VGG pool5,"ec->ex N=40",PT (rotation only),0.237399999474486,0.2585
+Fig 4d,VGG pool5,"ec->ex N=40",control,0.0220666661734382,0.26304
+Fig 4d,VGG pool5,"ec->ex N=80",self,0.947680027484894,0.9494
+Fig 4d,VGG pool5,"ec->ex N=80",non-PT,0.0232666661590338,0.0258
+Fig 4d,VGG pool5,"ec->ex N=80",PT (rotation only),0.399533333579699,0.4004
+Fig 4d,VGG pool5,"ec->ex N=80",control,0.0225333328545094,0.39373
+Fig 4d,VGG pool5,"ec->ex N=160",self,0.974566681583722,0.9772
+Fig 4d,VGG pool5,"ec->ex N=160",non-PT,0.0297999993339181,0.0248
+Fig 4d,VGG pool5,"ec->ex N=160",PT (rotation only),0.449399998088678,0.4573
+Fig 4d,VGG pool5,"ec->ex N=160",control,0.0233333328117927,0.45261
+Fig 4d,VGG pool5,"ec->ex N=320",self,0.995946673949559,0.9953
+Fig 4d,VGG pool5,"ec->ex N=320",non-PT,0.0286666660259167,0.0296
+Fig 4d,VGG pool5,"ec->ex N=320",PT (rotation only),0.505199997325738,0.4997
+Fig 4d,VGG pool5,"ec->ex N=320",control,0.0217333328475555,0.47772
+Fig 4d,VGG pool5,"ec->ex N=507",self,0.999066678682963,1
+Fig 4d,VGG pool5,"ec->ex N=507",non-PT,0.0399999991059303,0.038
+Fig 4d,VGG pool5,"ec->ex N=507",PT (rotation only),0.544066668947538,0.546
+Fig 4d,VGG pool5,"ec->ex N=507",control,0.0222666661689679,0.483
+Fig 3d,VGG pool5,"ex->ec",self,0.859840075095495,0.8494
+Fig 3d,VGG pool5,"ex->ec",non-PT,0.0274933327287436,0.0304
+Fig 3d,VGG pool5,"ex->ec",PT (rotation only),0.545413334528605,0.5502
+Fig 3d,VGG pool5,"ex->ec",control,0.0196533328990142,0.52781
+Fig 4d,VGG pool5,"ex->ec N=10",self,0.297033755779266,0.2617
+Fig 4d,VGG pool5,"ex->ec N=10",non-PT,0.0211333328609665,0.0245
+Fig 4d,VGG pool5,"ex->ec N=10",PT (rotation only),0.0669999990612268,0.0494
+Fig 4d,VGG pool5,"ex->ec N=10",control,0.020466666209201,0.05449
+Fig 4d,VGG pool5,"ex->ec N=20",self,0.489673849741618,0.5256
+Fig 4d,VGG pool5,"ex->ec N=20",non-PT,0.024266666136682,0.0226
+Fig 4d,VGG pool5,"ex->ec N=20",PT (rotation only),0.146666666728755,0.1574
+Fig 4d,VGG pool5,"ex->ec N=20",control,0.0190666662404935,0.14658
+Fig 4d,VGG pool5,"ex->ec N=40",self,0.71611357430617,0.7137
+Fig 4d,VGG pool5,"ex->ec N=40",non-PT,0.0362666658932964,0.0265
+Fig 4d,VGG pool5,"ex->ec N=40",PT (rotation only),0.35140000090003,0.3511
+Fig 4d,VGG pool5,"ex->ec N=40",control,0.0195999995619059,0.32647
+Fig 4d,VGG pool5,"ex->ec N=80",self,0.903566718101501,0.8961
+Fig 4d,VGG pool5,"ex->ec N=80",non-PT,0.0240666661287347,0.0317
+Fig 4d,VGG pool5,"ex->ec N=80",PT (rotation only),0.64073333889246,0.6332
+Fig 4d,VGG pool5,"ex->ec N=80",control,0.0207999995475014,0.62628
+Fig 4d,VGG pool5,"ex->ec N=160",self,0.956206690867742,0.9553
+Fig 4d,VGG pool5,"ex->ec N=160",non-PT,0.0354666658739249,0.037
+Fig 4d,VGG pool5,"ex->ec N=160",PT (rotation only),0.783466662168503,0.7997
+Fig 4d,VGG pool5,"ex->ec N=160",control,0.0185999995966752,0.79303
+Fig 4d,VGG pool5,"ex->ec N=320",self,0.968726683855057,0.9718
+Fig 4d,VGG pool5,"ex->ec N=320",non-PT,0.046866665619115,0.0493
+Fig 4d,VGG pool5,"ex->ec N=320",PT (rotation only),0.820799992283185,0.8301
+Fig 4d,VGG pool5,"ex->ec N=320",control,0.0161333329851429,0.81342
+Fig 4d,VGG pool5,"ex->ec N=507",self,0.975673347512881,0.976
+Fig 4d,VGG pool5,"ex->ec N=507",non-PT,0.0416666657353441,0.042
+Fig 4d,VGG pool5,"ex->ec N=507",PT (rotation only),0.813199993769328,0.814
+Fig 4d,VGG pool5,"ex->ec N=507",control,0.0161999996503194,0.8208
+Fig 3d,VGG pool5,"ac->ex",self,0.937226702610652,0.934
+Fig 3d,VGG pool5,"ac->ex",non-PT,0.0362133325984081,0.0365
+Fig 3d,VGG pool5,"ac->ex",PT (rotation only),0.417919999102751,0.4148
+Fig 3d,VGG pool5,"ac->ex",control,0.0208799995332956,0.42025
+Fig 4d,VGG pool5,"ac->ex N=10",self,0.463153945008914,0.4874
+Fig 4d,VGG pool5,"ac->ex N=10",non-PT,0.0339333326369524,0.0279
+Fig 4d,VGG pool5,"ac->ex N=10",PT (rotation only),0.0705999991297722,0.066
+Fig 4d,VGG pool5,"ac->ex N=10",control,0.0190666662404935,0.06563
+Fig 4d,VGG pool5,"ac->ex N=20",self,0.72844021876653,0.7509
+Fig 4d,VGG pool5,"ac->ex N=20",non-PT,0.0345999992638826,0.0383
+Fig 4d,VGG pool5,"ac->ex N=20",PT (rotation only),0.148666667068998,0.168
+Fig 4d,VGG pool5,"ac->ex N=20",control,0.0175333329414328,0.15487
+Fig 4d,VGG pool5,"ac->ex N=40",self,0.892113392750422,0.8994
+Fig 4d,VGG pool5,"ac->ex N=40",non-PT,0.0304666660105189,0.038
+Fig 4d,VGG pool5,"ac->ex N=40",PT (rotation only),0.300200001100699,0.3037
+Fig 4d,VGG pool5,"ac->ex N=40",control,0.0190666662404935,0.29708
+Fig 4d,VGG pool5,"ac->ex N=80",self,0.951266689300537,0.9501
+Fig 4d,VGG pool5,"ac->ex N=80",non-PT,0.0326666659365098,0.0349
+Fig 4d,VGG pool5,"ac->ex N=80",PT (rotation only),0.462199998497963,0.4561
+Fig 4d,VGG pool5,"ac->ex N=80",control,0.0190666662529111,0.47064
+Fig 4d,VGG pool5,"ac->ex N=160",self,0.978793343106906,0.9777
+Fig 4d,VGG pool5,"ac->ex N=160",non-PT,0.0471333323170741,0.0439
+Fig 4d,VGG pool5,"ac->ex N=160",PT (rotation only),0.547733334501584,0.5492
+Fig 4d,VGG pool5,"ac->ex N=160",control,0.0201333328833183,0.53823
+Fig 4d,VGG pool5,"ac->ex N=320",self,0.995086677273115,0.9948
+Fig 4d,VGG pool5,"ac->ex N=320",non-PT,0.0348666658873359,0.0341
+Fig 4d,VGG pool5,"ac->ex N=320",PT (rotation only),0.57373333632946,0.5599
+Fig 4d,VGG pool5,"ac->ex N=320",control,0.0221999995286266,0.54918
+Fig 4d,VGG pool5,"ac->ex N=507",self,0.999246676365534,1
+Fig 4d,VGG pool5,"ac->ex N=507",non-PT,0.0240666661287347,0.022
+Fig 4d,VGG pool5,"ac->ex N=507",PT (rotation only),0.578866670131683,0.574
+Fig 4d,VGG pool5,"ac->ex N=507",control,0.0201999995609125,0.5692
+Fig 3d,VGG pool5,"ex->ac",self,0.887714726845423,0.8955
+Fig 3d,VGG pool5,"ex->ac",non-PT,0.0420799992382526,0.0376
+Fig 3d,VGG pool5,"ex->ac",PT (rotation only),0.626320004145304,0.6384
+Fig 3d,VGG pool5,"ex->ac",control,0.0203466662218173,0.61623
+Fig 4d,VGG pool5,"ex->ac N=10",self,0.330413798093796,0.3069
+Fig 4d,VGG pool5,"ex->ac N=10",non-PT,0.0248666661108534,0.0263
+Fig 4d,VGG pool5,"ex->ac N=10",PT (rotation only),0.0656666658073664,0.0727
+Fig 4d,VGG pool5,"ex->ac N=10",control,0.0203999995440245,0.06983
+Fig 4d,VGG pool5,"ex->ac N=20",self,0.567313801447551,0.6144
+Fig 4d,VGG pool5,"ex->ac N=20",non-PT,0.036666665909191,0.0464
+Fig 4d,VGG pool5,"ex->ac N=20",PT (rotation only),0.196799999848008,0.1816
+Fig 4d,VGG pool5,"ex->ac N=20",control,0.019733332892259,0.18145
+Fig 4d,VGG pool5,"ex->ac N=40",self,0.839100093841553,0.8177
+Fig 4d,VGG pool5,"ex->ac N=40",non-PT,0.0384666659062107,0.0415
+Fig 4d,VGG pool5,"ex->ac N=40",PT (rotation only),0.454599998692671,0.4396
+Fig 4d,VGG pool5,"ex->ac N=40",control,0.0193333329136173,0.41428
+Fig 4d,VGG pool5,"ex->ac N=80",self,0.921753375331561,0.9232
+Fig 4d,VGG pool5,"ex->ac N=80",non-PT,0.0437333324551582,0.0486
+Fig 4d,VGG pool5,"ex->ac N=80",PT (rotation only),0.70920000354449,0.7046
+Fig 4d,VGG pool5,"ex->ac N=80",control,0.0169333329548438,0.69837
+Fig 4d,VGG pool5,"ex->ac N=160",self,0.956086689631144,0.9609
+Fig 4d,VGG pool5,"ex->ac N=160",non-PT,0.0368666659543912,0.0455
+Fig 4d,VGG pool5,"ex->ac N=160",PT (rotation only),0.818533326387405,0.8222
+Fig 4d,VGG pool5,"ex->ac N=160",control,0.0214666662116845,0.81267
+Fig 4d,VGG pool5,"ex->ac N=320",self,0.98380667189757,0.986
+Fig 4d,VGG pool5,"ex->ac N=320",non-PT,0.04019999910146,0.0407
+Fig 4d,VGG pool5,"ex->ac N=320",PT (rotation only),0.85886666238308,0.8619
+Fig 4d,VGG pool5,"ex->ac N=320",control,0.01913333290567,0.85168
+Fig 4d,VGG pool5,"ex->ac N=507",self,0.998000025749207,0.998
+Fig 4d,VGG pool5,"ex->ac N=507",non-PT,0.030399999320507,0.034
+Fig 4d,VGG pool5,"ex->ac N=507",PT (rotation only),0.869000000357628,0.866
+Fig 4d,VGG pool5,"ex->ac N=507",control,0.0175333329414328,0.8686
+hierarchy,pool2-to-pool5,"train AC, test AC",self,0.999973333676656,1
+hierarchy,pool2-to-pool5,"train AC, test AC",non-PT,0.0186133329172929,0.0324
+hierarchy,pool2-to-pool5,"train AC, test AC",PT (rotation only),0.862346661011378,0.8616
+hierarchy,pool2-to-pool5,"train AC, test AC",control,0.0165333329737186,0.76732
+hierarchy,pool2-to-pool5,"train AC, test EC",self,1,1
+hierarchy,pool2-to-pool5,"train AC, test EC",non-PT,0.0175999996066093,0.014
+hierarchy,pool2-to-pool5,"train AC, test EC",PT (rotation only),0.844613326152166,0.842
+hierarchy,pool2-to-pool5,"train AC, test EC",control,0.017146666303277,0.83564
+hierarchy,pool2-to-pool5,"train AC, test EX",self,0.999994666735331,1
+hierarchy,pool2-to-pool5,"train AC, test EX",non-PT,0.0150666663348675,0.0204
+hierarchy,pool2-to-pool5,"train AC, test EX",PT (rotation only),0.868613327821096,0.8676
+hierarchy,pool2-to-pool5,"train AC, test EX",control,0.0143466663559278,0.8622
+hierarchy,pool2-to-pool5,"train EC, test AC",self,1,1
+hierarchy,pool2-to-pool5,"train EC, test AC",non-PT,0.0190666662404935,0.0268
+hierarchy,pool2-to-pool5,"train EC, test AC",PT (rotation only),0.903786663214366,0.9
+hierarchy,pool2-to-pool5,"train EC, test AC",control,0.019946666225791,0.85952
+hierarchy,pool2-to-pool5,"train EC, test EC",self,1,1
+hierarchy,pool2-to-pool5,"train EC, test EC",non-PT,0.0189066662440697,0.02
+hierarchy,pool2-to-pool5,"train EC, test EC",PT (rotation only),0.982320006132126,0.9788
+hierarchy,pool2-to-pool5,"train EC, test EC",control,0.0192799995740255,0.92024
+hierarchy,pool2-to-pool5,"train EC, test EX",self,1,1
+hierarchy,pool2-to-pool5,"train EC, test EX",non-PT,0.0165333329637845,0.02
+hierarchy,pool2-to-pool5,"train EC, test EX",PT (rotation only),0.943039997498194,0.9392
+hierarchy,pool2-to-pool5,"train EC, test EX",control,0.0223999995241563,0.92988
+hierarchy,pool2-to-pool5,"train EX, test AC",self,1,1
+hierarchy,pool2-to-pool5,"train EX, test AC",non-PT,0.01762666627268,0.02
+hierarchy,pool2-to-pool5,"train EX, test AC",PT (rotation only),0.703200006723404,0.7024
+hierarchy,pool2-to-pool5,"train EX, test AC",control,0.0160266663134098,0.681
+hierarchy,pool2-to-pool5,"train EX, test EC",self,1,1
+hierarchy,pool2-to-pool5,"train EX, test EC",non-PT,0.00925333312650522,0.0068
+hierarchy,pool2-to-pool5,"train EX, test EC",PT (rotation only),0.835146659294764,0.8296
+hierarchy,pool2-to-pool5,"train EX, test EC",control,0.0158666663169861,0.79048
+hierarchy,pool2-to-pool5,"train EX, test EX",self,1,1
+hierarchy,pool2-to-pool5,"train EX, test EX",non-PT,0.0227999994903803,0.0208
+hierarchy,pool2-to-pool5,"train EX, test EX",PT (rotation only),0.846773326953252,0.8452
+hierarchy,pool2-to-pool5,"train EX, test EX",control,0.0215199995338917,0.80588
+hierarchy,pool5-to-pool2,"train AC, test AC",self,0.960200022220612,0.9608
+hierarchy,pool5-to-pool2,"train AC, test AC",non-PT,0.0201866662154595,0.0128
+hierarchy,pool5-to-pool2,"train AC, test AC",PT (rotation only),0.930240001519521,0.9224
+hierarchy,pool5-to-pool2,"train AC, test AC",control,0.0260266660998265,0.87264
+hierarchy,pool5-to-pool2,"train AC, test EC",self,0.960258688847224,0.9584
+hierarchy,pool5-to-pool2,"train AC, test EC",non-PT,0.0241866661260525,0.024
+hierarchy,pool5-to-pool2,"train AC, test EC",PT (rotation only),0.983493340333303,0.9788
+hierarchy,pool5-to-pool2,"train AC, test EC",control,0.0237599994838238,0.90912
+hierarchy,pool5-to-pool2,"train AC, test EX",self,0.960397355874379,0.96
+hierarchy,pool5-to-pool2,"train AC, test EX",non-PT,0.0233066661457221,0.03
+hierarchy,pool5-to-pool2,"train AC, test EX",PT (rotation only),0.920266683101654,0.9208
+hierarchy,pool5-to-pool2,"train AC, test EX",control,0.0261066660881042,0.92636
+hierarchy,pool5-to-pool2,"train EC, test AC",self,0.998000025749207,0.998
+hierarchy,pool5-to-pool2,"train EC, test AC",non-PT,0.0186399995833635,0.008
+hierarchy,pool5-to-pool2,"train EC, test AC",PT (rotation only),0.920426670471827,0.922
+hierarchy,pool5-to-pool2,"train EC, test AC",control,0.0187466662625472,0.91504
+hierarchy,pool5-to-pool2,"train EC, test EC",self,0.998000025749207,0.998
+hierarchy,pool5-to-pool2,"train EC, test EC",non-PT,0.0302666660050551,0.0252
+hierarchy,pool5-to-pool2,"train EC, test EC",PT (rotation only),0.985040013949076,0.9832
+hierarchy,pool5-to-pool2,"train EC, test EC",control,0.0213866662035386,0.94612
+hierarchy,pool5-to-pool2,"train EC, test EX",self,0.998000025749207,0.998
+hierarchy,pool5-to-pool2,"train EC, test EX",non-PT,0.0207999995350838,0.0028
+hierarchy,pool5-to-pool2,"train EC, test EX",PT (rotation only),0.95981331205368,0.9596
+hierarchy,pool5-to-pool2,"train EC, test EX",control,0.0214666661918163,0.97624
+hierarchy,pool5-to-pool2,"train EX, test AC",self,0.999994666735331,1
+hierarchy,pool5-to-pool2,"train EX, test AC",non-PT,0.0210133328636487,0.02
+hierarchy,pool5-to-pool2,"train EX, test AC",PT (rotation only),0.698826670487722,0.6988
+hierarchy,pool5-to-pool2,"train EX, test AC",control,0.0219999995132287,0.76044
+hierarchy,pool5-to-pool2,"train EX, test EC",self,0.999997333367666,1
+hierarchy,pool5-to-pool2,"train EX, test EC",non-PT,0.0197066662261883,0.02
+hierarchy,pool5-to-pool2,"train EX, test EC",PT (rotation only),0.874773333072662,0.8732
+hierarchy,pool5-to-pool2,"train EX, test EC",control,0.0237066661467155,0.80456
+hierarchy,pool5-to-pool2,"train EX, test EX",self,0.999992000102997,1
+hierarchy,pool5-to-pool2,"train EX, test EX",non-PT,0.0226133328278859,0.0284
+hierarchy,pool5-to-pool2,"train EX, test EX",PT (rotation only),0.881039995034536,0.8796
+hierarchy,pool5-to-pool2,"train EX, test EX",control,0.0245333327849706,0.83608

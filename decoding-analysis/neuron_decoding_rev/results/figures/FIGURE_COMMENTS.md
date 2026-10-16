@@ -11,6 +11,34 @@ What each figure in this folder shows and how we might use it. Click a name to o
 
 **Terms.** "Full space" is the published design: V1 whole, V2 subsampled to the V1 count (FR 48, KO 109), unless a figure says otherwise. "Control" is the corrected control. Headroom = (PT − control) / (self − control).
 
+## Why headroom
+
+**What it measures.** Headroom places PT on a scale whose two ends are measured on the same population, with the same decoder and the same rotation freedom:
+
+- **0 is the corrected control:** what a rotation with the same degrees of freedom reaches once the true stimulus correspondence is destroyed. Everything up to this level could be produced by rotation freedom alone.
+- **1 is the target's self-decoding:** what the decoder reaches when the rendering does not change at all.
+
+Headroom is the fraction of that gap which the true correspondence closes. In words: how much of the decodable structure survives the change of rendering, beyond what any rotation could produce.
+
+**Why not the other summaries.**
+
+- **Raw PT** grows with how decodable a population is. KO V1 has a higher PT than FR V1 partly because its self-decoding is twice as high (0.50 vs 0.26).
+- **PT − control** is in accuracy units, so it scales with decodability in the same way.
+- **PT/control** moves with the level of the control, which tracks rotation freedom rather than shared geometry. In the PC sweep it peaks at k ≈ 5 only because the control falls to chance there. In the partially shared simulations it rises from 1.82 to 3.18 as the number of stimuli grows from 20 to 50, at a fixed shared fraction (α = 0.8).
+
+**Evidence that it tracks shared geometry** (Simulations_v3, `partial_sharing_numbers.txt`):
+
+- **No shared structure (α = 0):** headroom is −0.07 to 0.05 at every population size from 20 neurons and every number of stimuli.
+- **A shared fraction α of 5 latent dimensions per rendering:** headroom follows α, at 0.09, 0.22, 0.38, 0.62 and 0.94 for α = 0.2–1.0 (50 stimuli). It changes by at most 0.03 between 20 and 50 stimuli, while PT/control rises by 16% (α = 0.2) to 97% (α = 1.0).
+- **Recorded populations behave the same way.** On random subsets of 20–50 stimuli, headroom stays flat (FR V1 0.14–0.15, FR V2 0.15–0.18, KO V1 0.25–0.28, KO V2 0.21–0.23), while PT/control rises from 1.09–1.18 to 1.24–1.47.
+- **It has interpretable reference points.** Two halves of one area (same geometry, different neurons) reach 0.48–0.70. Cue transfer at 0.14–0.25 corresponds to α ≈ 0.3–0.46 in the simulations.
+
+**Limits.**
+
+- **Small denominator:** headroom becomes unstable when self − control is small. That happens for small populations, and for the near-noiseless CNN and Gabor models; report PT − control there.
+- **Per direction:** a single direction is normalized by its own target's self-decoding, so across areas it can exceed 1. Pool both directions instead.
+- **How it is computed:** always as a ratio of pooled means (`transfer_metrics.m`), never as a mean of per-fold ratios.
+
 ## At a glance
 
 | Paper panel | Use | Figure |

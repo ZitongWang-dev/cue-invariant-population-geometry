@@ -1,0 +1,361 @@
+figure,panel,group,series,mean,sem
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 1 self,0.999,0.001
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 2 self,0.9996,0.00015704029462319
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 5 self,0.95345,0.00248408341769458
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 1 non-PT,0.129,0.00491506813145475
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 2 non-PT,0.11055,0.00215774962835048
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 5 non-PT,0.056,0.00136368952581114
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 1 PT (rotation only),0.805,0.010450384027192
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 2 PT (rotation only),0.8939,0.0016745103649742
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 5 PT (rotation only),0.62405,0.00345054479734668
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 1 PT control (corrected),0.6547,0.00675164697256197
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 2 PT control (corrected),0.83304,0.00166087092532094
+fig3d_cnn_cue_transfer_full,AlexNet,EC-AC,pool 5 PT control (corrected),0.59566,0.00285251698204096
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 1 self,0.998,0.00137649440322337
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 2 self,1,0
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 5 self,0.98715,0.000920223221257949
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 1 non-PT,0.101,0.00746571109173555
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 2 non-PT,0.11525,0.00197124536034373
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 5 non-PT,0.03905,0.0013132231866079
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 1 PT (rotation only),0.717,0.0400072361875751
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 2 PT (rotation only),0.92365,0.00219230683828313
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 5 PT (rotation only),0.68525,0.00457229246614759
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 1 PT control (corrected),0.6284,0.0278324309129892
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 2 PT control (corrected),0.90127,0.00303631615440054
+fig3d_cnn_cue_transfer_full,AlexNet,EC-EX,pool 5 PT control (corrected),0.65666,0.00403418487665695
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 1 self,0.999,0.001
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 2 self,0.9995,0.000156320472829262
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 5 self,0.9498,0.00231912609934468
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 1 non-PT,0.168,0.00622389284172399
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 2 non-PT,0.1119,0.00213597306920779
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 5 non-PT,0.0288,0.00113561615881
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 1 PT (rotation only),0.727,0.020635942073556
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 2 PT (rotation only),0.87755,0.00260950522970537
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 5 PT (rotation only),0.60815,0.00574577920709993
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 1 PT control (corrected),0.7244,0.0240747082837439
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 2 PT control (corrected),0.83407,0.00321933191749274
+fig3d_cnn_cue_transfer_full,AlexNet,AC-EX,pool 5 PT control (corrected),0.57657,0.00550406892096354
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 1 self,0.999,0.001
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 2 self,1,0
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 3 self,1,0
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 4 self,0.99915,0.000201979551807531
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 5 self,0.87185,0.00359077678850443
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 1 non-PT,0.01,0.00229415733870562
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 2 non-PT,0.03175,0.0013882224800569
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 3 non-PT,0.1036,0.00199939840576169
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 4 non-PT,0.06395,0.00131064420059426
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 5 non-PT,0.02795,0.000957489276329356
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 1 PT (rotation only),0.285,0.0059603956067927
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 2 PT (rotation only),0.65185,0.00290042668194584
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 3 PT (rotation only),0.67355,0.00373676360713908
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 4 PT (rotation only),0.604,0.00280708019980198
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 5 PT (rotation only),0.41655,0.00293500927573007
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 1 PT control (corrected),0.1567,0.00525211736751048
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 2 PT control (corrected),0.506535,0.00166232299263097
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 3 PT control (corrected),0.537035,0.00212489644447662
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 4 PT control (corrected),0.582935,0.00236207279889257
+fig3d_cnn_cue_transfer_full,VGG-19,EC-AC,pool 5 PT control (corrected),0.395375,0.00234355051364912
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 1 self,0.998,0.00137649440322337
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 2 self,1,0
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 3 self,1,0
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 4 self,0.9995,0.000156320472829262
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 5 self,0.89175,0.00384764273765009
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 1 non-PT,0.041,0.00270477161211149
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 2 non-PT,0.0575,0.00132807547268703
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 3 non-PT,0.06845,0.00167661006297175
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 4 non-PT,0.047,0.0015143424588602
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 5 non-PT,0.0298,0.00100120228477446
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 1 PT (rotation only),0.212,0.0107996101294152
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 2 PT (rotation only),0.55705,0.00379232092457739
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 3 PT (rotation only),0.61655,0.00209731747751831
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 4 PT (rotation only),0.6246,0.00332863327790054
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 5 PT (rotation only),0.458,0.00561148124869996
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 1 PT control (corrected),0.1822,0.00737120999850807
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 2 PT control (corrected),0.51532,0.00406390604355306
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 3 PT control (corrected),0.57374,0.00190662504117067
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 4 PT control (corrected),0.60372,0.00273519784808529
+fig3d_cnn_cue_transfer_full,VGG-19,EC-EX,pool 5 PT control (corrected),0.44495,0.00487368708623526
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 1 self,1,0
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 2 self,1,0
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 3 self,1,0
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 4 self,0.9996,0.00015704029462319
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 5 self,0.91475,0.00230148557232041
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 1 non-PT,0.04,1.59189143721484e-18
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 2 non-PT,0.03815,0.00132791269680119
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 3 non-PT,0.0532,0.00144901660542832
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 4 non-PT,0.0462,0.00133166562369588
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 5 non-PT,0.03705,0.00127467869065542
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 1 PT (rotation only),0.174,0.00504714614515236
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 2 PT (rotation only),0.5683,0.00444997535967947
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 3 PT (rotation only),0.66805,0.00350588388348948
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 4 PT (rotation only),0.6264,0.0034324998379963
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 5 PT (rotation only),0.5266,0.00618479824434947
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 1 PT control (corrected),0.1606,0.00937982156715035
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 2 PT control (corrected),0.53898,0.00421344060172452
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 3 PT control (corrected),0.61809,0.00231894880471675
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 4 PT control (corrected),0.616585,0.00266258197892313
+fig3d_cnn_cue_transfer_full,VGG-19,AC-EX,pool 5 PT control (corrected),0.51824,0.00543805453197482
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool2 self-decoding,1,0
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool5 self-decoding,0.959733333333333,0.00212357949187561
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool2-to-pool5 non-PT (different units),0.0222666666666667,0.00148413433868777
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool5-to-pool2 non-PT (different units),0.0222666666666667,0.00109563570533588
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool2-to-pool5 PT (rotation only),0.857066666666667,0.00270478351082256
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool5-to-pool2 PT (rotation only),0.940666666666667,0.00251290479912304
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool2-to-pool5 PT control (corrected),0.82172,0.00356934650207872
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool5-to-pool2 PT control (corrected),0.902706666666667,0.00198969485292479
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool2 self-decoding,1,0
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool5 self-decoding,1,0
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool2-to-pool5 non-PT (different units),0.0158666666666667,0.000739953845024534
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool5-to-pool2 non-PT (different units),0.0228,0.000599179155140812
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool2-to-pool5 PT (rotation only),0.7924,0.00574061241266846
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool5-to-pool2 PT (rotation only),0.8172,0.00697975339782196
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool2-to-pool5 PT control (corrected),0.75912,0.00477991622365345
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool5-to-pool2 PT control (corrected),0.80036,0.00269234194436997
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool2 self-decoding,1,0
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool5 self-decoding,0.998,0.000491539152311425
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool2-to-pool5 non-PT (different units),0.0222666666666667,0.000898154541774281
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool5-to-pool2 non-PT (different units),0.012,0.00107024009934504
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool2-to-pool5 PT (rotation only),0.939333333333334,0.0030822674861338
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool5-to-pool2 PT (rotation only),0.954933333333334,0.00227965746998586
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool2-to-pool5 PT control (corrected),0.903213333333333,0.00275410755537022
+hierarchy_by_training_full,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool5-to-pool2 PT control (corrected),0.9458,0.00216556330536196
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → AC,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → AC,pool5 self-decoding,0.9608,0.00378870501811446
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → AC,pool2-to-pool5 non-PT (different units),0.0324,0.00261174740160604
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → AC,pool5-to-pool2 non-PT (different units),0.0128,0.00148571428571429
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → AC,pool2-to-pool5 PT (rotation only),0.8616,0.00484334173723819
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → AC,pool5-to-pool2 PT (rotation only),0.9224,0.00294936866298604
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → AC,pool2-to-pool5 PT control (corrected),0.76732,0.00272710356927474
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → AC,pool5-to-pool2 PT control (corrected),0.87264,0.00155491583865691
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EX,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EX,pool5 self-decoding,0.96,0.00302371578407382
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EX,pool2-to-pool5 non-PT (different units),0.0204,0.00193696585790609
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EX,pool5-to-pool2 non-PT (different units),0.03,0.00191662969499982
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EX,pool2-to-pool5 PT (rotation only),0.8676,0.00347069363178519
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EX,pool5-to-pool2 PT (rotation only),0.9208,0.000983122887662012
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EX,pool2-to-pool5 PT control (corrected),0.8622,0.00228732086395719
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EX,pool5-to-pool2 PT control (corrected),0.92636,0.00123445765998097
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EC,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EC,pool5 self-decoding,0.9584,0.00419289973207866
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EC,pool2-to-pool5 non-PT (different units),0.014,0.00244114392723358
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EC,pool5-to-pool2 non-PT (different units),0.024,0.00139970842444753
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EC,pool2-to-pool5 PT (rotation only),0.842,0.00489064079103534
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EC,pool5-to-pool2 PT (rotation only),0.9788,0.00184368752056019
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EC,pool2-to-pool5 PT control (corrected),0.83564,0.00240046934186307
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,AC → EC,pool5-to-pool2 PT control (corrected),0.90912,0.00121105115414634
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → AC,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → AC,pool5 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → AC,pool2-to-pool5 non-PT (different units),0.02,4.95635278850516e-19
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → AC,pool5-to-pool2 non-PT (different units),0.02,4.95635278850516e-19
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → AC,pool2-to-pool5 PT (rotation only),0.7024,0.00473424346907611
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → AC,pool5-to-pool2 PT (rotation only),0.6988,0.00231481475434618
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → AC,pool2-to-pool5 PT control (corrected),0.681,0.00254926960327936
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → AC,pool5-to-pool2 PT control (corrected),0.76044,0.00161147922919362
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EX,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EX,pool5 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EX,pool2-to-pool5 non-PT (different units),0.0208,0.000559883369779012
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EX,pool5-to-pool2 non-PT (different units),0.0284,0.00152154593779364
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EX,pool2-to-pool5 PT (rotation only),0.8452,0.00301343928535662
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EX,pool5-to-pool2 PT (rotation only),0.8796,0.00264898902548555
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EX,pool2-to-pool5 PT control (corrected),0.80588,0.00263378985106858
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EX,pool5-to-pool2 PT control (corrected),0.83608,0.00142165181305094
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EC,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EC,pool5 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EC,pool2-to-pool5 non-PT (different units),0.0068,0.00146913830082085
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EC,pool5-to-pool2 non-PT (different units),0.02,4.95635278850516e-19
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EC,pool2-to-pool5 PT (rotation only),0.8296,0.00432326407300062
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EC,pool5-to-pool2 PT (rotation only),0.8732,0.00157635591132957
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EC,pool2-to-pool5 PT control (corrected),0.79048,0.00239833956166787
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EX → EC,pool5-to-pool2 PT control (corrected),0.80456,0.0016081831553727
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → AC,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → AC,pool5 self-decoding,0.998,0.000857142857142858
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → AC,pool2-to-pool5 non-PT (different units),0.0268,0.00167673151441385
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → AC,pool5-to-pool2 non-PT (different units),0.008,0.00139970842444753
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → AC,pool2-to-pool5 PT (rotation only),0.9,0.00352252228741084
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → AC,pool5-to-pool2 PT (rotation only),0.922,0.0022314999074019
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → AC,pool2-to-pool5 PT control (corrected),0.85952,0.00209688593210143
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → AC,pool5-to-pool2 PT control (corrected),0.91504,0.00142884568795933
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EX,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EX,pool5 self-decoding,0.998,0.000857142857142858
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EX,pool2-to-pool5 non-PT (different units),0.02,0.00171428571428571
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EX,pool5-to-pool2 non-PT (different units),0.0028,0.000991391518451284
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EX,pool2-to-pool5 PT (rotation only),0.9392,0.00279708302869038
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EX,pool5-to-pool2 PT (rotation only),0.9596,0.000901699076460544
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EX,pool2-to-pool5 PT control (corrected),0.92988,0.00149820028088125
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EX,pool5-to-pool2 PT control (corrected),0.97624,0.000920762771637005
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EC,pool2 self-decoding,1,0
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EC,pool5 self-decoding,0.998,0.000857142857142858
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EC,pool2-to-pool5 non-PT (different units),0.02,0.000989743318610787
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EC,pool5-to-pool2 non-PT (different units),0.0252,0.00137736809065074
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EC,pool2-to-pool5 PT (rotation only),0.9788,0.00175289847430605
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EC,pool5-to-pool2 PT (rotation only),0.9832,0.00165220940512011
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EC,pool2-to-pool5 PT control (corrected),0.92024,0.00177845610641617
+hierarchy_all_combos_full,AlexNet pool2 <-> pool5,EC → EC,pool5-to-pool2 PT control (corrected),0.94612,0.00129225005478105
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 1 self,0.99,0.00271448357015319
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 2 self,1,0
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 5 self,0.955,0.00806225774829855
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 1 non-PT (target PCs),0.074,0.00822064154238713
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 2 non-PT (target PCs),0.037,0.00441885910495839
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 5 non-PT (target PCs),0.035,0.00630371653116343
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 1 PT (rotation only),0.207,0.006692493831466
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 2 PT (rotation only),0.136,0.00924519790001957
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 5 PT (rotation only),0.062,0.00247088307248537
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 1 PT control (corrected),0.0456,0.00158013990053513
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 2 PT control (corrected),0.0415,0.00173432832440749
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-AC,pool 5 PT control (corrected),0.0435,0.00200459997321949
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 1 self,0.993,0.00333245602490037
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 2 self,1,0
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 5 self,0.962,0.00578564466680476
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 1 non-PT (target PCs),0.053,0.0048720470138601
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 2 non-PT (target PCs),0.082,0.00500526039072368
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 5 non-PT (target PCs),0.036,0.00449561189559213
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 1 PT (rotation only),0.084,0.00343358030111581
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 2 PT (rotation only),0.108,0.0053113582364391
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 5 PT (rotation only),0.055,0.00578109441469165
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 1 PT control (corrected),0.04,0.00177111323897236
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 2 PT control (corrected),0.0438,0.00214672332931647
+fig3d_cnn_cue_transfer_k5,AlexNet,EC-EX,pool 5 PT control (corrected),0.0428,0.00296789842357038
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 1 self,0.993,0.00262578309121399
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 2 self,1,0
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 5 self,0.945,0.00578109441469164
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 1 non-PT (target PCs),0.087,0.006692493831466
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 2 non-PT (target PCs),0.039,0.00588933022731072
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 5 non-PT (target PCs),0.029,0.00228265773075805
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 1 PT (rotation only),0.071,0.00422399162678596
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 2 PT (rotation only),0.045,0.00198679853559757
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 5 PT (rotation only),0.042,0.00352435137742804
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 1 PT control (corrected),0.0404,0.0018671678525172
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 2 PT control (corrected),0.0436,0.00158013990053513
+fig3d_cnn_cue_transfer_k5,AlexNet,AC-EX,pool 5 PT control (corrected),0.0388,0.00280750872895489
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 1 self,0.99,0.00271448357015319
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 2 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 3 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 4 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 5 self,0.964,0.0067434178433882
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 1 non-PT (target PCs),0.014,0.00210262993215139
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 2 non-PT (target PCs),0.02,7.95945718607422e-19
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 3 non-PT (target PCs),0.05,0.00688247201611685
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 4 non-PT (target PCs),0.067,0.00333245602490036
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 5 non-PT (target PCs),0.018,0.00407818329006537
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 1 PT (rotation only),0.057,0.00363462877276201
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 2 PT (rotation only),0.062,0.00540954322422299
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 3 PT (rotation only),0.112,0.00367065174192899
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 4 PT (rotation only),0.103,0.0100812488783567
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 5 PT (rotation only),0.038,0.00613874665760982
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 1 PT control (corrected),0.0437,0.0020584869251595
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 2 PT control (corrected),0.0438,0.00166005706940581
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 3 PT control (corrected),0.0446,0.00160983817427977
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 4 PT control (corrected),0.0425,0.0016725335336108
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-AC,pool 5 PT control (corrected),0.0416,0.00159340747093173
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 1 self,0.992,0.00224780594779607
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 2 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 3 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 4 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 5 self,0.978,0.00381134041899615
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 1 non-PT (target PCs),0.017,0.00163835604381825
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 2 non-PT (target PCs),0.079,0.00446624768917406
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 3 non-PT (target PCs),0.081,0.009
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 4 non-PT (target PCs),0.038,0.0043286074094636
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 5 non-PT (target PCs),0.02,0.00355409326655455
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 1 PT (rotation only),0.044,0.00183532587096449
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 2 PT (rotation only),0.079,0.001
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 3 PT (rotation only),0.08,0.00458831467741124
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 4 PT (rotation only),0.083,0.0119009066439229
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 5 PT (rotation only),0.049,0.00446624768917406
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 1 PT control (corrected),0.0408,0.00187167248596993
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 2 PT control (corrected),0.0425,0.0021318388405565
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 3 PT control (corrected),0.0458,0.00159538809005669
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 4 PT control (corrected),0.0405,0.00272560954071214
+fig3d_cnn_cue_transfer_k5,VGG-19,EC-EX,pool 5 PT control (corrected),0.0411,0.00228254244210267
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 1 self,0.995,0.00246020966158321
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 2 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 3 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 4 self,1,0
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 5 self,0.963,0.00714879452480589
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 1 non-PT (target PCs),0.01,0.00229415733870562
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 2 non-PT (target PCs),0.015,0.00380442955126341
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 3 non-PT (target PCs),0.03,0.00688247201611685
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 4 non-PT (target PCs),0.033,0.00391353925158343
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 5 non-PT (target PCs),0.052,0.00639078283648865
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 1 PT (rotation only),0.073,0.00363462877276201
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 2 PT (rotation only),0.074,0.00210262993215139
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 3 PT (rotation only),0.037,0.00861760743447605
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 4 PT (rotation only),0.069,0.00228265773075805
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 5 PT (rotation only),0.058,0.0043286074094636
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 1 PT control (corrected),0.042,0.00188064938392651
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 2 PT control (corrected),0.0422,0.00210212924636452
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 3 PT control (corrected),0.0423,0.00148164204782894
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 4 PT control (corrected),0.0395,0.00182309742211609
+fig3d_cnn_cue_transfer_k5,VGG-19,AC-EX,pool 5 PT control (corrected),0.0378,0.00152107994876217
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool2 self-decoding,1,0
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool5 self-decoding,0.934,0.00651435197154678
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool2-to-pool5 PT (rotation only),0.0713333333333334,0.0032776966026704
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool5-to-pool2 PT (rotation only),0.068,0.0036640534052224
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool2-to-pool5 PT control (corrected),0.0450666666666667,0.00155136820098233
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,AC → AC|EX|EC,pool5-to-pool2 PT control (corrected),0.0375333333333333,0.00140502655379115
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool2 self-decoding,1,0
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool5 self-decoding,0.952666666666667,0.00563105782784517
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool2-to-pool5 PT (rotation only),0.0606666666666667,0.00538053822315958
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool5-to-pool2 PT (rotation only),0.0613333333333334,0.0092938409135945
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool2-to-pool5 PT control (corrected),0.0478,0.00194250697124446
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EX → AC|EX|EC,pool5-to-pool2 PT control (corrected),0.0351333333333333,0.00123058096113816
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool2 self-decoding,1,0
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool5 self-decoding,0.977333333333334,0.00283384038735356
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool2-to-pool5 PT (rotation only),0.09,0.0129632548772094
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool5-to-pool2 PT (rotation only),0.204,0.0244366410393768
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool2-to-pool5 PT control (corrected),0.0471333333333334,0.00187832973818869
+hierarchy_by_training_k5,AlexNet pool2 <-> pool5,EC → AC|EX|EC,pool5-to-pool2 PT control (corrected),0.0475333333333334,0.00164053070564637
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → AC,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → AC,pool5 self-decoding,0.934,0.010770329614269
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → AC,pool2-to-pool5 PT (rotation only),0.068,0.0074236858171067
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → AC,pool5-to-pool2 PT (rotation only),0.08,0.00298142396999972
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → AC,pool2-to-pool5 PT control (corrected),0.042,0.00223109340409087
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → AC,pool5-to-pool2 PT control (corrected),0.0346,0.00225191276720727
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EX,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EX,pool5 self-decoding,0.936,0.0142361043360417
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EX,pool2-to-pool5 PT (rotation only),0.084,0.00266666666666667
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EX,pool5-to-pool2 PT (rotation only),0.05,0.00447213595499958
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EX,pool2-to-pool5 PT control (corrected),0.0532,0.00217460085737335
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EX,pool5-to-pool2 PT control (corrected),0.0404,0.00228619042659763
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EC,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EC,pool5 self-decoding,0.932,0.00952190457139046
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EC,pool2-to-pool5 PT (rotation only),0.062,0.003590109871423
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EC,pool5-to-pool2 PT (rotation only),0.074,0.00669991708074726
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EC,pool2-to-pool5 PT control (corrected),0.04,0.00152023390013218
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,AC → EC,pool5-to-pool2 PT control (corrected),0.0376,0.00262974438977547
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → AC,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → AC,pool5 self-decoding,0.952,0.0123648246606609
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → AC,pool2-to-pool5 PT (rotation only),0.042,0.00466666666666667
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → AC,pool5-to-pool2 PT (rotation only),0,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → AC,pool2-to-pool5 PT control (corrected),0.0496,0.0018086213288334
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → AC,pool5-to-pool2 PT control (corrected),0.036,0.00229007520497569
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EX,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EX,pool5 self-decoding,0.954,0.00791622805802527
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EX,pool2-to-pool5 PT (rotation only),0.1,4.62592926927149e-18
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EX,pool5-to-pool2 PT (rotation only),0.12,0.00421637021355784
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EX,pool2-to-pool5 PT control (corrected),0.0552,0.00171787983023002
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EX,pool5-to-pool2 PT control (corrected),0.0374,0.00197877627728744
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EC,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EC,pool5 self-decoding,0.952,0.00952190457139046
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EC,pool2-to-pool5 PT (rotation only),0.04,2.31296463463574e-18
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EC,pool5-to-pool2 PT (rotation only),0.064,0.004
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EC,pool2-to-pool5 PT control (corrected),0.0386,0.00379531875399741
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EX → EC,pool5-to-pool2 PT control (corrected),0.032,0.00193218356615859
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → AC,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → AC,pool5 self-decoding,0.98,0.00421637021355784
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → AC,pool2-to-pool5 PT (rotation only),0.018,0.002
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → AC,pool5-to-pool2 PT (rotation only),0.126,0.006
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → AC,pool2-to-pool5 PT control (corrected),0.0472,0.00308688984074406
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → AC,pool5-to-pool2 PT control (corrected),0.0494,0.00208806130178211
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EX,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EX,pool5 self-decoding,0.974,0.00600000000000001
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EX,pool2-to-pool5 PT (rotation only),0.07,0.00447213595499958
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EX,pool5-to-pool2 PT (rotation only),0.098,0.00553774924194538
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EX,pool2-to-pool5 PT control (corrected),0.0538,0.00241200700201674
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EX,pool5-to-pool2 PT control (corrected),0.0438,0.00390384425918863
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EC,pool2 self-decoding,1,0
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EC,pool5 self-decoding,0.978,0.00466666666666667
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EC,pool2-to-pool5 PT (rotation only),0.182,0.0062893207547044
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EC,pool5-to-pool2 PT (rotation only),0.388,0.00442216638714054
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EC,pool2-to-pool5 PT control (corrected),0.0404,0.00296348143611905
+hierarchy_all_combos_k5,AlexNet pool2 <-> pool5,EC → EC,pool5-to-pool2 PT control (corrected),0.0494,0.00202319878739914

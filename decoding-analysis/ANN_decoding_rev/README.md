@@ -32,9 +32,24 @@ ANN_decoding_rev/
       run_ann_pc_sweep.m                k = 1..49 sweep for cue transfer (8 layers) and the hierarchy
       run_all_ann.m                     MASTER: runs the drivers back to back, unattended, with a log
       run_ann_driver.m                  runs one driver in its own workspace (used by run_all_ann)
+    visualization_scripts/              one script per figure series; each writes results/figures/<NN_series>/
+      plot_sanity_old_vs_new.m              01  rerun vs published pipeline (Figs 3d, 4d, hierarchy)
+      plot_paper_style_bars.m               02  Fig 3d and hierarchy bars, published style + corrected control (full, k = 5)
+      plot_paper_style_curves.m             03  Fig 4d, published style + corrected control
+      plot_normalized_metric_bars.m         04  PT/control, PT - control, headroom and its denominator
+      plot_normalized_metrics_vs_size.m     05  the same metrics vs number of units
+      plot_pc_sweep_accuracy.m              06  self, PT, control, non-PT vs number of PCs
+      plot_pc_sweep_metrics.m               07  normalized metrics vs number of PCs
+      plot_dimensionality.m                 08  participation ratio and variance spectra
+      plot_cnn_vs_neurons.m                 09  CNN layers and recorded neurons on the same axes
+      helpers/                              ann_figure_settings, load_ann_results; the generic helpers
+                                            (plot_grouped_bars, bootstrap_metrics, ...) are shared from
+                                            neuron_decoding_rev/code/visualization_scripts/helpers
   results/
     decoding_outputs/<analysis>/<net>_pool<L>.mat   (hierarchy: <net>_pool<lo>_pool<hi>.mat)
     logs/run_all_ann_<set>_<date>.log
+    figures/<NN_series>/                figures (.png, .fig) + a .csv of every plotted number;
+                                        index in results/figures/README.md, comments in FIGURE_COMMENTS.md
 ```
 
 Each result file holds one variable `res` with the same fields as the matching neuron
