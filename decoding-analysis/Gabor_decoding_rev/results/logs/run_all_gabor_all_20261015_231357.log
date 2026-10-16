@@ -1,0 +1,358 @@
+run_all_gabor('all') started 2026-10-15 23:13:57 on DESKTOP-3OBL0M0
+Log: D:\Github repos\cue-invariant-population-geometry\decoding-analysis\Gabor_decoding_rev\code\decoding_scripts\..\..\results\logs\run_all_gabor_all_20261015_231357.log
+
+  job 1/2  run_gabor_cue_transfer_incremental   cue transfer vs cells, simple and complex (Fig 15, point 9)    ~4.5 h
+  job 2/2  run_gabor_pc_sweep                   PC sweep: simple and complex                                   ~0.3 h
+  total ~4.8 h (8 workers)
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+Parallel pool: 8 workers
+
+################ job 1/2: cue transfer vs cells, simple and complex (Fig 15, point 9) (run_gabor_cue_transfer_incremental) | started 2026-10-15 23:14:56 ################
+
+===== Gabor simple (192 cells; constant within AC/EC/EX: [16 0 9]): N = [10 20 30 40 48 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 192] | 20 draws, 10 folds, 10 permutations =====
+[Gabor simple] point 1/21: N = 10, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 10: 12/120 calls ( 10%) | 1.6 min elapsed, ~14.5 min left
+    Gabor simple N = 10: 24/120 calls ( 20%) | 2.3 min elapsed, ~9.1 min left
+    Gabor simple N = 10: 36/120 calls ( 30%) | 3.4 min elapsed, ~7.9 min left
+    Gabor simple N = 10: 48/120 calls ( 40%) | 4.0 min elapsed, ~6.0 min left
+    Gabor simple N = 10: 60/120 calls ( 50%) | 5.1 min elapsed, ~5.1 min left
+    Gabor simple N = 10: 72/120 calls ( 60%) | 5.8 min elapsed, ~3.8 min left
+    Gabor simple N = 10: 84/120 calls ( 70%) | 6.9 min elapsed, ~3.0 min left
+    Gabor simple N = 10: 96/120 calls ( 80%) | 7.6 min elapsed, ~1.9 min left
+    Gabor simple N = 10: 108/120 calls ( 90%) | 8.6 min elapsed, ~1.0 min left
+    Gabor simple N = 10: 120/120 calls (100%) | 9.3 min elapsed, ~0.0 min left
+[Gabor simple] N =  10 (20 draws): self 0.991  nonPT 0.048  PT 0.078  ctrl 0.066  PT/ctrl 1.19  headroom 0.01  PR 5.2 | 559 s | Gabor simple: ~3.0 h left
+[Gabor simple] point 2/21: N = 20, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 20: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.3 min left
+    Gabor simple N = 20: 24/120 calls ( 20%) | 1.7 min elapsed, ~7.0 min left
+    Gabor simple N = 20: 36/120 calls ( 30%) | 2.8 min elapsed, ~6.6 min left
+    Gabor simple N = 20: 48/120 calls ( 40%) | 3.5 min elapsed, ~5.2 min left
+    Gabor simple N = 20: 60/120 calls ( 50%) | 4.6 min elapsed, ~4.6 min left
+    Gabor simple N = 20: 72/120 calls ( 60%) | 5.3 min elapsed, ~3.5 min left
+    Gabor simple N = 20: 84/120 calls ( 70%) | 6.5 min elapsed, ~2.8 min left
+    Gabor simple N = 20: 96/120 calls ( 80%) | 7.2 min elapsed, ~1.8 min left
+    Gabor simple N = 20: 108/120 calls ( 90%) | 8.2 min elapsed, ~0.9 min left
+    Gabor simple N = 20: 120/120 calls (100%) | 8.7 min elapsed, ~0.0 min left
+[Gabor simple] N =  20 (20 draws): self 1.000  nonPT 0.055  PT 0.146  ctrl 0.131  PT/ctrl 1.11  headroom 0.02  PR 7.5 | 524 s | Gabor simple: ~2.7 h left
+[Gabor simple] point 3/21: N = 30, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 30: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.7 min left
+    Gabor simple N = 30: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    Gabor simple N = 30: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    Gabor simple N = 30: 48/120 calls ( 40%) | 3.3 min elapsed, ~4.9 min left
+    Gabor simple N = 30: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    Gabor simple N = 30: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.3 min left
+    Gabor simple N = 30: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    Gabor simple N = 30: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    Gabor simple N = 30: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    Gabor simple N = 30: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[Gabor simple] N =  30 (20 draws): self 1.000  nonPT 0.057  PT 0.195  ctrl 0.180  PT/ctrl 1.08  headroom 0.02  PR 7.9 | 484 s | Gabor simple: ~2.5 h left
+[Gabor simple] point 4/21: N = 40, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 40: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.9 min left
+    Gabor simple N = 40: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.6 min left
+    Gabor simple N = 40: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.4 min left
+    Gabor simple N = 40: 48/120 calls ( 40%) | 3.3 min elapsed, ~5.0 min left
+    Gabor simple N = 40: 60/120 calls ( 50%) | 4.4 min elapsed, ~4.4 min left
+    Gabor simple N = 40: 72/120 calls ( 60%) | 5.0 min elapsed, ~3.3 min left
+    Gabor simple N = 40: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    Gabor simple N = 40: 96/120 calls ( 80%) | 6.6 min elapsed, ~1.6 min left
+    Gabor simple N = 40: 108/120 calls ( 90%) | 7.6 min elapsed, ~0.8 min left
+    Gabor simple N = 40: 120/120 calls (100%) | 8.2 min elapsed, ~0.0 min left
+[Gabor simple] N =  40 (20 draws): self 1.000  nonPT 0.060  PT 0.248  ctrl 0.222  PT/ctrl 1.12  headroom 0.03  PR 8.8 | 490 s | Gabor simple: ~2.3 h left
+[Gabor simple] point 5/21: N = 48, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 48: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.0 min left
+    Gabor simple N = 48: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.7 min left
+    Gabor simple N = 48: 36/120 calls ( 30%) | 2.8 min elapsed, ~6.4 min left
+    Gabor simple N = 48: 48/120 calls ( 40%) | 3.3 min elapsed, ~5.0 min left
+    Gabor simple N = 48: 60/120 calls ( 50%) | 4.4 min elapsed, ~4.4 min left
+    Gabor simple N = 48: 72/120 calls ( 60%) | 5.0 min elapsed, ~3.3 min left
+    Gabor simple N = 48: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    Gabor simple N = 48: 96/120 calls ( 80%) | 6.6 min elapsed, ~1.7 min left
+    Gabor simple N = 48: 108/120 calls ( 90%) | 7.7 min elapsed, ~0.9 min left
+    Gabor simple N = 48: 120/120 calls (100%) | 8.2 min elapsed, ~0.0 min left
+[Gabor simple] N =  48 (20 draws): self 1.000  nonPT 0.063  PT 0.279  ctrl 0.243  PT/ctrl 1.15  headroom 0.05  PR 9.3 | 493 s | Gabor simple: ~2.1 h left
+[Gabor simple] point 6/21: N = 50, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 50: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.0 min left
+    Gabor simple N = 50: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.7 min left
+    Gabor simple N = 50: 36/120 calls ( 30%) | 2.8 min elapsed, ~6.4 min left
+    Gabor simple N = 50: 48/120 calls ( 40%) | 3.3 min elapsed, ~5.0 min left
+    Gabor simple N = 50: 60/120 calls ( 50%) | 4.4 min elapsed, ~4.4 min left
+    Gabor simple N = 50: 72/120 calls ( 60%) | 5.0 min elapsed, ~3.3 min left
+    Gabor simple N = 50: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    Gabor simple N = 50: 96/120 calls ( 80%) | 6.6 min elapsed, ~1.7 min left
+    Gabor simple N = 50: 108/120 calls ( 90%) | 7.7 min elapsed, ~0.9 min left
+    Gabor simple N = 50: 120/120 calls (100%) | 8.2 min elapsed, ~0.0 min left
+[Gabor simple] N =  50 (20 draws): self 1.000  nonPT 0.057  PT 0.274  ctrl 0.245  PT/ctrl 1.12  headroom 0.04  PR 9.2 | 495 s | Gabor simple: ~2.0 h left
+[Gabor simple] point 7/21: N = 60, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 60: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.1 min left
+    Gabor simple N = 60: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.8 min left
+    Gabor simple N = 60: 36/120 calls ( 30%) | 2.8 min elapsed, ~6.5 min left
+    Gabor simple N = 60: 48/120 calls ( 40%) | 3.4 min elapsed, ~5.1 min left
+    Gabor simple N = 60: 60/120 calls ( 50%) | 4.5 min elapsed, ~4.5 min left
+    Gabor simple N = 60: 72/120 calls ( 60%) | 5.1 min elapsed, ~3.4 min left
+    Gabor simple N = 60: 84/120 calls ( 70%) | 6.2 min elapsed, ~2.7 min left
+    Gabor simple N = 60: 96/120 calls ( 80%) | 6.8 min elapsed, ~1.7 min left
+    Gabor simple N = 60: 108/120 calls ( 90%) | 7.9 min elapsed, ~0.9 min left
+    Gabor simple N = 60: 120/120 calls (100%) | 8.4 min elapsed, ~0.0 min left
+[Gabor simple] N =  60 (20 draws): self 1.000  nonPT 0.057  PT 0.292  ctrl 0.264  PT/ctrl 1.11  headroom 0.04  PR 9.5 | 504 s | Gabor simple: ~1.8 h left
+[Gabor simple] point 8/21: N = 70, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 70: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.2 min left
+    Gabor simple N = 70: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.8 min left
+    Gabor simple N = 70: 36/120 calls ( 30%) | 2.8 min elapsed, ~6.6 min left
+    Gabor simple N = 70: 48/120 calls ( 40%) | 3.4 min elapsed, ~5.1 min left
+    Gabor simple N = 70: 60/120 calls ( 50%) | 4.5 min elapsed, ~4.5 min left
+    Gabor simple N = 70: 72/120 calls ( 60%) | 5.1 min elapsed, ~3.4 min left
+    Gabor simple N = 70: 84/120 calls ( 70%) | 6.2 min elapsed, ~2.7 min left
+    Gabor simple N = 70: 96/120 calls ( 80%) | 6.8 min elapsed, ~1.7 min left
+    Gabor simple N = 70: 108/120 calls ( 90%) | 7.9 min elapsed, ~0.9 min left
+    Gabor simple N = 70: 120/120 calls (100%) | 8.4 min elapsed, ~0.0 min left
+[Gabor simple] N =  70 (20 draws): self 1.000  nonPT 0.061  PT 0.320  ctrl 0.282  PT/ctrl 1.13  headroom 0.05  PR 9.7 | 505 s | Gabor simple: ~1.7 h left
+[Gabor simple] point 9/21: N = 80, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 80: 12/120 calls ( 10%) | 1.1 min elapsed, ~10.3 min left
+    Gabor simple N = 80: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.9 min left
+    Gabor simple N = 80: 36/120 calls ( 30%) | 2.9 min elapsed, ~6.7 min left
+    Gabor simple N = 80: 48/120 calls ( 40%) | 3.6 min elapsed, ~5.4 min left
+    Gabor simple N = 80: 60/120 calls ( 50%) | 4.8 min elapsed, ~4.8 min left
+    Gabor simple N = 80: 72/120 calls ( 60%) | 5.6 min elapsed, ~3.7 min left
+    Gabor simple N = 80: 84/120 calls ( 70%) | 6.7 min elapsed, ~2.9 min left
+    Gabor simple N = 80: 96/120 calls ( 80%) | 7.4 min elapsed, ~1.9 min left
+    Gabor simple N = 80: 108/120 calls ( 90%) | 8.6 min elapsed, ~1.0 min left
+    Gabor simple N = 80: 120/120 calls (100%) | 9.3 min elapsed, ~0.0 min left
+[Gabor simple] N =  80 (20 draws): self 1.000  nonPT 0.057  PT 0.334  ctrl 0.294  PT/ctrl 1.13  headroom 0.06  PR 9.8 | 561 s | Gabor simple: ~1.6 h left
+[Gabor simple] point 10/21: N = 90, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 90: 12/120 calls ( 10%) | 1.2 min elapsed, ~10.8 min left
+    Gabor simple N = 90: 24/120 calls ( 20%) | 1.8 min elapsed, ~7.3 min left
+    Gabor simple N = 90: 36/120 calls ( 30%) | 3.0 min elapsed, ~7.0 min left
+    Gabor simple N = 90: 48/120 calls ( 40%) | 3.6 min elapsed, ~5.5 min left
+    Gabor simple N = 90: 60/120 calls ( 50%) | 4.8 min elapsed, ~4.8 min left
+    Gabor simple N = 90: 72/120 calls ( 60%) | 5.4 min elapsed, ~3.6 min left
+    Gabor simple N = 90: 84/120 calls ( 70%) | 6.5 min elapsed, ~2.8 min left
+    Gabor simple N = 90: 96/120 calls ( 80%) | 7.2 min elapsed, ~1.8 min left
+    Gabor simple N = 90: 108/120 calls ( 90%) | 8.2 min elapsed, ~0.9 min left
+    Gabor simple N = 90: 120/120 calls (100%) | 8.8 min elapsed, ~0.0 min left
+[Gabor simple] N =  90 (20 draws): self 1.000  nonPT 0.062  PT 0.342  ctrl 0.302  PT/ctrl 1.13  headroom 0.06  PR 9.9 | 531 s | Gabor simple: ~1.4 h left
+[Gabor simple] point 11/21: N = 100, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 100: 12/120 calls ( 10%) | 1.2 min elapsed, ~10.5 min left
+    Gabor simple N = 100: 24/120 calls ( 20%) | 1.8 min elapsed, ~7.1 min left
+    Gabor simple N = 100: 36/120 calls ( 30%) | 2.9 min elapsed, ~6.8 min left
+    Gabor simple N = 100: 48/120 calls ( 40%) | 3.5 min elapsed, ~5.3 min left
+    Gabor simple N = 100: 60/120 calls ( 50%) | 4.7 min elapsed, ~4.7 min left
+    Gabor simple N = 100: 72/120 calls ( 60%) | 5.3 min elapsed, ~3.5 min left
+    Gabor simple N = 100: 84/120 calls ( 70%) | 6.4 min elapsed, ~2.7 min left
+    Gabor simple N = 100: 96/120 calls ( 80%) | 7.0 min elapsed, ~1.7 min left
+    Gabor simple N = 100: 108/120 calls ( 90%) | 8.1 min elapsed, ~0.9 min left
+    Gabor simple N = 100: 120/120 calls (100%) | 8.7 min elapsed, ~0.0 min left
+[Gabor simple] N = 100 (20 draws): self 1.000  nonPT 0.062  PT 0.353  ctrl 0.311  PT/ctrl 1.14  headroom 0.06  PR 10.2 | 521 s | Gabor simple: ~1.3 h left
+[Gabor simple] point 12/21: N = 110, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 110: 12/120 calls ( 10%) | 1.2 min elapsed, ~10.6 min left
+    Gabor simple N = 110: 24/120 calls ( 20%) | 1.8 min elapsed, ~7.1 min left
+    Gabor simple N = 110: 36/120 calls ( 30%) | 2.9 min elapsed, ~6.8 min left
+    Gabor simple N = 110: 48/120 calls ( 40%) | 3.5 min elapsed, ~5.3 min left
+    Gabor simple N = 110: 60/120 calls ( 50%) | 4.7 min elapsed, ~4.7 min left
+    Gabor simple N = 110: 72/120 calls ( 60%) | 5.3 min elapsed, ~3.6 min left
+    Gabor simple N = 110: 84/120 calls ( 70%) | 6.4 min elapsed, ~2.8 min left
+    Gabor simple N = 110: 96/120 calls ( 80%) | 7.1 min elapsed, ~1.8 min left
+    Gabor simple N = 110: 108/120 calls ( 90%) | 8.1 min elapsed, ~0.9 min left
+    Gabor simple N = 110: 120/120 calls (100%) | 8.8 min elapsed, ~0.0 min left
+[Gabor simple] N = 110 (20 draws): self 1.000  nonPT 0.062  PT 0.357  ctrl 0.310  PT/ctrl 1.15  headroom 0.07  PR 10.1 | 527 s | Gabor simple: ~1.2 h left
+[Gabor simple] point 13/21: N = 120, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 120: 12/120 calls ( 10%) | 1.2 min elapsed, ~10.8 min left
+    Gabor simple N = 120: 24/120 calls ( 20%) | 1.8 min elapsed, ~7.2 min left
+    Gabor simple N = 120: 36/120 calls ( 30%) | 3.0 min elapsed, ~7.0 min left
+    Gabor simple N = 120: 48/120 calls ( 40%) | 3.6 min elapsed, ~5.4 min left
+    Gabor simple N = 120: 60/120 calls ( 50%) | 4.8 min elapsed, ~4.8 min left
+    Gabor simple N = 120: 72/120 calls ( 60%) | 5.4 min elapsed, ~3.6 min left
+    Gabor simple N = 120: 84/120 calls ( 70%) | 6.5 min elapsed, ~2.8 min left
+    Gabor simple N = 120: 96/120 calls ( 80%) | 7.1 min elapsed, ~1.8 min left
+    Gabor simple N = 120: 108/120 calls ( 90%) | 8.2 min elapsed, ~0.9 min left
+    Gabor simple N = 120: 120/120 calls (100%) | 8.8 min elapsed, ~0.0 min left
+[Gabor simple] N = 120 (20 draws): self 1.000  nonPT 0.060  PT 0.367  ctrl 0.320  PT/ctrl 1.15  headroom 0.07  PR 10.3 | 531 s | Gabor simple: ~1.0 h left
+[Gabor simple] point 14/21: N = 130, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 130: 12/120 calls ( 10%) | 1.2 min elapsed, ~10.7 min left
+    Gabor simple N = 130: 24/120 calls ( 20%) | 1.8 min elapsed, ~7.3 min left
+    Gabor simple N = 130: 36/120 calls ( 30%) | 3.0 min elapsed, ~7.0 min left
+    Gabor simple N = 130: 48/120 calls ( 40%) | 3.6 min elapsed, ~5.4 min left
+    Gabor simple N = 130: 60/120 calls ( 50%) | 4.8 min elapsed, ~4.8 min left
+    Gabor simple N = 130: 72/120 calls ( 60%) | 5.4 min elapsed, ~3.6 min left
+    Gabor simple N = 130: 84/120 calls ( 70%) | 6.6 min elapsed, ~2.8 min left
+    Gabor simple N = 130: 96/120 calls ( 80%) | 7.2 min elapsed, ~1.8 min left
+    Gabor simple N = 130: 108/120 calls ( 90%) | 8.3 min elapsed, ~0.9 min left
+    Gabor simple N = 130: 120/120 calls (100%) | 8.9 min elapsed, ~0.0 min left
+[Gabor simple] N = 130 (20 draws): self 1.000  nonPT 0.064  PT 0.367  ctrl 0.320  PT/ctrl 1.14  headroom 0.07  PR 10.4 | 536 s | Gabor simple: ~0.9 h left
+[Gabor simple] point 15/21: N = 140, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 140: 12/120 calls ( 10%) | 1.2 min elapsed, ~10.9 min left
+    Gabor simple N = 140: 24/120 calls ( 20%) | 1.8 min elapsed, ~7.4 min left
+    Gabor simple N = 140: 36/120 calls ( 30%) | 3.0 min elapsed, ~7.1 min left
+    Gabor simple N = 140: 48/120 calls ( 40%) | 3.7 min elapsed, ~5.5 min left
+    Gabor simple N = 140: 60/120 calls ( 50%) | 4.8 min elapsed, ~4.8 min left
+    Gabor simple N = 140: 72/120 calls ( 60%) | 5.5 min elapsed, ~3.7 min left
+    Gabor simple N = 140: 84/120 calls ( 70%) | 6.6 min elapsed, ~2.8 min left
+    Gabor simple N = 140: 96/120 calls ( 80%) | 7.3 min elapsed, ~1.8 min left
+    Gabor simple N = 140: 108/120 calls ( 90%) | 8.4 min elapsed, ~0.9 min left
+    Gabor simple N = 140: 120/120 calls (100%) | 9.0 min elapsed, ~0.0 min left
+[Gabor simple] N = 140 (20 draws): self 1.000  nonPT 0.062  PT 0.377  ctrl 0.326  PT/ctrl 1.16  headroom 0.08  PR 10.4 | 543 s | Gabor simple: ~0.7 h left
+[Gabor simple] point 16/21: N = 150, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 150: 12/120 calls ( 10%) | 1.2 min elapsed, ~11.0 min left
+    Gabor simple N = 150: 24/120 calls ( 20%) | 1.9 min elapsed, ~7.5 min left
+    Gabor simple N = 150: 36/120 calls ( 30%) | 3.1 min elapsed, ~7.1 min left
+    Gabor simple N = 150: 48/120 calls ( 40%) | 3.7 min elapsed, ~5.6 min left
+    Gabor simple N = 150: 60/120 calls ( 50%) | 4.9 min elapsed, ~4.9 min left
+    Gabor simple N = 150: 72/120 calls ( 60%) | 5.5 min elapsed, ~3.7 min left
+    Gabor simple N = 150: 84/120 calls ( 70%) | 6.7 min elapsed, ~2.9 min left
+    Gabor simple N = 150: 96/120 calls ( 80%) | 7.4 min elapsed, ~1.8 min left
+    Gabor simple N = 150: 108/120 calls ( 90%) | 8.5 min elapsed, ~0.9 min left
+    Gabor simple N = 150: 120/120 calls (100%) | 9.1 min elapsed, ~0.0 min left
+[Gabor simple] N = 150 (20 draws): self 1.000  nonPT 0.061  PT 0.376  ctrl 0.327  PT/ctrl 1.15  headroom 0.07  PR 10.5 | 548 s | Gabor simple: ~0.6 h left
+[Gabor simple] point 17/21: N = 160, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 160: 12/120 calls ( 10%) | 1.2 min elapsed, ~11.2 min left
+    Gabor simple N = 160: 24/120 calls ( 20%) | 1.9 min elapsed, ~7.5 min left
+    Gabor simple N = 160: 36/120 calls ( 30%) | 3.1 min elapsed, ~7.2 min left
+    Gabor simple N = 160: 48/120 calls ( 40%) | 3.7 min elapsed, ~5.6 min left
+    Gabor simple N = 160: 60/120 calls ( 50%) | 4.9 min elapsed, ~4.9 min left
+    Gabor simple N = 160: 72/120 calls ( 60%) | 5.6 min elapsed, ~3.7 min left
+    Gabor simple N = 160: 84/120 calls ( 70%) | 6.8 min elapsed, ~2.9 min left
+    Gabor simple N = 160: 96/120 calls ( 80%) | 7.4 min elapsed, ~1.9 min left
+    Gabor simple N = 160: 108/120 calls ( 90%) | 8.6 min elapsed, ~1.0 min left
+    Gabor simple N = 160: 120/120 calls (100%) | 9.2 min elapsed, ~0.0 min left
+[Gabor simple] N = 160 (20 draws): self 1.000  nonPT 0.060  PT 0.382  ctrl 0.331  PT/ctrl 1.15  headroom 0.08  PR 10.5 | 553 s | Gabor simple: ~0.4 h left
+[Gabor simple] point 18/21: N = 170, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 170: 12/120 calls ( 10%) | 1.2 min elapsed, ~11.2 min left
+    Gabor simple N = 170: 24/120 calls ( 20%) | 1.9 min elapsed, ~7.6 min left
+    Gabor simple N = 170: 36/120 calls ( 30%) | 3.1 min elapsed, ~7.3 min left
+    Gabor simple N = 170: 48/120 calls ( 40%) | 3.8 min elapsed, ~5.7 min left
+    Gabor simple N = 170: 60/120 calls ( 50%) | 5.0 min elapsed, ~5.0 min left
+    Gabor simple N = 170: 72/120 calls ( 60%) | 5.7 min elapsed, ~3.8 min left
+    Gabor simple N = 170: 84/120 calls ( 70%) | 6.8 min elapsed, ~2.9 min left
+    Gabor simple N = 170: 96/120 calls ( 80%) | 7.5 min elapsed, ~1.9 min left
+    Gabor simple N = 170: 108/120 calls ( 90%) | 8.7 min elapsed, ~1.0 min left
+    Gabor simple N = 170: 120/120 calls (100%) | 9.3 min elapsed, ~0.0 min left
+[Gabor simple] N = 170 (20 draws): self 1.000  nonPT 0.063  PT 0.383  ctrl 0.333  PT/ctrl 1.15  headroom 0.08  PR 10.5 | 560 s | Gabor simple: ~0.3 h left
+[Gabor simple] point 19/21: N = 180, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 180: 12/120 calls ( 10%) | 1.3 min elapsed, ~11.6 min left
+    Gabor simple N = 180: 24/120 calls ( 20%) | 1.9 min elapsed, ~7.7 min left
+    Gabor simple N = 180: 36/120 calls ( 30%) | 3.2 min elapsed, ~7.4 min left
+    Gabor simple N = 180: 48/120 calls ( 40%) | 3.8 min elapsed, ~5.8 min left
+    Gabor simple N = 180: 60/120 calls ( 50%) | 5.1 min elapsed, ~5.1 min left
+    Gabor simple N = 180: 72/120 calls ( 60%) | 5.7 min elapsed, ~3.8 min left
+    Gabor simple N = 180: 84/120 calls ( 70%) | 7.0 min elapsed, ~3.0 min left
+    Gabor simple N = 180: 96/120 calls ( 80%) | 7.6 min elapsed, ~1.9 min left
+    Gabor simple N = 180: 108/120 calls ( 90%) | 8.8 min elapsed, ~1.0 min left
+    Gabor simple N = 180: 120/120 calls (100%) | 9.4 min elapsed, ~0.0 min left
+[Gabor simple] N = 180 (20 draws): self 1.000  nonPT 0.064  PT 0.388  ctrl 0.336  PT/ctrl 1.16  headroom 0.08  PR 10.6 | 568 s | Gabor simple: ~0.2 h left
+[Gabor simple] point 20/21: N = 190, 20 draws x 6 pairs = 120 calls
+    Gabor simple N = 190: 12/120 calls ( 10%) | 1.6 min elapsed, ~14.8 min left
+    Gabor simple N = 190: 24/120 calls ( 20%) | 2.5 min elapsed, ~9.9 min left
+    Gabor simple N = 190: 36/120 calls ( 30%) | 4.1 min elapsed, ~9.5 min left
+    Gabor simple N = 190: 48/120 calls ( 40%) | 4.9 min elapsed, ~7.4 min left
+    Gabor simple N = 190: 60/120 calls ( 50%) | 6.5 min elapsed, ~6.5 min left
+    Gabor simple N = 190: 72/120 calls ( 60%) | 7.3 min elapsed, ~4.9 min left
+    Gabor simple N = 190: 84/120 calls ( 70%) | 8.8 min elapsed, ~3.8 min left
+    Gabor simple N = 190: 96/120 calls ( 80%) | 9.7 min elapsed, ~2.4 min left
+    Gabor simple N = 190: 108/120 calls ( 90%) | 11.0 min elapsed, ~1.2 min left
+    Gabor simple N = 190: 120/120 calls (100%) | 11.9 min elapsed, ~0.0 min left
+[Gabor simple] N = 190 (20 draws): self 1.000  nonPT 0.063  PT 0.394  ctrl 0.337  PT/ctrl 1.17  headroom 0.09  PR 10.6 | 718 s | Gabor simple: ~0.0 h left
+[Gabor simple] point 21/21: N = 192, 1 draws x 6 pairs = 6 calls
+    Gabor simple N = 192: 1/6 calls ( 17%) | 0.6 min elapsed, ~3.2 min left
+    Gabor simple N = 192: 2/6 calls ( 33%) | 0.6 min elapsed, ~1.3 min left
+    Gabor simple N = 192: 3/6 calls ( 50%) | 0.7 min elapsed, ~0.7 min left
+    Gabor simple N = 192: 4/6 calls ( 67%) | 0.7 min elapsed, ~0.3 min left
+    Gabor simple N = 192: 5/6 calls ( 83%) | 0.7 min elapsed, ~0.1 min left
+    Gabor simple N = 192: 6/6 calls (100%) | 0.7 min elapsed, ~0.0 min left
+[Gabor simple] N = 192 ( 1 draws): self 1.000  nonPT 0.062  PT 0.397  ctrl 0.339  PT/ctrl 1.17  headroom 0.09  PR 10.6 | 41 s | Gabor simple: ~0.0 h left
+
+===== Gabor complex (48 cells; constant within AC/EC/EX: [0 0 0]): N = [10 20 30 40 48] | 20 draws, 10 folds, 10 permutations =====
+[Gabor complex] point 1/5: N = 10, 20 draws x 6 pairs = 120 calls
+    Gabor complex N = 10: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.6 min left
+    Gabor complex N = 10: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    Gabor complex N = 10: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.2 min left
+    Gabor complex N = 10: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.8 min left
+    Gabor complex N = 10: 60/120 calls ( 50%) | 4.2 min elapsed, ~4.2 min left
+    Gabor complex N = 10: 72/120 calls ( 60%) | 4.8 min elapsed, ~3.2 min left
+    Gabor complex N = 10: 84/120 calls ( 70%) | 5.8 min elapsed, ~2.5 min left
+    Gabor complex N = 10: 96/120 calls ( 80%) | 6.4 min elapsed, ~1.6 min left
+    Gabor complex N = 10: 108/120 calls ( 90%) | 7.4 min elapsed, ~0.8 min left
+    Gabor complex N = 10: 120/120 calls (100%) | 7.9 min elapsed, ~0.0 min left
+[Gabor complex] N =  10 (20 draws): self 1.000  nonPT 0.038  PT 0.066  ctrl 0.052  PT/ctrl 1.27  headroom 0.01  PR 3.2 | 476 s | Gabor complex: ~0.4 h left
+[Gabor complex] point 2/5: N = 20, 20 draws x 6 pairs = 120 calls
+    Gabor complex N = 20: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.7 min left
+    Gabor complex N = 20: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.5 min left
+    Gabor complex N = 20: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.2 min left
+    Gabor complex N = 20: 48/120 calls ( 40%) | 3.2 min elapsed, ~4.9 min left
+    Gabor complex N = 20: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    Gabor complex N = 20: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.2 min left
+    Gabor complex N = 20: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    Gabor complex N = 20: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    Gabor complex N = 20: 108/120 calls ( 90%) | 7.5 min elapsed, ~0.8 min left
+    Gabor complex N = 20: 120/120 calls (100%) | 8.0 min elapsed, ~0.0 min left
+[Gabor complex] N =  20 (20 draws): self 1.000  nonPT 0.036  PT 0.100  ctrl 0.076  PT/ctrl 1.32  headroom 0.03  PR 4.0 | 480 s | Gabor complex: ~0.3 h left
+[Gabor complex] point 3/5: N = 30, 20 draws x 6 pairs = 120 calls
+    Gabor complex N = 30: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.7 min left
+    Gabor complex N = 30: 24/120 calls ( 20%) | 1.6 min elapsed, ~6.6 min left
+    Gabor complex N = 30: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.3 min left
+    Gabor complex N = 30: 48/120 calls ( 40%) | 3.3 min elapsed, ~4.9 min left
+    Gabor complex N = 30: 60/120 calls ( 50%) | 4.3 min elapsed, ~4.3 min left
+    Gabor complex N = 30: 72/120 calls ( 60%) | 4.9 min elapsed, ~3.3 min left
+    Gabor complex N = 30: 84/120 calls ( 70%) | 5.9 min elapsed, ~2.5 min left
+    Gabor complex N = 30: 96/120 calls ( 80%) | 6.5 min elapsed, ~1.6 min left
+    Gabor complex N = 30: 108/120 calls ( 90%) | 7.6 min elapsed, ~0.8 min left
+    Gabor complex N = 30: 120/120 calls (100%) | 8.1 min elapsed, ~0.0 min left
+[Gabor complex] N =  30 (20 draws): self 1.000  nonPT 0.037  PT 0.115  ctrl 0.089  PT/ctrl 1.29  headroom 0.03  PR 4.5 | 484 s | Gabor complex: ~0.1 h left
+[Gabor complex] point 4/5: N = 40, 20 draws x 6 pairs = 120 calls
+    Gabor complex N = 40: 12/120 calls ( 10%) | 1.1 min elapsed, ~9.9 min left
+    Gabor complex N = 40: 24/120 calls ( 20%) | 1.7 min elapsed, ~6.7 min left
+    Gabor complex N = 40: 36/120 calls ( 30%) | 2.7 min elapsed, ~6.4 min left
+    Gabor complex N = 40: 48/120 calls ( 40%) | 3.3 min elapsed, ~5.0 min left
+    Gabor complex N = 40: 60/120 calls ( 50%) | 4.4 min elapsed, ~4.4 min left
+    Gabor complex N = 40: 72/120 calls ( 60%) | 5.0 min elapsed, ~3.3 min left
+    Gabor complex N = 40: 84/120 calls ( 70%) | 6.0 min elapsed, ~2.6 min left
+    Gabor complex N = 40: 96/120 calls ( 80%) | 6.6 min elapsed, ~1.6 min left
+    Gabor complex N = 40: 108/120 calls ( 90%) | 7.6 min elapsed, ~0.8 min left
+    Gabor complex N = 40: 120/120 calls (100%) | 8.2 min elapsed, ~0.0 min left
+[Gabor complex] N =  40 (20 draws): self 1.000  nonPT 0.035  PT 0.129  ctrl 0.098  PT/ctrl 1.33  headroom 0.04  PR 4.6 | 490 s | Gabor complex: ~0.0 h left
+[Gabor complex] point 5/5: N = 48, 1 draws x 6 pairs = 6 calls
+    Gabor complex N = 48: 1/6 calls ( 17%) | 0.5 min elapsed, ~2.3 min left
+    Gabor complex N = 48: 2/6 calls ( 33%) | 0.5 min elapsed, ~0.9 min left
+    Gabor complex N = 48: 3/6 calls ( 50%) | 0.5 min elapsed, ~0.5 min left
+    Gabor complex N = 48: 4/6 calls ( 67%) | 0.5 min elapsed, ~0.2 min left
+    Gabor complex N = 48: 5/6 calls ( 83%) | 0.5 min elapsed, ~0.1 min left
+    Gabor complex N = 48: 6/6 calls (100%) | 0.5 min elapsed, ~0.0 min left
+[Gabor complex] N =  48 ( 1 draws): self 1.000  nonPT 0.038  PT 0.139  ctrl 0.103  PT/ctrl 1.35  headroom 0.04  PR 4.8 | 29 s | Gabor complex: ~0.0 h left
+
+Done in 212.6 min. Results in D:\Github repos\cue-invariant-population-geometry\decoding-analysis\Gabor_decoding_rev\code\decoding_scripts\..\..\results\decoding_outputs\gabor_cue_transfer_incremental
+
+################ job 2/2: PC sweep: simple and complex (run_gabor_pc_sweep) | started 2026-10-16 02:47:34 ################
+
+===== Gabor simple PC sweep: N = 192, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 49] =====
+[Gabor simple] 18 k values x 6 pairs = 108 calls
+    Gabor simple PC sweep: 11/108 calls ( 10%) | 1.1 min elapsed, ~9.3 min left
+    Gabor simple PC sweep: 22/108 calls ( 20%) | 1.6 min elapsed, ~6.3 min left
+    Gabor simple PC sweep: 33/108 calls ( 31%) | 2.5 min elapsed, ~5.7 min left
+    Gabor simple PC sweep: 44/108 calls ( 41%) | 3.2 min elapsed, ~4.7 min left
+    Gabor simple PC sweep: 55/108 calls ( 51%) | 3.8 min elapsed, ~3.6 min left
+    Gabor simple PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.9 min left
+    Gabor simple PC sweep: 77/108 calls ( 71%) | 5.3 min elapsed, ~2.2 min left
+    Gabor simple PC sweep: 88/108 calls ( 81%) | 5.9 min elapsed, ~1.3 min left
+    Gabor simple PC sweep: 99/108 calls ( 92%) | 6.9 min elapsed, ~0.6 min left
+    Gabor simple PC sweep: 108/108 calls (100%) | 7.3 min elapsed, ~0.0 min left
+[Gabor simple] k = 5: self 1.000  nonPT 0.054  PT 0.054  ctrl 0.041  PT/ctrl 1.30  headroom 0.01
+
+===== Gabor complex PC sweep: N = 48, k = [1 2 3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 48] =====
+[Gabor complex] 18 k values x 6 pairs = 108 calls
+    Gabor complex PC sweep: 11/108 calls ( 10%) | 1.0 min elapsed, ~9.2 min left
+    Gabor complex PC sweep: 22/108 calls ( 20%) | 1.6 min elapsed, ~6.2 min left
+    Gabor complex PC sweep: 33/108 calls ( 31%) | 2.5 min elapsed, ~5.6 min left
+    Gabor complex PC sweep: 44/108 calls ( 41%) | 3.2 min elapsed, ~4.6 min left
+    Gabor complex PC sweep: 55/108 calls ( 51%) | 3.7 min elapsed, ~3.6 min left
+    Gabor complex PC sweep: 66/108 calls ( 61%) | 4.5 min elapsed, ~2.8 min left
+    Gabor complex PC sweep: 77/108 calls ( 71%) | 5.3 min elapsed, ~2.1 min left
+    Gabor complex PC sweep: 88/108 calls ( 81%) | 5.9 min elapsed, ~1.3 min left
+    Gabor complex PC sweep: 99/108 calls ( 92%) | 6.8 min elapsed, ~0.6 min left
+    Gabor complex PC sweep: 108/108 calls (100%) | 7.3 min elapsed, ~0.0 min left
+[Gabor complex] k = 5: self 1.000  nonPT 0.033  PT 0.048  ctrl 0.038  PT/ctrl 1.25  headroom 0.01
+
+Done in 14.6 min. Results in D:\Github repos\cue-invariant-population-geometry\decoding-analysis\Gabor_decoding_rev\code\decoding_scripts\..\..\results\decoding_outputs\gabor_pc_sweep
+
+################ run_all_gabor('all') finished 2026-10-16 03:02:07, 3.79 h ################
+  job 1  cue transfer vs cells, simple and complex (Fig 15, point 9)    done in 3.54 h
+  job 2  PC sweep: simple and complex                                   done in 0.24 h
+Log: D:\Github repos\cue-invariant-population-geometry\decoding-analysis\Gabor_decoding_rev\code\decoding_scripts\..\..\results\logs\run_all_gabor_all_20261015_231357.log
