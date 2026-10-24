@@ -25,6 +25,7 @@ neuron_decoding_rev/
       run_halves_incremental.m       Fig 4a (one point) + Fig 13: within-area halves vs half size
       run_across_area.m              Fig 4b + Fig 12: V1 <-> V2, both directions, 3 x 3 renderings
       run_pc_sweep.m                 k = 1..49 sweep for cue transfer, halves and across-area
+      run_nc_injection.m             rebuttal Point 8: noise correlations injected into the pseudo-populations
       run_all.m                      MASTER: runs the drivers back to back, unattended, with a log
       run_driver.m                   runs one driver in its own workspace (used by run_all)
       progress_queue.m               progress lines inside the parfor loops
@@ -37,6 +38,7 @@ neuron_decoding_rev/
       plot_pc_sweep_accuracy.m           06  self, PT, control, non-PT vs number of PCs
       plot_pc_sweep_metrics.m            07  PT/control, headroom, PT - control vs number of PCs
       plot_dimensionality.m              08  participation ratio and variance spectra
+      plot_nc_injection.m                09  injected noise correlations (run_nc_injection.m)
       helpers/                           figure_settings, load_all_results, plot_grouped_bars, bootstrap_metrics,
                                          to_resampling_units, mean_sem, save_figure, save_table
   results/
@@ -67,6 +69,34 @@ neuron_decoding_rev/
 
 Summary metrics (`transfer_metrics.m`) are ratios of pooled means:
 PT/control, PT − control, and headroom = (PT − control)/(self − control).
+
+## Injected noise correlations (`run_nc_injection.m`, rebuttal Point 8)
+
+Reviewer 2 asks for structured noise correlations (NC) of realistic magnitude (mean
+pairwise r = 0.05–0.15) injected into the pseudo-population. For each whole population
+the driver decodes six conditions with the unchanged core: the original data; the
+data with NC removed by the affine trial shift of Point 7 (the clean start); and NC
+injected into those data at mean r = 0, 0.05, 0.10, 0.15.
+
+- **Injection.** One correlation matrix per population and seed from a few shared
+  fluctuations, R = L·Lᵀ + D with L = [a·1, b·B] (k = 5 random factors), so the
+  pairwise NC is roughly Gaussian with mean a² and SD b²√k and R is always valid.
+  For every rendering and stimulus, each neuron's 10 real counts are reordered so
+  their ranks follow 10 draws from N(0, R) (Iman–Conover). Counts per neuron and
+  stimulus are unchanged; only the trial alignment across neurons changes.
+- **Spread.** The SD across pairs is set to that of the same-session pairs of the four
+  populations (estimation noise removed) and kept fixed across levels.
+- **Calibration.** a² and b² are rescaled until the achieved NC (Point 7 metric) hits
+  the targets; the achieved NC and the noise participation ratio of every condition
+  are stored as a manipulation check.
+- **Pairing.** Levels share the random draws, and all conditions of a seed share the
+  fold partition, so changes between conditions are paired. 10 seeds, 360 core calls
+  per population (~2.2 h for all four on 8 workers).
+
+Quick check of a machine (~5 min): `cfg_override = struct('populations', {{'FR','V1'}},
+'n_seeds', 1, 'n_perm', 2, 'pairs', {{'ac','ec'}}, 'tag', 'nc_injection_test');`
+then `run_nc_injection`. Figures: `plot_nc_injection.m` (`nc_tag = '<tag>'` first for
+another tag).
 
 ## Running
 

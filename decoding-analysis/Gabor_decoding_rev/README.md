@@ -32,9 +32,24 @@ Gabor_decoding_rev/
       run_gabor_pc_sweep.m                  k = 1..49 sweep of cue transfer, whole models
       run_all_gabor.m                       MASTER: runs both drivers back to back, unattended, with a log
       run_gabor_driver.m                    runs one driver in its own workspace (used by run_all_gabor)
+    visualization_scripts/                  one script per figure series; each writes results/figures/<NN_series>/
+      plot_sanity_old_vs_new.m                  01  rerun vs published pipeline (Fig 15, point 9 sweep)
+      plot_paper_style_bars.m                   02  Fig 15, published style + corrected control (full, k = 5)
+      plot_paper_style_curves.m                 03  self, PT, control, non-PT vs number of cells
+      plot_normalized_metric_bars.m             04  PT/control, PT - control, headroom and its denominator
+      plot_normalized_metrics_vs_size.m         05  the same metrics vs number of cells
+      plot_pc_sweep_accuracy.m                  06  accuracies vs number of PCs
+      plot_pc_sweep_metrics.m                   07  normalized metrics vs number of PCs
+      plot_dimensionality.m                     08  participation ratio and variance spectra
+      plot_models_vs_neurons.m                  09  rebuttal point 9 redone; neurons vs Gabor vs CNN layers
+      helpers/                                  gabor_figure_settings, load_gabor_results; the generic helpers
+                                                are shared from neuron_decoding_rev (and the CNN loader from
+                                                ANN_decoding_rev)
   results/
     decoding_outputs/<analysis>/<model>.mat
     logs/run_all_gabor_<set>_<date>.log
+    figures/<NN_series>/                    figures (.png, .fig) + a .csv of every plotted number;
+                                            index in results/figures/README.md, comments in FIGURE_COMMENTS.md
 ```
 
 Each result file holds one variable `res` with the same fields as the matching neuron

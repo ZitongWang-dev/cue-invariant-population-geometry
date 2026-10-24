@@ -1,0 +1,553 @@
+analysis,model,item,metric,old,new
+Fig 15,Gabor simple 48,ac->ec,self,1,1
+Fig 15,Gabor simple 48,ac->ec,non-PT,0.0689866666666666,0.0713
+Fig 15,Gabor simple 48,ac->ec,PT (rotation only),0.218826666666666,0.2239
+Fig 15,Gabor simple 48,ac->ec,control,0.0178133333333333,0.19497
+Fig 15,Gabor simple 48,ec->ac,self,0.99992,0.9999
+Fig 15,Gabor simple 48,ec->ac,non-PT,0.03584,0.0395
+Fig 15,Gabor simple 48,ec->ac,PT (rotation only),0.316933333333334,0.3316
+Fig 15,Gabor simple 48,ec->ac,control,0.0220533333333333,0.24594
+Fig 15,Gabor simple 48,ec->ex,self,0.999522666666666,0.9998
+Fig 15,Gabor simple 48,ec->ex,non-PT,0.0587199999999999,0.0543
+Fig 15,Gabor simple 48,ec->ex,PT (rotation only),0.323546666666667,0.3187
+Fig 15,Gabor simple 48,ec->ex,control,0.0229333333333333,0.31232
+Fig 15,Gabor simple 48,ex->ec,self,1,1
+Fig 15,Gabor simple 48,ex->ec,non-PT,0.0378133333333332,0.0308
+Fig 15,Gabor simple 48,ex->ec,PT (rotation only),0.323973333333334,0.3405
+Fig 15,Gabor simple 48,ex->ec,control,0.0211733333333333,0.32486
+Fig 15,Gabor simple 48,ac->ex,self,0.9996,0.9998
+Fig 15,Gabor simple 48,ac->ex,non-PT,0.0650399999999999,0.0742000000000001
+Fig 15,Gabor simple 48,ac->ex,PT (rotation only),0.194906666666666,0.2026
+Fig 15,Gabor simple 48,ac->ex,control,0.0222666666666667,0.1595
+Fig 15,Gabor simple 48,ex->ac,self,0.99992,0.9999
+Fig 15,Gabor simple 48,ex->ac,non-PT,0.106186666666667,0.1054
+Fig 15,Gabor simple 48,ex->ac,PT (rotation only),0.242106666666667,0.2591
+Fig 15,Gabor simple 48,ex->ac,control,0.0242933333333333,0.22153
+Fig 15,Gabor simple 192,ac->ec,self,1,1
+Fig 15,Gabor simple 192,ac->ec,non-PT,0.0800000000000001,0.08
+Fig 15,Gabor simple 192,ac->ec,PT (rotation only),0.315066666666667,0.312
+Fig 15,Gabor simple 192,ac->ec,control,0.0199466666666667,0.2622
+Fig 15,Gabor simple 192,ec->ac,self,1,1
+Fig 15,Gabor simple 192,ec->ac,non-PT,0.04,0.04
+Fig 15,Gabor simple 192,ec->ac,PT (rotation only),0.463066666666666,0.464
+Fig 15,Gabor simple 192,ec->ac,control,0.0265066666666666,0.3506
+Fig 15,Gabor simple 192,ec->ex,self,1,1
+Fig 15,Gabor simple 192,ec->ex,non-PT,0.06,0.06
+Fig 15,Gabor simple 192,ec->ex,PT (rotation only),0.5132,0.514
+Fig 15,Gabor simple 192,ec->ex,control,0.0250666666666667,0.4664
+Fig 15,Gabor simple 192,ex->ec,self,1,1
+Fig 15,Gabor simple 192,ex->ec,non-PT,0.0325866666666666,0.032
+Fig 15,Gabor simple 192,ex->ec,PT (rotation only),0.517013333333333,0.518
+Fig 15,Gabor simple 192,ex->ec,control,0.02592,0.455
+Fig 15,Gabor simple 192,ac->ex,self,1,1
+Fig 15,Gabor simple 192,ac->ex,non-PT,0.06,0.06
+Fig 15,Gabor simple 192,ac->ex,PT (rotation only),0.221279999999999,0.222
+Fig 15,Gabor simple 192,ac->ex,control,0.02184,0.208
+Fig 15,Gabor simple 192,ex->ac,self,1,1
+Fig 15,Gabor simple 192,ex->ac,non-PT,0.1,0.1
+Fig 15,Gabor simple 192,ex->ac,PT (rotation only),0.351733333333334,0.352
+Fig 15,Gabor simple 192,ex->ac,control,0.0303466666666666,0.2942
+Fig 15,Gabor complex 48,ac->ec,self,1,1
+Fig 15,Gabor complex 48,ac->ec,non-PT,0.02,0.02
+Fig 15,Gabor complex 48,ac->ec,PT (rotation only),0.178613333333333,0.178
+Fig 15,Gabor complex 48,ac->ec,control,0.01904,0.1
+Fig 15,Gabor complex 48,ec->ac,self,1,1
+Fig 15,Gabor complex 48,ec->ac,non-PT,0.04,0.04
+Fig 15,Gabor complex 48,ec->ac,PT (rotation only),0.110826666666667,0.11
+Fig 15,Gabor complex 48,ec->ac,control,0.0199733333333333,0.101
+Fig 15,Gabor complex 48,ec->ex,self,1,1
+Fig 15,Gabor complex 48,ec->ex,non-PT,0.0499733333333332,0.05
+Fig 15,Gabor complex 48,ec->ex,PT (rotation only),0.179066666666666,0.178
+Fig 15,Gabor complex 48,ec->ex,control,0.02016,0.1528
+Fig 15,Gabor complex 48,ex->ec,self,1,1
+Fig 15,Gabor complex 48,ex->ec,non-PT,0.0578933333333333,0.058
+Fig 15,Gabor complex 48,ex->ec,PT (rotation only),0.193466666666667,0.186
+Fig 15,Gabor complex 48,ex->ec,control,0.0245333333333333,0.1382
+Fig 15,Gabor complex 48,ac->ex,self,1,1
+Fig 15,Gabor complex 48,ac->ex,non-PT,0.02,0.02
+Fig 15,Gabor complex 48,ac->ex,PT (rotation only),0.0994666666666666,0.102
+Fig 15,Gabor complex 48,ac->ex,control,0.0221866666666667,0.067
+Fig 15,Gabor complex 48,ex->ac,self,1,1
+Fig 15,Gabor complex 48,ex->ac,non-PT,0.04,0.04
+Fig 15,Gabor complex 48,ex->ac,PT (rotation only),0.0800000000000001,0.08
+Fig 15,Gabor complex 48,ex->ac,control,0.0180266666666667,0.057
+point 9 sweep,Gabor simple,ac->ec N=10,self,0.995646666666666,0.9915
+point 9 sweep,Gabor simple,ac->ec N=10,non-PT,0.0467333333333334,0.0442
+point 9 sweep,Gabor simple,ac->ec N=10,PT (rotation only),0.067,0.0839
+point 9 sweep,Gabor simple,ac->ec N=10,control,0.0216,0.06208
+point 9 sweep,Gabor simple,ac->ec N=20,self,0.9999,0.9999
+point 9 sweep,Gabor simple,ac->ec N=20,non-PT,0.0554,0.0715
+point 9 sweep,Gabor simple,ac->ec N=20,PT (rotation only),0.122933333333333,0.1316
+point 9 sweep,Gabor simple,ac->ec N=20,control,0.0186666666666667,0.11022
+point 9 sweep,Gabor simple,ac->ec N=30,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=30,non-PT,0.0621333333333333,0.0643
+point 9 sweep,Gabor simple,ac->ec N=30,PT (rotation only),0.1792,0.1705
+point 9 sweep,Gabor simple,ac->ec N=30,control,0.0202666666666667,0.14674
+point 9 sweep,Gabor simple,ac->ec N=40,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=40,non-PT,0.0734666666666667,0.07
+point 9 sweep,Gabor simple,ac->ec N=40,PT (rotation only),0.194666666666666,0.2227
+point 9 sweep,Gabor simple,ac->ec N=40,control,0.0206,0.18138
+point 9 sweep,Gabor simple,ac->ec N=50,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=50,non-PT,0.0714666666666667,0.0647
+point 9 sweep,Gabor simple,ac->ec N=50,PT (rotation only),0.223133333333333,0.2214
+point 9 sweep,Gabor simple,ac->ec N=50,control,0.0173333333333333,0.19067
+point 9 sweep,Gabor simple,ac->ec N=60,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=60,non-PT,0.0709333333333333,0.0557
+point 9 sweep,Gabor simple,ac->ec N=60,PT (rotation only),0.244733333333333,0.218
+point 9 sweep,Gabor simple,ac->ec N=60,control,0.0192666666666667,0.19889
+point 9 sweep,Gabor simple,ac->ec N=70,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=70,non-PT,0.0640666666666667,0.0671
+point 9 sweep,Gabor simple,ac->ec N=70,PT (rotation only),0.238333333333333,0.258
+point 9 sweep,Gabor simple,ac->ec N=70,control,0.0183333333333333,0.22211
+point 9 sweep,Gabor simple,ac->ec N=80,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=80,non-PT,0.0791333333333333,0.0604
+point 9 sweep,Gabor simple,ac->ec N=80,PT (rotation only),0.263533333333333,0.2659
+point 9 sweep,Gabor simple,ac->ec N=80,control,0.0183333333333333,0.23027
+point 9 sweep,Gabor simple,ac->ec N=90,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=90,non-PT,0.0622666666666667,0.0755
+point 9 sweep,Gabor simple,ac->ec N=90,PT (rotation only),0.2664,0.2688
+point 9 sweep,Gabor simple,ac->ec N=90,control,0.0212,0.24237
+point 9 sweep,Gabor simple,ac->ec N=100,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=100,non-PT,0.0764666666666666,0.057
+point 9 sweep,Gabor simple,ac->ec N=100,PT (rotation only),0.2892,0.2842
+point 9 sweep,Gabor simple,ac->ec N=100,control,0.02,0.24273
+point 9 sweep,Gabor simple,ac->ec N=110,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=110,non-PT,0.0672666666666667,0.0688
+point 9 sweep,Gabor simple,ac->ec N=110,PT (rotation only),0.282266666666667,0.2814
+point 9 sweep,Gabor simple,ac->ec N=110,control,0.0195333333333333,0.24326
+point 9 sweep,Gabor simple,ac->ec N=120,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=120,non-PT,0.0689333333333333,0.0692
+point 9 sweep,Gabor simple,ac->ec N=120,PT (rotation only),0.289333333333333,0.2845
+point 9 sweep,Gabor simple,ac->ec N=120,control,0.0206666666666667,0.25336
+point 9 sweep,Gabor simple,ac->ec N=130,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=130,non-PT,0.072,0.0705
+point 9 sweep,Gabor simple,ac->ec N=130,PT (rotation only),0.299933333333333,0.2922
+point 9 sweep,Gabor simple,ac->ec N=130,control,0.0211333333333333,0.24747
+point 9 sweep,Gabor simple,ac->ec N=140,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=140,non-PT,0.076,0.0745
+point 9 sweep,Gabor simple,ac->ec N=140,PT (rotation only),0.302666666666667,0.2941
+point 9 sweep,Gabor simple,ac->ec N=140,control,0.0215333333333333,0.25324
+point 9 sweep,Gabor simple,ac->ec N=150,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=150,non-PT,0.0744,0.0718
+point 9 sweep,Gabor simple,ac->ec N=150,PT (rotation only),0.310666666666667,0.3046
+point 9 sweep,Gabor simple,ac->ec N=150,control,0.0204,0.24984
+point 9 sweep,Gabor simple,ac->ec N=160,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=160,non-PT,0.0720666666666667,0.071
+point 9 sweep,Gabor simple,ac->ec N=160,PT (rotation only),0.300933333333334,0.3027
+point 9 sweep,Gabor simple,ac->ec N=160,control,0.0198666666666667,0.25556
+point 9 sweep,Gabor simple,ac->ec N=170,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=170,non-PT,0.0775333333333334,0.0783000000000001
+point 9 sweep,Gabor simple,ac->ec N=170,PT (rotation only),0.306533333333333,0.2798
+point 9 sweep,Gabor simple,ac->ec N=170,control,0.0202,0.25894
+point 9 sweep,Gabor simple,ac->ec N=180,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=180,non-PT,0.077,0.0781
+point 9 sweep,Gabor simple,ac->ec N=180,PT (rotation only),0.296733333333333,0.3096
+point 9 sweep,Gabor simple,ac->ec N=180,control,0.0215333333333333,0.26024
+point 9 sweep,Gabor simple,ac->ec N=190,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=190,non-PT,0.0803333333333334,0.081
+point 9 sweep,Gabor simple,ac->ec N=190,PT (rotation only),0.312133333333333,0.313
+point 9 sweep,Gabor simple,ac->ec N=190,control,0.0202666666666667,0.26158
+point 9 sweep,Gabor simple,ac->ec N=192,self,1,1
+point 9 sweep,Gabor simple,ac->ec N=192,non-PT,0.08,0.08
+point 9 sweep,Gabor simple,ac->ec N=192,PT (rotation only),0.314866666666667,0.312
+point 9 sweep,Gabor simple,ac->ec N=192,control,0.0202,0.2622
+point 9 sweep,Gabor simple,ec->ac N=10,self,0.994613333333333,0.9907
+point 9 sweep,Gabor simple,ec->ac N=10,non-PT,0.043,0.0417
+point 9 sweep,Gabor simple,ec->ac N=10,PT (rotation only),0.0869333333333333,0.0755
+point 9 sweep,Gabor simple,ec->ac N=10,control,0.0196,0.06591
+point 9 sweep,Gabor simple,ec->ac N=20,self,0.9997,0.9997
+point 9 sweep,Gabor simple,ec->ac N=20,non-PT,0.0544,0.0434
+point 9 sweep,Gabor simple,ec->ac N=20,PT (rotation only),0.1474,0.1492
+point 9 sweep,Gabor simple,ec->ac N=20,control,0.0179333333333333,0.13232
+point 9 sweep,Gabor simple,ec->ac N=30,self,0.9997,0.9999
+point 9 sweep,Gabor simple,ec->ac N=30,non-PT,0.0404,0.0309
+point 9 sweep,Gabor simple,ec->ac N=30,PT (rotation only),0.233666666666667,0.227
+point 9 sweep,Gabor simple,ec->ac N=30,control,0.021,0.1855
+point 9 sweep,Gabor simple,ec->ac N=40,self,0.9999,0.9998
+point 9 sweep,Gabor simple,ec->ac N=40,non-PT,0.0354,0.0335
+point 9 sweep,Gabor simple,ec->ac N=40,PT (rotation only),0.2864,0.2862
+point 9 sweep,Gabor simple,ec->ac N=40,control,0.0222,0.22751
+point 9 sweep,Gabor simple,ec->ac N=50,self,0.9998,1
+point 9 sweep,Gabor simple,ec->ac N=50,non-PT,0.0322,0.0386
+point 9 sweep,Gabor simple,ec->ac N=50,PT (rotation only),0.307733333333333,0.3234
+point 9 sweep,Gabor simple,ec->ac N=50,control,0.0233333333333334,0.25116
+point 9 sweep,Gabor simple,ec->ac N=60,self,1,0.9999
+point 9 sweep,Gabor simple,ec->ac N=60,non-PT,0.0378,0.0289
+point 9 sweep,Gabor simple,ec->ac N=60,PT (rotation only),0.339933333333333,0.3637
+point 9 sweep,Gabor simple,ec->ac N=60,control,0.0244,0.2698
+point 9 sweep,Gabor simple,ec->ac N=70,self,1,0.9998
+point 9 sweep,Gabor simple,ec->ac N=70,non-PT,0.0343333333333334,0.0325
+point 9 sweep,Gabor simple,ec->ac N=70,PT (rotation only),0.385133333333333,0.384
+point 9 sweep,Gabor simple,ec->ac N=70,control,0.0263333333333334,0.28528
+point 9 sweep,Gabor simple,ec->ac N=80,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=80,non-PT,0.0382666666666667,0.0367
+point 9 sweep,Gabor simple,ec->ac N=80,PT (rotation only),0.391066666666667,0.3914
+point 9 sweep,Gabor simple,ec->ac N=80,control,0.0265333333333333,0.30004
+point 9 sweep,Gabor simple,ec->ac N=90,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=90,non-PT,0.0372,0.0324
+point 9 sweep,Gabor simple,ec->ac N=90,PT (rotation only),0.4044,0.4073
+point 9 sweep,Gabor simple,ec->ac N=90,control,0.0213333333333333,0.30753
+point 9 sweep,Gabor simple,ec->ac N=100,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=100,non-PT,0.0362666666666667,0.0377
+point 9 sweep,Gabor simple,ec->ac N=100,PT (rotation only),0.4108,0.4206
+point 9 sweep,Gabor simple,ec->ac N=100,control,0.0250666666666667,0.31969
+point 9 sweep,Gabor simple,ec->ac N=110,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=110,non-PT,0.036,0.037
+point 9 sweep,Gabor simple,ec->ac N=110,PT (rotation only),0.415266666666667,0.4378
+point 9 sweep,Gabor simple,ec->ac N=110,control,0.0242666666666667,0.31672
+point 9 sweep,Gabor simple,ec->ac N=120,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=120,non-PT,0.0362666666666667,0.0358
+point 9 sweep,Gabor simple,ec->ac N=120,PT (rotation only),0.427866666666667,0.4337
+point 9 sweep,Gabor simple,ec->ac N=120,control,0.0260666666666667,0.32641
+point 9 sweep,Gabor simple,ec->ac N=130,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=130,non-PT,0.0380666666666667,0.04
+point 9 sweep,Gabor simple,ec->ac N=130,PT (rotation only),0.442666666666667,0.435
+point 9 sweep,Gabor simple,ec->ac N=130,control,0.0252666666666667,0.32668
+point 9 sweep,Gabor simple,ec->ac N=140,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=140,non-PT,0.0369333333333334,0.036
+point 9 sweep,Gabor simple,ec->ac N=140,PT (rotation only),0.455933333333334,0.4635
+point 9 sweep,Gabor simple,ec->ac N=140,control,0.0266666666666667,0.33488
+point 9 sweep,Gabor simple,ec->ac N=150,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=150,non-PT,0.0375333333333334,0.0385
+point 9 sweep,Gabor simple,ec->ac N=150,PT (rotation only),0.464866666666667,0.4522
+point 9 sweep,Gabor simple,ec->ac N=150,control,0.0258,0.33391
+point 9 sweep,Gabor simple,ec->ac N=160,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=160,non-PT,0.0398666666666667,0.04
+point 9 sweep,Gabor simple,ec->ac N=160,PT (rotation only),0.462866666666667,0.4686
+point 9 sweep,Gabor simple,ec->ac N=160,control,0.0279333333333333,0.34302
+point 9 sweep,Gabor simple,ec->ac N=170,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=170,non-PT,0.04,0.04
+point 9 sweep,Gabor simple,ec->ac N=170,PT (rotation only),0.475533333333334,0.467
+point 9 sweep,Gabor simple,ec->ac N=170,control,0.0280666666666667,0.34315
+point 9 sweep,Gabor simple,ec->ac N=180,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=180,non-PT,0.04,0.04
+point 9 sweep,Gabor simple,ec->ac N=180,PT (rotation only),0.467733333333334,0.4691
+point 9 sweep,Gabor simple,ec->ac N=180,control,0.0263333333333334,0.34493
+point 9 sweep,Gabor simple,ec->ac N=190,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=190,non-PT,0.04,0.04
+point 9 sweep,Gabor simple,ec->ac N=190,PT (rotation only),0.4592,0.4591
+point 9 sweep,Gabor simple,ec->ac N=190,control,0.0261333333333334,0.34941
+point 9 sweep,Gabor simple,ec->ac N=192,self,1,1
+point 9 sweep,Gabor simple,ec->ac N=192,non-PT,0.04,0.04
+point 9 sweep,Gabor simple,ec->ac N=192,PT (rotation only),0.4622,0.464
+point 9 sweep,Gabor simple,ec->ac N=192,control,0.0276666666666667,0.3506
+point 9 sweep,Gabor simple,ec->ex N=10,self,0.997333333333333,0.99
+point 9 sweep,Gabor simple,ec->ex N=10,non-PT,0.0229333333333333,0.0339
+point 9 sweep,Gabor simple,ec->ex N=10,PT (rotation only),0.0813333333333333,0.0726
+point 9 sweep,Gabor simple,ec->ex N=10,control,0.0218,0.07359
+point 9 sweep,Gabor simple,ec->ex N=20,self,0.99892,0.9992
+point 9 sweep,Gabor simple,ec->ex N=20,non-PT,0.0348666666666667,0.0387
+point 9 sweep,Gabor simple,ec->ex N=20,PT (rotation only),0.153933333333333,0.1757
+point 9 sweep,Gabor simple,ec->ex N=20,control,0.0214,0.15644
+point 9 sweep,Gabor simple,ec->ex N=30,self,0.9992,0.9996
+point 9 sweep,Gabor simple,ec->ex N=30,non-PT,0.0487333333333334,0.0534
+point 9 sweep,Gabor simple,ec->ex N=30,PT (rotation only),0.2292,0.2185
+point 9 sweep,Gabor simple,ec->ex N=30,control,0.0233333333333333,0.22007
+point 9 sweep,Gabor simple,ec->ex N=40,self,0.9994,0.9995
+point 9 sweep,Gabor simple,ec->ex N=40,non-PT,0.0464,0.0471
+point 9 sweep,Gabor simple,ec->ex N=40,PT (rotation only),0.277733333333333,0.2799
+point 9 sweep,Gabor simple,ec->ex N=40,control,0.0208,0.27646
+point 9 sweep,Gabor simple,ec->ex N=50,self,0.9996,0.9996
+point 9 sweep,Gabor simple,ec->ex N=50,non-PT,0.0529333333333334,0.0427
+point 9 sweep,Gabor simple,ec->ex N=50,PT (rotation only),0.3274,0.3198
+point 9 sweep,Gabor simple,ec->ex N=50,control,0.0215333333333333,0.32033
+point 9 sweep,Gabor simple,ec->ex N=60,self,0.9998,0.9999
+point 9 sweep,Gabor simple,ec->ex N=60,non-PT,0.0480666666666667,0.0425
+point 9 sweep,Gabor simple,ec->ex N=60,PT (rotation only),0.337066666666667,0.3606
+point 9 sweep,Gabor simple,ec->ex N=60,control,0.0241333333333334,0.35006
+point 9 sweep,Gabor simple,ec->ex N=70,self,0.9998,0.9997
+point 9 sweep,Gabor simple,ec->ex N=70,non-PT,0.0588,0.0557
+point 9 sweep,Gabor simple,ec->ex N=70,PT (rotation only),0.394066666666667,0.3833
+point 9 sweep,Gabor simple,ec->ex N=70,control,0.0232666666666667,0.37269
+point 9 sweep,Gabor simple,ec->ex N=80,self,1,0.9998
+point 9 sweep,Gabor simple,ec->ex N=80,non-PT,0.0568666666666667,0.0525
+point 9 sweep,Gabor simple,ec->ex N=80,PT (rotation only),0.412533333333333,0.4018
+point 9 sweep,Gabor simple,ec->ex N=80,control,0.0223333333333333,0.39321
+point 9 sweep,Gabor simple,ec->ex N=90,self,1,0.9998
+point 9 sweep,Gabor simple,ec->ex N=90,non-PT,0.0540666666666667,0.0542
+point 9 sweep,Gabor simple,ec->ex N=90,PT (rotation only),0.422733333333334,0.4186
+point 9 sweep,Gabor simple,ec->ex N=90,control,0.0224,0.4029
+point 9 sweep,Gabor simple,ec->ex N=100,self,0.9999,0.9999
+point 9 sweep,Gabor simple,ec->ex N=100,non-PT,0.0593333333333333,0.0574
+point 9 sweep,Gabor simple,ec->ex N=100,PT (rotation only),0.448333333333333,0.4385
+point 9 sweep,Gabor simple,ec->ex N=100,control,0.0230666666666667,0.42173
+point 9 sweep,Gabor simple,ec->ex N=110,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=110,non-PT,0.0553333333333334,0.0573
+point 9 sweep,Gabor simple,ec->ex N=110,PT (rotation only),0.453466666666667,0.4526
+point 9 sweep,Gabor simple,ec->ex N=110,control,0.0231333333333333,0.42282
+point 9 sweep,Gabor simple,ec->ex N=120,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=120,non-PT,0.0633333333333333,0.0582
+point 9 sweep,Gabor simple,ec->ex N=120,PT (rotation only),0.471,0.4642
+point 9 sweep,Gabor simple,ec->ex N=120,control,0.0246666666666667,0.43219
+point 9 sweep,Gabor simple,ec->ex N=130,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=130,non-PT,0.0660666666666667,0.0593
+point 9 sweep,Gabor simple,ec->ex N=130,PT (rotation only),0.478266666666667,0.4709
+point 9 sweep,Gabor simple,ec->ex N=130,control,0.0242666666666667,0.43851
+point 9 sweep,Gabor simple,ec->ex N=140,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=140,non-PT,0.0625333333333333,0.0639
+point 9 sweep,Gabor simple,ec->ex N=140,PT (rotation only),0.466133333333334,0.4731
+point 9 sweep,Gabor simple,ec->ex N=140,control,0.0238666666666667,0.44705
+point 9 sweep,Gabor simple,ec->ex N=150,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=150,non-PT,0.0633333333333333,0.0637
+point 9 sweep,Gabor simple,ec->ex N=150,PT (rotation only),0.4928,0.4797
+point 9 sweep,Gabor simple,ec->ex N=150,control,0.0247333333333334,0.45183
+point 9 sweep,Gabor simple,ec->ex N=160,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=160,non-PT,0.0674666666666666,0.0647
+point 9 sweep,Gabor simple,ec->ex N=160,PT (rotation only),0.4958,0.4857
+point 9 sweep,Gabor simple,ec->ex N=160,control,0.0240666666666667,0.45553
+point 9 sweep,Gabor simple,ec->ex N=170,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=170,non-PT,0.0648,0.058
+point 9 sweep,Gabor simple,ec->ex N=170,PT (rotation only),0.500066666666666,0.4971
+point 9 sweep,Gabor simple,ec->ex N=170,control,0.0212,0.45588
+point 9 sweep,Gabor simple,ec->ex N=180,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=180,non-PT,0.0635333333333333,0.0685
+point 9 sweep,Gabor simple,ec->ex N=180,PT (rotation only),0.4966,0.4937
+point 9 sweep,Gabor simple,ec->ex N=180,control,0.0245333333333333,0.45948
+point 9 sweep,Gabor simple,ec->ex N=190,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=190,non-PT,0.0614,0.0617
+point 9 sweep,Gabor simple,ec->ex N=190,PT (rotation only),0.511733333333333,0.5089
+point 9 sweep,Gabor simple,ec->ex N=190,control,0.0230666666666667,0.4631
+point 9 sweep,Gabor simple,ec->ex N=192,self,1,1
+point 9 sweep,Gabor simple,ec->ex N=192,non-PT,0.06,0.06
+point 9 sweep,Gabor simple,ec->ex N=192,PT (rotation only),0.513,0.514
+point 9 sweep,Gabor simple,ec->ex N=192,control,0.0222666666666667,0.4664
+point 9 sweep,Gabor simple,ex->ec N=10,self,0.991586666666667,0.9917
+point 9 sweep,Gabor simple,ex->ec N=10,non-PT,0.0283333333333333,0.0357
+point 9 sweep,Gabor simple,ex->ec N=10,PT (rotation only),0.0689333333333333,0.0787
+point 9 sweep,Gabor simple,ex->ec N=10,control,0.0204666666666667,0.06956
+point 9 sweep,Gabor simple,ex->ec N=20,self,0.9998,1
+point 9 sweep,Gabor simple,ex->ec N=20,non-PT,0.0393333333333334,0.0383
+point 9 sweep,Gabor simple,ex->ec N=20,PT (rotation only),0.163266666666667,0.1678
+point 9 sweep,Gabor simple,ex->ec N=20,control,0.0196666666666667,0.15735
+point 9 sweep,Gabor simple,ex->ec N=30,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=30,non-PT,0.0458,0.0399
+point 9 sweep,Gabor simple,ex->ec N=30,PT (rotation only),0.251,0.2306
+point 9 sweep,Gabor simple,ex->ec N=30,control,0.0227333333333333,0.23291
+point 9 sweep,Gabor simple,ex->ec N=40,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=40,non-PT,0.0368666666666667,0.046
+point 9 sweep,Gabor simple,ex->ec N=40,PT (rotation only),0.3046,0.2994
+point 9 sweep,Gabor simple,ex->ec N=40,control,0.0202,0.29493
+point 9 sweep,Gabor simple,ex->ec N=50,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=50,non-PT,0.0329333333333334,0.0387
+point 9 sweep,Gabor simple,ex->ec N=50,PT (rotation only),0.330066666666667,0.3409
+point 9 sweep,Gabor simple,ex->ec N=50,control,0.0216666666666667,0.32985
+point 9 sweep,Gabor simple,ex->ec N=60,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=60,non-PT,0.0350666666666667,0.0329
+point 9 sweep,Gabor simple,ex->ec N=60,PT (rotation only),0.3698,0.3644
+point 9 sweep,Gabor simple,ex->ec N=60,control,0.0232,0.35919
+point 9 sweep,Gabor simple,ex->ec N=70,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=70,non-PT,0.0285333333333334,0.0328
+point 9 sweep,Gabor simple,ex->ec N=70,PT (rotation only),0.4162,0.4045
+point 9 sweep,Gabor simple,ex->ec N=70,control,0.0226,0.38487
+point 9 sweep,Gabor simple,ex->ec N=80,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=80,non-PT,0.0301333333333333,0.0267
+point 9 sweep,Gabor simple,ex->ec N=80,PT (rotation only),0.443333333333334,0.4244
+point 9 sweep,Gabor simple,ex->ec N=80,control,0.0242666666666667,0.39734
+point 9 sweep,Gabor simple,ex->ec N=90,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=90,non-PT,0.038,0.0252
+point 9 sweep,Gabor simple,ex->ec N=90,PT (rotation only),0.441666666666667,0.4388
+point 9 sweep,Gabor simple,ex->ec N=90,control,0.0234666666666667,0.40986
+point 9 sweep,Gabor simple,ex->ec N=100,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=100,non-PT,0.0257333333333334,0.0307
+point 9 sweep,Gabor simple,ex->ec N=100,PT (rotation only),0.4522,0.4471
+point 9 sweep,Gabor simple,ex->ec N=100,control,0.024,0.41273
+point 9 sweep,Gabor simple,ex->ec N=110,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=110,non-PT,0.0180666666666667,0.0184
+point 9 sweep,Gabor simple,ex->ec N=110,PT (rotation only),0.453933333333334,0.4523
+point 9 sweep,Gabor simple,ex->ec N=110,control,0.0234666666666667,0.41928
+point 9 sweep,Gabor simple,ex->ec N=120,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=120,non-PT,0.0266666666666667,0.0236
+point 9 sweep,Gabor simple,ex->ec N=120,PT (rotation only),0.458466666666667,0.4736
+point 9 sweep,Gabor simple,ex->ec N=120,control,0.0271333333333334,0.43311
+point 9 sweep,Gabor simple,ex->ec N=130,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=130,non-PT,0.0234,0.0302
+point 9 sweep,Gabor simple,ex->ec N=130,PT (rotation only),0.4644,0.4598
+point 9 sweep,Gabor simple,ex->ec N=130,control,0.0255333333333333,0.43316
+point 9 sweep,Gabor simple,ex->ec N=140,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=140,non-PT,0.0266666666666667,0.0249
+point 9 sweep,Gabor simple,ex->ec N=140,PT (rotation only),0.478533333333333,0.4811
+point 9 sweep,Gabor simple,ex->ec N=140,control,0.0255333333333334,0.43832
+point 9 sweep,Gabor simple,ex->ec N=150,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=150,non-PT,0.0245333333333333,0.0177
+point 9 sweep,Gabor simple,ex->ec N=150,PT (rotation only),0.4814,0.471
+point 9 sweep,Gabor simple,ex->ec N=150,control,0.0245333333333333,0.43726
+point 9 sweep,Gabor simple,ex->ec N=160,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=160,non-PT,0.0249333333333333,0.0205
+point 9 sweep,Gabor simple,ex->ec N=160,PT (rotation only),0.491666666666667,0.4797
+point 9 sweep,Gabor simple,ex->ec N=160,control,0.0249333333333333,0.44435
+point 9 sweep,Gabor simple,ex->ec N=170,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=170,non-PT,0.0247333333333333,0.0266
+point 9 sweep,Gabor simple,ex->ec N=170,PT (rotation only),0.486666666666667,0.4954
+point 9 sweep,Gabor simple,ex->ec N=170,control,0.0260666666666667,0.44542
+point 9 sweep,Gabor simple,ex->ec N=180,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=180,non-PT,0.0271333333333333,0.0289
+point 9 sweep,Gabor simple,ex->ec N=180,PT (rotation only),0.495266666666667,0.4966
+point 9 sweep,Gabor simple,ex->ec N=180,control,0.0258666666666667,0.44981
+point 9 sweep,Gabor simple,ex->ec N=190,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=190,non-PT,0.0279333333333334,0.0314
+point 9 sweep,Gabor simple,ex->ec N=190,PT (rotation only),0.510333333333333,0.5111
+point 9 sweep,Gabor simple,ex->ec N=190,control,0.0264,0.44788
+point 9 sweep,Gabor simple,ex->ec N=192,self,1,1
+point 9 sweep,Gabor simple,ex->ec N=192,non-PT,0.0324,0.032
+point 9 sweep,Gabor simple,ex->ec N=192,PT (rotation only),0.516533333333333,0.518
+point 9 sweep,Gabor simple,ex->ec N=192,control,0.0257333333333333,0.455
+point 9 sweep,Gabor simple,ac->ex N=10,self,0.995933333333333,0.9901
+point 9 sweep,Gabor simple,ac->ex N=10,non-PT,0.0468666666666667,0.0516
+point 9 sweep,Gabor simple,ac->ex N=10,PT (rotation only),0.0814666666666666,0.0822
+point 9 sweep,Gabor simple,ac->ex N=10,control,0.0205333333333333,0.06003
+point 9 sweep,Gabor simple,ac->ex N=20,self,0.9995,0.9991
+point 9 sweep,Gabor simple,ac->ex N=20,non-PT,0.0571333333333334,0.0576
+point 9 sweep,Gabor simple,ac->ex N=20,PT (rotation only),0.112933333333333,0.1259
+point 9 sweep,Gabor simple,ac->ex N=20,control,0.0223333333333333,0.10384
+point 9 sweep,Gabor simple,ac->ex N=30,self,0.999386666666666,0.9996
+point 9 sweep,Gabor simple,ac->ex N=30,non-PT,0.0696666666666667,0.0604
+point 9 sweep,Gabor simple,ac->ex N=30,PT (rotation only),0.160333333333333,0.1554
+point 9 sweep,Gabor simple,ac->ex N=30,control,0.0218666666666667,0.1259
+point 9 sweep,Gabor simple,ac->ex N=40,self,0.9996,0.9995
+point 9 sweep,Gabor simple,ac->ex N=40,non-PT,0.0614666666666667,0.0639
+point 9 sweep,Gabor simple,ac->ex N=40,PT (rotation only),0.1698,0.1766
+point 9 sweep,Gabor simple,ac->ex N=40,control,0.0190666666666667,0.1494
+point 9 sweep,Gabor simple,ac->ex N=50,self,0.999406666666667,0.9996
+point 9 sweep,Gabor simple,ac->ex N=50,non-PT,0.0662,0.0565
+point 9 sweep,Gabor simple,ac->ex N=50,PT (rotation only),0.184,0.1832
+point 9 sweep,Gabor simple,ac->ex N=50,control,0.0217333333333333,0.15729
+point 9 sweep,Gabor simple,ac->ex N=60,self,0.999993333333333,0.9999
+point 9 sweep,Gabor simple,ac->ex N=60,non-PT,0.0785333333333333,0.0725
+point 9 sweep,Gabor simple,ac->ex N=60,PT (rotation only),0.201133333333333,0.1866
+point 9 sweep,Gabor simple,ac->ex N=60,control,0.023,0.16353
+point 9 sweep,Gabor simple,ac->ex N=70,self,0.9998,0.9997
+point 9 sweep,Gabor simple,ac->ex N=70,non-PT,0.07,0.069
+point 9 sweep,Gabor simple,ac->ex N=70,PT (rotation only),0.2036,0.2047
+point 9 sweep,Gabor simple,ac->ex N=70,control,0.0241333333333333,0.17713
+point 9 sweep,Gabor simple,ac->ex N=80,self,0.9998,0.9998
+point 9 sweep,Gabor simple,ac->ex N=80,non-PT,0.0637333333333333,0.0671
+point 9 sweep,Gabor simple,ac->ex N=80,PT (rotation only),0.211333333333333,0.2182
+point 9 sweep,Gabor simple,ac->ex N=80,control,0.021,0.18493
+point 9 sweep,Gabor simple,ac->ex N=90,self,1,0.9998
+point 9 sweep,Gabor simple,ac->ex N=90,non-PT,0.0622666666666666,0.0762
+point 9 sweep,Gabor simple,ac->ex N=90,PT (rotation only),0.200733333333333,0.2197
+point 9 sweep,Gabor simple,ac->ex N=90,control,0.0204666666666667,0.18777
+point 9 sweep,Gabor simple,ac->ex N=100,self,1,0.9999
+point 9 sweep,Gabor simple,ac->ex N=100,non-PT,0.0718666666666666,0.0772
+point 9 sweep,Gabor simple,ac->ex N=100,PT (rotation only),0.214733333333333,0.2157
+point 9 sweep,Gabor simple,ac->ex N=100,control,0.0211333333333333,0.19393
+point 9 sweep,Gabor simple,ac->ex N=110,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=110,non-PT,0.0748666666666667,0.0815
+point 9 sweep,Gabor simple,ac->ex N=110,PT (rotation only),0.218866666666667,0.2095
+point 9 sweep,Gabor simple,ac->ex N=110,control,0.0236,0.19143
+point 9 sweep,Gabor simple,ac->ex N=120,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=120,non-PT,0.0757333333333333,0.0723
+point 9 sweep,Gabor simple,ac->ex N=120,PT (rotation only),0.218266666666667,0.2278
+point 9 sweep,Gabor simple,ac->ex N=120,control,0.0221333333333333,0.19691
+point 9 sweep,Gabor simple,ac->ex N=130,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=130,non-PT,0.073,0.0742
+point 9 sweep,Gabor simple,ac->ex N=130,PT (rotation only),0.219333333333333,0.2171
+point 9 sweep,Gabor simple,ac->ex N=130,control,0.0217333333333333,0.19637
+point 9 sweep,Gabor simple,ac->ex N=140,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=140,non-PT,0.0728666666666666,0.0699
+point 9 sweep,Gabor simple,ac->ex N=140,PT (rotation only),0.224266666666667,0.2194
+point 9 sweep,Gabor simple,ac->ex N=140,control,0.0208666666666667,0.20194
+point 9 sweep,Gabor simple,ac->ex N=150,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=150,non-PT,0.0687333333333333,0.0718
+point 9 sweep,Gabor simple,ac->ex N=150,PT (rotation only),0.2218,0.2209
+point 9 sweep,Gabor simple,ac->ex N=150,control,0.0211333333333333,0.2007
+point 9 sweep,Gabor simple,ac->ex N=160,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=160,non-PT,0.0752666666666667,0.0657
+point 9 sweep,Gabor simple,ac->ex N=160,PT (rotation only),0.2224,0.2166
+point 9 sweep,Gabor simple,ac->ex N=160,control,0.0220666666666667,0.20042
+point 9 sweep,Gabor simple,ac->ex N=170,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=170,non-PT,0.0700666666666666,0.0706
+point 9 sweep,Gabor simple,ac->ex N=170,PT (rotation only),0.226466666666667,0.2254
+point 9 sweep,Gabor simple,ac->ex N=170,control,0.0213333333333333,0.20366
+point 9 sweep,Gabor simple,ac->ex N=180,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=180,non-PT,0.0652666666666667,0.0658
+point 9 sweep,Gabor simple,ac->ex N=180,PT (rotation only),0.2242,0.224
+point 9 sweep,Gabor simple,ac->ex N=180,control,0.0209333333333333,0.20705
+point 9 sweep,Gabor simple,ac->ex N=190,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=190,non-PT,0.0640666666666667,0.0614
+point 9 sweep,Gabor simple,ac->ex N=190,PT (rotation only),0.224266666666667,0.2233
+point 9 sweep,Gabor simple,ac->ex N=190,control,0.021,0.20701
+point 9 sweep,Gabor simple,ac->ex N=192,self,1,1
+point 9 sweep,Gabor simple,ac->ex N=192,non-PT,0.06,0.06
+point 9 sweep,Gabor simple,ac->ex N=192,PT (rotation only),0.221,0.222
+point 9 sweep,Gabor simple,ac->ex N=192,control,0.0191333333333333,0.208
+point 9 sweep,Gabor simple,ex->ac N=10,self,0.99768,0.9906
+point 9 sweep,Gabor simple,ex->ac N=10,non-PT,0.0733999999999999,0.0785
+point 9 sweep,Gabor simple,ex->ac N=10,PT (rotation only),0.0827333333333333,0.078
+point 9 sweep,Gabor simple,ex->ac N=10,control,0.0209333333333333,0.06297
+point 9 sweep,Gabor simple,ex->ac N=20,self,0.999413333333334,0.9997
+point 9 sweep,Gabor simple,ex->ac N=20,non-PT,0.0854666666666667,0.082
+point 9 sweep,Gabor simple,ex->ac N=20,PT (rotation only),0.1474,0.1249
+point 9 sweep,Gabor simple,ex->ac N=20,control,0.0213333333333333,0.12825
+point 9 sweep,Gabor simple,ex->ac N=30,self,0.99982,0.9999
+point 9 sweep,Gabor simple,ex->ac N=30,non-PT,0.1068,0.0913
+point 9 sweep,Gabor simple,ex->ac N=30,PT (rotation only),0.183333333333333,0.1697
+point 9 sweep,Gabor simple,ex->ac N=30,control,0.0228666666666667,0.1708
+point 9 sweep,Gabor simple,ex->ac N=40,self,0.9998,0.9998
+point 9 sweep,Gabor simple,ex->ac N=40,non-PT,0.102733333333333,0.0997
+point 9 sweep,Gabor simple,ex->ac N=40,PT (rotation only),0.201133333333333,0.2227
+point 9 sweep,Gabor simple,ex->ac N=40,control,0.024,0.19941
+point 9 sweep,Gabor simple,ex->ac N=50,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=50,non-PT,0.103866666666667,0.0987
+point 9 sweep,Gabor simple,ex->ac N=50,PT (rotation only),0.249933333333333,0.2579
+point 9 sweep,Gabor simple,ex->ac N=50,control,0.0232,0.22284
+point 9 sweep,Gabor simple,ex->ac N=60,self,1,0.9999
+point 9 sweep,Gabor simple,ex->ac N=60,non-PT,0.113533333333333,0.1109
+point 9 sweep,Gabor simple,ex->ac N=60,PT (rotation only),0.266,0.2563
+point 9 sweep,Gabor simple,ex->ac N=60,control,0.0264,0.24031
+point 9 sweep,Gabor simple,ex->ac N=70,self,1,0.9998
+point 9 sweep,Gabor simple,ex->ac N=70,non-PT,0.103,0.1104
+point 9 sweep,Gabor simple,ex->ac N=70,PT (rotation only),0.279866666666667,0.2843
+point 9 sweep,Gabor simple,ex->ac N=70,control,0.0252,0.24882
+point 9 sweep,Gabor simple,ex->ac N=80,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=80,non-PT,0.099,0.1003
+point 9 sweep,Gabor simple,ex->ac N=80,PT (rotation only),0.299333333333333,0.2998
+point 9 sweep,Gabor simple,ex->ac N=80,control,0.0264,0.25852
+point 9 sweep,Gabor simple,ex->ac N=90,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=90,non-PT,0.0994,0.1085
+point 9 sweep,Gabor simple,ex->ac N=90,PT (rotation only),0.2906,0.2995
+point 9 sweep,Gabor simple,ex->ac N=90,control,0.0275333333333334,0.26443
+point 9 sweep,Gabor simple,ex->ac N=100,self,0.9999,1
+point 9 sweep,Gabor simple,ex->ac N=100,non-PT,0.101266666666667,0.1102
+point 9 sweep,Gabor simple,ex->ac N=100,PT (rotation only),0.315,0.3126
+point 9 sweep,Gabor simple,ex->ac N=100,control,0.0251333333333334,0.27373
+point 9 sweep,Gabor simple,ex->ac N=110,self,0.9999,1
+point 9 sweep,Gabor simple,ex->ac N=110,non-PT,0.1064,0.1112
+point 9 sweep,Gabor simple,ex->ac N=110,PT (rotation only),0.314066666666667,0.3086
+point 9 sweep,Gabor simple,ex->ac N=110,control,0.0288,0.26832
+point 9 sweep,Gabor simple,ex->ac N=120,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=120,non-PT,0.105066666666667,0.1039
+point 9 sweep,Gabor simple,ex->ac N=120,PT (rotation only),0.3196,0.3168
+point 9 sweep,Gabor simple,ex->ac N=120,control,0.0293333333333334,0.27993
+point 9 sweep,Gabor simple,ex->ac N=130,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=130,non-PT,0.1062,0.1093
+point 9 sweep,Gabor simple,ex->ac N=130,PT (rotation only),0.328133333333333,0.3242
+point 9 sweep,Gabor simple,ex->ac N=130,control,0.0274,0.27939
+point 9 sweep,Gabor simple,ex->ac N=140,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=140,non-PT,0.100066666666667,0.1028
+point 9 sweep,Gabor simple,ex->ac N=140,PT (rotation only),0.330066666666667,0.3334
+point 9 sweep,Gabor simple,ex->ac N=140,control,0.0283333333333334,0.28351
+point 9 sweep,Gabor simple,ex->ac N=150,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=150,non-PT,0.0999333333333332,0.105
+point 9 sweep,Gabor simple,ex->ac N=150,PT (rotation only),0.339133333333333,0.3253
+point 9 sweep,Gabor simple,ex->ac N=150,control,0.0271333333333334,0.28548
+point 9 sweep,Gabor simple,ex->ac N=160,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=160,non-PT,0.100133333333333,0.101
+point 9 sweep,Gabor simple,ex->ac N=160,PT (rotation only),0.333333333333333,0.3372
+point 9 sweep,Gabor simple,ex->ac N=160,control,0.0288,0.28986
+point 9 sweep,Gabor simple,ex->ac N=170,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=170,non-PT,0.102333333333333,0.1043
+point 9 sweep,Gabor simple,ex->ac N=170,PT (rotation only),0.341333333333333,0.3311
+point 9 sweep,Gabor simple,ex->ac N=170,control,0.0300666666666667,0.28813
+point 9 sweep,Gabor simple,ex->ac N=180,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=180,non-PT,0.1016,0.1014
+point 9 sweep,Gabor simple,ex->ac N=180,PT (rotation only),0.344,0.3362
+point 9 sweep,Gabor simple,ex->ac N=180,control,0.0312666666666667,0.29285
+point 9 sweep,Gabor simple,ex->ac N=190,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=190,non-PT,0.0999999999999999,0.1
+point 9 sweep,Gabor simple,ex->ac N=190,PT (rotation only),0.3488,0.3504
+point 9 sweep,Gabor simple,ex->ac N=190,control,0.0285333333333334,0.29542
+point 9 sweep,Gabor simple,ex->ac N=192,self,1,1
+point 9 sweep,Gabor simple,ex->ac N=192,non-PT,0.0999999999999999,0.1
+point 9 sweep,Gabor simple,ex->ac N=192,PT (rotation only),0.3524,0.352
+point 9 sweep,Gabor simple,ex->ac N=192,control,0.0309333333333334,0.2942

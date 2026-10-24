@@ -1,0 +1,73 @@
+figure,group,series,mean,sem
+fig15a_full,EC-AC,Gabor simple self-decoding,0.99995,5e-05
+fig15a_full,EC-AC,Gabor complex self-decoding,1,0
+fig15a_full,EC-AC,Gabor simple non-PT,0.0554,0.00146542439985118
+fig15a_full,EC-AC,Gabor complex non-PT,0.03,0.00229415733870562
+fig15a_full,EC-AC,Gabor simple PT (rotation only),0.27775,0.00346407900579591
+fig15a_full,EC-AC,Gabor complex PT (rotation only),0.144,0.0086572148189272
+fig15a_full,EC-AC,Gabor simple PT control (corrected),0.220455,0.00169183723228666
+fig15a_full,EC-AC,Gabor complex PT control (corrected),0.1005,0.00253346029229423
+fig15a_full,EC-EX,Gabor simple self-decoding,0.9999,7.06220126566725e-05
+fig15a_full,EC-EX,Gabor complex self-decoding,1,0
+fig15a_full,EC-EX,Gabor simple non-PT,0.04255,0.00129825166800729
+fig15a_full,EC-EX,Gabor complex non-PT,0.054,0.00210262993215139
+fig15a_full,EC-EX,Gabor simple PT (rotation only),0.3296,0.00249402293011509
+fig15a_full,EC-EX,Gabor complex PT (rotation only),0.182,0.00247088307248537
+fig15a_full,EC-EX,Gabor simple PT control (corrected),0.31859,0.00123362649770488
+fig15a_full,EC-EX,Gabor complex PT control (corrected),0.1455,0.00319497961446424
+fig15a_full,AC-EX,Gabor simple self-decoding,0.99985,8.63852187300444e-05
+fig15a_full,AC-EX,Gabor complex self-decoding,1,0
+fig15a_full,AC-EX,Gabor simple non-PT,0.0897999999999999,0.00135997198850705
+fig15a_full,AC-EX,Gabor complex non-PT,0.03,0.00229415733870562
+fig15a_full,AC-EX,Gabor simple PT (rotation only),0.23085,0.00241199877596115
+fig15a_full,AC-EX,Gabor complex PT (rotation only),0.091,0.00270477161211149
+fig15a_full,AC-EX,Gabor simple PT control (corrected),0.190515,0.00178030493220377
+fig15a_full,AC-EX,Gabor complex PT control (corrected),0.062,0.00239297216646448
+fig15b_full,EC-AC,Gabor simple self-decoding,1,0
+fig15b_full,EC-AC,Gabor complex self-decoding,1,0
+fig15b_full,EC-AC,Gabor simple non-PT,0.06,0.00458831467741124
+fig15b_full,EC-AC,Gabor complex non-PT,0.03,0.00229415733870562
+fig15b_full,EC-AC,Gabor simple PT (rotation only),0.388,0.0177348897879145
+fig15b_full,EC-AC,Gabor complex PT (rotation only),0.144,0.0086572148189272
+fig15b_full,EC-AC,Gabor simple PT control (corrected),0.3064,0.0104222434194724
+fig15b_full,EC-AC,Gabor complex PT control (corrected),0.1005,0.00253346029229423
+fig15b_full,EC-EX,Gabor simple self-decoding,1,0
+fig15b_full,EC-EX,Gabor complex self-decoding,1,0
+fig15b_full,EC-EX,Gabor simple non-PT,0.046,0.00358358832222088
+fig15b_full,EC-EX,Gabor complex non-PT,0.054,0.00210262993215139
+fig15b_full,EC-EX,Gabor simple PT (rotation only),0.516,0.00343358030111581
+fig15b_full,EC-EX,Gabor complex PT (rotation only),0.182,0.00247088307248537
+fig15b_full,EC-EX,Gabor simple PT control (corrected),0.4607,0.00323882694814033
+fig15b_full,EC-EX,Gabor complex PT control (corrected),0.1455,0.00319497961446424
+fig15b_full,AC-EX,Gabor simple self-decoding,1,0
+fig15b_full,AC-EX,Gabor complex self-decoding,1,0
+fig15b_full,AC-EX,Gabor simple non-PT,0.08,0.00458831467741124
+fig15b_full,AC-EX,Gabor complex non-PT,0.03,0.00229415733870562
+fig15b_full,AC-EX,Gabor simple PT (rotation only),0.287,0.0150280439599822
+fig15b_full,AC-EX,Gabor complex PT (rotation only),0.091,0.00270477161211149
+fig15b_full,AC-EX,Gabor simple PT control (corrected),0.2511,0.0102078143441292
+fig15b_full,AC-EX,Gabor complex PT control (corrected),0.062,0.00239297216646448
+fig15_k5,EC-AC,Gabor simple self-decoding,1,0
+fig15_k5,EC-AC,Gabor complex self-decoding,1,0
+fig15_k5,EC-AC,Gabor simple non-PT (target PCs),0.067,0.00637016070193061
+fig15_k5,EC-AC,Gabor complex non-PT (target PCs),0.03,0.00229415733870562
+fig15_k5,EC-AC,Gabor simple PT (rotation only),0.04,1.59189143721484e-18
+fig15_k5,EC-AC,Gabor complex PT (rotation only),0.051,0.0117406177547503
+fig15_k5,EC-AC,Gabor simple PT control (corrected),0.0429,0.00259341270793605
+fig15_k5,EC-AC,Gabor complex PT control (corrected),0.037,0.00208503439325413
+fig15_k5,EC-EX,Gabor simple self-decoding,1,0
+fig15_k5,EC-EX,Gabor complex self-decoding,1,0
+fig15_k5,EC-EX,Gabor simple non-PT (target PCs),0.05,0.00229415733870562
+fig15_k5,EC-EX,Gabor complex non-PT (target PCs),0.018,0.00137649440322337
+fig15_k5,EC-EX,Gabor simple PT (rotation only),0.061,0.001
+fig15_k5,EC-EX,Gabor complex PT (rotation only),0.04,0.00458831467741123
+fig15_k5,EC-EX,Gabor simple PT control (corrected),0.0397,0.00211896201004171
+fig15_k5,EC-EX,Gabor complex PT control (corrected),0.0391,0.00260959767013998
+fig15_k5,AC-EX,Gabor simple self-decoding,1,0
+fig15_k5,AC-EX,Gabor complex self-decoding,1,0
+fig15_k5,AC-EX,Gabor simple non-PT (target PCs),0.044,0.004
+fig15_k5,AC-EX,Gabor complex non-PT (target PCs),0.05,0.00229415733870562
+fig15_k5,AC-EX,Gabor simple PT (rotation only),0.06,0.00458831467741124
+fig15_k5,AC-EX,Gabor complex PT (rotation only),0.052,0.00224780594779607
+fig15_k5,AC-EX,Gabor simple PT control (corrected),0.0411,0.00200249843945008
+fig15_k5,AC-EX,Gabor complex PT control (corrected),0.0383,0.0020119380549217

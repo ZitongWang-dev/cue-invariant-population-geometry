@@ -19,6 +19,7 @@ Interpretation and suggested use of every figure: [FIGURE_COMMENTS.md](FIGURE_CO
 | `06_pc_sweep_accuracy/` | `plot_pc_sweep_accuracy.m` | Accuracies vs the number of PCs, k = 1–49 |
 | `07_pc_sweep_metrics/` | `plot_pc_sweep_metrics.m` | Normalized metrics vs the number of PCs |
 | `08_dimensionality/` | `plot_dimensionality.m` | Participation ratio (raw and noise-corrected) and variance spectra |
+| `09_nc_injection/` | `plot_nc_injection.m` | Noise correlations injected into the pseudo-populations (rebuttal Point 8) |
 
 ## Figure list
 
@@ -61,6 +62,11 @@ Interpretation and suggested use of every figure: [FIGURE_COMMENTS.md](FIGURE_CO
 | `cumvar_vs_k` | Variance captured by the top k PCs, whole populations | pc_sweep_cue |
 | `metrics_vs_pr` | PT/control and headroom vs PR along the N sweep | cue_transfer_incremental |
 | `pr_vs_N.csv`, `cumvar_vs_k.csv` | PR per population, size and rendering; cumulative variance per k | |
+| **09_nc_injection** | | |
+| `nc_injection_metrics` | Self, PT and control, headroom, PT/control per condition (original, NC removed, injected r = 0–0.15) | nc_injection |
+| `nc_injection_change` | Paired change from the NC-removed data vs achieved mean NC | nc_injection |
+| `nc_injection_check` | Achieved NC (all / same- / cross-session pairs), spread, noise PR, per-pair NC distributions | nc_injection |
+| `nc_injection.csv` | Every plotted number, with bootstrap CIs over seeds | |
 
 ## Conventions
 

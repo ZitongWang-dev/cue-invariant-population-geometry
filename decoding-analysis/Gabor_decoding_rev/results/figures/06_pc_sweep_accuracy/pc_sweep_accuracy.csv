@@ -1,0 +1,153 @@
+model,k,series,mean,sem
+Gabor simple,1,"self-decoding",0.822333333333333,0.00496522748647703
+Gabor simple,2,"self-decoding",0.994666666666667,0.00133333333333333
+Gabor simple,3,"self-decoding",1,0
+Gabor simple,4,"self-decoding",1,0
+Gabor simple,5,"self-decoding",1,0
+Gabor simple,6,"self-decoding",1,0
+Gabor simple,7,"self-decoding",1,0
+Gabor simple,8,"self-decoding",1,0
+Gabor simple,9,"self-decoding",1,0
+Gabor simple,10,"self-decoding",1,0
+Gabor simple,15,"self-decoding",1,0
+Gabor simple,20,"self-decoding",1,0
+Gabor simple,25,"self-decoding",1,0
+Gabor simple,30,"self-decoding",1,0
+Gabor simple,35,"self-decoding",1,0
+Gabor simple,40,"self-decoding",1,0
+Gabor simple,45,"self-decoding",1,0
+Gabor simple,49,"self-decoding",1,0
+Gabor simple,NaN,"self-decoding, full space",1,0
+Gabor simple,1,"PT (rotation only)",0.00433333333333333,0.00135226670276425
+Gabor simple,2,"PT (rotation only)",0.0386666666666667,0.00311245599126346
+Gabor simple,3,"PT (rotation only)",0.0556666666666667,0.00308419212349262
+Gabor simple,4,"PT (rotation only)",0.0466666666666667,0.00357855087505381
+Gabor simple,5,"PT (rotation only)",0.0536666666666667,0.00198819491517196
+Gabor simple,6,"PT (rotation only)",0.047,0.00325298645923324
+Gabor simple,7,"PT (rotation only)",0.071,0.00426323131473509
+Gabor simple,8,"PT (rotation only)",0.0806666666666667,0.00430389828988118
+Gabor simple,9,"PT (rotation only)",0.0853333333333333,0.00427492139331482
+Gabor simple,10,"PT (rotation only)",0.109666666666667,0.00495155437939725
+Gabor simple,15,"PT (rotation only)",0.150666666666667,0.00387565679993535
+Gabor simple,20,"PT (rotation only)",0.193666666666667,0.0046454319136958
+Gabor simple,25,"PT (rotation only)",0.239666666666667,0.00561458284199656
+Gabor simple,30,"PT (rotation only)",0.264,0.00763281645303028
+Gabor simple,35,"PT (rotation only)",0.312333333333333,0.00830344924132143
+Gabor simple,40,"PT (rotation only)",0.351,0.0111225835311217
+Gabor simple,45,"PT (rotation only)",0.373666666666667,0.0137901272034109
+Gabor simple,49,"PT (rotation only)",0.400333333333333,0.0149083199511708
+Gabor simple,NaN,"PT (rotation only), full space",0.397,0.0144255344856868
+Gabor simple,1,"PT control (corrected)",0.0233666666666667,0.000974814676481634
+Gabor simple,2,"PT control (corrected)",0.0257333333333333,0.000902559657845324
+Gabor simple,3,"PT control (corrected)",0.0317,0.00103806099120857
+Gabor simple,4,"PT control (corrected)",0.0356,0.00113972937614482
+Gabor simple,5,"PT control (corrected)",0.0412333333333333,0.00128976121529027
+Gabor simple,6,"PT control (corrected)",0.0471,0.00139444013024445
+Gabor simple,7,"PT control (corrected)",0.0544666666666667,0.0015961582880788
+Gabor simple,8,"PT control (corrected)",0.0609666666666667,0.00179042757047651
+Gabor simple,9,"PT control (corrected)",0.0714333333333333,0.00222877517814761
+Gabor simple,10,"PT control (corrected)",0.0812,0.00276875219197475
+Gabor simple,15,"PT control (corrected)",0.127166666666667,0.00421841313958174
+Gabor simple,20,"PT control (corrected)",0.174233333333333,0.00636535319370439
+Gabor simple,25,"PT control (corrected)",0.214466666666667,0.00734898688842566
+Gabor simple,30,"PT control (corrected)",0.251133333333333,0.00871823424130439
+Gabor simple,35,"PT control (corrected)",0.280733333333333,0.00991146875120062
+Gabor simple,40,"PT control (corrected)",0.301233333333333,0.0112027127129129
+Gabor simple,45,"PT control (corrected)",0.319066666666667,0.0122916963994661
+Gabor simple,49,"PT control (corrected)",0.3346,0.0130282006163336
+Gabor simple,NaN,"PT control (corrected), full space",0.3394,0.0125420242736711
+Gabor simple,1,"non-PT (target PCs)",0.0273333333333333,0.00177660036339749
+Gabor simple,2,"non-PT (target PCs)",0.054,0.0039858506808105
+Gabor simple,3,"non-PT (target PCs)",0.0463333333333333,0.00275113398978588
+Gabor simple,4,"non-PT (target PCs)",0.0536666666666667,0.00225452046420974
+Gabor simple,5,"non-PT (target PCs)",0.0536666666666667,0.00287170756370667
+Gabor simple,6,"non-PT (target PCs)",0.0546666666666667,0.00211887757658564
+Gabor simple,7,"non-PT (target PCs)",0.053,0.00194993843159358
+Gabor simple,8,"non-PT (target PCs)",0.06,0.00217847715431317
+Gabor simple,9,"non-PT (target PCs)",0.0633333333333333,0.00185134958662649
+Gabor simple,10,"non-PT (target PCs)",0.06,0.00251548874293232
+Gabor simple,15,"non-PT (target PCs)",0.0583333333333333,0.00265924107378632
+Gabor simple,20,"non-PT (target PCs)",0.0576666666666667,0.00285592521807279
+Gabor simple,25,"non-PT (target PCs)",0.0596666666666667,0.00302500564193027
+Gabor simple,30,"non-PT (target PCs)",0.0606666666666667,0.00272948606187292
+Gabor simple,35,"non-PT (target PCs)",0.0603333333333333,0.00331037290017752
+Gabor simple,40,"non-PT (target PCs)",0.0623333333333333,0.00297225082267951
+Gabor simple,45,"non-PT (target PCs)",0.0633333333333333,0.002778719237821
+Gabor simple,49,"non-PT (target PCs)",0.063,0.00284535502138839
+Gabor simple,NaN,"non-PT (target PCs), full space",0.062,0.00303277762339977
+Gabor complex,1,"self-decoding",0.771666666666667,0.013796680732941
+Gabor complex,2,"self-decoding",0.992666666666667,0.00157427530931829
+Gabor complex,3,"self-decoding",1,0
+Gabor complex,4,"self-decoding",1,0
+Gabor complex,5,"self-decoding",1,0
+Gabor complex,6,"self-decoding",1,0
+Gabor complex,7,"self-decoding",1,0
+Gabor complex,8,"self-decoding",1,0
+Gabor complex,9,"self-decoding",1,0
+Gabor complex,10,"self-decoding",1,0
+Gabor complex,15,"self-decoding",1,0
+Gabor complex,20,"self-decoding",1,0
+Gabor complex,25,"self-decoding",1,0
+Gabor complex,30,"self-decoding",1,0
+Gabor complex,35,"self-decoding",1,0
+Gabor complex,40,"self-decoding",1,0
+Gabor complex,45,"self-decoding",1,0
+Gabor complex,48,"self-decoding",1,0
+Gabor complex,NaN,"self-decoding, full space",1,0
+Gabor complex,1,"PT (rotation only)",0.0143333333333333,0.00238126713012409
+Gabor complex,2,"PT (rotation only)",0.0183333333333333,0.00173313775515472
+Gabor complex,3,"PT (rotation only)",0.0423333333333333,0.00352846909607532
+Gabor complex,4,"PT (rotation only)",0.04,0.0044340745313033
+Gabor complex,5,"PT (rotation only)",0.0476666666666667,0.00425438734438731
+Gabor complex,6,"PT (rotation only)",0.0866666666666667,0.00776296679652776
+Gabor complex,7,"PT (rotation only)",0.082,0.00502423505153843
+Gabor complex,8,"PT (rotation only)",0.0743333333333333,0.00733525912053204
+Gabor complex,9,"PT (rotation only)",0.0836666666666667,0.00469382733661064
+Gabor complex,10,"PT (rotation only)",0.074,0.00550910904646801
+Gabor complex,15,"PT (rotation only)",0.120333333333333,0.00532538249158993
+Gabor complex,20,"PT (rotation only)",0.125333333333333,0.00482148362347629
+Gabor complex,25,"PT (rotation only)",0.134666666666667,0.00566217834878803
+Gabor complex,30,"PT (rotation only)",0.139,0.00579157775406287
+Gabor complex,35,"PT (rotation only)",0.139333333333333,0.00578262870387943
+Gabor complex,40,"PT (rotation only)",0.140333333333333,0.00569451449132427
+Gabor complex,45,"PT (rotation only)",0.139666666666667,0.0056746371330101
+Gabor complex,48,"PT (rotation only)",0.139666666666667,0.0056746371330101
+Gabor complex,NaN,"PT (rotation only), full space",0.139,0.00575242518249703
+Gabor complex,1,"PT control (corrected)",0.0226333333333333,0.000829528034986537
+Gabor complex,2,"PT control (corrected)",0.0249,0.000828073797852139
+Gabor complex,3,"PT control (corrected)",0.0292333333333333,0.00107049982165961
+Gabor complex,4,"PT control (corrected)",0.0336666666666667,0.00112412342916268
+Gabor complex,5,"PT control (corrected)",0.0381333333333333,0.00128253515423382
+Gabor complex,6,"PT control (corrected)",0.0401333333333333,0.00140609381325575
+Gabor complex,7,"PT control (corrected)",0.0461333333333333,0.00149942864196802
+Gabor complex,8,"PT control (corrected)",0.0504666666666667,0.00154068490651645
+Gabor complex,9,"PT control (corrected)",0.0546,0.00165382624327281
+Gabor complex,10,"PT control (corrected)",0.0587333333333333,0.00186551619106716
+Gabor complex,15,"PT control (corrected)",0.074,0.00272796772517648
+Gabor complex,20,"PT control (corrected)",0.0857333333333334,0.00350446580845591
+Gabor complex,25,"PT control (corrected)",0.0936666666666667,0.004047784262877
+Gabor complex,30,"PT control (corrected)",0.0969333333333333,0.00431407279788617
+Gabor complex,35,"PT control (corrected)",0.0975666666666667,0.00434008817288304
+Gabor complex,40,"PT control (corrected)",0.0984,0.00443223936207329
+Gabor complex,45,"PT control (corrected)",0.0985333333333333,0.00443429538009037
+Gabor complex,48,"PT control (corrected)",0.0984666666666667,0.00443671550185996
+Gabor complex,NaN,"PT control (corrected), full space",0.102666666666667,0.00470476778647687
+Gabor complex,1,"non-PT (target PCs)",0.011,0.00174180891750064
+Gabor complex,2,"non-PT (target PCs)",0.019,0.00209519223663953
+Gabor complex,3,"non-PT (target PCs)",0.0276666666666667,0.00312061368246358
+Gabor complex,4,"non-PT (target PCs)",0.023,0.00232038375941577
+Gabor complex,5,"non-PT (target PCs)",0.0326666666666667,0.00207032662979757
+Gabor complex,6,"non-PT (target PCs)",0.032,0.00136128885422337
+Gabor complex,7,"non-PT (target PCs)",0.036,0.00114487312103867
+Gabor complex,8,"non-PT (target PCs)",0.0346666666666667,0.00163759963972812
+Gabor complex,9,"non-PT (target PCs)",0.034,0.00252892867158975
+Gabor complex,10,"non-PT (target PCs)",0.0283333333333333,0.00219355330066596
+Gabor complex,15,"non-PT (target PCs)",0.031,0.00129536330876512
+Gabor complex,20,"non-PT (target PCs)",0.0356666666666667,0.00172004905111155
+Gabor complex,25,"non-PT (target PCs)",0.0376666666666667,0.00202200698343369
+Gabor complex,30,"non-PT (target PCs)",0.0376666666666667,0.00213084247240019
+Gabor complex,35,"non-PT (target PCs)",0.0373333333333333,0.00209743812884467
+Gabor complex,40,"non-PT (target PCs)",0.0376666666666667,0.00190697006791524
+Gabor complex,45,"non-PT (target PCs)",0.038,0.00194268147142938
+Gabor complex,48,"non-PT (target PCs)",0.038,0.00194268147142938
+Gabor complex,NaN,"non-PT (target PCs), full space",0.038,0.00194268147142938
