@@ -85,8 +85,8 @@ for s = 1:size(spec, 1)
     xlim(ax, [0.5, nC + 0.5]);  box(ax, 'on');  title(ax, spec{s, 2});
     if s == 1, legend(ax, h, strrep(pops, '_', ' '), 'Location', 'best'); end
 end
-title(tl, sprintf(['Injected noise correlations, whole populations, pooled over 6 cue pairs ' ...
-    '(diamond: original, square: NC removed; bars: 95%% CI over %d seeds)'], nnz(r1.done)), 'FontSize', 11);
+title(tl, sprintf(['Injected noise correlations, whole populations, pooled over %d cue pairs ' ...
+    '(diamond: original, square: NC removed; bars: 95%% CI over %d seeds)'], numel(r1.pair_labels), nnz(r1.done)), 'FontSize', 11);
 save_figure(fig, S, out_dir, 'nc_injection_metrics');
 
 %% Figure 2: paired change from the affine (NC removed) condition vs achieved mean NC
